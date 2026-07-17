@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://d0v5j1rkejidn"]
+
+[ext_resource type="Texture2D" uid="uid://c0sayb1ju46b5" path="res://Assets/Art/Intro/Titles/KonigAscent_title0000.png" id="1_vu2ay"]
+
+[sub_resource type="Animation" id="Animation_1jl00"]
+resource_name = "titles_image"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_croxi"]
+_data = {
+&"titles_image": SubResource("Animation_1jl00")
+}
+
+[node name="TitlesScene" type="Node2D" unique_id=634831790]
+
+[node name="Titles" type="Sprite2D" parent="." unique_id=590434199]
+position = Vector2(160, 120)
+texture = ExtResource("1_vu2ay")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Titles" unique_id=56635924]
+libraries/ = SubResource("AnimationLibrary_croxi")
