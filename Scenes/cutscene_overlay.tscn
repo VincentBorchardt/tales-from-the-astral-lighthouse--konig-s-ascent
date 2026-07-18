@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ch0mq2ugu3sf7"]
+
+[ext_resource type="Texture2D" uid="uid://ylpeelnd6387" path="res://Assets/Art/UI/Cutscenes/Textbox/TFTAL_Textbox0005.png" id="1_kxy35"]
+
+[node name="CutsceneOverlay" type="Control" unique_id=1536554858]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftSpeaker" type="Sprite2D" parent="." unique_id=2098482821]
+position = Vector2(72, 157)
+
+[node name="RightSpeaker" type="Sprite2D" parent="." unique_id=1193639378]
+position = Vector2(247, 157)
+
+[node name="MessageBox" type="Sprite2D" parent="." unique_id=985376082]
+position = Vector2(160, 120)
+texture = ExtResource("1_kxy35")
+
+[node name="MessageArea" type="Control" parent="." unique_id=1054554033]
+anchors_preset = 0
+offset_top = 170.0
+offset_right = 320.0
+offset_bottom = 240.0
+
+[node name="MessageText" type="Label" parent="MessageArea" unique_id=1640906127]
+custom_maximum_size = Vector2(220, 50)
+layout_mode = 0
+offset_left = 51.0
+offset_top = 3.0
+offset_right = 271.0
+offset_bottom = 53.0
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 16
+text = "This is a lot of text and I want to fill the box so here is the bunch of text I need and I need a lot more text because this text is really small and I don't know what the actual answer is going to be and I'm still struggling to come up with filler"
+autowrap_mode = 3

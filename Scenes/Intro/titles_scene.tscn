@@ -1,9 +1,45 @@
 [gd_scene format=3 uid="uid://d0v5j1rkejidn"]
 
 [ext_resource type="Texture2D" uid="uid://c0sayb1ju46b5" path="res://Assets/Art/Intro/Titles/KonigAscent_title0000.png" id="1_vu2ay"]
+[ext_resource type="Texture2D" uid="uid://cjv05u4rcm0qs" path="res://Assets/Art/Intro/Titles/KonigAscent_title0001.png" id="2_njs4n"]
+[ext_resource type="Texture2D" uid="uid://dcvi487urco27" path="res://Assets/Art/Intro/Titles/KonigAscent_title0002.png" id="3_hio3k"]
+[ext_resource type="Texture2D" uid="uid://7ubxdyucf1kw" path="res://Assets/Art/Intro/Titles/KonigAscent_title0003.png" id="4_636ga"]
+[ext_resource type="Texture2D" uid="uid://bl0r1dry8rd3k" path="res://Assets/Art/Intro/Titles/KonigAscent_title0004.png" id="5_vy3b0"]
+[ext_resource type="Texture2D" uid="uid://c5csle7vslmhn" path="res://Assets/Art/Intro/Titles/KonigAscent_title0005.png" id="6_5fiq6"]
+[ext_resource type="Texture2D" uid="uid://dtwu0j68cv5wx" path="res://Assets/Art/Intro/Titles/KonigAscent_title0006.png" id="7_n4nnk"]
+[ext_resource type="Texture2D" uid="uid://dks4agxkwroym" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN04.png" id="8_hsdt4"]
+[ext_resource type="Texture2D" uid="uid://cow5e8kpygtpp" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN05.png" id="9_ac8yh"]
+[ext_resource type="Texture2D" uid="uid://cj7xa3pr8v37l" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN06.png" id="10_s6vst"]
+[ext_resource type="Texture2D" uid="uid://b2xfnhb2b4hc2" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN07.png" id="11_48854"]
+[ext_resource type="Texture2D" uid="uid://csj1hmif0oq7j" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN08.png" id="12_5sjc5"]
+[ext_resource type="Texture2D" uid="uid://chcc7tl7frfn" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN09.png" id="13_2o7gx"]
+[ext_resource type="Texture2D" uid="uid://wbqy65a2iry6" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN10.png" id="14_6euay"]
+[ext_resource type="Texture2D" uid="uid://cir78bg8ct2gk" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN11.png" id="15_wjmoa"]
+[ext_resource type="Texture2D" uid="uid://b7kwpubc7f7w" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN12.png" id="16_ogul4"]
+[ext_resource type="Texture2D" uid="uid://bnejeuy0ca761" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN13.png" id="17_jparb"]
+[ext_resource type="Texture2D" uid="uid://bvh33n3li0oyc" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN14.png" id="18_0kjk7"]
+[ext_resource type="Texture2D" uid="uid://b02hw8dmafhlq" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN15.png" id="19_bnu48"]
+[ext_resource type="Texture2D" uid="uid://dvjs4i14x7tqf" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN16.png" id="20_d5lgd"]
+
+[sub_resource type="Animation" id="Animation_ac8yh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vu2ay")]
+}
 
 [sub_resource type="Animation" id="Animation_1jl00"]
 resource_name = "titles_image"
+length = 8.0
+loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -12,14 +48,15 @@ tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 2.5, 2.6, 2.7, 2.8, 2.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": []
+"values": [ExtResource("1_vu2ay"), ExtResource("2_njs4n"), ExtResource("3_hio3k"), ExtResource("4_636ga"), ExtResource("5_vy3b0"), ExtResource("6_5fiq6"), ExtResource("7_n4nnk"), ExtResource("8_hsdt4"), ExtResource("9_ac8yh"), ExtResource("10_s6vst"), ExtResource("11_48854"), ExtResource("12_5sjc5"), ExtResource("13_2o7gx"), ExtResource("14_6euay"), ExtResource("15_wjmoa"), ExtResource("16_ogul4"), ExtResource("17_jparb"), ExtResource("18_0kjk7"), ExtResource("19_bnu48"), ExtResource("20_d5lgd")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_croxi"]
 _data = {
+&"RESET": SubResource("Animation_ac8yh"),
 &"titles_image": SubResource("Animation_1jl00")
 }
 
@@ -31,3 +68,4 @@ texture = ExtResource("1_vu2ay")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Titles" unique_id=56635924]
 libraries/ = SubResource("AnimationLibrary_croxi")
+autoplay = &"titles_image"
