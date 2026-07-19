@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ch0mq2ugu3sf7"]
 
 [ext_resource type="Texture2D" uid="uid://ylpeelnd6387" path="res://Assets/Art/UI/Cutscenes/Textbox/TFTAL_Textbox0005.png" id="1_kxy35"]
+[ext_resource type="Script" uid="uid://csg866k71r6l4" path="res://Scripts/Cutscenes/cutscene_overlay.gd" id="1_ne6od"]
 
 [node name="CutsceneOverlay" type="Control" unique_id=1536554858]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ne6od")
 
 [node name="LeftSpeaker" type="Sprite2D" parent="." unique_id=2098482821]
 position = Vector2(72, 157)

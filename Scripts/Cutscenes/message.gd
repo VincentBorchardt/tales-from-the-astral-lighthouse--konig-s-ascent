@@ -5,6 +5,7 @@ class_name Message extends Resource
 #@export var alt_picture : Texture2D
 @export var image_location : Location
 @export var has_box : bool = true
+@export var color: Color
 
 @export var choices: bool
 @export var yes_scene: PackedScene

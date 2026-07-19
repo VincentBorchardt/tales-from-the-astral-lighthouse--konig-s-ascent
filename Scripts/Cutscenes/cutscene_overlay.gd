@@ -1,5 +1,7 @@
 extends Control
 
+signal cutscene_ended
+
 var cutscene_active = false
 
 @export var messages: Array[Message]
@@ -9,14 +11,15 @@ var DIM = Color(0.385, 0.385, 0.385, 1.0)
 
 @onready var left_image = $LeftSpeaker
 @onready var right_image = $RightSpeaker
-@onready var current_speaker = $MessageArea/Speaker
+@onready var message_box = $MessageBox
+#@onready var current_speaker = $MessageArea/Speaker
 @onready var message_text = $MessageArea/MessageText
 
 # TODO figure out how to do previous messages in this new paradigm
 
 func _input(event: InputEvent) -> void:
 	if cutscene_active:
-		if Input.is_action_pressed("advance"):
+		if Input.is_action_pressed("advance_text"):
 			advance_cutscene()
 
 func start_cutscene(message_array):
@@ -30,17 +33,29 @@ func start_cutscene(message_array):
 func show_message(message_index):
 	var current_message = messages[message_index]
 	if current_message.image_location == Message.Location.LEFT:
-		left_image.texture = current_message.speaker.full_picture_left
-		left_image.modulate = Color.WHITE
-		left_image.visible = true
+		if current_message.speaker.full_picture_left:
+			left_image.texture = current_message.speaker.full_picture_left
+			left_image.modulate = Color.WHITE
+			left_image.visible = true
+		else:
+			left_image.visible = false
 		right_image.modulate = DIM
-		
 	elif current_message.image_location == Message.Location.RIGHT:
-		right_image.texture = current_message.speaker.full_picture_right
-		right_image.modulate = Color.WHITE
-		right_image.visible = true
+		if current_message.speaker.full_picture_right:
+			right_image.texture = current_message.speaker.full_picture_right
+			right_image.modulate = Color.WHITE
+			right_image.visible = true
+		else:
+			right_image.visible = false
 		left_image.modulate = DIM
-	current_speaker.text = current_message.speaker.name
+	if current_message.has_box:
+		message_box.visible = true
+	else:
+		message_box.visible = false
+	if current_message.color:
+		message_text.add_theme_color_override("font_color", current_message.color)
+	else:
+		message_text.remove_theme_color_override("font_color")
 	message_text.visible_characters = 0
 	message_text.text = current_message.message
 	var tween = create_tween()
@@ -49,7 +64,7 @@ func show_message(message_index):
 func advance_cutscene():
 	current_message_index += 1
 	if current_message_index >= len(messages):
-		# TODO probably do more than this
+		cutscene_ended.emit()
 		cutscene_active = false
 		self.visible = false
 		left_image.visible = false

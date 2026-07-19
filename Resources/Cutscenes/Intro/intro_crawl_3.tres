@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://n44iau8oa2rf"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_pmjm1"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Intro/narrator.tres" id="2_gxek1"]
+
+[resource]
+script = ExtResource("1_pmjm1")
+speaker = ExtResource("2_gxek1")
+message = "An inexplicable structure stands there alone in the void, among all of our dreams, and all of our fears..."
+has_box = false
+color = Color(0.8862745, 0.3019608, 0.3882353, 1)
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
