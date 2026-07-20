@@ -3,6 +3,7 @@ extends Control
 signal cutscene_ended
 
 var cutscene_active = false
+var can_advance_text = false
 
 @export var messages: Array[Message]
 var current_message_index = 0
@@ -12,25 +13,33 @@ var DIM = Color(0.385, 0.385, 0.385, 1.0)
 @onready var left_image = $LeftSpeaker
 @onready var right_image = $RightSpeaker
 @onready var message_box = $MessageBox
+@onready var message_box_animation = $MessageBox/AnimationPlayer
+@onready var advance_text_marker = $AdvanceTextMarker
 #@onready var current_speaker = $MessageArea/Speaker
 @onready var message_text = $MessageArea/MessageText
 
 # TODO figure out how to do previous messages in this new paradigm
 
 func _input(event: InputEvent) -> void:
-	if cutscene_active:
+	if cutscene_active and can_advance_text:
 		if Input.is_action_pressed("advance_text"):
 			advance_cutscene()
 
-func start_cutscene(message_array):
+func start_cutscene(message_array, has_box=true):
+	message_text.visible = false
 	messages = message_array
 	current_message_index = 0
-	# more stuff
-	show_message(current_message_index)
 	cutscene_active = true
 	self.visible = true
+	if has_box:
+		message_box_animation.play("message_box_in")
+	else:
+		show_message(current_message_index)
+	
 	
 func show_message(message_index):
+	can_advance_text = false
+	advance_text_marker.visible = false
 	var current_message = messages[message_index]
 	if current_message.image_location == Message.Location.LEFT:
 		if current_message.speaker.full_picture_left:
@@ -58,12 +67,20 @@ func show_message(message_index):
 		message_text.remove_theme_color_override("font_color")
 	message_text.visible_characters = 0
 	message_text.text = current_message.message
+	message_text.visible = true
 	var tween = create_tween()
-	tween.tween_property(message_text, "visible_ratio", 1, 2.0)
+	tween.tween_property(message_text, "visible_ratio", 1, 2.5)
+	tween.tween_callback(allow_advance)
+
+func allow_advance():
+	advance_text_marker.visible = true
+	can_advance_text = true
+	# TODO blink the marker
 
 func advance_cutscene():
 	current_message_index += 1
 	if current_message_index >= len(messages):
+		# TODO animate out the message box, check if it's visible
 		cutscene_ended.emit()
 		cutscene_active = false
 		self.visible = false
@@ -72,5 +89,3 @@ func advance_cutscene():
 		
 	else:
 		show_message(current_message_index)
-
-# TODO capture "next message" input and both increment current_message_index and call show_message

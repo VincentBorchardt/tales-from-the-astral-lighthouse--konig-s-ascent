@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://0wdvn0ni4mc4"]
+
+[ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="1_fcn0h"]
+[ext_resource type="Script" uid="uid://jsgwgchisn71" path="res://Scripts/Cutscenes/dialogue_test.gd" id="1_jtfhd"]
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_mky0a"]
+[ext_resource type="Resource" uid="uid://blrtrpqo25gfo" path="res://Resources/Cutscenes/test_message_1.tres" id="3_b5653"]
+[ext_resource type="Resource" uid="uid://cxohbe306iqo" path="res://Resources/Cutscenes/test_message_2.tres" id="4_mky0a"]
+
+[node name="DialogueTest" type="Node2D" unique_id=726050604]
+script = ExtResource("1_jtfhd")
+messages = Array[ExtResource("2_mky0a")]([ExtResource("3_b5653"), ExtResource("4_mky0a")])
+
+[node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("1_fcn0h")]
+visible = false
+
+[node name="Button" type="Button" parent="." unique_id=417089159]
+offset_left = 109.0
+offset_top = 18.0
+offset_right = 191.0
+offset_bottom = 43.0
+text = "Start Dialogue"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -7,7 +7,7 @@ extends Node2D
 @onready var titles_animation = $Titles/AnimationPlayer
 
 func start_intro():
-	$CutsceneOverlay.start_cutscene(messages)
+	$CutsceneOverlay.start_cutscene(messages, false)
 
 
 func _on_cutscene_overlay_cutscene_ended() -> void:

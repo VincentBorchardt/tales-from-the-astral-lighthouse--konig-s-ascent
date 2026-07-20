@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctkq5mwwd0y1a"
-path="res://.godot/imported/Text_advance_button.png-616c72acbff370ed1e59b2e7f36ea382.ctex"
+uid="uid://duakcfptglds8"
+path="res://.godot/imported/TFTAL_Textbox0002.png-c4275e33d8a95a59fdc9853c62c9a937.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/UI/Cutscenes/Textbox/Text_advance_button.png"
-dest_files=["res://.godot/imported/Text_advance_button.png-616c72acbff370ed1e59b2e7f36ea382.ctex"]
+source_file="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0002.png"
+dest_files=["res://.godot/imported/TFTAL_Textbox0002.png-c4275e33d8a95a59fdc9853c62c9a937.ctex"]
 
 [params]
 

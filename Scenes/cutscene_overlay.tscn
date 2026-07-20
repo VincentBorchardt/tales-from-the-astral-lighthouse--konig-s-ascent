@@ -1,7 +1,61 @@
 [gd_scene format=3 uid="uid://ch0mq2ugu3sf7"]
 
-[ext_resource type="Texture2D" uid="uid://ylpeelnd6387" path="res://Assets/Art/UI/Cutscenes/Textbox/TFTAL_Textbox0005.png" id="1_kxy35"]
 [ext_resource type="Script" uid="uid://csg866k71r6l4" path="res://Scripts/Cutscenes/cutscene_overlay.gd" id="1_ne6od"]
+[ext_resource type="Texture2D" uid="uid://crsqdgq7o2n1i" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0001.png" id="2_lit3v"]
+[ext_resource type="Texture2D" uid="uid://ctkq5mwwd0y1a" path="res://Assets/Art/UI/Cutscenes/Textbox2/Text_advance_button.png" id="3_flhaj"]
+[ext_resource type="Texture2D" uid="uid://duakcfptglds8" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0002.png" id="3_i5ixn"]
+[ext_resource type="Texture2D" uid="uid://44mq820c5yq7" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0003.png" id="4_0o6c1"]
+[ext_resource type="Texture2D" uid="uid://ccm2n48gv4auc" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0004.png" id="5_sgna5"]
+
+[sub_resource type="Animation" id="Animation_qjxta"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_lit3v")]
+}
+
+[sub_resource type="Animation" id="Animation_x21fx"]
+resource_name = "message_box_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_lit3v"), ExtResource("3_i5ixn"), ExtResource("4_0o6c1"), ExtResource("5_sgna5")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0],
+"method": &"show_message"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lsy2e"]
+_data = {
+&"RESET": SubResource("Animation_qjxta"),
+&"message_box_in": SubResource("Animation_x21fx")
+}
 
 [node name="CutsceneOverlay" type="Control" unique_id=1536554858]
 layout_mode = 3
@@ -20,7 +74,16 @@ position = Vector2(247, 157)
 
 [node name="MessageBox" type="Sprite2D" parent="." unique_id=985376082]
 position = Vector2(160, 120)
-texture = ExtResource("1_kxy35")
+texture = ExtResource("2_lit3v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MessageBox" unique_id=1836524745]
+libraries/ = SubResource("AnimationLibrary_lsy2e")
+
+[node name="AdvanceTextMarker" type="Sprite2D" parent="." unique_id=1577689292]
+visible = false
+position = Vector2(270, 217)
+texture = ExtResource("3_flhaj")
+hframes = 2
 
 [node name="MessageArea" type="Control" parent="." unique_id=1054554033]
 anchors_preset = 0
