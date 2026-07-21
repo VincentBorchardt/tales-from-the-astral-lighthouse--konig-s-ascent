@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bbl3771omgv7k"]
+
+[ext_resource type="Script" uid="uid://k0yupocfugm1" path="res://Scripts/Characters/enemy.gd" id="1_lsx3x"]
+[ext_resource type="Script" uid="uid://dnxwu2owxq0mp" path="res://Scripts/Characters/enemy_hurtbox.gd" id="2_b1c4r"]
+[ext_resource type="PackedScene" uid="uid://d2oaxybmw1dyd" path="res://Scenes/Objects/bullet.tscn" id="2_ixshx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cvgi"]
+size = Vector2(16, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvsuj"]
+radius = 6.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=845320837]
+script = ExtResource("1_lsx3x")
+bullet_scene = ExtResource("2_ixshx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1331990049]
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=982589613]
+collision_layer = 0
+script = ExtResource("2_b1c4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1775967042]
+shape = SubResource("RectangleShape2D_3cvgi")
+debug_color = Color(0.9307091, 0.25629458, 0.16546452, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1600493625]
+shape = SubResource("CircleShape2D_cvsuj")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1462256017]
+
+[node name="Timer" type="Timer" parent="." unique_id=280841505]
+wait_time = 1.641
+autostart = true
+
+[connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_hurtbox_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
