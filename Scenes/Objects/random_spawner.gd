@@ -1,8 +1,6 @@
 extends Node2D
 
-
 @export var portal_scene: PackedScene
-@export var spawn_area := Rect2(0, 0, 320, 240)
 @export var maxEnemies = 12
 @onready var spawn_check = $SpawnCheck
 @onready var timer = $EnemySpawnTimer
