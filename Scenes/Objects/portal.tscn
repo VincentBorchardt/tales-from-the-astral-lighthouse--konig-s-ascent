@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0llauehtytuj"]
 
-[ext_resource type="Script" uid="uid://cjc67fhahlxu8" path="res://Scenes/Objects/portal.gd" id="1_yjf24"]
+[ext_resource type="Script" uid="uid://cjc67fhahlxu8" path="res://Scripts/Objects/portal.gd" id="1_yjf24"]
 [ext_resource type="PackedScene" uid="uid://bbl3771omgv7k" path="res://Scenes/Characters/enemy.tscn" id="2_j133l"]
 
 [node name="Portal" type="Node2D" unique_id=995226439]

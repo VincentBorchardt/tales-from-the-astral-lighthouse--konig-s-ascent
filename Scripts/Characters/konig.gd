@@ -106,8 +106,8 @@ func update_hitbox_direction():
 	if last_x_direction > 0:
 		if last_y_direction < 0:
 			#ne
-			hitbox.position = Vector2(11, 5)
-			hitbox.rotation_degrees = 107.7
+			hitbox.position = Vector2(9, 2)
+			hitbox.rotation_degrees = 47.7
 		else:
 			#se
 			hitbox.position = Vector2(8, 14)
@@ -115,13 +115,13 @@ func update_hitbox_direction():
 
 	else:
 		#nw
-		if last_direction.y < 0:
-			hitbox.position = Vector2(-7, 7)
-			hitbox.rotation_degrees = 107.7
+		if last_y_direction < 0:
+			hitbox.position = Vector2(-3, 7)
+			hitbox.rotation_degrees = 127.7
 		else:
 		#sw
-			hitbox.position = Vector2(-5, 14)
-		hitbox.rotation_degrees = 107.7
+			hitbox.position = Vector2(-9, 7)
+			hitbox.rotation_degrees = 252.8
 			
 
 func update_idle():

@@ -27,6 +27,8 @@ window/stretch/scale_mode="integer"
 
 npcs=""
 player=""
+enemy=""
+spawners=""
 
 [gui]
 

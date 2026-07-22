@@ -1,7 +1,6 @@
 extends Area2D
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
-	print("player area entered")
 	var player = get_parent()
 
 	var knockback = (player.global_position - area.global_position).normalized()

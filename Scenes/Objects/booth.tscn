@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://ckv4ykifoeidp"]
 
+[ext_resource type="Script" uid="uid://bhbdk2a38ergy" path="res://Scripts/Objects/booth.gd" id="1_rg0fs"]
+
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_e0lb0"]
 points = PackedVector2Array(-2.051, -12.992, 10.439, -0.185, 7.687, 17.49, -4.802, 4.684)
 
 [node name="Booth" type="Node2D" unique_id=1170855833]
+script = ExtResource("1_rg0fs")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=554180535]
 
@@ -12,3 +15,5 @@ position = Vector2(8, 14)
 rotation = 1.8797196
 shape = SubResource("ConvexPolygonShape2D_e0lb0")
 debug_color = Color(1, 0, 0.10958373, 0.41960785)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
