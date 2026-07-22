@@ -130,8 +130,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Npcs" type="CharacterBody2D" unique_id=1718176889 groups=["npcs"]]
+[node name="Npcs" type="CharacterBody2D" unique_id=1718176889 node_paths=PackedStringArray("navigation_agent") groups=["npcs"]]
 script = ExtResource("1_wvuxs")
+navigation_agent = NodePath("NavigationAgent2D")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1069235581]
 collision_layer = 2
@@ -157,5 +158,7 @@ position = Vector2(0, -20)
 sprite_frames = SubResource("SpriteFrames_khvpl")
 animation = &"convo"
 frame_progress = 0.8923865
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1996609561]
 
 [connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_hurtbox_area_entered"]

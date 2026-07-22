@@ -5,15 +5,25 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_cfmdu"]
 radius = 4.0
 
+[sub_resource type="Gradient" id="Gradient_hbw2t"]
+offsets = PackedFloat32Array(0, 0.7878788, 0.959596, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.06860713, 0.06860713, 0.06860713, 1, 0.44949496, 0.44949496, 0.44949496, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8cp46"]
+gradient = SubResource("Gradient_hbw2t")
+
 [node name="Bullet" type="Area2D" unique_id=883874890]
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_cvsuj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334781309]
+scale = Vector2(1, 0.6400002)
 shape = SubResource("CircleShape2D_cfmdu")
 debug_color = Color(2.6321505e-08, 0.056600854, 0.0011945902, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1241522402]
+scale = Vector2(0.11364573, 0.07650799)
+texture = SubResource("GradientTexture2D_8cp46")
 
 [connection signal="area_entered" from="." to="." method="_on_body_entered"]

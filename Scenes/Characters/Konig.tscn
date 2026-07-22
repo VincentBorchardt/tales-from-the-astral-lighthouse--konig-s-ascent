@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d326dwdiail2n" path="res://Assets/Art/SpriteSheets/konig_walk_W.png" id="5_0pryh"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_0pryh"]
-points = PackedVector2Array(-2.051, -12.992, 10.439, -0.185, 7.687, 17.49, -4.802, 4.684)
+points = PackedVector2Array(-10.230589, -7.7029266, 2.763811, -8.08464, 3.4391432, 14.905447, -9.555256, 15.287159)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cdq7x"]
 atlas = ExtResource("2_4gd6k")
@@ -508,6 +508,7 @@ size = Vector2(12, 21.5)
 radius = 5.0
 
 [node name="Konig" type="CharacterBody2D" unique_id=2108258614 groups=["player"]]
+motion_mode = 1
 script = ExtResource("1_w4f7w")
 MOTION_SPEED = 65
 
@@ -515,14 +516,14 @@ MOTION_SPEED = 65
 script = ExtResource("2_cfmdu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1098175845]
-position = Vector2(8, 14)
+position = Vector2(7.999999, 13.999999)
 rotation = 1.8797196
 shape = SubResource("ConvexPolygonShape2D_0pryh")
 debug_color = Color(1, 0, 0.10958373, 0.41960785)
 
 [node name="Animations" type="AnimatedSprite2D" parent="." unique_id=1251738850]
 sprite_frames = SubResource("SpriteFrames_4gd6k")
-animation = &"walk_ne"
+animation = &"attack_sw"
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=753422830]
 visible = false

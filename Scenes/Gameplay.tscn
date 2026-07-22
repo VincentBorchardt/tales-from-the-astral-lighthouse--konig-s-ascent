@@ -1,34 +1,84 @@
 [gd_scene format=3 uid="uid://b8hjbo212hl6k"]
 
+[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Objects/gameplay.gd" id="1_mofsa"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="1_yijg0"]
 [ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npcs.tscn" id="2_tdndw"]
-[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="3_tdndw"]
+[ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="4_ovofm"]
+[ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="5_xwjbm"]
+[ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_u8j7u"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_pp5cw"]
+vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(170, 46, 327, 128, 173, 208, 13, 123)])
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8j7u"]
+texture = ExtResource("6_u8j7u")
+texture_region_size = Vector2i(320, 240)
+use_texture_padding = false
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_khvpl"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(320, 240)
+sources/2 = SubResource("TileSetAtlasSource_u8j7u")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khvpl"]
+size = Vector2(20, 388)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pp5cw"]
+size = Vector2(348, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yewy0"]
+size = Vector2(20, 288)
 
 [node name="Gameplay" type="Node2D" unique_id=540265773]
 y_sort_enabled = true
+script = ExtResource("1_mofsa")
+waves = Array[PackedScene]([ExtResource("5_xwjbm")])
+booth_scene = ExtResource("4_ovofm")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1814355913]
+position = Vector2(-2, 12)
+navigation_polygon = SubResource("NavigationPolygon_pp5cw")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1077169083]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_khvpl")
 
 [node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("1_yijg0")]
-position = Vector2(161, 96)
+position = Vector2(230, 109)
 
-[node name="Npcs" parent="." unique_id=1718176889 instance=ExtResource("2_tdndw")]
-position = Vector2(115, 147)
+[node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("2_tdndw")]
+position = Vector2(49, 126)
+movement_target = NodePath("../BoothSpawn")
 
-[node name="Portal" parent="." unique_id=995226439 instance=ExtResource("3_tdndw")]
-position = Vector2(190, 142)
-spawn_delay = 3
-appear_delay = 0
+[node name="BoothSpawn" type="Marker2D" parent="." unique_id=1073889898]
+position = Vector2(160, 128)
 
-[node name="Portal2" parent="." unique_id=1868534537 instance=ExtResource("3_tdndw")]
-position = Vector2(122, 105)
-spawn_delay = 6
-appear_delay = 3
+[node name="WaveTimer" type="Timer" parent="." unique_id=1601150292]
+wait_time = 5.0
 
-[node name="Portal3" parent="." unique_id=1004609621 instance=ExtResource("3_tdndw")]
-position = Vector2(88, 66)
-spawn_delay = 10
-appear_delay = 7
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1943110054]
 
-[node name="Portal4" parent="." unique_id=1890233396 instance=ExtResource("3_tdndw")]
-position = Vector2(221, 70)
-spawn_delay = 13
-appear_delay = 10
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2077102428]
+position = Vector2(44.000004, 103.00001)
+rotation = 1.1220708
+shape = SubResource("RectangleShape2D_khvpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1981613607]
+position = Vector2(271, 101.000015)
+rotation = 0.45270494
+shape = SubResource("RectangleShape2D_pp5cw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1055920144]
+position = Vector2(247, 182.00002)
+rotation = 1.1130205
+shape = SubResource("RectangleShape2D_yewy0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2053788878]
+position = Vector2(124, 204.99998)
+rotation = 2.0417528
+shape = SubResource("RectangleShape2D_yewy0")
