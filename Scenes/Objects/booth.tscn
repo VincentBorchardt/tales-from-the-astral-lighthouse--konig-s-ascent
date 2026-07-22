@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ckv4ykifoeidp"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_e0lb0"]
+points = PackedVector2Array(-2.051, -12.992, 10.439, -0.185, 7.687, 17.49, -4.802, 4.684)
+
+[node name="Booth" type="Node2D" unique_id=1170855833]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=554180535]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=689205343]
+position = Vector2(8, 14)
+rotation = 1.8797196
+shape = SubResource("ConvexPolygonShape2D_e0lb0")
+debug_color = Color(1, 0, 0.10958373, 0.41960785)

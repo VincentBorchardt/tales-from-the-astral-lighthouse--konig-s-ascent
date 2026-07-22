@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://brogcnqi8f1ko"]
+
+[ext_resource type="Script" uid="uid://b0effe0hugl2b" path="res://Scenes/Objects/random_spawner.gd" id="1_jrea7"]
+[ext_resource type="PackedScene" uid="uid://bbl3771omgv7k" path="res://Scenes/Characters/enemy.tscn" id="2_8hx4r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_khvpl"]
+radius = 21.023796
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khvpl"]
+size = Vector2(290.4986, 214.54736)
+
+[node name="RandomSpawner" type="Node2D" unique_id=610291061]
+script = ExtResource("1_jrea7")
+portal_scene = ExtResource("2_8hx4r")
+
+[node name="EnemySpawnTimer" type="Timer" parent="." unique_id=1682985516]
+process_callback = 0
+wait_time = 2.242
+autostart = true
+
+[node name="SpawnCheck" type="Area2D" parent="." unique_id=1091662690]
+visible = false
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnCheck" unique_id=137861152]
+shape = SubResource("CircleShape2D_khvpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=80833762]
+position = Vector2(161, 119.99999)
+rotation = -0.0825919
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_khvpl")
+
+[connection signal="timeout" from="EnemySpawnTimer" to="." method="spawn_portal"]

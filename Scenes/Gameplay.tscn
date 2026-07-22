@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b8hjbo212hl6k"]
+
+[ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="1_yijg0"]
+[ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npcs.tscn" id="2_tdndw"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="3_tdndw"]
+
+[node name="Gameplay" type="Node2D" unique_id=540265773]
+y_sort_enabled = true
+
+[node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("1_yijg0")]
+position = Vector2(161, 96)
+
+[node name="Npcs" parent="." unique_id=1718176889 instance=ExtResource("2_tdndw")]
+position = Vector2(115, 147)
+
+[node name="Portal" parent="." unique_id=995226439 instance=ExtResource("3_tdndw")]
+position = Vector2(190, 142)
+spawn_delay = 3
+appear_delay = 0
+
+[node name="Portal2" parent="." unique_id=1868534537 instance=ExtResource("3_tdndw")]
+position = Vector2(122, 105)
+spawn_delay = 6
+appear_delay = 3
+
+[node name="Portal3" parent="." unique_id=1004609621 instance=ExtResource("3_tdndw")]
+position = Vector2(88, 66)
+spawn_delay = 10
+appear_delay = 7
+
+[node name="Portal4" parent="." unique_id=1890233396 instance=ExtResource("3_tdndw")]
+position = Vector2(221, 70)
+spawn_delay = 13
+appear_delay = 10
