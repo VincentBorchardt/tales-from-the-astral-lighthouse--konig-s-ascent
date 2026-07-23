@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bq2rtmcb8el5w"]
+
+[ext_resource type="Script" uid="uid://dmfi75hnj717i" path="res://Scripts/Cutscenes/title_screen.gd" id="1_wbqsg"]
+[ext_resource type="Texture2D" uid="uid://c2wexfvukpebf" path="res://Assets/Art/UI/MenuPointer.png" id="2_xhham"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xhham"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8iyrd"]
+
+[node name="TitleScreen" type="Control" unique_id=613649742]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wbqsg")
+
+[node name="BeginMarker" type="Sprite2D" parent="." unique_id=2130014828]
+position = Vector2(80, 228)
+texture = ExtResource("2_xhham")
+
+[node name="BeginButton" type="Button" parent="." unique_id=662329368]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 215.0
+offset_right = 152.0
+offset_bottom = 240.0
+focus_neighbor_left = NodePath("../OptionButton")
+focus_neighbor_top = NodePath("../OptionButton")
+focus_neighbor_right = NodePath("../OptionButton")
+focus_neighbor_bottom = NodePath("../OptionButton")
+focus_next = NodePath("../OptionButton")
+focus_previous = NodePath("../OptionButton")
+accessibility_name = "Begin Climb"
+theme_override_colors/font_color = Color(0.8862745, 0.3019608, 0.3882353, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xhham")
+text = "Begin Climb"
+flat = true
+
+[node name="OptionMarker" type="Sprite2D" parent="." unique_id=639870371]
+position = Vector2(175, 228)
+texture = ExtResource("2_xhham")
+
+[node name="OptionButton" type="Button" parent="." unique_id=1460073230]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 215.0
+offset_right = 228.0
+offset_bottom = 240.0
+focus_neighbor_left = NodePath("../BeginButton")
+focus_neighbor_top = NodePath("../BeginButton")
+focus_neighbor_right = NodePath("../BeginButton")
+focus_neighbor_bottom = NodePath("../BeginButton")
+focus_next = NodePath("../BeginButton")
+focus_previous = NodePath("../BeginButton")
+accessibility_name = "Options"
+theme_override_colors/font_color = Color(0.8862745, 0.3019608, 0.3882353, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8iyrd")
+text = "Options"
+flat = true

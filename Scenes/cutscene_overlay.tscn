@@ -24,6 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_x21fx"]
 resource_name = "message_box_in"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -51,10 +52,41 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_lit3v"]
+resource_name = "message_box_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_sgna5"), ExtResource("4_0o6c1"), ExtResource("3_i5ixn"), ExtResource("2_lit3v")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"end_cutscene"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lsy2e"]
 _data = {
 &"RESET": SubResource("Animation_qjxta"),
-&"message_box_in": SubResource("Animation_x21fx")
+&"message_box_in": SubResource("Animation_x21fx"),
+&"message_box_out": SubResource("Animation_lit3v")
 }
 
 [node name="CutsceneOverlay" type="Control" unique_id=1536554858]

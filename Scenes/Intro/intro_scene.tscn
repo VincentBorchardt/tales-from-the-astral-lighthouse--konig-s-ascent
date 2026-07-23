@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://b02hw8dmafhlq" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN15.png" id="39_l3nhm"]
 [ext_resource type="Texture2D" uid="uid://dvjs4i14x7tqf" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN16.png" id="40_l5qq1"]
 [ext_resource type="AudioStream" uid="uid://qh5vbdb4d6xf" path="res://Assets/Audio/Music/IntroTheme_wip2.mp3" id="41_1db4j"]
+[ext_resource type="PackedScene" uid="uid://bq2rtmcb8el5w" path="res://Scenes/Intro/title_screen.tscn" id="42_8df33"]
 
 [sub_resource type="Animation" id="Animation_y1jjb"]
 length = 0.001
@@ -134,10 +135,24 @@ tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.19999999, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6),
+"times": PackedFloat32Array(0, 0.19999999, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 2.5, 2.6, 2.7, 2.8, 2.9, 3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("14_lf7j1"), ExtResource("25_1db4j"), ExtResource("26_8df33"), ExtResource("27_16jwr"), ExtResource("28_u16qi"), ExtResource("29_nwxsa"), ExtResource("30_ai3kl"), ExtResource("31_7cwih"), ExtResource("32_r0q46"), ExtResource("33_78dsx"), ExtResource("34_thnas"), ExtResource("35_my4te"), ExtResource("36_gph1r"), ExtResource("37_rlw87"), ExtResource("38_jslfc"), ExtResource("39_l3nhm"), ExtResource("40_l5qq1")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_title_screen"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b0ob4"]
@@ -171,5 +186,8 @@ libraries/ = SubResource("AnimationLibrary_b0ob4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=455029277]
 stream = ExtResource("41_1db4j")
+
+[node name="TitleScreen" parent="." unique_id=613649742 instance=ExtResource("42_8df33")]
+visible = false
 
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
