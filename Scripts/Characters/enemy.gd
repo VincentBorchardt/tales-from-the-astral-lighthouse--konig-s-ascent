@@ -14,6 +14,7 @@ var state = State.SHOOT
 @export var bullet_scene: PackedScene
 @onready var muzzle = $Marker2D
 @onready var hurtbox = $Hurtbox/CollisionShape2D
+@onready var enemy_anim = $AnimatedSprite2D
 
 var player
 
@@ -23,20 +24,50 @@ func _ready():
 
 func _physics_process(delta):
 	match state:
+		State.SHOOT:
+			var direction = (player.global_position - global_position).normalized()
+			enemy_anim.play(get_idle_animation(direction))
 		State.KNOCKBACK:
 			hurtbox.disabled = true
 			move_and_slide()
 			var collision = move_and_collide(velocity)
 
 			if collision:
+				velocity = Vector2.ZERO
+				enemy_anim.play("enemy_death")
+				await enemy_anim.animation_finished
 				died.emit()
 				queue_free()
 
 
 func take_hit(direction):
 	velocity = direction * knockback_speed
+	enemy_anim.play(get_knockback_animation(direction))
 	state = State.KNOCKBACK
 
+func get_knockback_animation(direction):
+	if direction.x >= 0:
+		if direction.y < 0:
+			return "enemy_punched_sw"
+		else:
+			return "enemy_punched_nw"
+	else:
+		if direction.y < 0:
+			return "enemy_punched_se"
+		else:
+			return "enemy_punched_ne"
+
+func get_idle_animation(direction):
+	if direction.x >= 0:
+		if direction.y < 0:
+			return "enemy_base_ne"
+		else:
+			return "enemy_base_se"
+	else:
+		if direction.y < 0:
+			return "enemy_base_nw"
+		else:
+			return "enemy_base_sw"
 
 func shoot():
 		var bullet = bullet_scene.instantiate()
