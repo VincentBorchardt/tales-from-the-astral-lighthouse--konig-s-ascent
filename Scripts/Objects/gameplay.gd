@@ -24,15 +24,13 @@ func _ready():
 	print("starting level now")
 	wave_timer.one_shot = true
 	wave_timer.timeout.connect(play_wave_animation)
-
-	play_wave_animation()
+	wave_timer.start(2)
 
 func play_wave_animation():
 	if current_wave_animation >= waves.size():
 		start_next_wave()
 	else:
 		print("starting next wave")
-		wave_animation.visible = true
 		wave_anim_player.play(wave_animations[current_wave_animation])
 		current_wave_animation += 1
 

@@ -7,8 +7,11 @@ enum State {
 }
 
 @onready var hitbox = $Hitbox/CollisionShape2D
+@onready var hurtbox = $Hurtbox/CollisionShape2D
 @onready var animations = $Animations
 @onready var timer = $Knockback
+@export var ACCELERATION  = 50
+@export var FRICTION  = 20
 @export var MOTION_SPEED = 40
 @export var KNOCKBACK_SPEED = 100
 @export var KNOCKBACK_TIME = 0.05
@@ -25,7 +28,7 @@ func _ready():
 func _physics_process(delta):
 	match state:
 		State.MOVE:
-			move_state()
+			move_state(delta)
 			
 		State.KNOCKBACK:
 			knockback_state()
@@ -33,26 +36,25 @@ func _physics_process(delta):
 		State.ATTACK:
 			attack_state()
 
-func move_state():
+func move_state(delta):
 	var motion = Vector2()
 	motion.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	motion.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	motion.y /= 2
 	motion = motion.normalized() * MOTION_SPEED
+	var velocity_weight: float = delta * (ACCELERATION if motion.x or motion.y else FRICTION)
 	animations.play(get_walk_animation())
 	if motion.x != 0:
 		last_x_direction = sign(motion.x)
-
 	if motion.y != 0:
 		last_y_direction = sign(motion.y)
-
 	if motion != Vector2.ZERO:
 		last_direction = motion.normalized()
 	else:
 		update_idle()
 	if Input.is_action_just_pressed("attack"):
 		start_attack()
-	velocity = motion
+	velocity = velocity.lerp(motion, velocity_weight)
 	move_and_slide()
 
 
@@ -68,9 +70,11 @@ func _on_timer_timeout():
 	timer.stop()
 
 func take_hit(direction):
-	state = State.KNOCKBACK
-	knockback_velocity = direction.normalized() * KNOCKBACK_SPEED
-	timer.start(KNOCKBACK_TIME)
+	if state == State.MOVE:
+		hurtbox.disabled = true
+		state = State.KNOCKBACK
+		knockback_velocity = direction.normalized() * KNOCKBACK_SPEED
+		timer.start(KNOCKBACK_TIME)
 
 
 func start_attack():
