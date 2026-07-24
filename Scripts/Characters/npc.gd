@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Npc extends CharacterBody2D
 
 enum State {
 	MOVE,
