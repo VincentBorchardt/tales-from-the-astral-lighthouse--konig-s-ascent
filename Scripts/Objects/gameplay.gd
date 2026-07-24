@@ -7,32 +7,33 @@ var wave_animations = [
 ]
 
 @export var waves: Array[PackedScene]
+@export var next_level: PackedScene
 @export var booth_scene: PackedScene
 
 @onready var booth_spawn = $BoothSpawn
 @onready var wave_timer = $WaveTimer
 @onready var wave_animation = $WaveAnimation
-
-
 var current_wave := -1
 var current_wave_scene: Node2D
 var enemies_remaining := 0
 var current_wave_animation = 0
 
 func _ready():
+	print("starting level now")
 	wave_timer.one_shot = true
 	wave_timer.timeout.connect(play_wave_animation)
 
 	play_wave_animation()
 
 func play_wave_animation():
-	if current_wave <= waves.size() -1:
+	if current_wave_animation >= waves.size():
+		start_next_wave()
+	else:
 		print("starting next wave")
 		wave_animation.visible = true
 		wave_animation.play(wave_animations[current_wave_animation])
 		current_wave_animation += 1
-	else:
-		start_next_wave()
+
 #TODO: set everything here that needs to be at the start of a round or when all waves or finished
 func start_next_wave():
 	wave_animation.visible = false
@@ -42,6 +43,7 @@ func start_next_wave():
 	if current_wave >= waves.size():
 		print("all waves complete")
 		var booth = booth_scene.instantiate()
+		booth.player_entered.connect(end_level)
 		booth.global_position = booth_spawn.global_position
 		add_child(booth)
 		return
@@ -65,21 +67,11 @@ func enemy_died():
 	if enemies_remaining <= 0:
 		wave_complete()
 
+func end_level():
+	print("starting next level")
+	get_tree().change_scene_to_packed(next_level)
 
 func wave_complete():
 	print("wave complete")
 	current_wave_scene.queue_free()
 	wave_timer.start()
-
-
-# TODO If we're creating NPCs via code somehow, this will need to be connected via code
-func _on_npcs_start_npc_conversation(messages: Array[Message]) -> void:
-	#TODO pause the gameplay scene somehow; look into this
-	$CutsceneOverlay.start_cutscene(messages)
-
-
-func _on_cutscene_overlay_cutscene_ended() -> void:
-	# TODO unpause the gameplay
-	# TODO send the NPC to the booth--needs a way to tell that,
-	# maybe with something sent in the first signal?
-	pass # Replace with function body.
