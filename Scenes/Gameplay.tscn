@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/SpriteSheets/Wave_1.png" id="7_xwjbm"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/SpriteSheets/Wave_2.png" id="9_uotjs"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/SpriteSheets/Wave_3.png" id="10_vu60g"]
+[ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_w5l26"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pp5cw"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -366,4 +367,9 @@ shape = SubResource("RectangleShape2D_yewy0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=927211537]
 
+[node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("12_w5l26")]
+visible = false
+
+[connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
 [connection signal="animation_finished" from="WaveAnimation" to="." method="start_next_wave"]
+[connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

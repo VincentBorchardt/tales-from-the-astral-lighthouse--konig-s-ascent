@@ -12,6 +12,8 @@ var wave_animations = [
 @onready var booth_spawn = $BoothSpawn
 @onready var wave_timer = $WaveTimer
 @onready var wave_animation = $WaveAnimation
+
+
 var current_wave := -1
 var current_wave_scene: Node2D
 var enemies_remaining := 0
@@ -68,3 +70,16 @@ func wave_complete():
 	print("wave complete")
 	current_wave_scene.queue_free()
 	wave_timer.start()
+
+
+# TODO If we're creating NPCs via code somehow, this will need to be connected via code
+func _on_npcs_start_npc_conversation(messages: Array[Message]) -> void:
+	#TODO pause the gameplay scene somehow; look into this
+	$CutsceneOverlay.start_cutscene(messages)
+
+
+func _on_cutscene_overlay_cutscene_ended() -> void:
+	# TODO unpause the gameplay
+	# TODO send the NPC to the booth--needs a way to tell that,
+	# maybe with something sent in the first signal?
+	pass # Replace with function body.

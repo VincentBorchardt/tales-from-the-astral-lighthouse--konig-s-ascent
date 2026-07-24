@@ -5,10 +5,16 @@ enum State {
 	CONVO,
 	IDLE
 }
+
+# TODO call this when you talk to the NPC
+signal start_npc_conversation(messages)
+
 @export var movement_speed = 100.0
 @export var movement_target : Node2D
 @export var navigation_agent : NavigationAgent2D
 @export var health = 5
+@export var conversation : Array[Message]
+
 @onready var idle_anim = $Animation
 var state = State.IDLE
 
