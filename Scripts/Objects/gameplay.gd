@@ -13,6 +13,8 @@ var wave_animations = [
 @onready var booth_spawn = $BoothSpawn
 @onready var wave_timer = $WaveTimer
 @onready var wave_animation = $WaveAnimation
+@onready var wave_anim_player = $AnimationPlayer
+
 var current_wave := -1
 var current_wave_scene: Node2D
 var enemies_remaining := 0
@@ -31,7 +33,7 @@ func play_wave_animation():
 	else:
 		print("starting next wave")
 		wave_animation.visible = true
-		wave_animation.play(wave_animations[current_wave_animation])
+		wave_anim_player.play(wave_animations[current_wave_animation])
 		current_wave_animation += 1
 
 #TODO: set everything here that needs to be at the start of a round or when all waves or finished
@@ -68,7 +70,10 @@ func enemy_died():
 		wave_complete()
 
 func end_level():
-	print("starting next level")
+	call_deferred("level_change")
+
+
+func level_change():
 	get_tree().change_scene_to_packed(next_level)
 
 func wave_complete():

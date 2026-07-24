@@ -5,6 +5,7 @@ extends Node2D
 @export var appear_delay := 5.0
 @onready var spawn_timer = $SpawnTimer
 @onready var Appear_timer = $AppearTimer
+@onready var portal_anim = $AnimatedSprite2D
 
 func _ready():
 	visible = false
@@ -16,11 +17,8 @@ func _ready():
 
 func update_visibility():
 	visible = true
-	spawn_timer.wait_time = spawn_delay
-	spawn_timer.one_shot = true
-	spawn_timer.timeout.connect(spawn_enemy)
-	spawn_timer.start()
-	
+	portal_anim.play("portal")
+
 
 func spawn_enemy():
 	var enemy = enemy_scene.instantiate()
