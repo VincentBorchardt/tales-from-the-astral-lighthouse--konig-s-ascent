@@ -1,24 +1,39 @@
 extends Node2D
 
+var wave_animations = [
+	"wave_1",
+	"wave_2",
+	"wave_3"
+]
+
 @export var waves: Array[PackedScene]
 @export var booth_scene: PackedScene
 
 @onready var booth_spawn = $BoothSpawn
 @onready var wave_timer = $WaveTimer
-
+@onready var wave_animation = $WaveAnimation
 var current_wave := -1
 var current_wave_scene: Node2D
 var enemies_remaining := 0
-
+var current_wave_animation = 0
 
 func _ready():
 	wave_timer.one_shot = true
-	wave_timer.timeout.connect(start_next_wave)
+	wave_timer.timeout.connect(play_wave_animation)
 
-	start_next_wave()
+	play_wave_animation()
 
+func play_wave_animation():
+	if current_wave <= waves.size() -1:
+		print("starting next wave")
+		wave_animation.visible = true
+		wave_animation.play(wave_animations[current_wave_animation])
+		current_wave_animation += 1
+	else:
+		start_next_wave()
 #TODO: set everything here that needs to be at the start of a round or when all waves or finished
 func start_next_wave():
+	wave_animation.visible = false
 	current_wave += 1
 
 	#TODO: this is where end of round stuff happens
@@ -52,5 +67,4 @@ func enemy_died():
 func wave_complete():
 	print("wave complete")
 	current_wave_scene.queue_free()
-	
 	wave_timer.start()

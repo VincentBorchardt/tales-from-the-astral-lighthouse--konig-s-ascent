@@ -8,12 +8,12 @@ script = ExtResource("1_5230x")
 enemy_count = 4
 
 [node name="Portal" parent="." unique_id=995226439 instance=ExtResource("1_w4pap")]
-position = Vector2(262, 157)
+position = Vector2(125, 109)
 spawn_delay = 3.0
 appear_delay = 0.1
 
 [node name="Portal2" parent="." unique_id=1193708322 instance=ExtResource("1_w4pap")]
-position = Vector2(188, 160)
+position = Vector2(110, 141)
 spawn_delay = 7.0
 
 [node name="Portal3" parent="." unique_id=1654507507 instance=ExtResource("1_w4pap")]
@@ -22,6 +22,6 @@ spawn_delay = 11.0
 appear_delay = 9.0
 
 [node name="Portal4" parent="." unique_id=879418495 instance=ExtResource("1_w4pap")]
-position = Vector2(293, 85)
+position = Vector2(157, 106)
 spawn_delay = 13.0
 appear_delay = 11.0
