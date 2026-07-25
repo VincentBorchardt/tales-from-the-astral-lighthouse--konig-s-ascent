@@ -14,14 +14,17 @@ var wave_animations = [
 @onready var wave_timer = $WaveTimer
 @onready var wave_animation = $WaveAnimation
 @onready var wave_anim_player = $AnimationPlayer
+@onready var cutscene_overlay = $CutsceneOverlay
 
 var current_wave := -1
 var current_wave_scene: Node2D
 var enemies_remaining := 0
 var current_wave_animation = 0
+var in_calm_state = false
 
 func _ready():
 	print("starting level now")
+	in_calm_state = false
 	wave_timer.one_shot = true
 	wave_timer.timeout.connect(play_wave_animation)
 	wave_timer.start(2)
@@ -42,6 +45,7 @@ func start_next_wave():
 	#TODO: this is where end of round stuff happens
 	if current_wave >= waves.size():
 		print("all waves complete")
+		in_calm_state = true
 		var booth = booth_scene.instantiate()
 		booth.player_entered.connect(end_level)
 		booth.global_position = booth_spawn.global_position
@@ -78,3 +82,13 @@ func wave_complete():
 	print("wave complete")
 	current_wave_scene.queue_free()
 	wave_timer.start()
+
+
+func _on_npcs_start_npc_conversation(messages: Variant) -> void:
+	# TODO pause gameplay
+	cutscene_overlay.start_cutscene(messages)
+
+
+func _on_cutscene_overlay_cutscene_ended() -> void:
+	# TODO unpause gameplay
+	pass # Replace with function body.
