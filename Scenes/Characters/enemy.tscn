@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://dqmd6ukds7wle" path="res://Assets/Art/SpriteSheets/Enemy/enemy_punched_SW.png" id="12_j6gg3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pp5cw"]
-radius = 8.631031
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvsuj"]
 radius = 8.0
@@ -578,6 +577,8 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_khvpl"]
+
 [node name="Enemy" type="CharacterBody2D" unique_id=845320837 groups=["enemy"]]
 script = ExtResource("1_lsx3x")
 knockback_speed = 3.0
@@ -604,6 +605,15 @@ autostart = true
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_pp5cw")
 animation = &"enemy_base_se"
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1031822175]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1862441194]
+shape = SubResource("CircleShape2D_khvpl")
+disabled = true
+debug_color = Color(0.74969727, 0.46035427, 9.62615e-07, 0.41960785)
 
 [connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

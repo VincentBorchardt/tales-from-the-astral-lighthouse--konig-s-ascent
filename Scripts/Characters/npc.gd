@@ -16,7 +16,9 @@ signal start_npc_conversation(messages)
 @export var conversation : Array[Message]
 
 @onready var idle_anim = $Animation
+@onready var convo_anim = $Convo
 var state = State.IDLE
+var player_in_range = false
 
 func _physics_process(delta):
 	match state:
@@ -24,8 +26,9 @@ func _physics_process(delta):
 			idle_state()
 		State.MOVE:
 			move_state()
-		State.MOVE:
+		State.CONVO:
 			convo_state()
+
 
 func move_state():
 	if navigation_agent.is_navigation_finished():
@@ -42,7 +45,8 @@ func idle_state():
 	idle_anim.play("idle")
 
 func convo_state():
-	return
+	if Input.is_action_just_pressed("advance_text"):
+		start_npc_conversation.emit(conversation)
 
 func move_to_booth():
 	navigation_agent.path_desired_distance = 4.0
@@ -63,3 +67,15 @@ func take_hit():
 	health -= 1
 	if health == 0:
 		queue_free()
+
+func _on_interact_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player") and state == State.CONVO:
+		player_in_range = true
+		convo_anim.visible = true
+		convo_anim.play("convo")
+
+func _on_interact_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player") and state == State.CONVO:
+		player_in_range = false
+		convo_anim.visible = false
+		

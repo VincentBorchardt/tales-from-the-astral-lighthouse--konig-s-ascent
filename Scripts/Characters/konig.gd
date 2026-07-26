@@ -54,11 +54,13 @@ func move_state(delta):
 		update_idle()
 	if Input.is_action_just_pressed("attack"):
 		start_attack()
-	velocity = velocity.lerp(motion, velocity_weight)
+	velocity = velocity.lerp(motion, velocity_weight * delta)
 	move_and_slide()
 
 
 func knockback_state():
+	if state == State.ATTACK:
+		return
 	velocity = knockback_velocity
 	move_and_slide()
 	hitbox.disabled = true
@@ -71,7 +73,6 @@ func _on_timer_timeout():
 
 func take_hit(direction):
 	if state == State.MOVE:
-		hurtbox.disabled = true
 		state = State.KNOCKBACK
 		knockback_velocity = direction.normalized() * KNOCKBACK_SPEED
 		timer.start(KNOCKBACK_TIME)
