@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dn3lmjckf6f6t" path="res://Assets/Art/SpriteSheets/convo npc.png" id="4_m1gjq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvuxs"]
-size = Vector2(6, 14)
+size = Vector2(12, 25)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mofsa"]
 radius = 5.3851647
@@ -120,7 +120,7 @@ animations = [{
 "duration": 5.0,
 "texture": SubResource("AtlasTexture_x6m70")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"convo",
 "speed": 10.0
 }, {
@@ -130,17 +130,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pp5cw"]
+radius = 29.017237
+
 [node name="Npc" type="CharacterBody2D" unique_id=1718176889 node_paths=PackedStringArray("navigation_agent") groups=["npcs"]]
 script = ExtResource("1_wvuxs")
 navigation_agent = NodePath("NavigationAgent2D")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1069235581]
 collision_layer = 2
-collision_mask = 8
+collision_mask = 24
 script = ExtResource("1_wudbq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1231253204]
-position = Vector2(0, -3)
+position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_wvuxs")
 debug_color = Color(0.91312116, 0.27376494, 0.27984765, 0.41960785)
 
@@ -151,15 +154,25 @@ shape = SubResource("CircleShape2D_mofsa")
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1818146974]
 sprite_frames = SubResource("SpriteFrames_pp5cw")
 animation = &"idle"
-frame_progress = 0.3005508
+frame_progress = 0.6318201
 
 [node name="Convo" type="AnimatedSprite2D" parent="." unique_id=1418114809]
 visible = false
 position = Vector2(0, -20)
 sprite_frames = SubResource("SpriteFrames_khvpl")
 animation = &"convo"
-frame_progress = 0.8923865
+frame = 5
+frame_progress = 1.0
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1996609561]
 
+[node name="Interact" type="Area2D" parent="." unique_id=1936323585]
+visible = false
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact" unique_id=611034364]
+shape = SubResource("CircleShape2D_pp5cw")
+
 [connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]

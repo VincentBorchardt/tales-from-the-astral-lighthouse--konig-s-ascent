@@ -15,6 +15,7 @@ var state = State.SHOOT
 @onready var muzzle = $Marker2D
 @onready var hurtbox = $Hurtbox/CollisionShape2D
 @onready var enemy_anim = $AnimatedSprite2D
+@onready var hitbox = $Hitbox/CollisionShape2D
 
 var player
 
@@ -29,6 +30,7 @@ func _physics_process(delta):
 			enemy_anim.play(get_idle_animation(direction))
 		State.KNOCKBACK:
 			hurtbox.disabled = true
+			hitbox.disabled = false
 			move_and_slide()
 			var collision = move_and_collide(velocity)
 

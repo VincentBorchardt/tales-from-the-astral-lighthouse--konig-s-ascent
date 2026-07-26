@@ -5,7 +5,7 @@
 
 [node name="Wave3" type="Node2D" unique_id=45031636]
 script = ExtResource("1_vioyo")
-enemy_count = 4
+enemy_count = 6
 
 [node name="Portal" parent="." unique_id=995226439 instance=ExtResource("2_cjyj1")]
 position = Vector2(188, 133)
@@ -15,14 +15,23 @@ appear_delay = 0.1
 [node name="Portal2" parent="." unique_id=1450848306 instance=ExtResource("2_cjyj1")]
 position = Vector2(117, 119)
 spawn_delay = 3.0
-appear_delay = 3.0
 
 [node name="Portal3" parent="." unique_id=1519533652 instance=ExtResource("2_cjyj1")]
 position = Vector2(160, 130)
 spawn_delay = 3.0
-appear_delay = 3.0
+appear_delay = 7.0
 
 [node name="Portal4" parent="." unique_id=1967187011 instance=ExtResource("2_cjyj1")]
 position = Vector2(177, 107)
 spawn_delay = 3.0
-appear_delay = 3.0
+appear_delay = 9.0
+
+[node name="Portal5" parent="." unique_id=25847514 instance=ExtResource("2_cjyj1")]
+position = Vector2(116, 151)
+spawn_delay = 3.0
+appear_delay = 11.0
+
+[node name="Portal6" parent="." unique_id=1900741743 instance=ExtResource("2_cjyj1")]
+position = Vector2(212, 91)
+spawn_delay = 3.0
+appear_delay = 13.0

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://igvnax0jd4xa"]
+
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scenes/Waves/wave.gd" id="1_c3prq"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="2_6i4qv"]
+
+[node name="Wave 7" type="Node2D" unique_id=1656313838]
+script = ExtResource("1_c3prq")
+enemy_count = 16
+
+[node name="Portal" parent="." unique_id=995226439 instance=ExtResource("2_6i4qv")]
+position = Vector2(40, 131)
+appear_delay = 1.0
+
+[node name="Portal2" parent="." unique_id=765965276 instance=ExtResource("2_6i4qv")]
+position = Vector2(67, 146)
+appear_delay = 3.0
+
+[node name="Portal3" parent="." unique_id=1721215829 instance=ExtResource("2_6i4qv")]
+position = Vector2(92, 158)
+
+[node name="Portal4" parent="." unique_id=730504590 instance=ExtResource("2_6i4qv")]
+position = Vector2(117, 141)
+appear_delay = 7.0
+
+[node name="Portal5" parent="." unique_id=1957841632 instance=ExtResource("2_6i4qv")]
+position = Vector2(113, 97)
+appear_delay = 8.0
+
+[node name="Portal6" parent="." unique_id=1595399868 instance=ExtResource("2_6i4qv")]
+position = Vector2(166, 186)
+appear_delay = 8.0
+
+[node name="Portal7" parent="." unique_id=2030274840 instance=ExtResource("2_6i4qv")]
+position = Vector2(205, 156)
+appear_delay = 9.0
+
+[node name="Portal8" parent="." unique_id=352890537 instance=ExtResource("2_6i4qv")]
+position = Vector2(240, 143)
+appear_delay = 11.0
+
+[node name="Portal9" parent="." unique_id=1706455994 instance=ExtResource("2_6i4qv")]
+position = Vector2(205, 116)
+appear_delay = 11.0
+
+[node name="Portal10" parent="." unique_id=1638769614 instance=ExtResource("2_6i4qv")]
+position = Vector2(179, 99)
+appear_delay = 11.0
+
+[node name="Portal11" parent="." unique_id=516995440 instance=ExtResource("2_6i4qv")]
+position = Vector2(154, 79)
+appear_delay = 14.0
+
+[node name="Portal12" parent="." unique_id=1348538205 instance=ExtResource("2_6i4qv")]
+position = Vector2(80, 116)
+appear_delay = 15.0
+
+[node name="Portal13" parent="." unique_id=1610213321 instance=ExtResource("2_6i4qv")]
+position = Vector2(178, 82)
+appear_delay = 17.0
+
+[node name="Portal14" parent="." unique_id=1167461992 instance=ExtResource("2_6i4qv")]
+position = Vector2(273, 131)
+appear_delay = 18.0
+
+[node name="Portal15" parent="." unique_id=948733254 instance=ExtResource("2_6i4qv")]
+position = Vector2(114, 166)
+appear_delay = 18.0
+
+[node name="Portal16" parent="." unique_id=1463932489 instance=ExtResource("2_6i4qv")]
+position = Vector2(200, 173)
+appear_delay = 18.0

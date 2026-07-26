@@ -16,7 +16,7 @@ gradient = SubResource("Gradient_hbw2t")
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_cvsuj")
-SPEED = 200
+SPEED = 150
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334781309]
 scale = Vector2(1, 0.6400002)
