@@ -12,13 +12,14 @@ signal start_npc_conversation(messages)
 @export var movement_speed = 100.0
 @export var movement_target : Node2D
 @export var navigation_agent : NavigationAgent2D
-@export var health = 5
+
 @export var conversation : Array[Message]
 
 @onready var idle_anim = $Animation
 @onready var convo_anim = $Convo
 var state = State.IDLE
 var player_in_range = false
+var health = 3
 
 func _physics_process(delta):
 	match state:

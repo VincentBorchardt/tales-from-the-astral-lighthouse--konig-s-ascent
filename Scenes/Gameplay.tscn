@@ -327,6 +327,9 @@ tile_set = SubResource("TileSet_khvpl")
 
 [node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("1_yijg0")]
 position = Vector2(223, 116)
+ACCELERATION = 50
+FRICTION = 20
+MOTION_SPEED = 65
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("2_tdndw")]
 position = Vector2(49, 126)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://650j77xtdxdt"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Objects/gameplay.gd" id="1_afv7b"]
-[ext_resource type="PackedScene" uid="uid://cy53uc7fxcw6x" path="res://Scenes/Waves/wave_4.tscn" id="2_7r2dd"]
+[ext_resource type="PackedScene" uid="uid://igvnax0jd4xa" path="res://Scenes/Waves/wave_7.tscn" id="2_tjl6l"]
 [ext_resource type="PackedScene" uid="uid://b0ab3h0aes02r" path="res://Scenes/Waves/wave_5.tscn" id="3_k2mw1"]
 [ext_resource type="PackedScene" uid="uid://b7uf646h3wp3r" path="res://Scenes/Waves/wave_6.tscn" id="4_tjl6l"]
 [ext_resource type="PackedScene" uid="uid://bl7t366jaibvd" path="res://Scenes/Levels/level_2.tscn" id="5_7r2dd"]
@@ -575,7 +575,7 @@ _data = {
 [node name="Level1" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_afv7b")
-waves = Array[PackedScene]([ExtResource("2_7r2dd"), ExtResource("3_k2mw1"), ExtResource("4_tjl6l")])
+waves = Array[PackedScene]([ExtResource("2_tjl6l"), ExtResource("3_k2mw1"), ExtResource("4_tjl6l")])
 next_level = ExtResource("5_7r2dd")
 booth_scene = ExtResource("5_3628d")
 
@@ -594,7 +594,12 @@ ACCELERATION = 682
 FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
-position = Vector2(107, 95)
+position = Vector2(152, 101)
+movement_target = NodePath("../BoothSpawn")
+conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
+
+[node name="Npcs2" parent="." unique_id=371942612 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
+position = Vector2(143, 150)
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
 
@@ -641,5 +646,6 @@ messages = Array[ExtResource("10_k2mw1")]([SubResource("Resource_tjl6l")])
 libraries/ = SubResource("AnimationLibrary_7r2dd")
 
 [connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
+[connection signal="start_npc_conversation" from="Npcs2" to="." method="_on_npcs_start_npc_conversation"]
 [connection signal="animation_finished" from="WaveAnimation" to="." method="start_next_wave"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

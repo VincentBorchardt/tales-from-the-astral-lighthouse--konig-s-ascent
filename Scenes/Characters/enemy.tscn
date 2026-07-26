@@ -598,7 +598,7 @@ shape = SubResource("CircleShape2D_cvsuj")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1462256017]
 
 [node name="Timer" type="Timer" parent="." unique_id=280841505]
-wait_time = 0.816
+wait_time = 1.2
 autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383095830]
