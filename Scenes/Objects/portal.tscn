@@ -159,7 +159,12 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Portal" type="Node2D" unique_id=995226439]
+[sub_resource type="CircleShape2D" id="CircleShape2D_i8tnu"]
+radius = 8.0
+
+[node name="Portal" type="CharacterBody2D" unique_id=110448379]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_yjf24")
 enemy_scene = ExtResource("2_j133l")
 
@@ -172,5 +177,8 @@ sprite_frames = SubResource("SpriteFrames_pp5cw")
 animation = &"portal"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1155106503]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1934745322]
+shape = SubResource("CircleShape2D_i8tnu")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="spawn_enemy"]

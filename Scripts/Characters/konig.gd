@@ -80,7 +80,6 @@ func take_hit(direction):
 
 func start_attack():
 	state = State.ATTACK
-	velocity = Vector2.ZERO
 	update_hitbox_direction()
 	hitbox.disabled = false
 	animations.play(get_attack_animation())
