@@ -1,37 +1,56 @@
-[gd_scene format=3 uid="uid://cy53uc7fxcw6x"]
+[gd_scene format=3 uid="uid://cefd7if647b4f"]
 
-[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scenes/Waves/wave.gd" id="1_vioyo"]
-[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="2_cjyj1"]
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Objects/wave.gd" id="1_3ninc"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="1_obd43"]
 
-[node name="Wave3" type="Node2D" unique_id=45031636]
-script = ExtResource("1_vioyo")
-enemy_count = 6
+[node name="Wave 4" type="Node2D" unique_id=884088732]
+script = ExtResource("1_3ninc")
+enemy_count = 12
 
-[node name="Portal" parent="." unique_id=995226439 instance=ExtResource("2_cjyj1")]
-position = Vector2(188, 133)
-spawn_delay = 3.0
-appear_delay = 0.1
+[node name="Portal" parent="." unique_id=995226439 instance=ExtResource("1_obd43")]
+position = Vector2(98, 168)
+appear_delay = 1.0
 
-[node name="Portal2" parent="." unique_id=1450848306 instance=ExtResource("2_cjyj1")]
-position = Vector2(117, 119)
-spawn_delay = 3.0
+[node name="Portal2" parent="." unique_id=1586486938 instance=ExtResource("1_obd43")]
+position = Vector2(223, 98)
+appear_delay = 1.0
 
-[node name="Portal3" parent="." unique_id=1519533652 instance=ExtResource("2_cjyj1")]
-position = Vector2(160, 130)
-spawn_delay = 3.0
-appear_delay = 7.0
+[node name="Portal3" parent="." unique_id=287095489 instance=ExtResource("1_obd43")]
+position = Vector2(133, 185)
+appear_delay = 4.0
 
-[node name="Portal4" parent="." unique_id=1967187011 instance=ExtResource("2_cjyj1")]
-position = Vector2(177, 107)
-spawn_delay = 3.0
-appear_delay = 9.0
+[node name="Portal4" parent="." unique_id=50649835 instance=ExtResource("1_obd43")]
+position = Vector2(254, 118)
+appear_delay = 4.0
 
-[node name="Portal5" parent="." unique_id=25847514 instance=ExtResource("2_cjyj1")]
-position = Vector2(116, 151)
-spawn_delay = 3.0
+[node name="Portal5" parent="." unique_id=341226131 instance=ExtResource("1_obd43")]
+position = Vector2(151, 158)
+appear_delay = 6.0
+
+[node name="Portal6" parent="." unique_id=1815276902 instance=ExtResource("1_obd43")]
+position = Vector2(199, 122)
+appear_delay = 6.0
+
+[node name="Portal7" parent="." unique_id=1276602181 instance=ExtResource("1_obd43")]
+position = Vector2(185, 143)
+appear_delay = 8.0
+
+[node name="Portal8" parent="." unique_id=1466460300 instance=ExtResource("1_obd43")]
+position = Vector2(178, 166)
 appear_delay = 11.0
 
-[node name="Portal6" parent="." unique_id=1900741743 instance=ExtResource("2_cjyj1")]
-position = Vector2(212, 91)
-spawn_delay = 3.0
-appear_delay = 13.0
+[node name="Portal9" parent="." unique_id=1747287637 instance=ExtResource("1_obd43")]
+position = Vector2(196, 157)
+appear_delay = 11.0
+
+[node name="Portal10" parent="." unique_id=730275370 instance=ExtResource("1_obd43")]
+position = Vector2(240, 133)
+appear_delay = 11.0
+
+[node name="Portal11" parent="." unique_id=1720251896 instance=ExtResource("1_obd43")]
+position = Vector2(223, 142)
+appear_delay = 11.0
+
+[node name="Portal12" parent="." unique_id=550480129 instance=ExtResource("1_obd43")]
+position = Vector2(225, 164)
+appear_delay = 14.0

@@ -16,7 +16,6 @@ gradient = SubResource("Gradient_hbw2t")
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_cvsuj")
-SPEED = 150
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334781309]
 scale = Vector2(1, 0.6400002)
@@ -27,4 +26,7 @@ debug_color = Color(2.6321505e-08, 0.056600854, 0.0011945902, 0.41960785)
 scale = Vector2(0.11364573, 0.07650799)
 texture = SubResource("GradientTexture2D_8cp46")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=577297737]
+
 [connection signal="area_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

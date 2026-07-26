@@ -1,20 +1,20 @@
-[gd_scene format=3 uid="uid://650j77xtdxdt"]
+[gd_scene format=3 uid="uid://d1a2op8s4io37"]
 
-[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Objects/gameplay.gd" id="1_afv7b"]
-[ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_irw6p"]
-[ext_resource type="PackedScene" uid="uid://dv2ws74mj06q" path="res://Scenes/Waves/wave_2.tscn" id="3_31phq"]
-[ext_resource type="PackedScene" uid="uid://cnk4r2obnewnv" path="res://Scenes/Waves/wave_3.tscn" id="4_7hll7"]
-[ext_resource type="PackedScene" uid="uid://bl7t366jaibvd" path="res://Scenes/Levels/level_2.tscn" id="5_7r2dd"]
-[ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="5_3628d"]
-[ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_irw6p"]
-[ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="7_31phq"]
-[ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npc.tscn" id="8_7hll7"]
-[ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/SpriteSheets/Wave_1.png" id="9_fayjm"]
-[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="10_k2mw1"]
-[ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/SpriteSheets/Wave_2.png" id="10_nojx8"]
-[ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/SpriteSheets/Wave_3.png" id="11_vvknj"]
-[ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_ad63i"]
-[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="15_tjl6l"]
+[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Objects/gameplay.gd" id="1_xpmn3"]
+[ext_resource type="PackedScene" uid="uid://cefd7if647b4f" path="res://Scenes/Waves/wave_4.tscn" id="2_eb4ip"]
+[ext_resource type="PackedScene" uid="uid://cq7qwaink0bj" path="res://Scenes/Waves/wave_5.tscn" id="3_ecora"]
+[ext_resource type="PackedScene" uid="uid://y0qsdr7yuscb" path="res://Scenes/Waves/wave_6.tscn" id="4_xpmn3"]
+[ext_resource type="PackedScene" uid="uid://brexcf30oj1hv" path="res://Scenes/Levels/level_5.tscn" id="5_eb4ip"]
+[ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="8_eb5oh"]
+[ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/SpriteSheets/Wave_1.png" id="9_e7hmo"]
+[ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/SpriteSheets/Wave_2.png" id="10_legg8"]
+[ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/SpriteSheets/Wave_3.png" id="11_roffe"]
+[ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="12_d51q7"]
+[ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="13_lapqw"]
+[ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npc.tscn" id="14_oteb1"]
+[ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="15_k8nfc"]
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_ep717"]
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_x7vre"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -22,7 +22,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(170, 46, 327, 128, 173, 208, 13, 123)])
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hi6ks"]
-texture = ExtResource("6_irw6p")
+texture = ExtResource("12_d51q7")
 texture_region_size = Vector2i(320, 240)
 use_texture_padding = false
 0:0/0 = 0
@@ -35,7 +35,7 @@ tile_size = Vector2i(320, 240)
 sources/2 = SubResource("TileSetAtlasSource_hi6ks")
 
 [sub_resource type="Resource" id="Resource_2d332"]
-script = ExtResource("10_k2mw1")
+script = ExtResource("16_ep717")
 message = "Hey pal whats the big idea?"
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
 
@@ -49,147 +49,147 @@ size = Vector2(348, 19)
 size = Vector2(20, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t5x67"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(0, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dl3j8"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(320, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d4l8x"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(640, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7jv5f"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(0, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5g72"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(320, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_itm32"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(640, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uont2"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(0, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxmlj"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(320, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ra7kt"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(640, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cw8is"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(0, 720, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_38een"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(320, 720, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cl238"]
-atlas = ExtResource("9_fayjm")
+atlas = ExtResource("9_e7hmo")
 region = Rect2(640, 720, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ekq2v"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(0, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vapt"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(320, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xym50"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(640, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qwhr"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(0, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvn2x"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(320, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wmptt"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(640, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1vsj"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(0, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lowd3"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(320, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_myg4q"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(640, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_udu7g"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(0, 720, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8od8r"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(320, 720, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ps6y2"]
-atlas = ExtResource("10_nojx8")
+atlas = ExtResource("10_legg8")
 region = Rect2(640, 720, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1am4h"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(0, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lw6th"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(320, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i1t1m"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(640, 0, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gx3m4"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(0, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nkn0g"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(320, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2jvd"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(640, 240, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1wvy"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(0, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6tn7p"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(320, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_382gq"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(640, 480, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b3lmn"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(0, 720, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_336bq"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(320, 720, 320, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yyke2"]
-atlas = ExtResource("11_vvknj")
+atlas = ExtResource("11_roffe")
 region = Rect2(640, 720, 320, 240)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4rmp6"]
@@ -319,11 +319,11 @@ animations = [{
 }]
 
 [sub_resource type="Resource" id="Resource_3628d"]
-script = ExtResource("15_tjl6l")
+script = ExtResource("17_x7vre")
 metadata/_custom_type_script = "uid://d2gsgeusfrsnk"
 
 [sub_resource type="Resource" id="Resource_tjl6l"]
-script = ExtResource("10_k2mw1")
+script = ExtResource("16_ep717")
 speaker = SubResource("Resource_3628d")
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
 
@@ -572,12 +572,12 @@ _data = {
 &"wave_3": SubResource("Animation_4aibg")
 }
 
-[node name="Level1" type="Node2D" unique_id=1763996064]
+[node name="Level4" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
-script = ExtResource("1_afv7b")
-waves = Array[PackedScene]([ExtResource("2_irw6p"), ExtResource("3_31phq"), ExtResource("4_7hll7")])
-next_level = ExtResource("5_7r2dd")
-booth_scene = ExtResource("5_3628d")
+script = ExtResource("1_xpmn3")
+waves = Array[PackedScene]([ExtResource("2_eb4ip"), ExtResource("3_ecora"), ExtResource("4_xpmn3")])
+next_level = ExtResource("5_eb4ip")
+booth_scene = ExtResource("8_eb5oh")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false
@@ -588,15 +588,30 @@ navigation_polygon = SubResource("NavigationPolygon_numx4")
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_bwgk3")
 
-[node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("7_31phq")]
+[node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("13_lapqw")]
 position = Vector2(223, 116)
 ACCELERATION = 682
 FRICTION = 565
 
-[node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
-position = Vector2(132, 124)
+[node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("14_oteb1")]
+position = Vector2(162, 64)
 movement_target = NodePath("../BoothSpawn")
-conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
+conversation = Array[ExtResource("16_ep717")]([SubResource("Resource_2d332")])
+
+[node name="Npcs2" parent="." unique_id=1852029283 node_paths=PackedStringArray("movement_target") instance=ExtResource("14_oteb1")]
+position = Vector2(298, 127)
+movement_target = NodePath("../BoothSpawn")
+conversation = Array[ExtResource("16_ep717")]([SubResource("Resource_2d332")])
+
+[node name="Npcs3" parent="." unique_id=795469979 node_paths=PackedStringArray("movement_target") instance=ExtResource("14_oteb1")]
+position = Vector2(163, 195)
+movement_target = NodePath("../BoothSpawn")
+conversation = Array[ExtResource("16_ep717")]([SubResource("Resource_2d332")])
+
+[node name="Npcs4" parent="." unique_id=1107975191 node_paths=PackedStringArray("movement_target") instance=ExtResource("14_oteb1")]
+position = Vector2(44, 126)
+movement_target = NodePath("../BoothSpawn")
+conversation = Array[ExtResource("16_ep717")]([SubResource("Resource_2d332")])
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
 position = Vector2(160, 128)
@@ -633,13 +648,16 @@ position = Vector2(160, 109)
 sprite_frames = SubResource("SpriteFrames_4rmp6")
 animation = &"wave_1"
 
-[node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("12_ad63i")]
+[node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("15_k8nfc")]
 visible = false
-messages = Array[ExtResource("10_k2mw1")]([SubResource("Resource_tjl6l")])
+messages = Array[ExtResource("16_ep717")]([SubResource("Resource_tjl6l")])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1022537975]
 libraries/ = SubResource("AnimationLibrary_7r2dd")
 
 [connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
+[connection signal="start_npc_conversation" from="Npcs2" to="." method="_on_npcs_start_npc_conversation"]
+[connection signal="start_npc_conversation" from="Npcs3" to="." method="_on_npcs_start_npc_conversation"]
+[connection signal="start_npc_conversation" from="Npcs4" to="." method="_on_npcs_start_npc_conversation"]
 [connection signal="animation_finished" from="WaveAnimation" to="." method="start_next_wave"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

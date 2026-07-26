@@ -1,28 +1,56 @@
-[gd_scene format=3 uid="uid://b0ab3h0aes02r"]
+[gd_scene format=3 uid="uid://cq7qwaink0bj"]
 
-[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scenes/Waves/wave.gd" id="1_sjw5x"]
-[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="2_ltcii"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="1_nd5pm"]
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Objects/wave.gd" id="1_sjw5x"]
 
-[node name="Wave3" type="Node2D" unique_id=45031636]
+[node name="Wave 5" type="Node2D" unique_id=1811934671]
 script = ExtResource("1_sjw5x")
-enemy_count = 4
+enemy_count = 12
 
-[node name="Portal" parent="." unique_id=995226439 instance=ExtResource("2_ltcii")]
-position = Vector2(188, 133)
-spawn_delay = 3.0
-appear_delay = 0.1
+[node name="Portal" parent="." unique_id=995226439 instance=ExtResource("1_nd5pm")]
+position = Vector2(205, 92)
+appear_delay = 1.0
 
-[node name="Portal2" parent="." unique_id=1450848306 instance=ExtResource("2_ltcii")]
-position = Vector2(117, 119)
-spawn_delay = 3.0
-appear_delay = 3.0
+[node name="Portal2" parent="." unique_id=1688290972 instance=ExtResource("1_nd5pm")]
+position = Vector2(73, 148)
+appear_delay = 1.0
 
-[node name="Portal3" parent="." unique_id=1519533652 instance=ExtResource("2_ltcii")]
-position = Vector2(160, 130)
-spawn_delay = 3.0
-appear_delay = 3.0
+[node name="Portal3" parent="." unique_id=1737797961 instance=ExtResource("1_nd5pm")]
+position = Vector2(253, 120)
+appear_delay = 4.0
 
-[node name="Portal4" parent="." unique_id=1967187011 instance=ExtResource("2_ltcii")]
-position = Vector2(177, 107)
-spawn_delay = 3.0
-appear_delay = 3.0
+[node name="Portal4" parent="." unique_id=1040026141 instance=ExtResource("1_nd5pm")]
+position = Vector2(134, 181)
+appear_delay = 4.0
+
+[node name="Portal5" parent="." unique_id=438423957 instance=ExtResource("1_nd5pm")]
+position = Vector2(202, 119)
+appear_delay = 6.0
+
+[node name="Portal6" parent="." unique_id=543777243 instance=ExtResource("1_nd5pm")]
+position = Vector2(151, 159)
+appear_delay = 6.0
+
+[node name="Portal7" parent="." unique_id=39012251 instance=ExtResource("1_nd5pm")]
+position = Vector2(185, 143)
+appear_delay = 8.0
+
+[node name="Portal8" parent="." unique_id=1742266107 instance=ExtResource("1_nd5pm")]
+position = Vector2(207, 92)
+appear_delay = 11.0
+
+[node name="Portal9" parent="." unique_id=1420462530 instance=ExtResource("1_nd5pm")]
+position = Vector2(91, 151)
+appear_delay = 11.0
+
+[node name="Portal10" parent="." unique_id=1478876398 instance=ExtResource("1_nd5pm")]
+position = Vector2(119, 142)
+appear_delay = 11.0
+
+[node name="Portal11" parent="." unique_id=1999332890 instance=ExtResource("1_nd5pm")]
+position = Vector2(185, 98)
+appear_delay = 11.0
+
+[node name="Portal12" parent="." unique_id=2127292266 instance=ExtResource("1_nd5pm")]
+position = Vector2(142, 117)
+appear_delay = 14.0

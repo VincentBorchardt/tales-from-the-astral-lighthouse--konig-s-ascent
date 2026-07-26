@@ -458,7 +458,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"enemy_death",
-"speed": 10.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -578,6 +578,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_khvpl"]
+radius = 8.0
 
 [node name="Enemy" type="CharacterBody2D" unique_id=845320837 groups=["enemy"]]
 script = ExtResource("1_lsx3x")
@@ -598,13 +599,15 @@ shape = SubResource("CircleShape2D_cvsuj")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1462256017]
 
 [node name="Timer" type="Timer" parent="." unique_id=280841505]
-wait_time = 1.2
+wait_time = 1.6999999999999997
 autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383095830]
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_pp5cw")
-animation = &"enemy_base_se"
+animation = &"enemy_death"
+frame = 8
+frame_progress = 1.0
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1031822175]
 collision_layer = 8
