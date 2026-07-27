@@ -574,7 +574,6 @@ y_sort_enabled = true
 script = ExtResource("1_afv7b")
 waves = Array[PackedScene]([ExtResource("2_irw6p"), ExtResource("3_31phq"), ExtResource("4_7hll7")])
 next_level = ExtResource("5_7r2dd")
-booth_scene = ExtResource("5_3628d")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false
@@ -594,6 +593,10 @@ FRICTION = 565
 position = Vector2(132, 124)
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("10_k2mw1")]([ExtResource("11_irw6p"), ExtResource("12_31phq")])
+
+[node name="Booth" parent="." unique_id=1170855833 instance=ExtResource("5_3628d")]
+visible = false
+position = Vector2(160, 128)
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
 position = Vector2(160, 128)
@@ -637,6 +640,11 @@ messages = Array[ExtResource("10_k2mw1")]([SubResource("Resource_tjl6l")])
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1022537975]
 libraries/ = SubResource("AnimationLibrary_7r2dd")
 
+[connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
+[connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
 [connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
+[connection signal="player_entered" from="Booth" to="." method="_on_booth_player_entered"]
+[connection signal="warp_in_finished" from="Booth" to="." method="_on_booth_warp_in_finished"]
+[connection signal="warp_out_finished" from="Booth" to="." method="_on_booth_warp_out_finished"]
 [connection signal="animation_finished" from="WaveAnimation" to="." method="start_next_wave"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

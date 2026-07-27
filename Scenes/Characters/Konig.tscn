@@ -6,6 +6,58 @@
 [ext_resource type="Script" uid="uid://d16j85amlxh4o" path="res://Scripts/Characters/hitbox.gd" id="2_cfmdu"]
 [ext_resource type="Texture2D" uid="uid://60j1peshqqk0" path="res://Assets/Art/Characters/Gameplay/Konig/konig_walk_E.png" id="4_qjibl"]
 [ext_resource type="Texture2D" uid="uid://d326dwdiail2n" path="res://Assets/Art/Characters/Gameplay/Konig/konig_walk_W.png" id="5_0pryh"]
+[ext_resource type="Texture2D" uid="uid://dh22t2ul67te5" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise00.png" id="6_mouc3"]
+[ext_resource type="Texture2D" uid="uid://dmufgex6w0xxg" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise01.png" id="7_28ia5"]
+[ext_resource type="Texture2D" uid="uid://baabspveg3gro" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise02.png" id="8_jwtgd"]
+[ext_resource type="Texture2D" uid="uid://c7ts0v4pcc338" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise03.png" id="9_eu4u8"]
+[ext_resource type="Texture2D" uid="uid://dmkdu1sorwgp6" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise04.png" id="10_mrdu5"]
+[ext_resource type="Texture2D" uid="uid://2p1j8djjbiih" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise05.png" id="11_mn8mx"]
+[ext_resource type="Texture2D" uid="uid://c0b4b7ub3tr38" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise06.png" id="12_d2nr2"]
+[ext_resource type="Texture2D" uid="uid://cubt2vneuf20k" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise07.png" id="13_e73jq"]
+[ext_resource type="Texture2D" uid="uid://dpfkr5machj01" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE00.png" id="14_16tm7"]
+[ext_resource type="Texture2D" uid="uid://cheyneqoovax0" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE01.png" id="15_fyilx"]
+[ext_resource type="Texture2D" uid="uid://bk0y4xg17qrgn" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE02.png" id="16_xi5mx"]
+[ext_resource type="Texture2D" uid="uid://bss38hj7x6iw3" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE03.png" id="17_2g4ab"]
+[ext_resource type="Texture2D" uid="uid://s2bsyyr7pbvk" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE04.png" id="18_edqmx"]
+[ext_resource type="Texture2D" uid="uid://bs7c0kwx4b3dc" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE05.png" id="19_cugtb"]
+[ext_resource type="Texture2D" uid="uid://dg73onu5s0ywh" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE06.png" id="20_bwrv0"]
+[ext_resource type="Texture2D" uid="uid://dldcp1kkwf0im" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE07.png" id="21_xjpds"]
+[ext_resource type="Texture2D" uid="uid://dqe1ww7djbs50" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE08.png" id="22_pksqq"]
+[ext_resource type="Texture2D" uid="uid://brgyuhhby77r2" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE09.png" id="23_mwxxm"]
+[ext_resource type="Texture2D" uid="uid://c4l2l7jm1gbja" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE10.png" id="24_0q27i"]
+[ext_resource type="Texture2D" uid="uid://u734cx6s60y4" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW00.png" id="25_6a2bg"]
+[ext_resource type="Texture2D" uid="uid://c0rv0stred0sh" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW01.png" id="26_n0tr3"]
+[ext_resource type="Texture2D" uid="uid://i4h6idoyhm0d" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW02.png" id="27_oa25u"]
+[ext_resource type="Texture2D" uid="uid://0vimcgira7b0" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW03.png" id="28_yobhc"]
+[ext_resource type="Texture2D" uid="uid://b5gum0v7yvpkn" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW04.png" id="29_mf20o"]
+[ext_resource type="Texture2D" uid="uid://cwil1u5qktcgf" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW05.png" id="30_tc8yc"]
+[ext_resource type="Texture2D" uid="uid://cbwog4cfcimwn" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW06.png" id="31_l8byl"]
+[ext_resource type="Texture2D" uid="uid://c8dbc6070u34w" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW07.png" id="32_dn2yo"]
+[ext_resource type="Texture2D" uid="uid://7qxt2w737o3t" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW08.png" id="33_eeyj1"]
+[ext_resource type="Texture2D" uid="uid://b03m0ps061xsv" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW09.png" id="34_l2doc"]
+[ext_resource type="Texture2D" uid="uid://ou4etjywiihj" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NW/Konig_DeMat_NW10.png" id="35_k0xq7"]
+[ext_resource type="Texture2D" uid="uid://c4fsb5gs6pyib" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE00.png" id="36_5g6n3"]
+[ext_resource type="Texture2D" uid="uid://2n77ae2hogbf" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE01.png" id="37_oww84"]
+[ext_resource type="Texture2D" uid="uid://c2k2n1a7jdpld" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE02.png" id="38_tbngs"]
+[ext_resource type="Texture2D" uid="uid://w17jr18v5sna" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE03.png" id="39_toeed"]
+[ext_resource type="Texture2D" uid="uid://dkpqqktbo1qny" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE04.png" id="40_3vyq3"]
+[ext_resource type="Texture2D" uid="uid://d0ocfyxv5o0r2" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE05.png" id="41_33tcr"]
+[ext_resource type="Texture2D" uid="uid://c18em5yrsuv47" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE06.png" id="42_pbfm1"]
+[ext_resource type="Texture2D" uid="uid://o5yukmyiujn7" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE07.png" id="43_qwqrj"]
+[ext_resource type="Texture2D" uid="uid://dpydlxxc1otup" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE08.png" id="44_l1ibr"]
+[ext_resource type="Texture2D" uid="uid://dfave3s4lw6v5" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE09.png" id="45_pl3r8"]
+[ext_resource type="Texture2D" uid="uid://bvvacmb0d8ss1" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SE/Konig_DeMat_SE10.png" id="46_p8fdt"]
+[ext_resource type="Texture2D" uid="uid://d3s3x6555gkyf" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW00.png" id="47_5tagr"]
+[ext_resource type="Texture2D" uid="uid://cvrahkrgmjp3n" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW01.png" id="48_ba1ad"]
+[ext_resource type="Texture2D" uid="uid://hseqlffwt7de" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW02.png" id="49_20ktg"]
+[ext_resource type="Texture2D" uid="uid://dnq2s4yevsqtf" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW03.png" id="50_8c562"]
+[ext_resource type="Texture2D" uid="uid://dvc6byfltxmyh" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW04.png" id="51_6rk50"]
+[ext_resource type="Texture2D" uid="uid://bo70l8f4u2ogg" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW05.png" id="52_2qrmt"]
+[ext_resource type="Texture2D" uid="uid://buvhx71vfsrgx" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW06.png" id="53_04fa7"]
+[ext_resource type="Texture2D" uid="uid://c70uu8wr7tkwt" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW07.png" id="54_6ujio"]
+[ext_resource type="Texture2D" uid="uid://ykn8g131p03b" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW08.png" id="55_fekeg"]
+[ext_resource type="Texture2D" uid="uid://qe3nqwgd58td" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW09.png" id="56_m3ryu"]
+[ext_resource type="Texture2D" uid="uid://bic1n2prbaeol" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW10.png" id="57_l1nqm"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_0pryh"]
 points = PackedVector2Array(-10.230589, -7.7029266, 2.763811, -8.08464, 3.4391432, 14.905447, -9.555256, 15.287159)
@@ -499,6 +551,187 @@ animations = [{
 "loop": 1,
 "name": &"walk_sw",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_mouc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_28ia5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jwtgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_eu4u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mrdu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mn8mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_d2nr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_e73jq")
+}],
+"loop": 0,
+"name": &"warp_in",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_16tm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fyilx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xi5mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2g4ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_edqmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cugtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_bwrv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xjpds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_pksqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_mwxxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0q27i")
+}],
+"loop": 0,
+"name": &"warp_out_ne",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_6a2bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_n0tr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_oa25u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_yobhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_mf20o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_tc8yc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_l8byl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dn2yo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_eeyj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_l2doc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_k0xq7")
+}],
+"loop": 0,
+"name": &"warp_out_nw",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_5g6n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_oww84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_tbngs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_toeed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_3vyq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_33tcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_pbfm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_qwqrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_l1ibr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_pl3r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_p8fdt")
+}],
+"loop": 0,
+"name": &"warp_out_se",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_5tagr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ba1ad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_20ktg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_8c562")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_6rk50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_2qrmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_04fa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_6ujio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_fekeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_m3ryu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_l1nqm")
+}],
+"loop": 0,
+"name": &"warp_out_sw",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfmdu"]
@@ -508,6 +741,7 @@ size = Vector2(12, 21.5)
 radius = 5.0
 
 [node name="Konig" type="CharacterBody2D" unique_id=2108258614 groups=["player"]]
+visible = false
 motion_mode = 1
 script = ExtResource("1_w4f7w")
 ACCELERATION = 161
@@ -525,7 +759,7 @@ debug_color = Color(1, 0, 0.10958373, 0.41960785)
 
 [node name="Animations" type="AnimatedSprite2D" parent="." unique_id=1251738850]
 sprite_frames = SubResource("SpriteFrames_4gd6k")
-animation = &"attack_sw"
+animation = &"warp_in"
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=753422830]
 collision_layer = 2

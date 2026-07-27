@@ -54,33 +54,29 @@ func _ready():
 	health_marker.play("full")
 	state = State.IDLE
 
-# TODO remove this, it's a bad design pattern
-func _physics_process(delta):
-	match state:
-		State.CONVO:
-			convo_state()
-		_:
-			pass
-
-func start_move():
-		move_to_booth()
-
-func move_state():
-	if navigation_agent.is_navigation_finished():
-			state = State.IDLE
-	var current_position: Vector2 = global_position
-	var next_path: Vector2 = navigation_agent.get_next_path_position()
-	var new_velocity: Vector2 = next_path - current_position
-	new_velocity = new_velocity.normalized()
-	new_velocity = new_velocity * movement_speed
-	velocity = new_velocity
-	move_and_slide()
-
-
-func convo_state():
+func _input(event: InputEvent) -> void:
 	if player_in_range and Input.is_action_just_pressed("advance_text"):
 		state = State.MOVE
 		start_npc_conversation.emit(conversation)
+
+func start_move():
+	print("Starting NPC movement")
+	move_to_booth()
+
+func move_state():
+	while true:
+		if navigation_agent.is_navigation_finished():
+			# TODO animate warp out
+			# TODO note we saved this NPC in a global
+			state = State.IDLE
+			return
+		var current_position: Vector2 = global_position
+		var next_path: Vector2 = navigation_agent.get_next_path_position()
+		var new_velocity: Vector2 = next_path - current_position
+		new_velocity = new_velocity.normalized()
+		new_velocity = new_velocity * movement_speed
+		velocity = new_velocity
+		move_and_slide()
 
 func end_of_wave():
 	health_marker.visible = false
@@ -116,7 +112,6 @@ func _on_interact_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player") and state == State.CONVO:
 		player_in_range = false
 		convo_anim.visible = false
-		
 
 func _on_animation_animation_finished() -> void:
 	match body_animations.animation:

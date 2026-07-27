@@ -577,7 +577,6 @@ y_sort_enabled = true
 script = ExtResource("1_md4x4")
 waves = Array[PackedScene]([ExtResource("2_anjjd"), ExtResource("3_ocbj8"), ExtResource("4_r8neg")])
 next_level = ExtResource("5_13yca")
-booth_scene = ExtResource("6_ocbj8")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false
@@ -607,6 +606,10 @@ conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 position = Vector2(51, 120)
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
+
+[node name="Booth" parent="." unique_id=1170855833 instance=ExtResource("6_ocbj8")]
+visible = false
+position = Vector2(160, 128)
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
 position = Vector2(160, 128)
@@ -650,8 +653,13 @@ messages = Array[ExtResource("16_wnlxl")]([SubResource("Resource_tjl6l")])
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1022537975]
 libraries/ = SubResource("AnimationLibrary_7r2dd")
 
+[connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
+[connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
 [connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
 [connection signal="start_npc_conversation" from="Npcs2" to="." method="_on_npcs_start_npc_conversation"]
 [connection signal="start_npc_conversation" from="Npcs3" to="." method="_on_npcs_start_npc_conversation"]
+[connection signal="player_entered" from="Booth" to="." method="_on_booth_player_entered"]
+[connection signal="warp_in_finished" from="Booth" to="." method="_on_booth_warp_in_finished"]
+[connection signal="warp_out_finished" from="Booth" to="." method="_on_booth_warp_out_finished"]
 [connection signal="animation_finished" from="WaveAnimation" to="." method="start_next_wave"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

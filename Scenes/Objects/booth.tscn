@@ -1,14 +1,241 @@
 [gd_scene format=3 uid="uid://ckv4ykifoeidp"]
 
 [ext_resource type="Script" uid="uid://bhbdk2a38ergy" path="res://Scripts/Objects/booth.gd" id="1_rg0fs"]
+[ext_resource type="Texture2D" uid="uid://wjmse1sgsrw5" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/Phonebooth_Open_Loop00.png" id="2_62k58"]
+[ext_resource type="Texture2D" uid="uid://bnf8qdg5nrox2" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/Phonebooth_Open_Loop01.png" id="3_2leon"]
+[ext_resource type="Texture2D" uid="uid://bjnslw8btd0rf" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/Phonebooth_Open_Loop02.png" id="4_ju77w"]
+[ext_resource type="Texture2D" uid="uid://cifpdpo1qyuj5" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/Phonebooth_Open_Loop03.png" id="5_eg8f1"]
+[ext_resource type="Texture2D" uid="uid://cri3tumaj0l76" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/Phonebooth_Open_Loop04.png" id="6_it76u"]
+[ext_resource type="Texture2D" uid="uid://cmiley8s4nuss" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/Phonebooth_Open_Loop05.png" id="7_h5w32"]
+[ext_resource type="Texture2D" uid="uid://dqkyir78xrfwp" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/Phonebooth_Open_Loop06.png" id="8_fnpxv"]
+[ext_resource type="Texture2D" uid="uid://dvu0qd2d0qmh6" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/Phonebooth_Open_Loop07.png" id="9_q025w"]
+[ext_resource type="Texture2D" uid="uid://du4g7wmgmkokb" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter00.png" id="10_4m5pe"]
+[ext_resource type="Texture2D" uid="uid://dpox1ksaa1kyk" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter01.png" id="11_5jrbm"]
+[ext_resource type="Texture2D" uid="uid://b2kxfvppdayxp" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter02.png" id="12_dybis"]
+[ext_resource type="Texture2D" uid="uid://dka10kaccn7p6" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter03.png" id="13_m2lvg"]
+[ext_resource type="Texture2D" uid="uid://b4brjwboh4xv3" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter04.png" id="14_h2va4"]
+[ext_resource type="Texture2D" uid="uid://by0atubo0us22" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter05.png" id="15_6a7jk"]
+[ext_resource type="Texture2D" uid="uid://kliki1knsgc5" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter06.png" id="16_023nh"]
+[ext_resource type="Texture2D" uid="uid://cyqev8f6xdw72" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter07.png" id="17_sha3y"]
+[ext_resource type="Texture2D" uid="uid://8ex1hnb7ujqr" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter08.png" id="18_oygah"]
+[ext_resource type="Texture2D" uid="uid://beruetpbahhqj" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter09.png" id="19_k8jpu"]
+[ext_resource type="Texture2D" uid="uid://blsmmx1fy6hu2" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter10.png" id="20_vohqt"]
+[ext_resource type="Texture2D" uid="uid://d2sakumhiullm" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter11.png" id="21_n1lpd"]
+[ext_resource type="Texture2D" uid="uid://b5l0foulkxu7m" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter12.png" id="22_bjknb"]
+[ext_resource type="Texture2D" uid="uid://bv2qkekjbtlqa" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter13.png" id="23_ihg7a"]
+[ext_resource type="Texture2D" uid="uid://ck530sd0pyy41" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter14.png" id="24_xi18b"]
+[ext_resource type="Texture2D" uid="uid://bk46gxeo42ghy" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter15.png" id="25_wgbyb"]
+[ext_resource type="Texture2D" uid="uid://14kbx2airxyt" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter16.png" id="26_t065b"]
+[ext_resource type="Texture2D" uid="uid://dei1swobvl57p" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter17.png" id="27_fnxlr"]
+[ext_resource type="Texture2D" uid="uid://q3abxgno3y0k" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter18.png" id="28_urcwe"]
+[ext_resource type="Texture2D" uid="uid://3fneqtbiixe1" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter19.png" id="29_vb6b0"]
+[ext_resource type="Texture2D" uid="uid://dqry770e366k5" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter20.png" id="30_uvo0b"]
+[ext_resource type="Texture2D" uid="uid://d14xlohwaie0c" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter21.png" id="31_dcqkj"]
+[ext_resource type="Texture2D" uid="uid://dqj13yu3s4bg" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter22.png" id="32_3d768"]
+[ext_resource type="Texture2D" uid="uid://bdajpudamhsyj" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter23.png" id="33_ufyn7"]
+[ext_resource type="Texture2D" uid="uid://dv36iaqp7silc" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter24.png" id="34_52chs"]
+[ext_resource type="Texture2D" uid="uid://bhjci7fdkb50p" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter25.png" id="35_uausj"]
+[ext_resource type="Texture2D" uid="uid://cubk03afkl5ah" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter26.png" id="36_nbmes"]
+[ext_resource type="Texture2D" uid="uid://c7eyyajdenjsv" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter27.png" id="37_hx536"]
+[ext_resource type="Texture2D" uid="uid://c72hkqik3ob4p" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/PhoneBooth_Enter28.png" id="38_mhwl1"]
+[ext_resource type="Texture2D" uid="uid://bl40nptsufebk" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit00.png" id="39_pqgxn"]
+[ext_resource type="Texture2D" uid="uid://clktwumd48unm" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit01.png" id="40_hwoh3"]
+[ext_resource type="Texture2D" uid="uid://bkavvporbf658" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit02.png" id="41_faaqk"]
+[ext_resource type="Texture2D" uid="uid://gen8nqu8g1ba" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit03.png" id="42_ojyo3"]
+[ext_resource type="Texture2D" uid="uid://dwulxpy6nn77d" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit04.png" id="43_wp47k"]
+[ext_resource type="Texture2D" uid="uid://co0m2q6eq8lcu" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit05.png" id="44_ko4cg"]
+[ext_resource type="Texture2D" uid="uid://crsumcsyxhag5" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit06.png" id="45_nxnpt"]
+[ext_resource type="Texture2D" uid="uid://cdfhoj85ocq3f" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit07.png" id="46_pkjv7"]
+[ext_resource type="Texture2D" uid="uid://c453ekbngke24" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit08.png" id="47_4fftw"]
+[ext_resource type="Texture2D" uid="uid://dkjecups4qb34" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit09.png" id="48_0ugef"]
+[ext_resource type="Texture2D" uid="uid://dl20862nugk68" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit10.png" id="49_l63jf"]
+[ext_resource type="Texture2D" uid="uid://mf02765wvli1" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit11.png" id="50_6hpq2"]
+[ext_resource type="Texture2D" uid="uid://cqdg0xo52qnms" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit12.png" id="51_mkca7"]
+[ext_resource type="Texture2D" uid="uid://d3la16mdyk4gi" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit13.png" id="52_k3jdb"]
+[ext_resource type="Texture2D" uid="uid://cx8k0iixroj2j" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit14.png" id="53_bqdku"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_e0lb0"]
 points = PackedVector2Array(-2.051, -12.992, 10.439, -0.185, 7.687, 17.49, -4.802, 4.684)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13yca"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_62k58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2leon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ju77w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eg8f1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_it76u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h5w32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fnpxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q025w")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_4m5pe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5jrbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dybis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_m2lvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_h2va4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6a7jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_023nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_sha3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_oygah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_k8jpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vohqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_n1lpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bjknb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ihg7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_xi18b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_wgbyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_t065b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_fnxlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_urcwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_vb6b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_uvo0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dcqkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3d768")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ufyn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_52chs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_uausj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_nbmes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hx536")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_mhwl1")
+}],
+"loop": 0,
+"name": &"warp_in",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_pqgxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hwoh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_faaqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ojyo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_wp47k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ko4cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_nxnpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_pkjv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_4fftw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_0ugef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_l63jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_6hpq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_mkca7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_k3jdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_bqdku")
+}],
+"loop": 0,
+"name": &"warp_out",
+"speed": 10.0
+}]
 
 [node name="Booth" type="Node2D" unique_id=1170855833]
 script = ExtResource("1_rg0fs")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=554180535]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=689205343]
 position = Vector2(8, 14)
@@ -16,4 +243,11 @@ rotation = 1.8797196
 shape = SubResource("ConvexPolygonShape2D_e0lb0")
 debug_color = Color(1, 0, 0.10958373, 0.41960785)
 
+[node name="Animations" type="AnimatedSprite2D" parent="." unique_id=1954650103]
+sprite_frames = SubResource("SpriteFrames_13yca")
+animation = &"warp_out"
+frame = 14
+frame_progress = 1.0
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="animation_finished" from="Animations" to="." method="_on_animations_animation_finished"]

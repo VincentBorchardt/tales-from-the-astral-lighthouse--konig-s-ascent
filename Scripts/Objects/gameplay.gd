@@ -8,9 +8,9 @@ var wave_animations = [
 
 @export var waves: Array[PackedScene]
 @export var next_level: PackedScene
-@export var booth_scene: PackedScene
 
-@onready var booth_spawn = $BoothSpawn
+@onready var booth = $Booth
+@onready var konig = $Konig
 @onready var wave_timer = $WaveTimer
 @onready var wave_animation = $WaveAnimation
 @onready var wave_anim_player = $AnimationPlayer
@@ -25,9 +25,8 @@ var in_calm_state = false
 func _ready():
 	print("starting level now")
 	in_calm_state = false
-	wave_timer.one_shot = true
-	wave_timer.timeout.connect(play_wave_animation)
-	wave_timer.start(2)
+	booth.warp_in()
+	
 
 func play_wave_animation():
 	if current_wave_animation >= waves.size():
@@ -46,11 +45,9 @@ func start_next_wave():
 	if current_wave >= waves.size():
 		print("all waves complete")
 		in_calm_state = true
+		booth.visible = true
+		booth.warp_in()
 		get_tree().call_group("npcs", "end_of_wave")
-		var booth = booth_scene.instantiate()
-		booth.player_entered.connect(end_level)
-		booth.global_position = booth_spawn.global_position
-		add_child(booth)
 		return
 
 	current_wave_scene = waves[current_wave].instantiate()
@@ -94,3 +91,42 @@ func _on_npcs_start_npc_conversation(messages: Variant) -> void:
 func _on_cutscene_overlay_cutscene_ended() -> void:
 	# TODO unpause gameplay
 	pass # Replace with function body.
+
+
+func _on_booth_player_entered() -> void:
+	if in_calm_state:
+		get_tree().call_group("npcs", "start_move")
+		print("checking if NPCs left")
+		var npcs_left = true
+		#while npcs_left:
+			## TODO put a timer in here to prevent the super-long while looping?
+			#if get_tree().get_nodes_in_group("npcs").size() == 0:
+				#npcs_left = false
+		konig.warp_out()
+	
+
+
+func _on_booth_warp_in_finished() -> void:
+	print("booth warp in finished")
+	if in_calm_state:
+		print("staying open in calm state")
+		booth.stay_open()
+	else:
+		print("calling konig warp in")
+		konig.warp_in()
+
+
+func _on_booth_warp_out_finished() -> void:
+	if in_calm_state:
+		end_level()
+	else:
+		wave_timer.one_shot = true
+		wave_timer.timeout.connect(play_wave_animation)
+		wave_timer.start(2)
+
+# TODO these both might want short timers (like a second)
+func _on_konig_arrived() -> void:
+	booth.warp_out()
+
+func _on_konig_left() -> void:
+	booth.warp_out()

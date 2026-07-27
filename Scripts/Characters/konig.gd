@@ -3,8 +3,12 @@ extends CharacterBody2D
 enum State {
 	KNOCKBACK,
 	ATTACK,
-	MOVE
+	MOVE,
+	WARPING
 }
+
+signal konig_arrived
+signal konig_left
 
 @onready var hitbox = $Hitbox/CollisionShape2D
 @onready var hurtbox = $Hurtbox/CollisionShape2D
@@ -16,7 +20,7 @@ enum State {
 @export var KNOCKBACK_SPEED = 100
 @export var KNOCKBACK_TIME = 0.05
 
-var state = State.MOVE
+var state = State.WARPING
 var knockback_velocity = Vector2.ZERO
 var last_x_direction = 1
 var last_y_direction = 1
@@ -101,10 +105,28 @@ func get_attack_animation() -> String:
 		else:
 			return "attack_sw"
 
+func warp_in():
+	print("triggering warp in")
+	visible = true
+	state = State.WARPING
+	animations.play("warp_in")
+
+func warp_out():
+	state = State.WARPING
+	# TODO HAVE THIS CHECK FOR DIRECTION!
+	animations.play("warp_out_se")
+
 func _on_animated_sprite_2d_animation_finished():
-	hitbox.disabled = true	
-	if state == State.ATTACK:
-		state = State.MOVE
+	match animations.animation:
+		"warp_in":
+			state = State.MOVE
+			konig_arrived.emit()
+		"warp_out_ne", "warp_out_nw", "warp_out_se", "warp_out_sw":
+			konig_left.emit()
+		_: # TODO should probably put all the attacks here explicitly
+			hitbox.disabled = true
+			if state == State.ATTACK:
+				state = State.MOVE
 
 func update_hitbox_direction():
 	if last_x_direction > 0:
