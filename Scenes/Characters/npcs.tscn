@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://da3ojj1y5jdaq" path="res://Scripts/Characters/npc_hurtbox.gd" id="1_wudbq"]
 [ext_resource type="Script" path="res://Scripts/Characters/npcs.gd" id="1_wvuxs"]
-[ext_resource type="Texture2D" uid="uid://c1xqtpvkye87e" path="res://Assets/Art/SpriteSheets/idle npc.png" id="3_nc6pv"]
-[ext_resource type="Texture2D" uid="uid://dn3lmjckf6f6t" path="res://Assets/Art/SpriteSheets/convo npc.png" id="4_m1gjq"]
+[ext_resource type="Texture2D" uid="uid://c1xqtpvkye87e" path="res://Assets/Art/Characters/Gameplay/Npc/idle npc.png" id="3_nc6pv"]
+[ext_resource type="Texture2D" uid="uid://dn3lmjckf6f6t" path="res://Assets/Art/Characters/Gameplay/Npc/convo npc.png" id="4_m1gjq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvuxs"]
 size = Vector2(6, 14)

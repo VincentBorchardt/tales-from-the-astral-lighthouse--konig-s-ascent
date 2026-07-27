@@ -3,7 +3,9 @@ class_name Npc extends CharacterBody2D
 enum State {
 	MOVE,
 	CONVO,
-	IDLE
+	IDLE,
+	HURT,
+	DEAD
 }
 
 # TODO call this when you talk to the NPC
@@ -15,21 +17,53 @@ signal start_npc_conversation(messages)
 
 @export var conversation : Array[Message]
 
-@onready var idle_anim = $Animation
+@onready var body_animations = $Animation
 @onready var convo_anim = $Convo
-var state = State.IDLE
-var player_in_range = false
-var health = 3
+@onready var health_marker = $HealthMarker
 
+var state = State.IDLE:
+	set(newState):
+		state = newState
+		match newState:
+			State.IDLE:
+				body_animations.play("idle")
+			State.HURT:
+				body_animations.play("hurt")
+			State.DEAD:
+				body_animations.play("death")
+			_:
+				pass
+var player_in_range = false
+var health = 3:
+	set(amount):
+		health = amount
+		match amount:
+			3:
+				health_marker.play("full")
+			2:
+				health_marker.play("mid")
+			1:
+				health_marker.play("low")
+			0:
+				health_marker.visible = false
+				state = State.DEAD
+			_:
+				pass
+
+func _ready():
+	health_marker.play("full")
+	state = State.IDLE
+
+# TODO remove this, it's a bad design pattern
 func _physics_process(delta):
 	match state:
-		State.IDLE:
-			idle_state()
-		State.MOVE:
-			move_state()
 		State.CONVO:
 			convo_state()
+		_:
+			pass
 
+func start_move():
+		move_to_booth()
 
 func move_state():
 	if navigation_agent.is_navigation_finished():
@@ -42,18 +76,18 @@ func move_state():
 	velocity = new_velocity
 	move_and_slide()
 
-func idle_state():
-	idle_anim.play("idle")
 
 func convo_state():
 	if player_in_range and Input.is_action_just_pressed("advance_text"):
+		state = State.MOVE
 		start_npc_conversation.emit(conversation)
 
 func end_of_wave():
-	print("calling end of wave")
+	health_marker.visible = false
 	state = State.CONVO
 
 func move_to_booth():
+	body_animations.play("walk")
 	navigation_agent.path_desired_distance = 4.0
 	navigation_agent.target_desired_distance = 4.0
 	
@@ -65,13 +99,12 @@ func actor_setup():
 	
 func set_movement_target(target_point: Vector2):
 	navigation_agent.target_position = target_point
-	state = State.MOVE
+	move_state()
 
 func take_hit():
 	print("taking health")
+	state = State.HURT
 	health -= 1
-	if health == 0:
-		queue_free()
 
 func _on_interact_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and state == State.CONVO:
@@ -84,3 +117,10 @@ func _on_interact_body_exited(body: Node2D) -> void:
 		player_in_range = false
 		convo_anim.visible = false
 		
+
+func _on_animation_animation_finished() -> void:
+	match body_animations.animation:
+		"hurt":
+			state = State.IDLE
+		"death":
+			queue_free()

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://2seu0v0io3l2"]
 
 [ext_resource type="Script" uid="uid://bdu30svilhe51" path="res://Scripts/Characters/konig.gd" id="1_w4f7w"]
-[ext_resource type="Texture2D" uid="uid://dfw6xhu4k7svk" path="res://Assets/Art/SpriteSheets/Konig_punch_SpriteSheet.png" id="2_4gd6k"]
+[ext_resource type="Texture2D" uid="uid://dfw6xhu4k7svk" path="res://Assets/Art/Characters/Gameplay/Konig/Konig_punch_SpriteSheet.png" id="2_4gd6k"]
 [ext_resource type="Script" uid="uid://bk67jp1xkd76d" path="res://Scripts/Characters/player_hurtbox.gd" id="2_cdq7x"]
 [ext_resource type="Script" uid="uid://d16j85amlxh4o" path="res://Scripts/Characters/hitbox.gd" id="2_cfmdu"]
-[ext_resource type="Texture2D" uid="uid://60j1peshqqk0" path="res://Assets/Art/SpriteSheets/konig_walk_E.png" id="4_qjibl"]
-[ext_resource type="Texture2D" uid="uid://d326dwdiail2n" path="res://Assets/Art/SpriteSheets/konig_walk_W.png" id="5_0pryh"]
+[ext_resource type="Texture2D" uid="uid://60j1peshqqk0" path="res://Assets/Art/Characters/Gameplay/Konig/konig_walk_E.png" id="4_qjibl"]
+[ext_resource type="Texture2D" uid="uid://d326dwdiail2n" path="res://Assets/Art/Characters/Gameplay/Konig/konig_walk_W.png" id="5_0pryh"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_0pryh"]
 points = PackedVector2Array(-10.230589, -7.7029266, 2.763811, -8.08464, 3.4391432, 14.905447, -9.555256, 15.287159)
