@@ -46,6 +46,7 @@ func start_next_wave():
 	if current_wave >= waves.size():
 		print("all waves complete")
 		in_calm_state = true
+		get_tree().call_group("npcs", "end_of_wave")
 		var booth = booth_scene.instantiate()
 		booth.player_entered.connect(end_level)
 		booth.global_position = booth_spawn.global_position
@@ -85,8 +86,9 @@ func wave_complete():
 
 
 func _on_npcs_start_npc_conversation(messages: Variant) -> void:
-	# TODO pause gameplay
-	cutscene_overlay.start_cutscene(messages)
+	if in_calm_state:
+		# TODO pause gameplay
+		cutscene_overlay.start_cutscene(messages)
 
 
 func _on_cutscene_overlay_cutscene_ended() -> void:

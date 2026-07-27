@@ -81,11 +81,19 @@ func advance_cutscene():
 	current_message_index += 1
 	if current_message_index >= len(messages):
 		# TODO animate out the message box, check if it's visible
-		cutscene_ended.emit()
-		cutscene_active = false
-		self.visible = false
-		left_image.visible = false
-		right_image.visible = false
+		if message_box.visible:
+			message_text.visible = false
+			advance_text_marker.visible = false
+			message_box_animation.play("message_box_out")
+		else:
+			end_cutscene()
 		
 	else:
 		show_message(current_message_index)
+
+func end_cutscene():
+	cutscene_ended.emit()
+	cutscene_active = false
+	self.visible = false
+	left_image.visible = false
+	right_image.visible = false

@@ -12,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/SpriteSheets/Wave_1.png" id="9_fayjm"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="10_k2mw1"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/SpriteSheets/Wave_2.png" id="10_nojx8"]
+[ext_resource type="Resource" uid="uid://blrtrpqo25gfo" path="res://Resources/Cutscenes/test_message_1.tres" id="11_irw6p"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/SpriteSheets/Wave_3.png" id="11_vvknj"]
+[ext_resource type="Resource" uid="uid://cxohbe306iqo" path="res://Resources/Cutscenes/test_message_2.tres" id="12_31phq"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_ad63i"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="15_tjl6l"]
 
@@ -33,11 +35,6 @@ tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(320, 240)
 sources/2 = SubResource("TileSetAtlasSource_hi6ks")
-
-[sub_resource type="Resource" id="Resource_2d332"]
-script = ExtResource("10_k2mw1")
-message = "Hey pal whats the big idea?"
-metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hkci"]
 size = Vector2(20, 388)
@@ -596,7 +593,7 @@ FRICTION = 565
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
 position = Vector2(132, 124)
 movement_target = NodePath("../BoothSpawn")
-conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
+conversation = Array[ExtResource("10_k2mw1")]([ExtResource("11_irw6p"), ExtResource("12_31phq")])
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
 position = Vector2(160, 128)

@@ -167,7 +167,6 @@ frame_progress = 1.0
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1996609561]
 
 [node name="Interact" type="Area2D" parent="." unique_id=1936323585]
-visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact" unique_id=611034364]

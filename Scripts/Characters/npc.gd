@@ -46,8 +46,12 @@ func idle_state():
 	idle_anim.play("idle")
 
 func convo_state():
-	if Input.is_action_just_pressed("advance_text"):
+	if player_in_range and Input.is_action_just_pressed("advance_text"):
 		start_npc_conversation.emit(conversation)
+
+func end_of_wave():
+	print("calling end of wave")
+	state = State.CONVO
 
 func move_to_booth():
 	navigation_agent.path_desired_distance = 4.0
