@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://qe3nqwgd58td" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW09.png" id="56_m3ryu"]
 [ext_resource type="Texture2D" uid="uid://bic1n2prbaeol" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW10.png" id="57_l1nqm"]
 [ext_resource type="Texture2D" uid="uid://dxq6qvjppayal" path="res://Assets/Art/Characters/Gameplay/Konig/Shadow.png" id="63_cugtb"]
+[ext_resource type="AudioStream" uid="uid://de1sa64aaferj" path="res://Assets/Audio/SFX/PunchCollide_wip1.mp3" id="64_bwrv0"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_0pryh"]
 points = PackedVector2Array(-10.230589, -7.7029266, 2.763811, -8.08464, 3.4391432, 14.905447, -9.555256, 15.287159)
@@ -841,6 +842,10 @@ modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.59607846)
 z_index = -1
 texture = ExtResource("63_cugtb")
 offset = Vector2(-2, 12)
+
+[node name="Punch" type="AudioStreamPlayer2D" parent="." unique_id=1529802421]
+stream = ExtResource("64_bwrv0")
+volume_db = -9.301
 
 [connection signal="animation_finished" from="Animations" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="take_hit"]
