@@ -10,6 +10,7 @@ enum State {
 signal konig_arrived
 signal konig_left
 
+@onready var punch_sfx = $Punch
 @onready var shadow = $Shadow
 @onready var hitbox = $Hitbox/CollisionShape2D
 @onready var hurtbox = $Hurtbox/CollisionShape2D
@@ -23,14 +24,21 @@ signal konig_left
 
 var state = State.WARPING
 var knockback_velocity = Vector2.ZERO
-var last_x_direction = 1
+var last_x_direction = -1
 var last_y_direction = 1
 var last_direction = Vector2(1, 0)
+var attack_buffered = false
+var attack_buffer_timer = 0.0
+var attack_buffer_time = 0.2
 
 func _ready():
 	hitbox.disabled = true
 
 func _physics_process(delta):
+	update_attack_buffer(delta)
+	
+	if Input.is_action_just_pressed("attack"):
+		buffer_attack()
 	match state:
 		State.MOVE:
 			move_state(delta)
@@ -58,8 +66,6 @@ func move_state(delta):
 		last_direction = motion.normalized()
 	else:
 		update_idle()
-	if Input.is_action_just_pressed("attack"):
-		start_attack()
 	velocity = velocity.lerp(motion, velocity_weight * delta)
 	move_and_slide()
 
@@ -83,6 +89,10 @@ func _on_timer_timeout():
 	state = State.MOVE
 	velocity = Vector2.ZERO
 	timer.stop()
+	
+	if attack_buffered:
+		attack_buffered = false
+		start_attack()
 
 func take_hit(direction):
 	if state == State.MOVE:
@@ -91,17 +101,37 @@ func take_hit(direction):
 		timer.start(KNOCKBACK_TIME)
 		animations.play(get_stun_animation())
 
+func update_attack_buffer(delta):
+	if attack_buffered:
+		attack_buffer_timer -= delta
 
+		if attack_buffer_timer <= 0:
+			attack_buffered = false
+
+
+func buffer_attack():
+	if state == State.MOVE:
+		start_attack()
+	else:
+		attack_buffered = true
+		attack_buffer_timer = attack_buffer_time
 
 func start_attack():
+	attack_buffered = false
+	attack_buffer_timer = 0.0
+	
 	state = State.ATTACK
 	update_hitbox_direction()
 	hitbox.disabled = false
+	play_punch_sfx()
 	animations.play(get_attack_animation())
 
 func attack_state():
 	velocity = Vector2.ZERO
 	move_and_slide()
+
+func play_punch_sfx():
+	punch_sfx.play()
 
 func get_attack_animation() -> String:
 	if last_x_direction > 0:

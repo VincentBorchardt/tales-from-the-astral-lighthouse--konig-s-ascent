@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bq0x0gomy56h5"]
 
-[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Objects/gameplay.gd" id="1_md4x4"]
+[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_md4x4"]
 [ext_resource type="PackedScene" uid="uid://cefd7if647b4f" path="res://Scenes/Waves/wave_4.tscn" id="2_anjjd"]
 [ext_resource type="PackedScene" uid="uid://cq7qwaink0bj" path="res://Scenes/Waves/wave_5.tscn" id="3_ocbj8"]
 [ext_resource type="PackedScene" uid="uid://y0qsdr7yuscb" path="res://Scenes/Waves/wave_6.tscn" id="4_r8neg"]
 [ext_resource type="PackedScene" uid="uid://d1a2op8s4io37" path="res://Scenes/Levels/level_4.tscn" id="5_13yca"]
+[ext_resource type="AudioStream" uid="uid://jiue6il30deb" path="res://Assets/Audio/Music/MainThemeLevel3_wip1.mp3" id="6_8dmpc"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="6_ocbj8"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="7_r8neg"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="8_rcyh2"]
@@ -577,6 +578,7 @@ y_sort_enabled = true
 script = ExtResource("1_md4x4")
 waves = Array[PackedScene]([ExtResource("2_anjjd"), ExtResource("3_ocbj8"), ExtResource("4_r8neg")])
 next_level = ExtResource("5_13yca")
+music = ExtResource("6_8dmpc")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false

@@ -17,6 +17,7 @@ var state = State.SHOOT
 @onready var enemy_anim = $AnimatedSprite2D
 @onready var hitbox = $Hitbox/CollisionShape2D
 @onready var shadow = $Shadow
+@onready var explode = $Explode
 
 var player
 
@@ -38,11 +39,15 @@ func _physics_process(delta):
 			if collision:
 				velocity = Vector2.ZERO
 				shadow.visible = false
+				play_explode_sound()
 				enemy_anim.play("enemy_death")
 				await enemy_anim.animation_finished
 				died.emit()
 				queue_free()
 
+func play_explode_sound():
+	explode.pitch_scale = randf_range(0.9, 1.2)
+	explode.play()
 
 func take_hit(direction):
 	velocity = direction * knockback_speed

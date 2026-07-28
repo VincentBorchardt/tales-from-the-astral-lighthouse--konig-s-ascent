@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnk4r2obnewnv"]
 
 [ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="1_cwapv"]
-[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Objects/wave.gd" id="1_qvc7d"]
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Gameplay/wave.gd" id="1_qvc7d"]
 
 [node name="Wave 3" type="Node2D" unique_id=2078737245]
 script = ExtResource("1_qvc7d")

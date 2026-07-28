@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://bl7t366jaibvd"]
 
-[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Objects/gameplay.gd" id="1_0x4y1"]
+[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_0x4y1"]
 [ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_ia1lp"]
 [ext_resource type="PackedScene" uid="uid://dv2ws74mj06q" path="res://Scenes/Waves/wave_2.tscn" id="3_5buja"]
 [ext_resource type="PackedScene" uid="uid://cnk4r2obnewnv" path="res://Scenes/Waves/wave_3.tscn" id="4_wyygt"]
 [ext_resource type="PackedScene" uid="uid://bq0x0gomy56h5" path="res://Scenes/Levels/level_3.tscn" id="5_uqiic"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="5_yxf76"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_ia1lp"]
+[ext_resource type="AudioStream" uid="uid://cd8lfmu8qdn7y" path="res://Assets/Audio/Music/MainThemeLevel2_wip1.mp3" id="6_yxf76"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="7_5buja"]
 [ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npc.tscn" id="8_wyygt"]
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/UI/Waves/Wave_1.png" id="9_u87on"]
@@ -577,6 +578,7 @@ y_sort_enabled = true
 script = ExtResource("1_0x4y1")
 waves = Array[PackedScene]([ExtResource("2_ia1lp"), ExtResource("3_5buja"), ExtResource("4_wyygt")])
 next_level = ExtResource("5_uqiic")
+music = ExtResource("6_yxf76")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false

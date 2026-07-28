@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brexcf30oj1hv"]
 
-[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Objects/gameplay.gd" id="1_633d5"]
+[ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_633d5"]
 [ext_resource type="PackedScene" uid="uid://dv2ws74mj06q" path="res://Scenes/Waves/wave_2.tscn" id="3_27vqw"]
 [ext_resource type="PackedScene" uid="uid://cnk4r2obnewnv" path="res://Scenes/Waves/wave_3.tscn" id="4_jd0ia"]
 [ext_resource type="PackedScene" uid="uid://y0qsdr7yuscb" path="res://Scenes/Waves/wave_6.tscn" id="4_srugb"]
