@@ -8,7 +8,7 @@ var wave_animations = [
 
 @export var waves: Array[PackedScene]
 @export var next_level: PackedScene
-
+@export var music : AudioStream
 @onready var booth = $Booth
 @onready var konig = $Konig
 @onready var wave_timer = $WaveTimer
@@ -25,6 +25,8 @@ var in_calm_state = false
 func _ready():
 	print("starting level now")
 	in_calm_state = false
+	print("Music resource:", music)
+	MusicManager.play_music( music )
 	booth.warp_in()
 	
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cefd7if647b4f"]
 
-[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Objects/wave.gd" id="1_3ninc"]
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Gameplay/wave.gd" id="1_3ninc"]
 [ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="1_obd43"]
 
 [node name="Wave 4" type="Node2D" unique_id=884088732]
