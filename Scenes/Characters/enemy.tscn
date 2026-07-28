@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c44vek5a8usmp" path="res://Assets/Art/Characters/Gameplay/Enemy/enemy_punched_NW.png" id="10_8p8tp"]
 [ext_resource type="Texture2D" uid="uid://cd767ciifkdq4" path="res://Assets/Art/Characters/Gameplay/Enemy/enemy_punched_SE.png" id="11_mf7k6"]
 [ext_resource type="Texture2D" uid="uid://dqmd6ukds7wle" path="res://Assets/Art/Characters/Gameplay/Enemy/enemy_punched_SW.png" id="12_j6gg3"]
+[ext_resource type="Texture2D" uid="uid://dxq6qvjppayal" path="res://Assets/Art/Characters/Gameplay/Konig/Shadow.png" id="13_ebtt5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pp5cw"]
 
@@ -339,7 +340,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_base_ne",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -368,7 +369,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_base_nw",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -397,7 +398,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_base_se",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -426,7 +427,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_base_sw",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -487,7 +488,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_punched_ne",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -516,7 +517,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_punched_nw",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -545,7 +546,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_punched_se",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -574,7 +575,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"enemy_punched_sw",
-"speed": 10.0
+"speed": 12.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_khvpl"]
@@ -599,15 +600,13 @@ shape = SubResource("CircleShape2D_cvsuj")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1462256017]
 
 [node name="Timer" type="Timer" parent="." unique_id=280841505]
-wait_time = 1.6999999999999997
+wait_time = 1.6999999999999995
 autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383095830]
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_pp5cw")
-animation = &"enemy_death"
-frame = 8
-frame_progress = 1.0
+animation = &"enemy_base_se"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1031822175]
 collision_layer = 8
@@ -617,6 +616,12 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_khvpl")
 disabled = true
 debug_color = Color(0.74969727, 0.46035427, 9.62615e-07, 0.41960785)
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=283154658]
+modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.4862745)
+z_index = -1
+position = Vector2(0, 15)
+texture = ExtResource("13_ebtt5")
 
 [connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

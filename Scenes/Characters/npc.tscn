@@ -35,9 +35,10 @@
 [ext_resource type="Texture2D" uid="uid://cwjedgsd7hmkh" path="res://Assets/Art/Characters/Gameplay/Npc/Walk/NPC_Walk_SE/NPC_Walk_SE05.png" id="28_c0gjw"]
 [ext_resource type="Texture2D" uid="uid://ecqbh45fy7bg" path="res://Assets/Art/Characters/Gameplay/Npc/Walk/NPC_Walk_SE/NPC_Walk_SE06.png" id="29_d5ghi"]
 [ext_resource type="Texture2D" uid="uid://c8uk6ihgbs4n5" path="res://Assets/Art/Characters/Gameplay/Npc/Walk/NPC_Walk_SE/NPC_Walk_SE07.png" id="30_r0bbl"]
+[ext_resource type="Texture2D" uid="uid://dxq6qvjppayal" path="res://Assets/Art/Characters/Gameplay/Konig/Shadow.png" id="36_i26q5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvuxs"]
-size = Vector2(12, 25)
+size = Vector2(8, 12)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mofsa"]
 radius = 5.3851647
@@ -300,7 +301,7 @@ collision_mask = 24
 script = ExtResource("1_wudbq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1231253204]
-position = Vector2(0, 2.5)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_wvuxs")
 debug_color = Color(0.91312116, 0.27376494, 0.27984765, 0.41960785)
 
@@ -321,6 +322,7 @@ animation = &"convo"
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1996609561]
 
 [node name="Interact" type="Area2D" parent="." unique_id=1936323585]
+visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact" unique_id=611034364]
@@ -330,6 +332,12 @@ shape = SubResource("CircleShape2D_pp5cw")
 position = Vector2(0, -17)
 sprite_frames = SubResource("SpriteFrames_40cke")
 animation = &"low"
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=458526374]
+modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.4862745)
+z_index = -1
+position = Vector2(0, 12)
+texture = ExtResource("36_i26q5")
 
 [connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_hurtbox_area_entered"]
 [connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]
