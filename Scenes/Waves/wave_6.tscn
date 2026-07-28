@@ -35,22 +35,18 @@ appear_delay = 6.0
 position = Vector2(205, 174)
 appear_delay = 8.0
 
-[node name="Portal8" parent="." unique_id=1822096228 instance=ExtResource("1_rluyh")]
-position = Vector2(179, 181)
-appear_delay = 11.0
-
 [node name="Portal9" parent="." unique_id=704435984 instance=ExtResource("1_rluyh")]
-position = Vector2(160, 195)
-appear_delay = 11.0
+position = Vector2(178, 181)
+appear_delay = 9.0
 
 [node name="Portal10" parent="." unique_id=1649085403 instance=ExtResource("1_rluyh")]
-position = Vector2(119, 181)
-appear_delay = 11.0
+position = Vector2(137, 167)
+appear_delay = 9.0
 
 [node name="Portal11" parent="." unique_id=1033762044 instance=ExtResource("1_rluyh")]
-position = Vector2(101, 168)
-appear_delay = 11.0
+position = Vector2(119, 154)
+appear_delay = 9.0
 
 [node name="Portal12" parent="." unique_id=1780006931 instance=ExtResource("1_rluyh")]
-position = Vector2(76, 151)
+position = Vector2(94, 137)
 appear_delay = 14.0

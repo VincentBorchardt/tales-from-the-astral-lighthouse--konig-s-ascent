@@ -17,7 +17,7 @@ position = Vector2(108, 115)
 appear_delay = 3.0
 
 [node name="Portal3" parent="." unique_id=169329958 instance=ExtResource("1_121b7")]
-position = Vector2(177, 130)
+position = Vector2(68, 142)
 spawn_delay = 7.0
 
 [node name="Portal4" parent="." unique_id=2020874988 instance=ExtResource("1_121b7")]
