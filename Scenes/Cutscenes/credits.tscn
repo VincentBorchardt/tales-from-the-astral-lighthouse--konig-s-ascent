@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://c2y42pymii2gj"]
+
+[ext_resource type="Script" uid="uid://b3jf58g0r4gsx" path="res://Scripts/Cutscenes/credits.gd" id="1_ub10f"]
+
+[node name="Credits" type="ScrollContainer" unique_id=1784082459]
+offset_right = 320.0
+offset_bottom = 240.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_ub10f")
+scroll_speed = 80.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2025567231]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tales from the Astral Lighthouse
+Königs Ascent
+
+[img]res://Assets/Art/Credits/AlphaCrush_Alphad.png[/img]
+
+Scenario & Game Design
+Balbod & Shabello
+
+Pixel Art & Animation
+Shabello
+
+Character Art & Ending Illustrations
+estherdevil
+
+Writing & Dialogue
+LimeyOtoko
+
+Music
+Chibenobi & Lam
+
+SFX
+Chibenobi
+
+Programming:
+calledthespacecowboy & Vincent
+
+Gameplay Design 
+calledthespacecowboy
+
+Systems Design
+Vincent
+
+Character Designs
+Alexandria - Kyle Bosman
+Boyhowdy - Kyle Bosman
+Dark Schippie Dues - Kyle Bosman
+Ermitz - Olf_HImself & Kyle Bosman
+Gulltry - Arktykk & Kyle Bosman
+König - Michael2399 & Kyle Bosman
+Marygold - Kenmi & Kyle Bosman
+Pitmaster - Kyle Bosman
+PrimevalMask - Kyle Bosman
+Seraph Quartz - jinx480 & Kyle Bosman
+Trik - Kyle Bosman
+Yazmody  - calledthespacecowboy & Kyle Bosman
+
+Fonts
+Cloak by Chevy Ray
+Emoji font by meowni.ca
+
+Playtesters
+—
+
+A Big Thank You to Kyle Bosman
+& the Robot Party Community
+
+And a thank you to you for playing!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
