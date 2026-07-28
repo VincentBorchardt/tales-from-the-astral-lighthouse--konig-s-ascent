@@ -16,6 +16,7 @@ var state = State.SHOOT
 @onready var hurtbox = $Hurtbox/CollisionShape2D
 @onready var enemy_anim = $AnimatedSprite2D
 @onready var hitbox = $Hitbox/CollisionShape2D
+@onready var shadow = $Shadow
 
 var player
 
@@ -36,6 +37,7 @@ func _physics_process(delta):
 
 			if collision:
 				velocity = Vector2.ZERO
+				shadow.visible = false
 				enemy_anim.play("enemy_death")
 				await enemy_anim.animation_finished
 				died.emit()
@@ -76,7 +78,6 @@ func shoot():
 		get_tree().current_scene.add_child(bullet)
 		bullet.global_position = muzzle.global_position
 		bullet.direction = (player.global_position - muzzle.global_position).normalized() * bullet_lag
-		bullet.rotation = bullet.direction.angle()
 
 
 func _on_timer_timeout() -> void:

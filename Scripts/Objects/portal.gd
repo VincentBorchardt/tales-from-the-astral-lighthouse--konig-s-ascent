@@ -25,4 +25,6 @@ func spawn_enemy():
 	enemy.global_position = global_position
 	get_parent().add_child(enemy)
 	get_tree().current_scene.enemy_spawned(enemy)
+
+	await get_tree().process_frame
 	queue_free()

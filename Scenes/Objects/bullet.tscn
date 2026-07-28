@@ -1,16 +1,119 @@
 [gd_scene format=3 uid="uid://d2oaxybmw1dyd"]
 
 [ext_resource type="Script" uid="uid://br2h7ytwhvq3c" path="res://Scripts/Objects/bullet.gd" id="1_cvsuj"]
+[ext_resource type="Texture2D" uid="uid://behymimy2txht" path="res://Assets/Art/Characters/Gameplay/Enemy/bullet.png" id="2_3cvgi"]
+[ext_resource type="Texture2D" uid="uid://uvdf8p53y086" path="res://Assets/Art/Characters/Gameplay/Enemy/bullet pop.png" id="3_di161"]
+[ext_resource type="Texture2D" uid="uid://dq82t20ad7ns8" path="res://Assets/Art/Characters/Gameplay/Enemy/bullets red.png" id="3_hbw2t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cfmdu"]
-radius = 4.0
+radius = 9.841446
 
-[sub_resource type="Gradient" id="Gradient_hbw2t"]
-offsets = PackedFloat32Array(0, 0.7878788, 0.959596, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0.06860713, 0.06860713, 0.06860713, 1, 0.44949496, 0.44949496, 0.44949496, 1, 1, 1, 1, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbw2t"]
+atlas = ExtResource("2_3cvgi")
+region = Rect2(0, 10, 10, 10)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_8cp46"]
-gradient = SubResource("Gradient_hbw2t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_di161"]
+atlas = ExtResource("2_3cvgi")
+region = Rect2(10, 10, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfiki"]
+atlas = ExtResource("2_3cvgi")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqv3d"]
+atlas = ExtResource("2_3cvgi")
+region = Rect2(10, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0v07"]
+atlas = ExtResource("3_di161")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4t5f"]
+atlas = ExtResource("3_di161")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_goku7"]
+atlas = ExtResource("3_di161")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtypv"]
+atlas = ExtResource("3_hbw2t")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhyrb"]
+atlas = ExtResource("3_hbw2t")
+region = Rect2(10, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acyyl"]
+atlas = ExtResource("3_hbw2t")
+region = Rect2(0, 10, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w120t"]
+atlas = ExtResource("3_hbw2t")
+region = Rect2(10, 10, 10, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pp5cw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_hbw2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di161")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfiki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqv3d")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0v07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4t5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_goku7")
+}],
+"loop": 0,
+"name": &"pop",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_qtypv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhyrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acyyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w120t")
+}],
+"loop": 0,
+"name": &"red_bullet",
+"speed": 8.0
+}]
 
 [node name="Bullet" type="Area2D" unique_id=883874890]
 collision_layer = 8
@@ -18,15 +121,15 @@ collision_mask = 2
 script = ExtResource("1_cvsuj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334781309]
-scale = Vector2(1, 0.6400002)
+scale = Vector2(0.5080554, 0.5110863)
 shape = SubResource("CircleShape2D_cfmdu")
 debug_color = Color(2.6321505e-08, 0.056600854, 0.0011945902, 0.41960785)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1241522402]
-scale = Vector2(0.11364573, 0.07650799)
-texture = SubResource("GradientTexture2D_8cp46")
-
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=577297737]
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1697316424]
+sprite_frames = SubResource("SpriteFrames_pp5cw")
+
 [connection signal="area_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

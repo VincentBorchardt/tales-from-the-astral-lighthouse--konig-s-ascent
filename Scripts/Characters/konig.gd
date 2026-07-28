@@ -10,6 +10,7 @@ enum State {
 signal konig_arrived
 signal konig_left
 
+@onready var shadow = $Shadow
 @onready var hitbox = $Hitbox/CollisionShape2D
 @onready var hurtbox = $Hurtbox/CollisionShape2D
 @onready var animations = $Animations
@@ -18,7 +19,7 @@ signal konig_left
 @export var FRICTION  = 20
 @export var MOTION_SPEED = 40
 @export var KNOCKBACK_SPEED = 100
-@export var KNOCKBACK_TIME = 0.05
+@export var KNOCKBACK_TIME = 0.15
 
 var state = State.WARPING
 var knockback_velocity = Vector2.ZERO
@@ -48,6 +49,7 @@ func move_state(delta):
 	motion = motion.normalized() * MOTION_SPEED
 	var velocity_weight: float = delta * (ACCELERATION if motion.x or motion.y else FRICTION)
 	animations.play(get_walk_animation())
+	set_shadow()
 	if motion.x != 0:
 		last_x_direction = sign(motion.x)
 	if motion.y != 0:
@@ -61,6 +63,13 @@ func move_state(delta):
 	velocity = velocity.lerp(motion, velocity_weight * delta)
 	move_and_slide()
 
+func set_shadow():
+	if last_x_direction > 0:
+		shadow.flip_h = false
+		shadow.offset = Vector2(-2, 12)
+	elif last_x_direction < 0:
+		shadow.flip_h = true
+		shadow.offset = Vector2(2, 12)
 
 func knockback_state():
 	if state == State.ATTACK:
@@ -78,8 +87,10 @@ func _on_timer_timeout():
 func take_hit(direction):
 	if state == State.MOVE:
 		state = State.KNOCKBACK
-		knockback_velocity = direction.normalized() * KNOCKBACK_SPEED
+		knockback_velocity = Vector2.ZERO
 		timer.start(KNOCKBACK_TIME)
+		animations.play(get_stun_animation())
+
 
 
 func start_attack():
@@ -104,6 +115,19 @@ func get_attack_animation() -> String:
 			return "attack_nw"
 		else:
 			return "attack_sw"
+
+func get_stun_animation() -> String:
+	if last_x_direction > 0:
+		if last_y_direction < 0:
+			return "stun_ne"
+		else:
+			return "stun_se"
+
+	else:
+		if last_y_direction < 0:
+			return "stun_nw"
+		else:
+			return "stun_sw"
 
 func warp_in():
 	print("triggering warp in")

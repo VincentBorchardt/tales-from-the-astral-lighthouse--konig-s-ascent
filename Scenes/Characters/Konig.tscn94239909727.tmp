@@ -836,7 +836,7 @@ shape = SubResource("CircleShape2D_pp5cw")
 [node name="Knockback" type="Timer" parent="." unique_id=214250105]
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=470894684]
-modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.59607846)
+modulate = Color(0.45452422, 0.45452428, 0.45452422, 1)
 z_index = -1
 texture = ExtResource("63_cugtb")
 offset = Vector2(-2, 12)

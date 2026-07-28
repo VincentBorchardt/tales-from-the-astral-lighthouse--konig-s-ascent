@@ -8,15 +8,15 @@ script = ExtResource("1_qvc7d")
 enemy_count = 6
 
 [node name="Portal" parent="." unique_id=995226439 instance=ExtResource("1_cwapv")]
-position = Vector2(41, 129)
+position = Vector2(52, 132)
 appear_delay = 1.0
 
 [node name="Portal2" parent="." unique_id=1763946553 instance=ExtResource("1_cwapv")]
-position = Vector2(73, 115)
+position = Vector2(86, 112)
 appear_delay = 3.0
 
 [node name="Portal3" parent="." unique_id=134105576 instance=ExtResource("1_cwapv")]
-position = Vector2(103, 100)
+position = Vector2(128, 97)
 appear_delay = 4.0
 
 [node name="Portal6" parent="." unique_id=315346019 instance=ExtResource("1_cwapv")]
