@@ -145,6 +145,7 @@ func _on_animated_sprite_2d_animation_finished():
 		"warp_in":
 			state = State.MOVE
 			konig_arrived.emit()
+			shadow.visible = true
 		"warp_out_ne", "warp_out_nw", "warp_out_se", "warp_out_sw":
 			konig_left.emit()
 		_: # TODO should probably put all the attacks here explicitly

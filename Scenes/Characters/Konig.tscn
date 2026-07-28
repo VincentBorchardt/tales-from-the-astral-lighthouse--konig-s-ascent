@@ -815,7 +815,7 @@ debug_color = Color(1, 0, 0.10958373, 0.41960785)
 
 [node name="Animations" type="AnimatedSprite2D" parent="." unique_id=1251738850]
 sprite_frames = SubResource("SpriteFrames_4gd6k")
-animation = &"attack_se"
+animation = &"warp_in"
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=753422830]
 visible = false
@@ -836,6 +836,7 @@ shape = SubResource("CircleShape2D_pp5cw")
 [node name="Knockback" type="Timer" parent="." unique_id=214250105]
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=470894684]
+visible = false
 modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.59607846)
 z_index = -1
 texture = ExtResource("63_cugtb")
