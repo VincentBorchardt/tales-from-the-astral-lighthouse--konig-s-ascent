@@ -83,13 +83,14 @@ func wave_complete():
 
 
 func _on_npcs_start_npc_conversation(messages: Variant) -> void:
+	print("trying to start conversation")
 	if in_calm_state:
-		# TODO pause gameplay
+		get_tree().paused = true
 		cutscene_overlay.start_cutscene(messages)
 
 
 func _on_cutscene_overlay_cutscene_ended() -> void:
-	# TODO unpause gameplay
+	get_tree().paused = false
 	pass # Replace with function body.
 
 
