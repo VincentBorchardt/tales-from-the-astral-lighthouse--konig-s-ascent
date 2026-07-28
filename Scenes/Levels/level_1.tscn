@@ -602,7 +602,7 @@ visible = false
 position = Vector2(160, 128)
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
-position = Vector2(160, 82)
+position = Vector2(159, 140)
 
 [node name="WaveTimer" type="Timer" parent="." unique_id=767368027]
 wait_time = 5.0
