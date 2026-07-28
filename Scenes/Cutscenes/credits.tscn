@@ -14,6 +14,7 @@ scroll_speed = 80.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.99215686, 0.9843137, 0.89411765, 1)
 bbcode_enabled = true
 text = "
 
@@ -30,39 +31,36 @@ text = "
 
 
 
-Tales from the Astral Lighthouse
-Königs Ascent
+[color=#e24d63]Tales from the Astral Lighthouse
+Königs Ascent[/color]
 
 [img]res://Assets/Art/Credits/AlphaCrush_Alphad.png[/img]
 
-Scenario & Game Design
+[color=#90dcc0]Scenario & Game Design[/color]
 Balbod & Shabello
 
-Pixel Art & Animation
-Shabello
-
-Character Art & Ending Illustrations
-estherdevil
-
-Writing & Dialogue
+[color=#90dcc0]Writing & Dialogue[/color]
 LimeyOtoko
 
-Music
-Chibenobi & Lam
+[color=#90dcc0]Pixel Art & Animation[/color]
+Shabello
 
-SFX
+[color=#90dcc0]Character Art & Ending Illustrations[/color]
+estherdevil
+
+[color=#90dcc0]Music[/color]
+Chibenobi, Lam & MattB
+
+[color=#90dcc0]SFX[/color]
 Chibenobi
 
-Programming:
-calledthespacecowboy & Vincent
-
-Gameplay Design 
+[color=#90dcc0]Gameplay Design[/color]
 calledthespacecowboy
 
-Systems Design
+[color=#90dcc0]Systems Design[/color]
 Vincent
 
-Character Designs
+[color=#90dcc0]Character Designs[/color]
 Alexandria - Kyle Bosman
 Boyhowdy - Kyle Bosman
 Dark Schippie Dues - Kyle Bosman
@@ -76,12 +74,15 @@ Seraph Quartz - jinx480 & Kyle Bosman
 Trik - Kyle Bosman
 Yazmody  - calledthespacecowboy & Kyle Bosman
 
-Fonts
+[color=#90dcc0]Fonts[/color]
 Cloak by Chevy Ray
 Emoji font by meowni.ca
 
-Playtesters
+[color=#90dcc0]Playtesters[/color]
 —
+
+[color=#90dcc0]Built on Godot Engine 4.7[/color]
+godotengine.org/license
 
 A Big Thank You to Kyle Bosman
 & the Robot Party Community
