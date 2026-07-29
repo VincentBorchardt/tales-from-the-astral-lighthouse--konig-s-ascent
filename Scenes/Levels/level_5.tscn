@@ -648,6 +648,8 @@ messages = Array[ExtResource("16_aag1t")]([SubResource("Resource_tjl6l")])
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1022537975]
 libraries/ = SubResource("AnimationLibrary_7r2dd")
 
+[node name="ComboTimer" type="Timer" parent="." unique_id=989159986]
+
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
 [connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
