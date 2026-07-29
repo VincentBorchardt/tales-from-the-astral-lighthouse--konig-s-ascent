@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_qvtqq"]
 [ext_resource type="PackedScene" uid="uid://c4gipqt3vgc26" path="res://Scenes/Waves/tutorial_wave.tscn" id="2_35mx6"]
-[ext_resource type="PackedScene" uid="uid://650j77xtdxdt" path="res://Scenes/Levels/level_1.tscn" id="3_ku8a2"]
+[ext_resource type="PackedScene" uid="uid://bl7t366jaibvd" path="res://Scenes/Levels/level_2.tscn" id="3_ku8a2"]
 [ext_resource type="AudioStream" uid="uid://ca7puep3fxliq" path="res://Assets/Audio/Music/MainThemeLevel1_wip1.mp3" id="4_mj38t"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_o863f"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="7_qfmmv"]
@@ -647,6 +647,8 @@ libraries/ = SubResource("AnimationLibrary_7r2dd")
 z_index = -3
 position = Vector2(160, 120)
 texture = ExtResource("18_o7iop")
+
+[node name="ComboTimer" type="Timer" parent="." unique_id=352762323]
 
 [connection signal="bullet_absorbed" from="Konig" to="." method="_on_bullet_absorbed"]
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]

@@ -59,42 +59,46 @@ func _input(event: InputEvent) -> void:
 		state = State.MOVE
 		start_npc_conversation.emit(conversation)
 
+func _physics_process(delta):
+	if state == State.MOVE:
+		move_state()
+
 func start_move():
 	print("Starting NPC movement")
 	move_to_booth()
 
 func move_state():
-	while true:
-		if navigation_agent.is_navigation_finished():
-			body_animations.play("warp")
-			state = State.IDLE
-			return
-		var current_position: Vector2 = global_position
-		var next_path: Vector2 = navigation_agent.get_next_path_position()
-		var new_velocity: Vector2 = next_path - current_position
-		new_velocity = new_velocity.normalized()
-		new_velocity = new_velocity * movement_speed
-		velocity = new_velocity
-		move_and_slide()
+	var distance = global_position.distance_to(movement_target.global_position)
+
+	if distance < 20:
+		velocity = Vector2.ZERO
+		state = State.IDLE
+		body_animations.play("warp")
+		return
+	
+	var next_path: Vector2 = navigation_agent.get_next_path_position()
+	var direction: Vector2 = global_position.direction_to(next_path)
+
+	velocity = direction * movement_speed
+	move_and_slide()
+	body_animations.play("walk")
 
 func end_of_wave():
 	health_marker.visible = false
 	state = State.CONVO
 
 func move_to_booth():
-	body_animations.play("walk")
+	state = State.MOVE
 	navigation_agent.path_desired_distance = 4.0
 	navigation_agent.target_desired_distance = 4.0
 	
 	call_deferred("actor_setup")
+
 	
 func actor_setup():
 	await get_tree().physics_frame
-	set_movement_target(movement_target.position)
+	navigation_agent.target_position = movement_target.global_position
 	
-func set_movement_target(target_point: Vector2):
-	navigation_agent.target_position = target_point
-	move_state()
 
 func take_hit():
 	print("taking health")
@@ -117,4 +121,6 @@ func _on_animation_animation_finished() -> void:
 		"hurt":
 			state = State.IDLE
 		"death":
+			queue_free()
+		"warp":
 			queue_free()

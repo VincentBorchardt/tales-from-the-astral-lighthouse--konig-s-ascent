@@ -8,7 +8,7 @@ enum State {
 }
 
 var state = State.SHOOT
-
+var dead = false
 @export var knockback_speed = 1.5
 @export var bullet_lag : float = 0.3
 @export var bullet_scene: PackedScene
@@ -39,6 +39,9 @@ func _physics_process(delta):
 				die()
 
 func die():
+	if dead:
+		return
+	dead = true
 	velocity = Vector2.ZERO
 	shadow.visible = false
 	GameplayManager.increase_combo()

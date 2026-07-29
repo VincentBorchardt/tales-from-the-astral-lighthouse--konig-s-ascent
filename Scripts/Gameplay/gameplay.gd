@@ -156,14 +156,13 @@ func _on_cutscene_overlay_cutscene_ended() -> void:
 func _on_booth_player_entered() -> void:
 	if in_calm_state:
 		get_tree().call_group("npcs", "start_move")
-		print("checking if NPCs left")
-		var npcs_left = true
-		#while npcs_left:
-			## TODO put a timer in here to prevent the super-long while looping?
-			#if get_tree().get_nodes_in_group("npcs").size() == 0:
-				#npcs_left = false
+		await wait_for_npcs()
 		konig.warp_out()
 	
+
+func wait_for_npcs() -> void:
+	while get_tree().get_nodes_in_group("npcs").size() > 0:
+		await get_tree().process_frame
 
 func _on_bullet_absorbed():
 	print("absorbing bullet")
@@ -178,6 +177,7 @@ func _on_booth_warp_in_finished() -> void:
 		booth.stay_open()
 	else:
 		print("calling konig warp in")
+		booth.stay_open()
 		konig.warp_in()
 
 

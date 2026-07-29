@@ -827,6 +827,7 @@ size = Vector2(9, 20)
 radius = 5.0
 
 [node name="Konig" type="CharacterBody2D" unique_id=2108258614 groups=["player"]]
+collision_layer = 33
 motion_mode = 1
 script = ExtResource("1_w4f7w")
 ACCELERATION = 161
