@@ -13,7 +13,7 @@ var wave_animations = [
 @export_group("Special Level Setup")
 @export var is_tutorial = false
 @export var is_final = false
-@export var absorbed_bullet_threshold: int
+@export var absorbed_bullet_threshold: int = 5
 
 @onready var booth = $Booth
 @onready var konig = $Konig
@@ -29,12 +29,15 @@ var current_wave_animation = 0
 var in_calm_state = false
 
 var scripted_progression_count = 0
-var absorbed_bullet_count = 0:
+var absorbed_bullet_count: int = 0:
 	set(new_bullet_count):
 		absorbed_bullet_count = new_bullet_count
-		if absorbed_bullet_count >= absorbed_bullet_threshold:
+		print("absorbed bullet count = " + str(new_bullet_count))
+		print("absorbed bullet threshold = " + str(absorbed_bullet_threshold))
+		if new_bullet_count == absorbed_bullet_threshold:
+			print("move to next part of sequence")
 			scripted_progression_count += 1
-			continue_scripted_sequence()
+			continue_scripted_sequence.call_deferred()
 
 func _ready():
 	print("starting level now")
@@ -60,7 +63,23 @@ func continue_scripted_sequence():
 				start_next_wave()
 				konig.toggle_cutscene()
 			2:
-				pass
+				scripted_progression_count += 1
+				start_cutscene(StoryAutoload.tutorial_2)
+			3:
+				scripted_progression_count += 1
+				konig.toggle_cutscene()
+			4:
+				scripted_progression_count += 1
+				start_cutscene(StoryAutoload.tutorial_3)
+			5:
+				scripted_progression_count += 1
+				in_calm_state = true
+				get_tree().call_group("npcs", "end_of_wave")
+			6:
+				scripted_progression_count += 1
+				booth.visible = true
+				booth.warp_in()
+				
 	elif is_final:
 		pass
 
@@ -106,6 +125,8 @@ func level_change():
 func wave_complete():
 	print("wave complete")
 	current_wave_scene.queue_free()
+	if scripted_progression_count > 0:
+		continue_scripted_sequence()
 	wave_timer.start()
 
 
@@ -119,6 +140,7 @@ func start_cutscene(messages):
 	cutscene_overlay.start_cutscene(messages)
 
 func _on_cutscene_overlay_cutscene_ended() -> void:
+	print("ending cutscene")
 	get_tree().paused = false
 	if scripted_progression_count > 0:
 		continue_scripted_sequence()
@@ -137,7 +159,9 @@ func _on_booth_player_entered() -> void:
 	
 
 func _on_bullet_absorbed():
+	print("absorbing bullet")
 	if is_tutorial or is_final:
+		print("adding to bullet count")
 		absorbed_bullet_count += 1
 
 func _on_booth_warp_in_finished() -> void:

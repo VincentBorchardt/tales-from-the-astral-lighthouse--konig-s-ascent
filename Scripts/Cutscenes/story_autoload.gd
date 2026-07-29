@@ -13,3 +13,6 @@ var tutorial_2_1: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial
 var tutorial_2_2: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_2_2.tres")
 var tutorial_2_3: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_2_3.tres")
 var tutorial_2: Array[Message] = [tutorial_2_1, tutorial_2_2, tutorial_2_3]
+
+var tutorial_3_1: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_3_1.tres")
+var tutorial_3: Array[Message] = [tutorial_3_1]
