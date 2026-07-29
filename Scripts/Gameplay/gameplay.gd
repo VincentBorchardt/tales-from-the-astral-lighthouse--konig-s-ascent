@@ -9,6 +9,11 @@ var wave_animations = [
 @export var waves: Array[PackedScene]
 @export var next_level: PackedScene
 @export var music : AudioStream
+
+@export var is_tutorial = false
+@export var is_final = false
+@export var absorbed_bullet_threshold: int
+
 @onready var booth = $Booth
 @onready var konig = $Konig
 @onready var wave_timer = $WaveTimer
@@ -21,6 +26,12 @@ var current_wave_scene: Node2D
 var enemies_remaining := 0
 var current_wave_animation = 0
 var in_calm_state = false
+
+var absorbed_bullet_count = 0:
+	set(new_bullet_count):
+		absorbed_bullet_count = new_bullet_count
+		if absorbed_bullet_count >= absorbed_bullet_threshold:
+			pass
 
 func _ready():
 	print("starting level now")
@@ -58,7 +69,6 @@ func start_next_wave():
 	enemies_remaining = current_wave_scene.enemy_count
 
 	print("new wave")
-
 
 func enemy_spawned(enemy):
 	enemy.died.connect(enemy_died)
@@ -108,6 +118,9 @@ func _on_booth_player_entered() -> void:
 		konig.warp_out()
 	
 
+func _on_bullet_absorbed():
+	print("bullet absorbed")
+	pass
 
 func _on_booth_warp_in_finished() -> void:
 	print("booth warp in finished")

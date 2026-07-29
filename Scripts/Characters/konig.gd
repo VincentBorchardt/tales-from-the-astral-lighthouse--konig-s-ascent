@@ -10,6 +10,8 @@ enum State {
 signal konig_arrived
 signal konig_left
 
+signal bullet_absorbed
+
 @onready var punch_sfx = $Punch
 @onready var shadow = $Shadow
 @onready var hitbox = $Hitbox/CollisionShape2D
@@ -95,6 +97,7 @@ func _on_timer_timeout():
 		start_attack()
 
 func take_hit(direction):
+	bullet_absorbed.emit()
 	if state == State.MOVE:
 		state = State.KNOCKBACK
 		knockback_velocity = Vector2.ZERO
