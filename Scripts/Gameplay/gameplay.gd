@@ -58,7 +58,7 @@ func continue_scripted_sequence():
 			1:
 				# Start the basic wave
 				start_next_wave()
-				konig.toggle_cutscene_state()
+				konig.toggle_cutscene()
 			2:
 				pass
 	elif is_final:

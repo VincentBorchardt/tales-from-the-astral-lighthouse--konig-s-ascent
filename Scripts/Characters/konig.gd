@@ -129,7 +129,7 @@ func start_attack():
 	play_punch_sfx()
 	animations.play(get_attack_animation())
 
-func toggle_cutscene_state():
+func toggle_cutscene():
 	in_cutscene = !in_cutscene
 
 func attack_state():
