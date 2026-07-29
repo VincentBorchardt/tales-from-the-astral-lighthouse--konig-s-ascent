@@ -9,15 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://d326dwdiail2n" path="res://Assets/Art/Characters/Gameplay/Konig/konig_walk_W.png" id="5_0pryh"]
 [ext_resource type="Texture2D" uid="uid://dgxx6t48tw7kh" path="res://Assets/Art/Characters/Gameplay/Konig/Stun/Konig_STUN_NW.png" id="5_cugtb"]
 [ext_resource type="Texture2D" uid="uid://dkjngn2a2c1uq" path="res://Assets/Art/Characters/Gameplay/Konig/Stun/Konig_STUN_SE.png" id="6_bwrv0"]
-[ext_resource type="Texture2D" uid="uid://dh22t2ul67te5" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise00.png" id="6_mouc3"]
-[ext_resource type="Texture2D" uid="uid://dmufgex6w0xxg" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise01.png" id="7_28ia5"]
 [ext_resource type="Texture2D" uid="uid://bbtwrxdbr1oq4" path="res://Assets/Art/Characters/Gameplay/Konig/Stun/Konig_STUN_SW.png" id="7_xjpds"]
-[ext_resource type="Texture2D" uid="uid://baabspveg3gro" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise02.png" id="8_jwtgd"]
-[ext_resource type="Texture2D" uid="uid://c7ts0v4pcc338" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise03.png" id="9_eu4u8"]
-[ext_resource type="Texture2D" uid="uid://dmkdu1sorwgp6" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise04.png" id="10_mrdu5"]
-[ext_resource type="Texture2D" uid="uid://2p1j8djjbiih" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise05.png" id="11_mn8mx"]
-[ext_resource type="Texture2D" uid="uid://c0b4b7ub3tr38" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise06.png" id="12_d2nr2"]
-[ext_resource type="Texture2D" uid="uid://cubt2vneuf20k" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig_Materialise07.png" id="13_e73jq"]
+[ext_resource type="Texture2D" uid="uid://4npgo5mqkcau" path="res://Assets/Art/Characters/Gameplay/Konig/Arrive/Konig MAT.png" id="10_at4a4"]
 [ext_resource type="Texture2D" uid="uid://dpfkr5machj01" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE00.png" id="14_16tm7"]
 [ext_resource type="Texture2D" uid="uid://cheyneqoovax0" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE01.png" id="15_fyilx"]
 [ext_resource type="Texture2D" uid="uid://bk0y4xg17qrgn" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_NE/Konig_DeMat_NE02.png" id="16_xi5mx"]
@@ -340,6 +333,42 @@ region = Rect2(56, 78, 28, 26)
 atlas = ExtResource("5_0pryh")
 region = Rect2(84, 78, 28, 26)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa25u"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(50, 52, 25, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yobhc"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(25, 52, 25, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf20o"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(0, 0, 25, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tc8yc"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(25, 0, 25, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8byl"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(50, 0, 25, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn2yo"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(0, 26, 25, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeyj1"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(25, 26, 25, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2doc"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(50, 26, 25, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0xq7"]
+atlas = ExtResource("10_at4a4")
+region = Rect2(0, 52, 25, 26)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_4gd6k"]
 animations = [{
 "frames": [{
@@ -608,31 +637,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": SubResource("AtlasTexture_oa25u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_mouc3")
+"texture": SubResource("AtlasTexture_yobhc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_28ia5")
+"texture": SubResource("AtlasTexture_mf20o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_jwtgd")
+"texture": SubResource("AtlasTexture_tc8yc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_eu4u8")
+"texture": SubResource("AtlasTexture_l8byl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_mrdu5")
+"texture": SubResource("AtlasTexture_dn2yo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_mn8mx")
+"texture": SubResource("AtlasTexture_eeyj1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_d2nr2")
+"texture": SubResource("AtlasTexture_l2doc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_e73jq")
+"texture": SubResource("AtlasTexture_k0xq7")
 }],
 "loop": 0,
 "name": &"warp_in",
@@ -806,6 +835,7 @@ MOTION_SPEED = 100
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=181426405]
 visible = false
+collision_layer = 4
 script = ExtResource("2_cfmdu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1098175845]
@@ -821,7 +851,7 @@ animation = &"warp_in"
 [node name="Hurtbox" type="Area2D" parent="." unique_id=753422830]
 visible = false
 collision_layer = 2
-collision_mask = 8
+collision_mask = 16
 script = ExtResource("2_cdq7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=211066800]
@@ -840,8 +870,10 @@ shape = SubResource("CircleShape2D_pp5cw")
 visible = false
 modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.59607846)
 z_index = -1
+position = Vector2(4, 0)
 texture = ExtResource("63_cugtb")
 offset = Vector2(-2, 12)
+flip_h = true
 
 [node name="Punch" type="AudioStreamPlayer2D" parent="." unique_id=1529802421]
 stream = ExtResource("64_bwrv0")

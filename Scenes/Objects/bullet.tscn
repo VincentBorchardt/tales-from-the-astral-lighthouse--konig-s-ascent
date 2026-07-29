@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://behymimy2txht" path="res://Assets/Art/Characters/Gameplay/Enemy/bullet.png" id="2_3cvgi"]
 [ext_resource type="Texture2D" uid="uid://uvdf8p53y086" path="res://Assets/Art/Characters/Gameplay/Enemy/bullet pop.png" id="3_di161"]
 [ext_resource type="Texture2D" uid="uid://dq82t20ad7ns8" path="res://Assets/Art/Characters/Gameplay/Enemy/bullets red.png" id="3_hbw2t"]
+[ext_resource type="AudioStream" uid="uid://dqw0agudqnmoj" path="res://Assets/Audio/SFX/EnemiesShooting_wip1.mp3" id="5_xfiki"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cfmdu"]
 radius = 9.841446
@@ -116,7 +117,7 @@ animations = [{
 }]
 
 [node name="Bullet" type="Area2D" unique_id=883874890]
-collision_layer = 8
+collision_layer = 16
 collision_mask = 2
 script = ExtResource("1_cvsuj")
 
@@ -129,6 +130,10 @@ debug_color = Color(2.6321505e-08, 0.056600854, 0.0011945902, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1697316424]
 sprite_frames = SubResource("SpriteFrames_pp5cw")
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="." unique_id=469439482]
+stream = ExtResource("5_xfiki")
+volume_db = -5.919
 
 [connection signal="area_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

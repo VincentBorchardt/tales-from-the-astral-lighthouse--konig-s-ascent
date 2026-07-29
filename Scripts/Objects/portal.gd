@@ -6,6 +6,7 @@ extends Node2D
 @onready var spawn_timer = $SpawnTimer
 @onready var Appear_timer = $AppearTimer
 @onready var portal_anim = $AnimatedSprite2D
+@onready var enter_sfx = $Enter
 
 func _ready():
 	visible = false
@@ -17,6 +18,7 @@ func _ready():
 
 func update_visibility():
 	visible = true
+	enter_sfx.play()
 	portal_anim.play("portal")
 
 

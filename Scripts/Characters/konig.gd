@@ -74,10 +74,10 @@ func move_state(delta):
 func set_shadow():
 	if last_x_direction > 0:
 		shadow.flip_h = false
-		shadow.offset = Vector2(-2, 12)
+		shadow.offset = Vector2(-6, 12)
 	elif last_x_direction < 0:
 		shadow.flip_h = true
-		shadow.offset = Vector2(2, 12)
+		shadow.offset = Vector2(-2, 12)
 
 func knockback_state():
 	if state == State.ATTACK:
@@ -169,6 +169,7 @@ func warp_in():
 	print("triggering warp in")
 	visible = true
 	state = State.WARPING
+	shadow.visible = true
 	animations.play("warp_in")
 
 func warp_out():
@@ -181,7 +182,7 @@ func _on_animated_sprite_2d_animation_finished():
 		"warp_in":
 			state = State.MOVE
 			konig_arrived.emit()
-			shadow.visible = true
+
 		"warp_out_ne", "warp_out_nw", "warp_out_se", "warp_out_sw":
 			konig_left.emit()
 		_: # TODO should probably put all the attacks here explicitly

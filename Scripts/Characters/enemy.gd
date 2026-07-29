@@ -10,7 +10,7 @@ enum State {
 var state = State.SHOOT
 
 @export var knockback_speed = 1.5
-@export var bullet_lag = .3
+@export var bullet_lag : float = 0.3
 @export var bullet_scene: PackedScene
 @onready var muzzle = $Marker2D
 @onready var hurtbox = $Hurtbox/CollisionShape2D
@@ -33,21 +33,29 @@ func _physics_process(delta):
 		State.KNOCKBACK:
 			hurtbox.disabled = true
 			hitbox.disabled = false
-			move_and_slide()
 			var collision = move_and_collide(velocity)
 
 			if collision:
-				velocity = Vector2.ZERO
-				shadow.visible = false
-				play_explode_sound()
-				enemy_anim.play("enemy_death")
-				await enemy_anim.animation_finished
-				died.emit()
-				queue_free()
+				die()
+
+func die():
+	velocity = Vector2.ZERO
+	shadow.visible = false
+	GameplayManager.increase_combo()
+	play_explode_sound()
+	enemy_anim.play("enemy_death")
+	await enemy_anim.animation_finished
+	died.emit()
+	queue_free()
 
 func play_explode_sound():
-	explode.pitch_scale = randf_range(0.9, 1.2)
+	var pitch_max = 1
+	var increase = GameplayManager.enemy_combo
+	pitch_max += increase
+	explode.pitch_scale = randf_range(pitch_max, pitch_max)
 	explode.play()
+
+
 
 func take_hit(direction):
 	velocity = direction * knockback_speed
