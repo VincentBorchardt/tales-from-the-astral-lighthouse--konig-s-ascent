@@ -611,7 +611,7 @@ sprite_frames = SubResource("SpriteFrames_pp5cw")
 animation = &"enemy_base_se"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1031822175]
-collision_layer = 8
+collision_layer = 9
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1862441194]

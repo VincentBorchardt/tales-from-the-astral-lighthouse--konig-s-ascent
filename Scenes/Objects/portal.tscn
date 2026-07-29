@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cjc67fhahlxu8" path="res://Scripts/Objects/portal.gd" id="1_yjf24"]
 [ext_resource type="PackedScene" uid="uid://bbl3771omgv7k" path="res://Scenes/Characters/enemy.tscn" id="2_j133l"]
 [ext_resource type="Texture2D" uid="uid://cgig8plwflmrp" path="res://Assets/Art/Characters/Gameplay/Enemy/enemy_portal.png" id="3_i8tnu"]
+[ext_resource type="AudioStream" uid="uid://c4algayl8w61n" path="res://Assets/Audio/SFX/EnemiesTeleportingIn_wip1.mp3" id="4_xstie"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xstie"]
 atlas = ExtResource("3_i8tnu")
@@ -180,5 +181,8 @@ animation = &"portal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1934745322]
 shape = SubResource("CircleShape2D_i8tnu")
+
+[node name="Enter" type="AudioStreamPlayer2D" parent="." unique_id=804412273]
+stream = ExtResource("4_xstie")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="spawn_enemy"]

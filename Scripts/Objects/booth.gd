@@ -5,15 +5,19 @@ signal warp_in_finished
 signal warp_out_finished
 
 @onready var animations = $Animations
+@onready var exit_sfx = $Exit
+@onready var enter_sfx = $Enter
 
 func _ready() -> void:
 	visible = true
 	warp_in()
 
 func warp_in():
+	enter_sfx.play()
 	animations.play("warp_in")
 
 func warp_out():
+	exit_sfx.play()
 	animations.play("warp_out")
 
 func stay_open():

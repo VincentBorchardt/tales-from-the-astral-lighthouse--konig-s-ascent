@@ -33,7 +33,6 @@ func _physics_process(delta):
 		State.KNOCKBACK:
 			hurtbox.disabled = true
 			hitbox.disabled = false
-			move_and_slide()
 			var collision = move_and_collide(velocity)
 
 			if collision:

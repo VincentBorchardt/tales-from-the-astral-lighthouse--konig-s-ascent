@@ -66,8 +66,7 @@ func start_move():
 func move_state():
 	while true:
 		if navigation_agent.is_navigation_finished():
-			# TODO animate warp out
-			# TODO note we saved this NPC in a global
+			body_animations.play("warp")
 			state = State.IDLE
 			return
 		var current_position: Vector2 = global_position

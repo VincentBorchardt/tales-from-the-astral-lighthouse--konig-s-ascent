@@ -35,7 +35,16 @@
 [ext_resource type="Texture2D" uid="uid://cwjedgsd7hmkh" path="res://Assets/Art/Characters/Gameplay/Npc/Walk/NPC_Walk_SE/NPC_Walk_SE05.png" id="28_c0gjw"]
 [ext_resource type="Texture2D" uid="uid://ecqbh45fy7bg" path="res://Assets/Art/Characters/Gameplay/Npc/Walk/NPC_Walk_SE/NPC_Walk_SE06.png" id="29_d5ghi"]
 [ext_resource type="Texture2D" uid="uid://c8uk6ihgbs4n5" path="res://Assets/Art/Characters/Gameplay/Npc/Walk/NPC_Walk_SE/NPC_Walk_SE07.png" id="30_r0bbl"]
+[ext_resource type="Texture2D" uid="uid://dwrc8dv24nygj" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE00.png" id="31_ln57b"]
+[ext_resource type="Texture2D" uid="uid://c2iq3ddphpmuw" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE01.png" id="32_l00fq"]
+[ext_resource type="Texture2D" uid="uid://bo6pmejb34eea" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE02.png" id="33_3ub6l"]
+[ext_resource type="Texture2D" uid="uid://b2t2vf17u6h4h" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE03.png" id="34_l4hja"]
+[ext_resource type="Texture2D" uid="uid://myuf3xprqg68" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE04.png" id="35_yjq2k"]
 [ext_resource type="Texture2D" uid="uid://dxq6qvjppayal" path="res://Assets/Art/Characters/Gameplay/Konig/Shadow.png" id="36_i26q5"]
+[ext_resource type="Texture2D" uid="uid://b76pw164x4m0k" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE05.png" id="36_mq2nl"]
+[ext_resource type="Texture2D" uid="uid://bq5bldoupj8jd" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE06.png" id="37_lawho"]
+[ext_resource type="Texture2D" uid="uid://df13o1nfyb7fc" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE07.png" id="38_2qjh2"]
+[ext_resource type="Texture2D" uid="uid://culeqik5fdlv5" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE08.png" id="39_216sd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvuxs"]
 size = Vector2(8, 10)
@@ -74,6 +83,42 @@ region = Rect2(32, 26, 16, 26)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kcl6"]
 atlas = ExtResource("3_nc6pv")
 region = Rect2(48, 26, 16, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oicfj"]
+atlas = ExtResource("31_ln57b")
+region = Rect2(0, 0, 12, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33x70"]
+atlas = ExtResource("32_l00fq")
+region = Rect2(0, 0, 12, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n6yt"]
+atlas = ExtResource("33_3ub6l")
+region = Rect2(0, 0, 12, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afsh5"]
+atlas = ExtResource("34_l4hja")
+region = Rect2(0, 0, 12, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdeef"]
+atlas = ExtResource("35_yjq2k")
+region = Rect2(0, 0, 12, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3nja"]
+atlas = ExtResource("36_mq2nl")
+region = Rect2(0, 0, 12, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1v33"]
+atlas = ExtResource("37_lawho")
+region = Rect2(0, 0, 12, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wn770"]
+atlas = ExtResource("38_2qjh2")
+region = Rect2(0, 0, 12, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1frqc"]
+atlas = ExtResource("39_216sd")
+region = Rect2(0, 0, 12, 31)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pp5cw"]
 animations = [{
@@ -201,6 +246,38 @@ animations = [{
 "loop": 1,
 "name": &"walk",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oicfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33x70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n6yt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afsh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdeef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3nja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1v33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wn770")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1frqc")
+}],
+"loop": 1,
+"name": &"warp",
+"speed": 5.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vitg6"]
@@ -311,7 +388,7 @@ shape = SubResource("CircleShape2D_mofsa")
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1818146974]
 sprite_frames = SubResource("SpriteFrames_pp5cw")
-animation = &"walk"
+animation = &"warp"
 
 [node name="Convo" type="AnimatedSprite2D" parent="." unique_id=1418114809]
 visible = false

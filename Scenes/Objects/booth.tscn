@@ -53,6 +53,8 @@
 [ext_resource type="Texture2D" uid="uid://cqdg0xo52qnms" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit12.png" id="51_mkca7"]
 [ext_resource type="Texture2D" uid="uid://d3la16mdyk4gi" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit13.png" id="52_k3jdb"]
 [ext_resource type="Texture2D" uid="uid://cx8k0iixroj2j" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit14.png" id="53_bqdku"]
+[ext_resource type="AudioStream" uid="uid://dvlixcadrrya1" path="res://Assets/Audio/SFX/PhoneBoothExit_wip1.mp3" id="54_ju77w"]
+[ext_resource type="AudioStream" uid="uid://bnwr3o03031gn" path="res://Assets/Audio/SFX/PhoneBoothEnter_wip1.mp3" id="55_eg8f1"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_e0lb0"]
 points = PackedVector2Array(-2.051, -12.992, 10.439, -0.185, 7.687, 17.49, -4.802, 4.684)
@@ -247,6 +249,12 @@ debug_color = Color(1, 0, 0.10958373, 0.41960785)
 sprite_frames = SubResource("SpriteFrames_13yca")
 animation = &"warp_out"
 frame = 6
+
+[node name="Exit" type="AudioStreamPlayer2D" parent="." unique_id=697288631]
+stream = ExtResource("54_ju77w")
+
+[node name="Enter" type="AudioStreamPlayer2D" parent="." unique_id=1700806240]
+stream = ExtResource("55_eg8f1")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="animation_finished" from="Animations" to="." method="_on_animations_animation_finished"]
