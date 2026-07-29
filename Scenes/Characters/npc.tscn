@@ -275,9 +275,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1frqc")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"warp",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vitg6"]
