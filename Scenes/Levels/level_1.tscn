@@ -648,6 +648,8 @@ z_index = -3
 position = Vector2(160, 120)
 texture = ExtResource("18_31phq")
 
+[node name="ComboTimer" type="Timer" parent="." unique_id=1313092895]
+
 [connection signal="bullet_absorbed" from="Konig" to="." method="_on_bullet_absorbed"]
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]

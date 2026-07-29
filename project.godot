@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tales from the Astral Lighthouse: Konig's Ascent"
-run/main_scene="uid://brexcf30oj1hv"
+run/main_scene="uid://650j77xtdxdt"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
