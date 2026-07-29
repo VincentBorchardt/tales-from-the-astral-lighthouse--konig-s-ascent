@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://pnta660itadl"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_bjsti"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_g1sgl"]
+
+[resource]
+script = ExtResource("1_bjsti")
+speaker = ExtResource("2_g1sgl")
+message = "Anyway, if you want to escape this lighthouse, I'll join in your quest, but there are plenty of other souls to save."
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

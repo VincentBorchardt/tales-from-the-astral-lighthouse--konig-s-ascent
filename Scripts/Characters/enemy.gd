@@ -78,10 +78,11 @@ func get_idle_animation(direction):
 			return "enemy_base_sw"
 
 func shoot():
-		var bullet = bullet_scene.instantiate()
-		get_tree().current_scene.add_child(bullet)
-		bullet.global_position = muzzle.global_position
-		bullet.direction = (player.global_position - muzzle.global_position).normalized() * bullet_lag
+	var bullet = bullet_scene.instantiate()
+	get_tree().current_scene.add_child(bullet)
+	
+	bullet.global_position = muzzle.global_position
+	bullet.direction = (player.global_position - muzzle.global_position).normalized() * bullet_lag
 
 
 func _on_timer_timeout() -> void:

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://c6qbc517svfiv"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_5gnsh"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_6ai76"]
+
+[resource]
+script = ExtResource("1_5gnsh")
+speaker = ExtResource("2_6ai76")
+message = "Oh no! The evil spirits are back!"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -17,3 +17,7 @@ func _process(delta: float) -> void:
 
 func start_title_screen():
 	begin_button.grab_focus()
+
+
+func _on_begin_button_pressed() -> void:
+	get_tree().change_scene_to_packed(preload("res://Scenes/Levels/tutorial.tscn"))

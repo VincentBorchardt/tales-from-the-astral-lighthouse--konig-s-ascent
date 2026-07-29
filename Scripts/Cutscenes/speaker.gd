@@ -5,6 +5,7 @@ class_name Speaker extends Resource
 
 @export_group("")
 @export var name: String
+@export var font: Font
 
 
 @export_group("Images")

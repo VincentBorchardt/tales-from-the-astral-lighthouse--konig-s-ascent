@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cbehvv3w8hiae"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_vv7hd"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_pwkng"]
+
+[resource]
+script = ExtResource("1_vv7hd")
+speaker = ExtResource("2_pwkng")
+message = "Wow, those spirits can't hurt you at all!"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

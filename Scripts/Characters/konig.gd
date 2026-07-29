@@ -10,6 +10,8 @@ enum State {
 signal konig_arrived
 signal konig_left
 
+signal bullet_absorbed
+
 @onready var punch_sfx = $Punch
 @onready var shadow = $Shadow
 @onready var hitbox = $Hitbox/CollisionShape2D
@@ -30,14 +32,14 @@ var last_direction = Vector2(1, 0)
 var attack_buffered = false
 var attack_buffer_timer = 0.0
 var attack_buffer_time = 0.2
-
+var in_cutscene = false
 func _ready():
 	hitbox.disabled = true
 
 func _physics_process(delta):
 	update_attack_buffer(delta)
 	
-	if Input.is_action_just_pressed("attack"):
+	if !in_cutscene and Input.is_action_just_pressed("attack"):
 		buffer_attack()
 	match state:
 		State.MOVE:
@@ -95,6 +97,7 @@ func _on_timer_timeout():
 		start_attack()
 
 func take_hit(direction):
+	bullet_absorbed.emit()
 	if state == State.MOVE:
 		state = State.KNOCKBACK
 		knockback_velocity = Vector2.ZERO
@@ -125,6 +128,9 @@ func start_attack():
 	hitbox.disabled = false
 	play_punch_sfx()
 	animations.play(get_attack_animation())
+
+func toggle_cutscene():
+	in_cutscene = !in_cutscene
 
 func attack_state():
 	velocity = Vector2.ZERO
