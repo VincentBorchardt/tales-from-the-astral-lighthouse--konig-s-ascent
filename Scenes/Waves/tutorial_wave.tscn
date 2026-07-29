@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4gipqt3vgc26"]
+
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Gameplay/wave.gd" id="1_t33fj"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="2_mblmy"]
+
+[node name="TutorialWave" type="Node2D" unique_id=1424351692]
+script = ExtResource("1_t33fj")
+enemy_count = 3
+
+[node name="Portal" parent="." unique_id=110448379 instance=ExtResource("2_mblmy")]
+position = Vector2(181, 81)
+appear_delay = 1.0
+
+[node name="Portal2" parent="." unique_id=413960308 instance=ExtResource("2_mblmy")]
+position = Vector2(251, 116)
+appear_delay = 1.0
