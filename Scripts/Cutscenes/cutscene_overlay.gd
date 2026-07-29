@@ -41,6 +41,15 @@ func show_message(message_index):
 	can_advance_text = false
 	advance_text_marker.visible = false
 	var current_message = messages[message_index]
+	set_up_message_box(current_message)
+	message_text.visible_characters = 0
+	message_text.text = current_message.message
+	message_text.visible = true
+	var tween = create_tween()
+	tween.tween_property(message_text, "visible_ratio", 1, 2.5)
+	tween.tween_callback(allow_advance)
+
+func set_up_message_box(current_message):
 	if current_message.image_location == Message.Location.LEFT:
 		if current_message.speaker.full_picture_left:
 			left_image.texture = current_message.speaker.full_picture_left
@@ -61,16 +70,14 @@ func show_message(message_index):
 		message_box.visible = true
 	else:
 		message_box.visible = false
+	if current_message.speaker.font:
+		message_text.add_theme_font_override("font", current_message.speaker.font)
+	else:
+		message_text.remove_theme_font_override("font")
 	if current_message.color:
 		message_text.add_theme_color_override("font_color", current_message.color)
 	else:
 		message_text.remove_theme_color_override("font_color")
-	message_text.visible_characters = 0
-	message_text.text = current_message.message
-	message_text.visible = true
-	var tween = create_tween()
-	tween.tween_property(message_text, "visible_ratio", 1, 2.5)
-	tween.tween_callback(allow_advance)
 
 func allow_advance():
 	advance_text_marker.visible = true

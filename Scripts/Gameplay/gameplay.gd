@@ -5,11 +5,12 @@ var wave_animations = [
 	"wave_2",
 	"wave_3"
 ]
-
+@export_group("Level Setup")
 @export var waves: Array[PackedScene]
 @export var next_level: PackedScene
 @export var music : AudioStream
 
+@export_group("Special Level Setup")
 @export var is_tutorial = false
 @export var is_final = false
 @export var absorbed_bullet_threshold: int
@@ -27,11 +28,13 @@ var enemies_remaining := 0
 var current_wave_animation = 0
 var in_calm_state = false
 
+var scripted_progression_count = 0
 var absorbed_bullet_count = 0:
 	set(new_bullet_count):
 		absorbed_bullet_count = new_bullet_count
 		if absorbed_bullet_count >= absorbed_bullet_threshold:
-			pass
+			scripted_progression_count += 1
+			continue_scripted_sequence()
 
 func _ready():
 	print("starting level now")
@@ -48,6 +51,17 @@ func play_wave_animation():
 		print("starting next wave")
 		wave_anim_player.play(wave_animations[current_wave_animation])
 		current_wave_animation += 1
+
+func continue_scripted_sequence():
+	if is_tutorial:
+		match scripted_progression_count:
+			1:
+				# Start the basic wave
+				pass
+			2:
+				pass
+	elif is_final:
+		pass
 
 #TODO: set everything here that needs to be at the start of a round or when all waves or finished
 func start_next_wave():
@@ -95,15 +109,17 @@ func wave_complete():
 
 
 func _on_npcs_start_npc_conversation(messages: Variant) -> void:
-	print("trying to start conversation")
 	if in_calm_state:
-		get_tree().paused = true
-		cutscene_overlay.start_cutscene(messages)
+		start_cutscene(messages)
 
+func start_cutscene(messages):
+	get_tree().paused = true
+	cutscene_overlay.start_cutscene(messages)
 
 func _on_cutscene_overlay_cutscene_ended() -> void:
 	get_tree().paused = false
-	pass # Replace with function body.
+	if scripted_progression_count > 0:
+		continue_scripted_sequence()
 
 
 func _on_booth_player_entered() -> void:
@@ -119,8 +135,8 @@ func _on_booth_player_entered() -> void:
 	
 
 func _on_bullet_absorbed():
-	print("bullet absorbed")
-	pass
+	if is_tutorial or is_final:
+		absorbed_bullet_count += 1
 
 func _on_booth_warp_in_finished() -> void:
 	print("booth warp in finished")
@@ -136,9 +152,15 @@ func _on_booth_warp_out_finished() -> void:
 	if in_calm_state:
 		end_level()
 	else:
-		wave_timer.one_shot = true
-		wave_timer.timeout.connect(play_wave_animation)
-		wave_timer.start(2)
+		if is_tutorial:
+			scripted_progression_count += 1
+			start_cutscene(StoryAutoload.tutorial_1)
+		elif is_final:
+			pass
+		else:
+			wave_timer.one_shot = true
+			wave_timer.timeout.connect(play_wave_animation)
+			wave_timer.start(2)
 
 # TODO these both might want short timers (like a second)
 func _on_konig_arrived() -> void:

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Message" format=3 uid="uid://bsi3il8o1q7pi"]
 
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_rnmy1"]
-[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Intro/narrator.tres" id="2_32yfx"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_32yfx"]
 
 [resource]
 script = ExtResource("1_rnmy1")

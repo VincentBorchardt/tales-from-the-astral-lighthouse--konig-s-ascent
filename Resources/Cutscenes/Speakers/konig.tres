@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://cpu44y12xdfnd"]
+
+[ext_resource type="FontFile" uid="uid://c4tvia3tv415o" path="res://Assets/og-dcm-emoji.ttf" id="1_trmpw"]
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="2_3ptix"]
+
+[resource]
+script = ExtResource("2_3ptix")
+name = "Konig"
+font = ExtResource("1_trmpw")
+metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

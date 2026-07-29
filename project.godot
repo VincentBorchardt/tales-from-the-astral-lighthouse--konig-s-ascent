@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://cbkopb4a8wrqt"
 [autoload]
 
 MusicManager="*uid://badttjwghyd68"
+StoryAutoload="*uid://dsh1bddmx68k4"
 
 [display]
 
