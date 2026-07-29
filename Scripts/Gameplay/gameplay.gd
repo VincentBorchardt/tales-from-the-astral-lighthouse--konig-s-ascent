@@ -57,7 +57,8 @@ func continue_scripted_sequence():
 		match scripted_progression_count:
 			1:
 				# Start the basic wave
-				pass
+				start_next_wave()
+				konig.toggle_cutscene_state()
 			2:
 				pass
 	elif is_final:
@@ -106,6 +107,7 @@ func wave_complete():
 	print("wave complete")
 	current_wave_scene.queue_free()
 	wave_timer.start()
+
 
 
 func _on_npcs_start_npc_conversation(messages: Variant) -> void:
