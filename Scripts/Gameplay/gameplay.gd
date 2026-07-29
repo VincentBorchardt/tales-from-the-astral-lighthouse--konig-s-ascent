@@ -17,6 +17,7 @@ var wave_animations = [
 
 @onready var booth = $Booth
 @onready var konig = $Konig
+@onready var combo_timer = $ComboTimer
 @onready var wave_timer = $WaveTimer
 @onready var wave_animation = $WaveAnimation
 @onready var wave_anim_player = $AnimationPlayer
@@ -44,6 +45,8 @@ func _ready():
 	in_calm_state = false
 	print("Music resource:", music)
 	MusicManager.play_music( music )
+	combo_timer.one_shot = true
+	combo_timer.timeout.connect(reset_combo)
 	booth.warp_in()
 	
 
@@ -107,10 +110,14 @@ func start_next_wave():
 func enemy_spawned(enemy):
 	enemy.died.connect(enemy_died)
 
+func reset_combo():
+	print("reset combo")
+	GameplayManager.reset_combo()
 
 func enemy_died():
 	enemies_remaining -= 1
 	print("enemies remaining:", enemies_remaining)
+	combo_timer.start()
 
 	if enemies_remaining <= 0:
 		wave_complete()

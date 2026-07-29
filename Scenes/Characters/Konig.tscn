@@ -835,6 +835,7 @@ MOTION_SPEED = 100
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=181426405]
 visible = false
+collision_layer = 4
 script = ExtResource("2_cfmdu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1098175845]
@@ -850,7 +851,7 @@ animation = &"warp_in"
 [node name="Hurtbox" type="Area2D" parent="." unique_id=753422830]
 visible = false
 collision_layer = 2
-collision_mask = 8
+collision_mask = 16
 script = ExtResource("2_cdq7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=211066800]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tales from the Astral Lighthouse: Konig's Ascent"
-run/main_scene="uid://b768gnvq0nl7q"
+run/main_scene="uid://brexcf30oj1hv"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,8 @@ buses/default_bus_layout="uid://cbkopb4a8wrqt"
 
 MusicManager="*uid://badttjwghyd68"
 StoryAutoload="*uid://dsh1bddmx68k4"
+Hitstop="*uid://bm5brvl5wjp1k"
+GameplayManager="*uid://b6vwigioaamyx"
 
 [display]
 

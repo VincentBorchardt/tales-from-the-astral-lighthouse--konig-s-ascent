@@ -157,7 +157,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"portal",
-"speed": 14.0
+"speed": 18.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i8tnu"]

@@ -16,11 +16,11 @@ position = Vector2(86, 112)
 appear_delay = 3.0
 
 [node name="Portal3" parent="." unique_id=134105576 instance=ExtResource("1_cwapv")]
-position = Vector2(128, 97)
+position = Vector2(147, 88)
 appear_delay = 4.0
 
 [node name="Portal6" parent="." unique_id=315346019 instance=ExtResource("1_cwapv")]
-position = Vector2(248, 144)
+position = Vector2(232, 135)
 appear_delay = 2.0
 
 [node name="Portal7" parent="." unique_id=1649527508 instance=ExtResource("1_cwapv")]
