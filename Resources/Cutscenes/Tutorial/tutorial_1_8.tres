@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_8jss4")
 speaker = ExtResource("2_r4g1y")
-message = "Your sturdy body looks like it could block any attack. Please, get between the bullet and the [color=e24d63]Lost Souls[/color]."
+message = "Your sturdy body looks like it could block any attack. Please, get between the bullets and the [color=e24d63]Lost Soul[/color]."
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

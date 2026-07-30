@@ -1,4 +1,3 @@
-class_name Gameplay
 extends Node2D
 
 var wave_animations = [
@@ -10,6 +9,14 @@ var wave_animations = [
 @export var waves: Array[PackedScene]
 @export var next_level: PackedScene
 @export var music : AudioStream
+
+@export_group("NPC Conversations")
+@export var npc_convo_0 : Array[Message]
+@export var npc_convo_1 : Array[Message]
+@export var npc_convo_2 : Array[Message]
+@export var npc_convo_3 : Array[Message]
+@export var npc_convo_4 : Array[Message]
+
 
 @export_group("Special Level Setup")
 @export var is_tutorial = false
@@ -29,6 +36,9 @@ var current_wave_scene: Node2D
 var enemies_remaining := 0
 var current_wave_animation = 0
 var in_calm_state = false
+var npc_conversations: Array
+var num_npcs: int
+var current_npc = 0
 
 var scripted_progression_count = 0
 var absorbed_bullet_count: int = 0:
@@ -42,7 +52,7 @@ var absorbed_bullet_count: int = 0:
 			continue_scripted_sequence.call_deferred()
 
 func _ready():
-	wave_anim_player.play("floor_transition_in")
+	npc_conversations = [npc_convo_0, npc_convo_1, npc_convo_2, npc_convo_3, npc_convo_4]
 	print("starting level now")
 	in_calm_state = false
 	print("Music resource:", music)
@@ -66,7 +76,6 @@ func continue_scripted_sequence():
 			1:
 				# Start the basic wave
 				start_next_wave()
-				get_tree().call_group("npcs", "tutorial_wave")
 				konig.toggle_cutscene()
 			2:
 				scripted_progression_count += 1
@@ -131,8 +140,6 @@ func end_level():
 
 
 func level_change():
-	wave_anim_player.play("floor_transition_out")
-	await wave_anim_player.animation_finished
 	get_tree().change_scene_to_packed(next_level)
 
 func wave_complete():
@@ -146,7 +153,13 @@ func wave_complete():
 
 func _on_npcs_start_npc_conversation(messages: Variant) -> void:
 	if in_calm_state:
-		start_cutscene(messages)
+		print(current_npc)
+		var current_conversation = npc_conversations[current_npc]
+		if current_conversation:
+			current_npc += 1
+			start_cutscene(current_conversation)
+		else:
+			print("tried to do a nonexistent conversation")
 
 func start_cutscene(messages):
 	get_tree().paused = true

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://o5l4o68rjt82"]
+
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_c4746"]
+
+[resource]
+script = ExtResource("1_c4746")
+name = "Lost Soul"
+metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

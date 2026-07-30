@@ -46,7 +46,8 @@ func show_message(message_index):
 	message_text.text = current_message.message
 	message_text.visible = true
 	var tween = create_tween()
-	tween.tween_property(message_text, "visible_ratio", 1, 2.5)
+	var animation_time = current_message.animation_time
+	tween.tween_property(message_text, "visible_ratio", 1, animation_time)
 	tween.tween_callback(allow_advance)
 
 func set_up_message_box(current_message):

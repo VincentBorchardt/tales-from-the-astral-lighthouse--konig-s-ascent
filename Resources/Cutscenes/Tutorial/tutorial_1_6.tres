@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_lk38v")
 speaker = ExtResource("2_4gk5v")
-message = "Look, there’s one now! The tower sentry is trying to consume it. "
+message = "Look, there’s one now! The tower sentries are trying to consume it."
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
