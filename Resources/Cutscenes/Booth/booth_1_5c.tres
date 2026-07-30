@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://c8nlox7qyxv8g"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_xokut"]
+[ext_resource type="Resource" uid="uid://cxg7k7hcd5g2w" path="res://Resources/Cutscenes/Speakers/marygold.tres" id="2_uot2k"]
+
+[resource]
+script = ExtResource("1_xokut")
+speaker = ExtResource("2_uot2k")
+message = "… as long as you promise to get back to me eventually. Don’t forget, you said we’d go dancin’!"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

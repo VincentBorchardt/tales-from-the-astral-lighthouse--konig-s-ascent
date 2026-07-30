@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://cxg7k7hcd5g2w"]
+
+[ext_resource type="Texture2D" uid="uid://ce58x1s1vp8no" path="res://Assets/Art/Characters/Portraits/Marygold_pixel_portrait_left.png" id="1_n2skw"]
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_s7ojs"]
+[ext_resource type="Texture2D" uid="uid://c1lao7k408vm7" path="res://Assets/Art/Characters/Portraits/Marygold_pixel_portrait.png" id="2_xd0bd"]
+
+[resource]
+script = ExtResource("1_s7ojs")
+name = "Marygold"
+full_picture_left = ExtResource("1_n2skw")
+full_picture_right = ExtResource("2_xd0bd")
+metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

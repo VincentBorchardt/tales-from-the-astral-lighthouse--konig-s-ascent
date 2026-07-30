@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cynhkjvtmyl5u"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_osqvj"]
+[ext_resource type="Resource" uid="uid://cxg7k7hcd5g2w" path="res://Resources/Cutscenes/Speakers/marygold.tres" id="2_4pwr3"]
+
+[resource]
+script = ExtResource("1_osqvj")
+speaker = ExtResource("2_4pwr3")
+message = "Konig, sugar? That you? "
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

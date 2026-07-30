@@ -1,6 +1,7 @@
 extends Node
 
-var savedNpcs = []
+var saved_cameos = []
+var total_saved_npcs = 0
 
 var tutorial_1_1: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_1_1.tres")
 var tutorial_1_2: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_1_2.tres")
@@ -14,12 +15,12 @@ var tutorial_1: Array[Message] = [tutorial_1_1, tutorial_1_2, tutorial_1_3, tuto
 tutorial_1_5, tutorial_1_6, tutorial_1_7, tutorial_1_8]
 
 var tutorial_2_1: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_2_1.tres")
-var tutorial_2_2: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_2_2.tres")
-var tutorial_2_3: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_2_3.tres")
 var tutorial_2: Array[Message] = [tutorial_2_1]
 
 var tutorial_3_1: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_3_1.tres")
-var tutorial_3: Array[Message] = [tutorial_3_1]
+var tutorial_3_2: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_3_2.tres")
+var tutorial_3_3: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_3_3.tres")
+var tutorial_3: Array[Message] = [tutorial_3_1, tutorial_3_2, tutorial_3_3]
 
 var tutorial_5_1: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_5_1.tres")
 var tutorial_5_2: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_5_2.tres")
