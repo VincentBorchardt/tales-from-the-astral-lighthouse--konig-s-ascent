@@ -1,11 +1,10 @@
 [gd_resource type="Resource" script_class="Message" format=3 uid="uid://bquv5ipnyovq5"]
 
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_ropnn"]
-[ext_resource type="Resource" uid="uid://cpu44y12xdfnd" path="res://Resources/Cutscenes/Speakers/konig.tres" id="2_2ajbx"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_2ajbx"]
 
 [resource]
 script = ExtResource("1_ropnn")
 speaker = ExtResource("2_2ajbx")
-message = "What's going on here?"
-image_location = 1
+message = "I think I’ve forgotten who I am. "
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

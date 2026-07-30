@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_rno4r")
 speaker = ExtResource("2_3ldfr")
-message = "Finally! Help has arrived!"
+message = "Hello, strange traveller! I am … I am, er- "
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

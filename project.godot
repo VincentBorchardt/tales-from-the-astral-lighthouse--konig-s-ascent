@@ -46,6 +46,7 @@ spawners=""
 
 theme/default_font_antialiasing=0
 theme/default_font_subpixel_positioning=0
+theme/custom="uid://bxwh5bpr7l6ls"
 theme/custom_font="uid://bt2jn0f1him5l"
 
 [input]

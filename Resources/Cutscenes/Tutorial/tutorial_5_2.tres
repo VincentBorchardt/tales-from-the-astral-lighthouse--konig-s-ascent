@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cm3q0fbyar58h"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_6147c"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_6tc3p"]
+
+[resource]
+script = ExtResource("1_6147c")
+speaker = ExtResource("2_6tc3p")
+message = "… I remembered. Good. This tower and its [color=MEDIUM_PURPLE]trickster[/color] won’t be getting me just yet."
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

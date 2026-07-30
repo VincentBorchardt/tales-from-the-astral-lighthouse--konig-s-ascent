@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://ch0mq2ugu3sf7"]
 
 [ext_resource type="Script" uid="uid://csg866k71r6l4" path="res://Scripts/Cutscenes/cutscene_overlay.gd" id="1_ne6od"]
+[ext_resource type="Texture2D" uid="uid://cgm4aj5ed61gt" path="res://Assets/Art/Characters/Portraits/Alexandria_pixel_portrait_left.png" id="2_0o6c1"]
 [ext_resource type="Texture2D" uid="uid://crsqdgq7o2n1i" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0001.png" id="2_lit3v"]
 [ext_resource type="Texture2D" uid="uid://ctkq5mwwd0y1a" path="res://Assets/Art/UI/Cutscenes/Textbox2/Text_advance_button.png" id="3_flhaj"]
 [ext_resource type="Texture2D" uid="uid://duakcfptglds8" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0002.png" id="3_i5ixn"]
+[ext_resource type="Texture2D" uid="uid://h0w1w6giaqra" path="res://Assets/Art/Characters/Portraits/Konig_Pixel_portrait01_right.png" id="3_sgna5"]
 [ext_resource type="Texture2D" uid="uid://44mq820c5yq7" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0003.png" id="4_0o6c1"]
 [ext_resource type="Texture2D" uid="uid://ccm2n48gv4auc" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0004.png" id="5_sgna5"]
 
@@ -100,10 +102,14 @@ grow_vertical = 2
 script = ExtResource("1_ne6od")
 
 [node name="LeftSpeaker" type="Sprite2D" parent="." unique_id=2098482821]
-position = Vector2(72, 157)
+visible = false
+position = Vector2(74, 149)
+texture = ExtResource("2_0o6c1")
 
 [node name="RightSpeaker" type="Sprite2D" parent="." unique_id=1193639378]
-position = Vector2(247, 157)
+visible = false
+position = Vector2(244, 151)
+texture = ExtResource("3_sgna5")
 
 [node name="MessageBox" type="Sprite2D" parent="." unique_id=985376082]
 position = Vector2(160, 120)
@@ -124,14 +130,13 @@ offset_top = 170.0
 offset_right = 320.0
 offset_bottom = 240.0
 
-[node name="MessageText" type="Label" parent="MessageArea" unique_id=1640906127]
+[node name="MessageText" type="RichTextLabel" parent="MessageArea" unique_id=40516724]
 custom_maximum_size = Vector2(220, 50)
 layout_mode = 0
 offset_left = 51.0
 offset_top = 3.0
 offset_right = 271.0
 offset_bottom = 53.0
-theme_override_constants/line_spacing = -2
-theme_override_font_sizes/font_size = 16
+bbcode_enabled = true
 text = "This is a lot of text and I want to fill the box so here is the bunch of text I need and I need a lot more text because this text is really small and I don't know what the actual answer is going to be and I'm still struggling to come up with filler"
-autowrap_mode = 3
+scroll_active = false

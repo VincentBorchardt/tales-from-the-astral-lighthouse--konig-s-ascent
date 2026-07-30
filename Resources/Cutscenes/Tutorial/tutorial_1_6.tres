@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://5ef3k4qyylxe"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_lk38v"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_4gk5v"]
+
+[resource]
+script = ExtResource("1_lk38v")
+speaker = ExtResource("2_4gk5v")
+message = "Look, there’s one now! The tower sentry is trying to consume it. "
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

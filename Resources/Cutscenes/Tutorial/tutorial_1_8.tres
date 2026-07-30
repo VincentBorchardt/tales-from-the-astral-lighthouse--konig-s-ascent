@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dimuc7stjh4u0"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_8jss4"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_r4g1y"]
+
+[resource]
+script = ExtResource("1_8jss4")
+speaker = ExtResource("2_r4g1y")
+message = "Your sturdy body looks like it could block any attack. Please, get between the bullet and the [color=e24d63]Lost Souls[/color]."
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

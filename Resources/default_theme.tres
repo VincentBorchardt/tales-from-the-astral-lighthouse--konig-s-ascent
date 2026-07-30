@@ -1,0 +1,4 @@
+[gd_resource type="Theme" format=3 uid="uid://bxwh5bpr7l6ls"]
+
+[resource]
+/colors/default_color = Color(1, 0.9843137, 0.8862745, 1)

@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://c1xqtpvkye87e" path="res://Assets/Art/Characters/Gameplay/Npc/idle npc.png" id="3_nc6pv"]
 [ext_resource type="Texture2D" uid="uid://dlc0schjca3dk" path="res://Assets/Art/Characters/Gameplay/Npc/Hurt/NPC_DMG_Hit_SE/NPC_DamageHit_SE00.png" id="3_oyfms"]
 [ext_resource type="Texture2D" uid="uid://dgye2mg4xhe0n" path="res://Assets/Art/Characters/Gameplay/Npc/Hurt/NPC_DMG_Hit_SE/NPC_DamageHit_SE01.png" id="4_2jt1m"]
-[ext_resource type="Texture2D" uid="uid://dn3lmjckf6f6t" path="res://Assets/Art/Characters/Gameplay/Npc/convo npc.png" id="4_m1gjq"]
 [ext_resource type="Texture2D" uid="uid://bv1u822arcwqb" path="res://Assets/Art/Characters/Gameplay/Npc/Death/NPC_Death_NW-SE/NPC_Death_NW-SE01.png" id="4_xouvm"]
 [ext_resource type="Texture2D" uid="uid://fsw2qhnqhvfn" path="res://Assets/Art/Characters/Gameplay/Npc/NPC_FullHealth.png" id="5_7hf6e"]
 [ext_resource type="Texture2D" uid="uid://57q7ul5l7hhv" path="res://Assets/Art/Characters/Gameplay/Npc/Death/NPC_Death_NW-SE/NPC_Death_NW-SE02.png" id="5_7ylh2"]
@@ -45,6 +44,12 @@
 [ext_resource type="Texture2D" uid="uid://bq5bldoupj8jd" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE06.png" id="37_lawho"]
 [ext_resource type="Texture2D" uid="uid://df13o1nfyb7fc" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE07.png" id="38_2qjh2"]
 [ext_resource type="Texture2D" uid="uid://culeqik5fdlv5" path="res://Assets/Art/Characters/Gameplay/Npc/Leave/NPC_Demat_NW-SE/NPC_Demat_NW-SE08.png" id="39_216sd"]
+[ext_resource type="Texture2D" uid="uid://drei8gjxw78qb" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert00.png" id="40_mq2nl"]
+[ext_resource type="Texture2D" uid="uid://ibjk3sq7urp7" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert01.png" id="41_lawho"]
+[ext_resource type="Texture2D" uid="uid://c86tuhku0j6ev" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert02.png" id="42_2qjh2"]
+[ext_resource type="Texture2D" uid="uid://dccrngn6ulx8k" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert03.png" id="43_216sd"]
+[ext_resource type="Texture2D" uid="uid://bdagjaa2ob0tk" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert04.png" id="44_oicfj"]
+[ext_resource type="Texture2D" uid="uid://bq4jv523gjbtp" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert05.png" id="45_33x70"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvuxs"]
 size = Vector2(8, 10)
@@ -280,50 +285,26 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vitg6"]
-atlas = ExtResource("4_m1gjq")
-region = Rect2(0, 0, 8, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1xjvr"]
-atlas = ExtResource("4_m1gjq")
-region = Rect2(8, 0, 8, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jrjqd"]
-atlas = ExtResource("4_m1gjq")
-region = Rect2(16, 0, 8, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mdy0c"]
-atlas = ExtResource("4_m1gjq")
-region = Rect2(0, 16, 8, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pwb8e"]
-atlas = ExtResource("4_m1gjq")
-region = Rect2(8, 16, 8, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x6m70"]
-atlas = ExtResource("4_m1gjq")
-region = Rect2(16, 16, 8, 16)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_khvpl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vitg6")
+"texture": ExtResource("40_mq2nl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1xjvr")
+"texture": ExtResource("41_lawho")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jrjqd")
+"texture": ExtResource("42_2qjh2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mdy0c")
+"texture": ExtResource("43_216sd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pwb8e")
+"texture": ExtResource("44_oicfj")
 }, {
 "duration": 5.0,
-"texture": SubResource("AtlasTexture_x6m70")
+"texture": ExtResource("45_33x70")
 }],
 "loop": 0,
 "name": &"convo",

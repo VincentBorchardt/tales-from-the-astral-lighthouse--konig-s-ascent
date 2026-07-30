@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bgxe5rwgi2e2c"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_aodlq"]
+[ext_resource type="Resource" uid="uid://cpu44y12xdfnd" path="res://Resources/Cutscenes/Speakers/konig.tres" id="2_mq7ub"]
+
+[resource]
+script = ExtResource("1_aodlq")
+speaker = ExtResource("2_mq7ub")
+message = ">o<"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

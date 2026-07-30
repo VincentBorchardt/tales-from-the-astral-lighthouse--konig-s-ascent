@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_bjsti")
 speaker = ExtResource("2_g1sgl")
-message = "Anyway, if you want to escape this lighthouse, I'll join in your quest, but there are plenty of other souls to save."
+message = "Now, you must go. In this place, you either ascend, or you forget … and there’s no way out down here. "
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

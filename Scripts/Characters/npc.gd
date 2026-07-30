@@ -57,6 +57,8 @@ func _ready():
 func _input(event: InputEvent) -> void:
 	if player_in_range and Input.is_action_just_pressed("advance_text"):
 		state = State.MOVE
+		player_in_range = false
+		convo_anim.visible = false
 		start_npc_conversation.emit(conversation)
 
 func _physics_process(delta):
@@ -107,6 +109,7 @@ func take_hit():
 
 func _on_interact_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and state == State.CONVO:
+		print("entered NPC area")
 		player_in_range = true
 		convo_anim.visible = true
 		convo_anim.play("convo")

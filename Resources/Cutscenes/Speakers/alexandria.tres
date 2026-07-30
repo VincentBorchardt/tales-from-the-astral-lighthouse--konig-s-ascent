@@ -2,9 +2,13 @@
 
 [ext_resource type="FontFile" uid="uid://bt2jn0f1him5l" path="res://Assets/cloak.ttf" id="1_c14mk"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_eknxu"]
+[ext_resource type="Texture2D" uid="uid://cgm4aj5ed61gt" path="res://Assets/Art/Characters/Portraits/Alexandria_pixel_portrait_left.png" id="2_x2rif"]
+[ext_resource type="Texture2D" uid="uid://d13leabse8lbi" path="res://Assets/Art/Characters/Portraits/Alexandria_pixel_portrait.png" id="3_11x20"]
 
 [resource]
 script = ExtResource("1_eknxu")
 name = "Alexandria"
 font = ExtResource("1_c14mk")
+full_picture_left = ExtResource("2_x2rif")
+full_picture_right = ExtResource("3_11x20")
 metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

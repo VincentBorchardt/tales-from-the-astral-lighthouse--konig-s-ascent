@@ -82,7 +82,8 @@ func continue_scripted_sequence():
 				scripted_progression_count += 1
 				booth.visible = true
 				booth.warp_in()
-				
+			7:
+				end_level()
 	elif is_final:
 		pass
 
@@ -183,7 +184,10 @@ func _on_booth_warp_in_finished() -> void:
 
 func _on_booth_warp_out_finished() -> void:
 	if in_calm_state:
-		end_level()
+		if is_tutorial:
+			start_cutscene(StoryAutoload.tutorial_5)
+		else:
+			end_level()
 	else:
 		if is_tutorial:
 			scripted_progression_count += 1

@@ -2,9 +2,13 @@
 
 [ext_resource type="FontFile" uid="uid://c4tvia3tv415o" path="res://Assets/og-dcm-emoji.ttf" id="1_trmpw"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="2_3ptix"]
+[ext_resource type="Texture2D" uid="uid://dir0tmeyu42o3" path="res://Assets/Art/Characters/Portraits/Konig_Pixel_portrait01.png" id="2_05soc"]
+[ext_resource type="Texture2D" uid="uid://h0w1w6giaqra" path="res://Assets/Art/Characters/Portraits/Konig_Pixel_portrait01_right.png" id="3_mlyvu"]
 
 [resource]
 script = ExtResource("2_3ptix")
 name = "Konig"
 font = ExtResource("1_trmpw")
+full_picture_left = ExtResource("2_05soc")
+full_picture_right = ExtResource("3_mlyvu")
 metadata/_custom_type_script = "uid://d2gsgeusfrsnk"
