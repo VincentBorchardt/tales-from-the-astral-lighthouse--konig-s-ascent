@@ -5,7 +5,7 @@
 
 [node name="Wave 6" type="Node2D" unique_id=1215648875]
 script = ExtResource("1_l1iiw")
-enemy_count = 12
+enemy_count = 11
 
 [node name="Portal" parent="." unique_id=995226439 instance=ExtResource("1_rluyh")]
 position = Vector2(205, 92)

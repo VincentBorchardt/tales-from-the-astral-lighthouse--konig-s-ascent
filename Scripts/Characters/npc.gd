@@ -20,6 +20,7 @@ signal start_npc_conversation(messages)
 @onready var body_animations = $Animation
 @onready var convo_anim = $Convo
 @onready var health_marker = $HealthMarker
+@onready var hurtbox = $Hurtbox
 
 var state = State.IDLE:
 	set(newState):
@@ -84,6 +85,10 @@ func move_state():
 	velocity = direction * movement_speed
 	move_and_slide()
 	body_animations.play("walk")
+
+func tutorial_wave():
+	hurtbox.monitoring = false
+	
 
 func end_of_wave():
 	health_marker.visible = false

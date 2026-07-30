@@ -1,3 +1,4 @@
+class_name Gameplay
 extends Node2D
 
 var wave_animations = [
@@ -41,6 +42,7 @@ var absorbed_bullet_count: int = 0:
 			continue_scripted_sequence.call_deferred()
 
 func _ready():
+	wave_anim_player.play("floor_transition_in")
 	print("starting level now")
 	in_calm_state = false
 	print("Music resource:", music)
@@ -64,6 +66,7 @@ func continue_scripted_sequence():
 			1:
 				# Start the basic wave
 				start_next_wave()
+				get_tree().call_group("npcs", "tutorial_wave")
 				konig.toggle_cutscene()
 			2:
 				scripted_progression_count += 1
@@ -128,6 +131,8 @@ func end_level():
 
 
 func level_change():
+	wave_anim_player.play("floor_transition_out")
+	await wave_anim_player.animation_finished
 	get_tree().change_scene_to_packed(next_level)
 
 func wave_complete():

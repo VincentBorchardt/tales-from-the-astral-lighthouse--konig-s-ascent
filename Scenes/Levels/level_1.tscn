@@ -568,7 +568,7 @@ _data = {
 &"wave_3": SubResource("Animation_4aibg")
 }
 
-[node name="Level2" type="Node2D" unique_id=1763996064]
+[node name="Level3" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_afv7b")
 next_level = ExtResource("5_7r2dd")
