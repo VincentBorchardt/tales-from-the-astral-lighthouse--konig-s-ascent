@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="14_1hf40"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_wnlxl"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_jgaqf"]
+[ext_resource type="Texture2D" uid="uid://qr4bqj8gci5" path="res://Assets/Art/UI/Waves/Floor_03.png" id="18_ocbj8"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -329,6 +330,14 @@ script = ExtResource("16_wnlxl")
 speaker = SubResource("Resource_3628d")
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
 
+[sub_resource type="Gradient" id="Gradient_r8neg"]
+offsets = PackedFloat32Array(0, 0.005050505)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ocbj8"]
+gradient = SubResource("Gradient_r8neg")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(0.021367522, 0)
+
 [sub_resource type="Animation" id="Animation_8bd5q"]
 length = 0.001
 tracks/0/type = "value"
@@ -366,6 +375,100 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Transition:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.1254902, 0.07450981, 0.16078432, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FloorNumber:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FloorNumber:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_yxf76"]
+resource_name = "floor_number"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FloorNumber:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 1.4333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FloorNumber:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ku8a2"]
+resource_name = "floor_transition_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.1254902, 0.07450981, 0.16078432, 1), Color(0.1254902, 0.07450981, 0.16078432, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mj38t"]
+resource_name = "floor_transition_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.1254902, 0.07450981, 0.16078432, 0), Color(0.1254902, 0.07450981, 0.16078432, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_3sh5u"]
@@ -566,15 +669,18 @@ tracks/4/keys = {
 "values": [true]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7r2dd"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rcyh2"]
 _data = {
 &"RESET": SubResource("Animation_8bd5q"),
+&"floor_number": SubResource("Animation_yxf76"),
+&"floor_transition_in": SubResource("Animation_ku8a2"),
+&"floor_transition_out": SubResource("Animation_mj38t"),
 &"wave_1": SubResource("Animation_3sh5u"),
 &"wave_2": SubResource("Animation_tjq1q"),
 &"wave_3": SubResource("Animation_4aibg")
 }
 
-[node name="Level3" type="Node2D" unique_id=1763996064]
+[node name="Level4" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_md4x4")
 waves = Array[PackedScene]([ExtResource("2_sy7oa"), ExtResource("2_anjjd"), ExtResource("3_ocbj8")])
@@ -658,10 +764,22 @@ animation = &"wave_1"
 visible = false
 messages = Array[ExtResource("16_wnlxl")]([SubResource("Resource_tjl6l")])
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1022537975]
-libraries/ = SubResource("AnimationLibrary_7r2dd")
-
 [node name="ComboTimer" type="Timer" parent="." unique_id=1167771421]
+
+[node name="Transition" type="Sprite2D" parent="." unique_id=1255374130]
+modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
+z_index = 1
+position = Vector2(163, 120)
+scale = Vector2(5.09375, 3.75)
+texture = SubResource("GradientTexture2D_ocbj8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1404971501]
+libraries/ = SubResource("AnimationLibrary_rcyh2")
+
+[node name="FloorNumber" type="Sprite2D" parent="." unique_id=1322599119]
+visible = false
+position = Vector2(160, 128)
+texture = ExtResource("18_ocbj8")
 
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]

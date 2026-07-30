@@ -57,8 +57,12 @@ func _ready():
 	in_calm_state = false
 	print("Music resource:", music)
 	MusicManager.play_music( music )
+	wave_anim_player.play("floor_transition_in")
+	await wave_anim_player.animation_finished
 	combo_timer.one_shot = true
 	combo_timer.timeout.connect(reset_combo)
+	if wave_anim_player.has_animation("floor_number"):
+		wave_anim_player.play("floor_number")
 	booth.warp_in()
 	
 
@@ -140,6 +144,8 @@ func end_level():
 
 
 func level_change():
+	wave_anim_player.play("floor_transition_out")
+	await wave_anim_player.animation_finished
 	get_tree().change_scene_to_packed(next_level)
 
 func wave_complete():
