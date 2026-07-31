@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_wi7lt")
 speaker = ExtResource("2_pwuhh")
-message = "*v*"
+message = "„• v •„"
 animation_time = 0.0
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -53,6 +53,7 @@ var absorbed_bullet_count: int = 0:
 
 func _ready():
 	npc_conversations = [npc_convo_0, npc_convo_1, npc_convo_2, npc_convo_3, npc_convo_4]
+	num_npcs = get_tree().get_node_count_in_group("npcs")
 	print("starting level now")
 	in_calm_state = false
 	print("Music resource:", music)
@@ -223,3 +224,7 @@ func _on_konig_arrived() -> void:
 
 func _on_konig_left() -> void:
 	booth.warp_out()
+
+
+func _on_npc_died(npc: Variant) -> void:
+	num_npcs -= 1

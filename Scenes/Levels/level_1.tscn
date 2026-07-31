@@ -650,6 +650,7 @@ libraries/ = SubResource("AnimationLibrary_7r2dd")
 [connection signal="bullet_absorbed" from="Konig" to="." method="_on_bullet_absorbed"]
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
+[connection signal="npc_died" from="Npcs" to="." method="_on_npc_died"]
 [connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
 [connection signal="player_entered" from="Booth" to="." method="_on_booth_player_entered"]
 [connection signal="warp_in_finished" from="Booth" to="." method="_on_booth_warp_in_finished"]

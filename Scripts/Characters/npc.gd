@@ -8,8 +8,8 @@ enum State {
 	DEAD
 }
 
-# TODO call this when you talk to the NPC
 signal start_npc_conversation(messages)
+signal npc_died(npc)
 
 @export var movement_speed = 100.0
 @export var movement_target : Node2D
@@ -46,6 +46,7 @@ var health = 3:
 				health_marker.play("low")
 			0:
 				health_marker.visible = false
+				npc_died.emit(self)
 				state = State.DEAD
 			_:
 				pass

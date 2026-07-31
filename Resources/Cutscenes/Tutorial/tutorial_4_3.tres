@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Message" format=3 uid="uid://pnta660itadl"]
 
-[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_bjsti"]
-[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_g1sgl"]
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_77isc"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_f3sfv"]
 
 [resource]
-script = ExtResource("1_bjsti")
-speaker = ExtResource("2_g1sgl")
-message = "Now, you must go. In this place, you either ascend, or you forget … and there’s no way out down here. "
+script = ExtResource("1_77isc")
+speaker = ExtResource("2_f3sfv")
+message = "Now, you must go! In The Astral Lighthouse, you either ascend, or you forget … and there’s no way out down here. "
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
