@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://csg866k71r6l4" path="res://Scripts/Cutscenes/cutscene_overlay.gd" id="1_ne6od"]
 [ext_resource type="Texture2D" uid="uid://cgm4aj5ed61gt" path="res://Assets/Art/Characters/Portraits/Alexandria_pixel_portrait_left.png" id="2_0o6c1"]
 [ext_resource type="Texture2D" uid="uid://crsqdgq7o2n1i" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0001.png" id="2_lit3v"]
+[ext_resource type="Texture2D" uid="uid://c1lao7k408vm7" path="res://Assets/Art/Characters/Portraits/Marygold_pixel_portrait.png" id="3_0o6c1"]
 [ext_resource type="Texture2D" uid="uid://ctkq5mwwd0y1a" path="res://Assets/Art/UI/Cutscenes/Textbox2/Text_advance_button.png" id="3_flhaj"]
 [ext_resource type="Texture2D" uid="uid://duakcfptglds8" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0002.png" id="3_i5ixn"]
-[ext_resource type="Texture2D" uid="uid://h0w1w6giaqra" path="res://Assets/Art/Characters/Portraits/Konig_Pixel_portrait01_right.png" id="3_sgna5"]
 [ext_resource type="Texture2D" uid="uid://44mq820c5yq7" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0003.png" id="4_0o6c1"]
 [ext_resource type="Texture2D" uid="uid://ccm2n48gv4auc" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0004.png" id="5_sgna5"]
 
@@ -109,27 +109,26 @@ texture = ExtResource("2_0o6c1")
 
 [node name="RightSpeaker" type="Sprite2D" parent="." unique_id=1193639378]
 visible = false
-position = Vector2(244, 151)
-texture = ExtResource("3_sgna5")
+position = Vector2(248, 157)
+texture = ExtResource("3_0o6c1")
 
 [node name="MessageBox" type="Sprite2D" parent="." unique_id=985376082]
-position = Vector2(160, 120)
+position = Vector2(160, 127)
 texture = ExtResource("2_lit3v")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MessageBox" unique_id=1836524745]
 libraries/ = SubResource("AnimationLibrary_lsy2e")
 
 [node name="AdvanceTextMarker" type="Sprite2D" parent="." unique_id=1577689292]
-visible = false
-position = Vector2(270, 217)
+position = Vector2(271, 224)
 texture = ExtResource("3_flhaj")
 hframes = 2
 
 [node name="MessageArea" type="Control" parent="." unique_id=1054554033]
 anchors_preset = 0
-offset_top = 170.0
+offset_top = 175.0
 offset_right = 320.0
-offset_bottom = 240.0
+offset_bottom = 245.0
 
 [node name="MessageText" type="RichTextLabel" parent="MessageArea" unique_id=40516724]
 custom_maximum_size = Vector2(220, 50)

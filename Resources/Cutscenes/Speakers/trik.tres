@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://bwljsncmvcbnv"]
+
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_b8i3s"]
+
+[resource]
+script = ExtResource("1_b8i3s")
+name = "Trik"
+metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

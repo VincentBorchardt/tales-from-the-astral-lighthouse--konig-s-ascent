@@ -23,7 +23,6 @@ next_level = ExtResource("2_rqpbp")
 [node name="Background" type="Sprite2D" parent="." unique_id=1844786785]
 
 [node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("1_jbhrr")]
-visible = false
 layout_mode = 1
 
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

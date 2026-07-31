@@ -65,8 +65,8 @@ func set_up_message_box(current_message):
 	elif current_message.image_location == Message.Location.RIGHT:
 		if current_message.speaker.full_picture_right:
 			right_image.texture = current_message.speaker.full_picture_right
-			var right_x = 320 - ceili(left_image.texture.get_width() / 2)
-			var right_y = 240 - ceili(left_image.texture.get_height() / 2)
+			var right_x = 320 - ceili(right_image.texture.get_width() / 2)
+			var right_y = 240 - ceili(right_image.texture.get_height() / 2)
 			right_image.position = Vector2(right_x, right_y)
 			right_image.modulate = Color.WHITE
 			right_image.visible = true

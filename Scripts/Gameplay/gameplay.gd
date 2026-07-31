@@ -16,6 +16,7 @@ var wave_animations = [
 @export var npc_convo_2 : Array[Message]
 @export var npc_convo_3 : Array[Message]
 @export var npc_convo_4 : Array[Message]
+@export var cameo_npc: Speaker
 
 
 @export_group("Special Level Setup")
@@ -141,6 +142,9 @@ func enemy_died():
 		wave_complete()
 
 func end_level():
+	if num_npcs > 0:
+		StoryAutoload.append(cameo_npc)
+		StoryAutoload.total_saved_npcs += num_npcs
 	call_deferred("level_change")
 
 
