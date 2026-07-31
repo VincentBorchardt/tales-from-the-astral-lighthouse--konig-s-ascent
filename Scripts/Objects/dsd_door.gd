@@ -1,0 +1,31 @@
+extends Node2D
+
+@onready var door_animation = $Door
+@onready var dsd_spawn = $DsdSpawn
+@onready var hit_sound = $Hit
+@export var packedShippieDue : PackedScene
+
+var health := 3:
+	set(value):
+		health = value
+
+		if health <= 0:
+			open_door()
+
+func _ready():
+	GameplayManager.shippie_door.connect(show_glimmer)
+
+func show_glimmer():
+	visible = true
+	door_animation.visible = true
+	door_animation.play("glimmer")
+
+func open_door():
+	door_animation.play("opened")
+	var shippie = packedShippieDue.instantiate()
+	get_tree().current_scene.add_child(shippie)
+	shippie.global_position = dsd_spawn.global_position
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	hit_sound.play()
+	health -= 1

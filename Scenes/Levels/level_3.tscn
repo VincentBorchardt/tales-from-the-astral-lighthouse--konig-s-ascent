@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://bq0x0gomy56h5"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_md4x4"]
-[ext_resource type="PackedScene" uid="uid://cefd7if647b4f" path="res://Scenes/Waves/wave_4.tscn" id="2_anjjd"]
 [ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_sy7oa"]
-[ext_resource type="PackedScene" uid="uid://cq7qwaink0bj" path="res://Scenes/Waves/wave_5.tscn" id="3_ocbj8"]
 [ext_resource type="PackedScene" uid="uid://d1a2op8s4io37" path="res://Scenes/Levels/level_4.tscn" id="5_13yca"]
 [ext_resource type="AudioStream" uid="uid://jiue6il30deb" path="res://Assets/Audio/Music/MainThemeLevel3_wip1.mp3" id="6_8dmpc"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="6_ocbj8"]
@@ -18,6 +16,7 @@
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_wnlxl"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_jgaqf"]
 [ext_resource type="Texture2D" uid="uid://qr4bqj8gci5" path="res://Assets/Art/UI/Waves/Floor_03.png" id="18_ocbj8"]
+[ext_resource type="PackedScene" uid="uid://dt2yp7sm2y31j" path="res://Scenes/Objects/dsd_door.tscn" id="19_r8neg"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -683,7 +682,7 @@ _data = {
 [node name="Level4" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_md4x4")
-waves = Array[PackedScene]([ExtResource("2_sy7oa"), ExtResource("2_anjjd"), ExtResource("3_ocbj8")])
+waves = Array[PackedScene]([ExtResource("2_sy7oa")])
 next_level = ExtResource("5_13yca")
 music = ExtResource("6_8dmpc")
 
@@ -767,6 +766,7 @@ messages = Array[ExtResource("16_wnlxl")]([SubResource("Resource_tjl6l")])
 [node name="ComboTimer" type="Timer" parent="." unique_id=1167771421]
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=1255374130]
+visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 1
 position = Vector2(163, 120)
@@ -780,6 +780,9 @@ libraries/ = SubResource("AnimationLibrary_rcyh2")
 visible = false
 position = Vector2(160, 128)
 texture = ExtResource("18_ocbj8")
+
+[node name="DsdDoor" parent="." unique_id=1074552836 instance=ExtResource("19_r8neg")]
+position = Vector2(238, 75)
 
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]

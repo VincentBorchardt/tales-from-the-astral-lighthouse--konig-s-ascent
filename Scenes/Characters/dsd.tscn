@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bsj5pg7rv8mf5"]
+
+[ext_resource type="Script" uid="uid://cd4ao6liie5eq" path="res://Scripts/Characters/dsd.gd" id="1_861q2"]
+[ext_resource type="Texture2D" uid="uid://dy2qh6r3fyqsd" path="res://Assets/Art/Characters/Gameplay/Dsd/Dsd.webp" id="2_rx287"]
+[ext_resource type="Texture2D" uid="uid://dxq6qvjppayal" path="res://Assets/Art/Characters/Gameplay/Konig/Shadow.png" id="7_828av"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id0sx"]
+atlas = ExtResource("2_rx287")
+region = Rect2(0, 0, 558, 878)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkqeu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id0sx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dsd" type="CharacterBody2D" unique_id=786290646]
+script = ExtResource("1_861q2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1283062960]
+scale = Vector2(0.022085639, 0.018276328)
+sprite_frames = SubResource("SpriteFrames_xkqeu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=186641006]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1546413013]
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=246645548]
+modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.4862745)
+z_index = -1
+position = Vector2(0, 8)
+texture = ExtResource("7_828av")
