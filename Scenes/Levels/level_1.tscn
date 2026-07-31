@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://650j77xtdxdt"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_afv7b"]
+[ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_3628d"]
 [ext_resource type="AudioStream" uid="uid://cd8lfmu8qdn7y" path="res://Assets/Audio/Music/MainThemeLevel2_wip1.mp3" id="3_3628d"]
 [ext_resource type="PackedScene" uid="uid://bl7t366jaibvd" path="res://Scenes/Levels/level_2.tscn" id="5_7r2dd"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="5_3628d"]
@@ -10,17 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/UI/Waves/Wave_1.png" id="9_fayjm"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="10_k2mw1"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/UI/Waves/Wave_2.png" id="10_nojx8"]
-[ext_resource type="Resource" uid="uid://blrtrpqo25gfo" path="res://Resources/Cutscenes/test_message_1.tres" id="11_irw6p"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="11_vvknj"]
-[ext_resource type="Resource" uid="uid://cxohbe306iqo" path="res://Resources/Cutscenes/test_message_2.tres" id="12_31phq"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_ad63i"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="15_tjl6l"]
+[ext_resource type="Texture2D" uid="uid://bgp7u7j3di816" path="res://Assets/Art/UI/Waves/Floor_01.png" id="16_31phq"]
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="18_31phq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
-vertices = PackedVector2Array(305.6875, 123.859375, 156.24219, 197.71875, 17.960938, 121.65625, 164.84375, 52.140625)
+vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(165, 41, 328, 124, 156, 209, -4, 121)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(170, 46, 327, 128, 173, 208, 13, 123)])
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hi6ks"]
 texture = ExtResource("6_irw6p")
@@ -35,6 +35,11 @@ tile_offset_axis = 1
 tile_size = Vector2i(320, 240)
 sources/2 = SubResource("TileSetAtlasSource_hi6ks")
 
+[sub_resource type="Resource" id="Resource_2d332"]
+script = ExtResource("10_k2mw1")
+message = "Hey pal whats the big idea?"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hkci"]
 size = Vector2(20, 388)
 
@@ -43,6 +48,348 @@ size = Vector2(348, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu1sj"]
 size = Vector2(20, 288)
+
+[sub_resource type="Animation" id="Animation_8bd5q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WaveAnimation:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"wave_1"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WaveAnimation:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WaveAnimation:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Transition:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.1254902, 0.07450981, 0.16078432, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FloorNumber:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FloorNumber:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_yxf76"]
+resource_name = "floor_number"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FloorNumber:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 1.4333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FloorNumber:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ku8a2"]
+resource_name = "floor_transition_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.1254902, 0.07450981, 0.16078432, 1), Color(0.1254902, 0.07450981, 0.16078432, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mj38t"]
+resource_name = "floor_transition_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.1254902, 0.07450981, 0.16078432, 0), Color(0.1254902, 0.07450981, 0.16078432, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3sh5u"]
+resource_name = "wave_1"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WaveAnimation:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"wave_1"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WaveAnimation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"wave_1", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WaveAnimation:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WaveAnimation:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.26666668, 0.6666667, 2.8, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WaveAnimation:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_tjq1q"]
+resource_name = "wave_2"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WaveAnimation:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"wave_2"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WaveAnimation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"wave_2", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WaveAnimation:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WaveAnimation:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.26666668, 0.6666667, 2.8, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WaveAnimation:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_4aibg"]
+resource_name = "wave_3"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WaveAnimation:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"wave_3"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WaveAnimation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"wave_3", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WaveAnimation:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WaveAnimation:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.26666668, 0.6666667, 2.8, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WaveAnimation:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yxf76"]
+_data = {
+&"RESET": SubResource("Animation_8bd5q"),
+&"floor_number": SubResource("Animation_yxf76"),
+&"floor_transition_in": SubResource("Animation_ku8a2"),
+&"floor_transition_out": SubResource("Animation_mj38t"),
+&"wave_1": SubResource("Animation_3sh5u"),
+&"wave_2": SubResource("Animation_tjq1q"),
+&"wave_3": SubResource("Animation_4aibg")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t5x67"]
 atlas = ExtResource("9_fayjm")
@@ -323,285 +670,53 @@ script = ExtResource("10_k2mw1")
 speaker = SubResource("Resource_3628d")
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
 
-[sub_resource type="Animation" id="Animation_8bd5q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WaveAnimation:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"wave_1"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WaveAnimation:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WaveAnimation:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
+[sub_resource type="Gradient" id="Gradient_yxf76"]
+offsets = PackedFloat32Array(0, 0.005050505)
 
-[sub_resource type="Animation" id="Animation_3sh5u"]
-resource_name = "wave_1"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WaveAnimation:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"wave_1"]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WaveAnimation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"wave_1", 1.0, false],
-"method": &"play"
-}]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WaveAnimation:offset")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("WaveAnimation:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.26666668, 0.6666667, 2.8, 3.1333334),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("WaveAnimation:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yewy0"]
+gradient = SubResource("Gradient_yxf76")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(0.021367522, 0)
 
-[sub_resource type="Animation" id="Animation_tjq1q"]
-resource_name = "wave_2"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WaveAnimation:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"wave_2"]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WaveAnimation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"wave_2", 1.0, false],
-"method": &"play"
-}]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WaveAnimation:offset")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("WaveAnimation:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.26666668, 0.6666667, 2.8, 3.1333334),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("WaveAnimation:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_4aibg"]
-resource_name = "wave_3"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WaveAnimation:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"wave_3"]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WaveAnimation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"wave_3", 1.0, false],
-"method": &"play"
-}]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WaveAnimation:offset")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("WaveAnimation:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.26666668, 0.6666667, 2.8, 3.1333334),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("WaveAnimation:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7r2dd"]
-_data = {
-&"RESET": SubResource("Animation_8bd5q"),
-&"wave_1": SubResource("Animation_3sh5u"),
-&"wave_2": SubResource("Animation_tjq1q"),
-&"wave_3": SubResource("Animation_4aibg")
-}
-
-[node name="Level2" type="Node2D" unique_id=1763996064]
+[node name="Level1" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_afv7b")
+waves = Array[PackedScene]([ExtResource("2_3628d")])
 next_level = ExtResource("5_7r2dd")
 music = ExtResource("3_3628d")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
+visible = false
 position = Vector2(-2, 12)
 navigation_polygon = SubResource("NavigationPolygon_numx4")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2118346129]
+[node name="Background" type="Sprite2D" parent="." unique_id=1423638879]
 z_index = -3
 position = Vector2(160, 120)
 texture = ExtResource("18_31phq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1719386126]
-z_index = -2
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_bwgk3")
 
 [node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("7_31phq")]
-position = Vector2(223, 116)
+position = Vector2(163, 168)
 ACCELERATION = 682
 FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
-position = Vector2(99, 103)
+position = Vector2(132, 124)
 movement_target = NodePath("../BoothSpawn")
-conversation = Array[ExtResource("10_k2mw1")]([ExtResource("11_irw6p"), ExtResource("12_31phq")])
+conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
+
+[node name="Npcs2" parent="." unique_id=656374900 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
+position = Vector2(196, 121)
+movement_target = NodePath("../BoothSpawn")
+conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
 
 [node name="Booth" parent="." unique_id=1170855833 instance=ExtResource("5_3628d")]
 visible = false
-y_sort_enabled = true
-position = Vector2(156, 105)
+position = Vector2(160, 128)
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
 position = Vector2(160, 128)
@@ -610,6 +725,7 @@ position = Vector2(160, 128)
 wait_time = 5.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1684486360]
+visible = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=414705039]
 position = Vector2(44, 100.00001)
@@ -631,6 +747,9 @@ position = Vector2(124, 204.99998)
 rotation = 2.0417528
 shape = SubResource("RectangleShape2D_iu1sj")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=666188338]
+libraries/ = SubResource("AnimationLibrary_yxf76")
+
 [node name="WaveAnimation" type="AnimatedSprite2D" parent="." unique_id=1208111558]
 visible = false
 z_index = 2
@@ -642,16 +761,25 @@ animation = &"wave_1"
 visible = false
 messages = Array[ExtResource("10_k2mw1")]([SubResource("Resource_tjl6l")])
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1022537975]
-libraries/ = SubResource("AnimationLibrary_7r2dd")
+[node name="ComboTimer" type="Timer" parent="." unique_id=1559184445]
 
-[node name="ComboTimer" type="Timer" parent="." unique_id=2110544139]
+[node name="Transition" type="Sprite2D" parent="." unique_id=30594026]
+modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
+z_index = 1
+position = Vector2(163, 120)
+scale = Vector2(5.09375, 3.75)
+texture = SubResource("GradientTexture2D_yewy0")
 
-[connection signal="bullet_absorbed" from="Konig" to="." method="_on_bullet_absorbed"]
+[node name="FloorNumber" type="Sprite2D" parent="." unique_id=2030268997]
+visible = false
+position = Vector2(160, 128)
+texture = ExtResource("16_31phq")
+
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
 [connection signal="npc_died" from="Npcs" to="." method="_on_npc_died"]
 [connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
+[connection signal="start_npc_conversation" from="Npcs2" to="." method="_on_npcs_start_npc_conversation"]
 [connection signal="player_entered" from="Booth" to="." method="_on_booth_player_entered"]
 [connection signal="warp_in_finished" from="Booth" to="." method="_on_booth_warp_in_finished"]
 [connection signal="warp_out_finished" from="Booth" to="." method="_on_booth_warp_out_finished"]
