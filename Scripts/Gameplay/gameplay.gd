@@ -53,6 +53,7 @@ var absorbed_bullet_count: int = 0:
 			continue_scripted_sequence.call_deferred()
 
 func _ready():
+	GameplayManager.end_of_level = false
 	npc_conversations = [npc_convo_0, npc_convo_1, npc_convo_2, npc_convo_3, npc_convo_4]
 	num_npcs = get_tree().get_node_count_in_group("npcs")
 	print("starting level now")
@@ -113,6 +114,7 @@ func start_next_wave():
 	#TODO: this is where end of round stuff happens
 	if current_wave >= waves.size():
 		print("all waves complete")
+		GameplayManager.end_of_level = true
 		in_calm_state = true
 		booth.visible = true
 		booth.warp_in()
@@ -143,7 +145,7 @@ func enemy_died():
 
 func end_level():
 	if num_npcs > 0:
-		StoryAutoload.append(cameo_npc)
+		StoryAutoload.saved_cameos.append(cameo_npc)
 		StoryAutoload.total_saved_npcs += num_npcs
 	call_deferred("level_change")
 

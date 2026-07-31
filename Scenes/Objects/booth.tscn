@@ -3,6 +3,12 @@
 [ext_resource type="Script" uid="uid://bhbdk2a38ergy" path="res://Scripts/Objects/booth.gd" id="1_rg0fs"]
 [ext_resource type="Texture2D" uid="uid://dxvascyel8lng" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Open_loop/booth open loop.png" id="2_4oquh"]
 [ext_resource type="Texture2D" uid="uid://dfmyro5de2i3g" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Enter/booth full enter.png" id="10_rqlmk"]
+[ext_resource type="Texture2D" uid="uid://drei8gjxw78qb" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert00.png" id="21_vw8al"]
+[ext_resource type="Texture2D" uid="uid://ibjk3sq7urp7" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert01.png" id="22_rqlmk"]
+[ext_resource type="Texture2D" uid="uid://c86tuhku0j6ev" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert02.png" id="23_06qdd"]
+[ext_resource type="Texture2D" uid="uid://dccrngn6ulx8k" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert03.png" id="24_515o5"]
+[ext_resource type="Texture2D" uid="uid://bdagjaa2ob0tk" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert04.png" id="25_yfyjv"]
+[ext_resource type="Texture2D" uid="uid://bq4jv523gjbtp" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert05.png" id="26_a2r2t"]
 [ext_resource type="Texture2D" uid="uid://bl40nptsufebk" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit00.png" id="39_pqgxn"]
 [ext_resource type="Texture2D" uid="uid://clktwumd48unm" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit01.png" id="40_hwoh3"]
 [ext_resource type="Texture2D" uid="uid://bkavvporbf658" path="res://Assets/Art/Tiles/Phonebooth/Phonebooth_Exit/Phonebooth_Exit02.png" id="41_faaqk"]
@@ -339,12 +345,42 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwrr4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_vw8al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rqlmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_06qdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_515o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_yfyjv")
+}, {
+"duration": 5.0,
+"texture": ExtResource("26_a2r2t")
+}],
+"loop": 0,
+"name": &"interaction",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pp5cw"]
+radius = 13.038404
+
 [node name="Booth" type="Node2D" unique_id=1170855833]
 script = ExtResource("1_rg0fs")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=554180535]
-collision_layer = 32
-collision_mask = 32
+position = Vector2(-14, 9)
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=689205343]
 position = Vector2(8, 14)
@@ -353,7 +389,6 @@ shape = SubResource("CircleShape2D_ju77w")
 debug_color = Color(1, 0, 0.10958373, 0.41960785)
 
 [node name="Animations" type="AnimatedSprite2D" parent="." unique_id=1954650103]
-position = Vector2(5, -14)
 sprite_frames = SubResource("SpriteFrames_13yca")
 animation = &"open"
 frame_progress = 0.6364894
@@ -364,5 +399,22 @@ stream = ExtResource("54_ju77w")
 [node name="Enter" type="AudioStreamPlayer2D" parent="." unique_id=1700806240]
 stream = ExtResource("55_eg8f1")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="InteractAnimation" type="AnimatedSprite2D" parent="." unique_id=1881624363]
+visible = false
+position = Vector2(0, -18)
+sprite_frames = SubResource("SpriteFrames_cwrr4")
+animation = &"interaction"
+frame = 5
+frame_progress = 1.0
+
+[node name="InteractionRange" type="Area2D" parent="." unique_id=949263895]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionRange" unique_id=155067127]
+position = Vector2(0, 40)
+shape = SubResource("CircleShape2D_pp5cw")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="animation_finished" from="Animations" to="." method="_on_animations_animation_finished"]
+[connection signal="body_entered" from="InteractionRange" to="." method="_on_interaction_range_body_entered"]
+[connection signal="body_exited" from="InteractionRange" to="." method="_on_interaction_range_body_exited"]

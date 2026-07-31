@@ -18,6 +18,7 @@ var dead = false
 @onready var hitbox = $Hitbox/CollisionShape2D
 @onready var shadow = $Shadow
 @onready var explode = $Explode
+@onready var knockback_death_timer = $KnocbackDeath
 
 var player
 
@@ -64,6 +65,9 @@ func take_hit(direction):
 	velocity = direction * knockback_speed
 	enemy_anim.play(get_knockback_animation(direction))
 	state = State.KNOCKBACK
+	knockback_death_timer.start()
+	
+	
 
 func get_knockback_animation(direction):
 	if direction.x >= 0:
