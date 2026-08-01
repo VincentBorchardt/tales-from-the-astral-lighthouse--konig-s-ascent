@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_77isc")
 speaker = ExtResource("2_f3sfv")
-message = "Now, you must go! In The Astral Lighthouse, you either ascend, or you forget … and there’s no way out down here. "
+message = "Now, you must go! In [color=8146c9]The Astral Lighthouse[/color], you either ascend, or you forget … and there’s no way out down here. "
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

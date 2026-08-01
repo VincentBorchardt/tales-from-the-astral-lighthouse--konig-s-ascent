@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dkmbhhjlagu3a"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_ih3q7"]
+[ext_resource type="Resource" uid="uid://onpw3vsij0i" path="res://Resources/Cutscenes/Speakers/dsd.tres" id="2_1td7x"]
+
+[resource]
+script = ExtResource("1_ih3q7")
+speaker = ExtResource("2_1td7x")
+message = "With your help, I am sure we can all get to [color=e5d363]where we are supposed to be[/color]. "
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

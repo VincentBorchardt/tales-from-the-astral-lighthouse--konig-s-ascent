@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://nn7jg1dhb6va"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_aa3op"]
+[ext_resource type="Resource" uid="uid://onpw3vsij0i" path="res://Resources/Cutscenes/Speakers/dsd.tres" id="2_6a857"]
+
+[resource]
+script = ExtResource("1_aa3op")
+speaker = ExtResource("2_6a857")
+message = "Kishishishishi … I must confess, if I were as strong as you, I wouldn’t be stopping to concern myself with [color=e24d63]Lost Souls[/color]."
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

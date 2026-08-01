@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dtib5g5qcu6p7"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_jdsra"]
+[ext_resource type="Resource" uid="uid://dxc3jsmma3eir" path="res://Resources/Cutscenes/Speakers/ermitz.tres" id="2_wnn5f"]
+
+[resource]
+script = ExtResource("1_jdsra")
+speaker = ExtResource("2_wnn5f")
+message = "I know that’s a tough ask, but lifting a weight is always safer if you have a spotter looking out for you!"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

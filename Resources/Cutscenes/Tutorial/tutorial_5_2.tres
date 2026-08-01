@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_6147c")
 speaker = ExtResource("2_6tc3p")
-message = "… I remembered. Good. This tower and its [color=MEDIUM_PURPLE]trickster[/color] won’t be getting me just yet."
+message = "… I remembered. Good. This tower and its [color=8146c9]trickster[/color] won’t be getting me just yet."
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

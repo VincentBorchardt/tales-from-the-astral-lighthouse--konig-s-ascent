@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cyv3vjbve2fxb"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_jhyb7"]
+[ext_resource type="Resource" uid="uid://bxa2n6e0ien8i" path="res://Resources/Cutscenes/Speakers/yazmody.tres" id="2_4kjyr"]
+
+[resource]
+script = ExtResource("1_jhyb7")
+speaker = ExtResource("2_4kjyr")
+message = "My liege ... If you’ve found yourself in [color=e5d363]The Domain of The Trickster[/color], then you need to be careful."
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

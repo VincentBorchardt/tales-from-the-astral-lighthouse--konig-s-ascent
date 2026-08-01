@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://d0we3tl7usywu"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_eqxpk"]
+[ext_resource type="Resource" uid="uid://bwljsncmvcbnv" path="res://Resources/Cutscenes/Speakers/trik.tres" id="2_6shvf"]
+
+[resource]
+script = ExtResource("1_eqxpk")
+speaker = ExtResource("2_6shvf")
+message = "[Trik winks cheekily, and Konig feels encouraged to see his quest through.]"
+animation_time = 1.5
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

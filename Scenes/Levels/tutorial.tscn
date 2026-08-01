@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_qvtqq"]
 [ext_resource type="PackedScene" uid="uid://c4gipqt3vgc26" path="res://Scenes/Waves/tutorial_wave.tscn" id="2_35mx6"]
-[ext_resource type="PackedScene" uid="uid://dti4v4l1kdr3w" path="res://Scenes/Cutscenes/booth_conversation_1.tscn" id="3_wdaxu"]
+[ext_resource type="PackedScene" uid="uid://dti4v4l1kdr3w" path="res://Scenes/Cutscenes/booth_tutorial.tscn" id="3_wdaxu"]
 [ext_resource type="AudioStream" uid="uid://ca7puep3fxliq" path="res://Assets/Audio/Music/MainThemeLevel1_wip1.mp3" id="4_mj38t"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_o863f"]
 [ext_resource type="Resource" uid="uid://c235ooxjxu8uq" path="res://Resources/Cutscenes/Tutorial/tutorial_4_1.tres" id="6_wdaxu"]

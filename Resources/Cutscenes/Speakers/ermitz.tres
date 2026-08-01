@@ -1,8 +1,12 @@
 [gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://dxc3jsmma3eir"]
 
+[ext_resource type="Texture2D" uid="uid://benm6gv2ymd6y" path="res://Assets/Art/Characters/Portraits/Ermitz_pixel_portrait_left.png" id="1_c5pf6"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_rxsgo"]
+[ext_resource type="Texture2D" uid="uid://bjuiafkehg2ro" path="res://Assets/Art/Characters/Portraits/Ermitz_pixel_portrait.png" id="2_d8rws"]
 
 [resource]
 script = ExtResource("1_rxsgo")
 name = "Ermitz"
+full_picture_left = ExtResource("1_c5pf6")
+full_picture_right = ExtResource("2_d8rws")
 metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

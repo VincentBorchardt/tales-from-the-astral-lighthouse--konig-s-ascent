@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://c3w00lracyrdc"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_ii5c3"]
+[ext_resource type="Resource" uid="uid://dxc3jsmma3eir" path="res://Resources/Cutscenes/Speakers/ermitz.tres" id="2_kab3e"]
+
+[resource]
+script = ExtResource("1_ii5c3")
+speaker = ExtResource("2_kab3e")
+message = "Wherever you are, if you’re doing something hard, I need you to keep trying to make friends as good as me."
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

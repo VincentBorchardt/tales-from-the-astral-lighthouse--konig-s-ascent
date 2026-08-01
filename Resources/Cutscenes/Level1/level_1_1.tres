@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dyedvv04euo28"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_x1crn"]
+[ext_resource type="Resource" uid="uid://bwljsncmvcbnv" path="res://Resources/Cutscenes/Speakers/trik.tres" id="2_llbug"]
+
+[resource]
+script = ExtResource("1_x1crn")
+speaker = ExtResource("2_llbug")
+message = "[Trik looks at Konig with wide-eyed curiosity.] "
+animation_time = 1.5
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

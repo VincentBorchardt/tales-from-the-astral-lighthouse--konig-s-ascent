@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://24s08kp7l4se"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_fgc48"]
+[ext_resource type="Resource" uid="uid://dsv2aheawd57y" path="res://Resources/Cutscenes/Speakers/seraph.tres" id="2_xk0jh"]
+
+[resource]
+script = ExtResource("1_fgc48")
+speaker = ExtResource("2_xk0jh")
+message = "Not good, huh? Have you considered buying [color=8146c9]The Lighthouse[/color] and then laying everyone off so they just go home?"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

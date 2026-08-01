@@ -1,8 +1,12 @@
 [gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://kiy01wjkjaq0"]
 
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_6owib"]
+[ext_resource type="Texture2D" uid="uid://chfw60mukipqn" path="res://Assets/Art/Characters/Portraits/Pitmaster_pixel_portrait_left.png" id="1_t535f"]
+[ext_resource type="Texture2D" uid="uid://nr6hx3dpnu81" path="res://Assets/Art/Characters/Portraits/Pitmaster_pixel_portrait.png" id="2_3xfv2"]
 
 [resource]
 script = ExtResource("1_6owib")
 name = "The Pitmaster"
+full_picture_left = ExtResource("1_t535f")
+full_picture_right = ExtResource("2_3xfv2")
 metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

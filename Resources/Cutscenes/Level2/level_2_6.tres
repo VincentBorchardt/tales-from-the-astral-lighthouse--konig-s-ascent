@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cioqej4kaplnq"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_gbrra"]
+[ext_resource type="Resource" uid="uid://d361g08sp4r1d" path="res://Resources/Cutscenes/Speakers/primeval_mask.tres" id="2_dv2j1"]
+
+[resource]
+script = ExtResource("1_gbrra")
+speaker = ExtResource("2_dv2j1")
+message = "Listen, man. That sounds cool and all, but I can’t do it."
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

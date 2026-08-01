@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dhuxxdfa8r7mx"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_4j83w"]
+[ext_resource type="Resource" uid="uid://dsv2aheawd57y" path="res://Resources/Cutscenes/Speakers/seraph.tres" id="2_kdrwa"]
+
+[resource]
+script = ExtResource("1_4j83w")
+speaker = ExtResource("2_kdrwa")
+message = "Kleiner König, my guy! How’s it going?"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://i2jc5r8t0uqf"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_vphcv"]
+[ext_resource type="Resource" uid="uid://dsv2aheawd57y" path="res://Resources/Cutscenes/Speakers/seraph.tres" id="2_s2thn"]
+
+[resource]
+script = ExtResource("1_vphcv")
+speaker = ExtResource("2_s2thn")
+message = "Go for Quartz! "
+image_location = 1
+animation_time = 1.5
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://dsv2aheawd57y"]
+
+[ext_resource type="Texture2D" uid="uid://do621n56dbolw" path="res://Assets/Art/Characters/Portraits/Seraph_pixel_portrait_left.png" id="1_na1yb"]
+[ext_resource type="Texture2D" uid="uid://cjd0t2rybn2mk" path="res://Assets/Art/Characters/Portraits/Seraph_pixel_portrait.png" id="2_mqs6k"]
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="3_orev2"]
+
+[resource]
+script = ExtResource("3_orev2")
+name = "Seraph"
+full_picture_left = ExtResource("1_na1yb")
+full_picture_right = ExtResource("2_mqs6k")
+metadata/_custom_type_script = "uid://d2gsgeusfrsnk"
