@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ck4emqm5geuse"]
+
+[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/booth_conversation.gd" id="1_8xytb"]
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_aajga"]
+[ext_resource type="Resource" uid="uid://cynhkjvtmyl5u" path="res://Resources/Cutscenes/Tutorial/booth_t_1.tres" id="3_6svl8"]
+[ext_resource type="Resource" uid="uid://df0fhng7pnit3" path="res://Resources/Cutscenes/Tutorial/booth_t_2.tres" id="4_o61u0"]
+[ext_resource type="Resource" uid="uid://6oaypab172jt" path="res://Resources/Cutscenes/Tutorial/booth_t_3.tres" id="5_jg4mq"]
+[ext_resource type="Resource" uid="uid://bb4yhr1xqj7o8" path="res://Resources/Cutscenes/Tutorial/booth_t_4.tres" id="6_ckslo"]
+[ext_resource type="Resource" uid="uid://c2wvvu1yjm1u2" path="res://Resources/Cutscenes/Tutorial/booth_t_5.tres" id="7_tirqv"]
+[ext_resource type="Resource" uid="uid://j28v5emrh1v" path="res://Resources/Cutscenes/Tutorial/booth_t_6.tres" id="8_1uold"]
+[ext_resource type="Resource" uid="uid://c8nlox7qyxv8g" path="res://Resources/Cutscenes/Tutorial/booth_t_7.tres" id="9_pq82h"]
+[ext_resource type="Resource" uid="uid://c4o5mjw143e8c" path="res://Resources/Cutscenes/Tutorial/booth_t_8.tres" id="10_uhfec"]
+[ext_resource type="PackedScene" uid="uid://650j77xtdxdt" path="res://Scenes/Levels/level_1.tscn" id="11_fmacy"]
+[ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_kovq7"]
+
+[node name="BoothConversation1" type="Control" unique_id=1827662693]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8xytb")
+conversation = Array[ExtResource("2_aajga")]([ExtResource("3_6svl8"), ExtResource("4_o61u0"), ExtResource("5_jg4mq"), ExtResource("6_ckslo"), ExtResource("7_tirqv"), ExtResource("8_1uold"), ExtResource("9_pq82h"), ExtResource("10_uhfec")])
+next_level = ExtResource("11_fmacy")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1844786785]
+
+[node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("12_kovq7")]
+layout_mode = 1
+
+[connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

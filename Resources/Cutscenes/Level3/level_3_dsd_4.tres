@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cwqy0e1ks3g38"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_bjga0"]
+[ext_resource type="Resource" uid="uid://onpw3vsij0i" path="res://Resources/Cutscenes/Speakers/dsd.tres" id="2_74cjp"]
+
+[resource]
+script = ExtResource("1_bjga0")
+speaker = ExtResource("2_74cjp")
+message = "I would simply want to go home. "
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

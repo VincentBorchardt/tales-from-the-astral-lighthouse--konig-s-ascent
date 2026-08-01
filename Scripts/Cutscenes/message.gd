@@ -8,7 +8,7 @@ class_name Message extends Resource
 @export var animation_time: float = 2.5
 @export var color: Color
 
-@export var choices: bool
-@export var yes_scene: PackedScene
-@export var no_scene: PackedScene
+#@export var choices: bool
+#@export var yes_scene: PackedScene
+#@export var no_scene: PackedScene
 enum Location {LEFT, RIGHT}

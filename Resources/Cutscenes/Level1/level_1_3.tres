@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bf2tgc2i1ifuv"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_f8dg0"]
+[ext_resource type="Resource" uid="uid://bwljsncmvcbnv" path="res://Resources/Cutscenes/Speakers/trik.tres" id="2_roaym"]
+
+[resource]
+script = ExtResource("1_f8dg0")
+speaker = ExtResource("2_roaym")
+message = "[Trik uses his tail to hand Konig two different half-eaten candy bars.] "
+animation_time = 1.5
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

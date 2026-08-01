@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://c0372f10ic6te"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_eclk0"]
+[ext_resource type="Resource" uid="uid://onpw3vsij0i" path="res://Resources/Cutscenes/Speakers/dsd.tres" id="2_fnkri"]
+
+[resource]
+script = ExtResource("1_eclk0")
+speaker = ExtResource("2_fnkri")
+message = "Still. I must thank you for your kindness. We still have quite the journey ahead, but I believe in you, my new friend!"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

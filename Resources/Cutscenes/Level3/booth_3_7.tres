@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bl85ut22ibw0"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_rdo60"]
+[ext_resource type="Resource" uid="uid://dsv2aheawd57y" path="res://Resources/Cutscenes/Speakers/seraph.tres" id="2_33vgs"]
+
+[resource]
+script = ExtResource("1_rdo60")
+speaker = ExtResource("2_33vgs")
+message = "Well if you’re gonna swear at me like that, you’re on your own, pal. "
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

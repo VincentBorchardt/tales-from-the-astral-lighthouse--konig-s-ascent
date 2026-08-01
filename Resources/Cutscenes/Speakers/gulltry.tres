@@ -1,8 +1,12 @@
 [gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://b12uia5oxvxld"]
 
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_6seob"]
+[ext_resource type="Texture2D" uid="uid://cvtbqkb8oq8f4" path="res://Assets/Art/Characters/Portraits/Gulltry_pixel_portrait_left.png" id="1_dg51h"]
+[ext_resource type="Texture2D" uid="uid://dlnnyjwk3icwk" path="res://Assets/Art/Characters/Portraits/Gulltry_pixel_portrait.png" id="2_bisqv"]
 
 [resource]
 script = ExtResource("1_6seob")
 name = "Gulltry"
+full_picture_left = ExtResource("1_dg51h")
+full_picture_right = ExtResource("2_bisqv")
 metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

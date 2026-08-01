@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cqk0vujm5qpae"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_jmk6l"]
+[ext_resource type="Resource" uid="uid://bxa2n6e0ien8i" path="res://Resources/Cutscenes/Speakers/yazmody.tres" id="2_nh1vj"]
+
+[resource]
+script = ExtResource("1_jmk6l")
+speaker = ExtResource("2_nh1vj")
+message = "Listen, we don’t have much time. I’ve had to bounce my signal off of three dying stars just to get it through to you."
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
