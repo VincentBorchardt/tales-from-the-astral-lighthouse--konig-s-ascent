@@ -50,6 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://dccrngn6ulx8k" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert03.png" id="43_216sd"]
 [ext_resource type="Texture2D" uid="uid://bdagjaa2ob0tk" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert04.png" id="44_oicfj"]
 [ext_resource type="Texture2D" uid="uid://bq4jv523gjbtp" path="res://Assets/Art/Characters/Gameplay/ConvoAlert/ConvoAlert05.png" id="45_33x70"]
+[ext_resource type="AudioStream" uid="uid://br7rbvam12m7m" path="res://Assets/Audio/SFX/NPCdamagedSqueeak_wip1.mp3" id="51_lawho"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvuxs"]
 size = Vector2(8, 10)
@@ -351,9 +352,7 @@ animations = [{
 
 [node name="Npc" type="CharacterBody2D" unique_id=1718176889 node_paths=PackedStringArray("navigation_agent") groups=["npcs"]]
 script = ExtResource("1_wvuxs")
-movement_speed = null
 navigation_agent = NodePath("NavigationAgent2D")
-conversation = null
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1069235581]
 collision_layer = 2
@@ -398,6 +397,9 @@ modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.4862745)
 z_index = -1
 position = Vector2(0, 12)
 texture = ExtResource("36_i26q5")
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="." unique_id=1928547609]
+stream = ExtResource("51_lawho")
 
 [connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_hurtbox_area_entered"]
 [connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]

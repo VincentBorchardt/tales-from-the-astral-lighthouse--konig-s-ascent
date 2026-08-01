@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://650j77xtdxdt"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_afv7b"]
-[ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_3628d"]
-[ext_resource type="PackedScene" uid="uid://dv2ws74mj06q" path="res://Scenes/Waves/wave_2.tscn" id="3_31phq"]
+[ext_resource type="PackedScene" uid="uid://b42krjlf6mcrk" path="res://Scenes/Waves/wave_1_1.tscn" id="2_ad63i"]
 [ext_resource type="AudioStream" uid="uid://cd8lfmu8qdn7y" path="res://Assets/Audio/Music/MainThemeLevel2_wip1.mp3" id="3_3628d"]
-[ext_resource type="PackedScene" uid="uid://cnk4r2obnewnv" path="res://Scenes/Waves/wave_3.tscn" id="4_7hll7"]
+[ext_resource type="PackedScene" uid="uid://cpoen3uh66hcs" path="res://Scenes/Waves/wave_1_2.tscn" id="3_pmbdk"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="5_3628d"]
 [ext_resource type="PackedScene" uid="uid://b2av23snq1gs7" path="res://Scenes/Cutscenes/booth_conversation_1.tscn" id="5_pmbdk"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_irw6p"]
@@ -21,14 +20,21 @@
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_ad63i"]
 [ext_resource type="Resource" uid="uid://d0we3tl7usywu" path="res://Resources/Cutscenes/Level1/level_1_5.tres" id="12_t8afp"]
 [ext_resource type="Resource" uid="uid://cifkslqv228lr" path="res://Resources/Cutscenes/Level1/level_1_6.tres" id="13_1fgkh"]
+[ext_resource type="Texture2D" uid="uid://2ehgxj6chgxe" path="res://Assets/Art/Tiles/TutorialGrid.png" id="15_ksf1i"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="15_tjl6l"]
 [ext_resource type="Texture2D" uid="uid://bgp7u7j3di816" path="res://Assets/Art/UI/Waves/Floor_01.png" id="16_31phq"]
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="18_31phq"]
+[ext_resource type="PackedScene" uid="uid://b00xoe2f78osm" path="res://Scenes/Waves/wave_1_3.tscn" id="23_ad63i"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(170, 46, 327, 128, 173, 208, 13, 123)])
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vif5h"]
+texture = ExtResource("15_ksf1i")
+texture_region_size = Vector2i(320, 240)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hi6ks"]
 texture = ExtResource("6_irw6p")
@@ -42,6 +48,7 @@ tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(320, 240)
 sources/2 = SubResource("TileSetAtlasSource_hi6ks")
+sources/0 = SubResource("TileSetAtlasSource_vif5h")
 
 [sub_resource type="Resource" id="Resource_2d332"]
 script = ExtResource("10_k2mw1")
@@ -689,7 +696,7 @@ fill_to = Vector2(0.021367522, 0)
 [node name="Level1" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_afv7b")
-waves = Array[PackedScene]([ExtResource("2_3628d"), ExtResource("3_31phq"), ExtResource("4_7hll7")])
+waves = Array[PackedScene]([ExtResource("2_ad63i"), ExtResource("3_pmbdk"), ExtResource("23_ad63i")])
 next_level = ExtResource("5_pmbdk")
 music = ExtResource("3_3628d")
 npc_convo_0 = Array[ExtResource("10_k2mw1")]([ExtResource("8_pmbdk"), ExtResource("9_ksf1i"), ExtResource("10_vif5h"), ExtResource("11_i7ma5"), ExtResource("12_t8afp"), ExtResource("13_1fgkh")])
@@ -715,7 +722,6 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
 position = Vector2(132, 124)
-movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
 
@@ -769,6 +775,7 @@ messages = Array[ExtResource("10_k2mw1")]([SubResource("Resource_tjl6l")])
 [node name="ComboTimer" type="Timer" parent="." unique_id=1559184445]
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=30594026]
+visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 1
 position = Vector2(163, 120)

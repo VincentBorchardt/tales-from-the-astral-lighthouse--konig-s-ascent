@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cq7qwaink0bj" path="res://Scenes/Waves/wave_5.tscn" id="3_ecora"]
 [ext_resource type="PackedScene" uid="uid://y0qsdr7yuscb" path="res://Scenes/Waves/wave_6.tscn" id="4_xpmn3"]
 [ext_resource type="PackedScene" uid="uid://ck4emqm5geuse" path="res://Scenes/Cutscenes/booth_conversation_4.tscn" id="5_legg8"]
-[ext_resource type="AudioStream" uid="uid://smfksifrkc4u" path="res://Assets/Audio/Music/MainThemeLevel4_wip1.mp3" id="6_ecora"]
+[ext_resource type="AudioStream" uid="uid://bp306kh5ot8sa" path="res://Assets/Audio/Music/MainThemeLevel5_wip3.mp3" id="6_legg8"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="8_eb5oh"]
 [ext_resource type="Resource" uid="uid://c8jttlf2s3lhq" path="res://Resources/Cutscenes/Level4/level_4_1.tres" id="8_roffe"]
 [ext_resource type="Resource" uid="uid://bl1l2hodmitdo" path="res://Resources/Cutscenes/Level4/level_4_2.tres" id="9_d51q7"]
@@ -693,7 +693,7 @@ y_sort_enabled = true
 script = ExtResource("1_xpmn3")
 waves = Array[PackedScene]([ExtResource("2_eb4ip"), ExtResource("3_ecora"), ExtResource("4_xpmn3")])
 next_level = ExtResource("5_legg8")
-music = ExtResource("6_ecora")
+music = ExtResource("6_legg8")
 npc_convo_0 = Array[ExtResource("16_ep717")]([ExtResource("8_roffe"), ExtResource("9_d51q7"), ExtResource("10_lapqw"), ExtResource("11_oteb1"), ExtResource("12_k8nfc"), ExtResource("13_ep717"), ExtResource("14_x7vre"), ExtResource("15_lhrhx")])
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]

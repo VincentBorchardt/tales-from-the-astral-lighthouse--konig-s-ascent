@@ -16,7 +16,7 @@ signal npc_died(npc)
 @export var navigation_agent : NavigationAgent2D
 
 @export var conversation : Array[Message]
-
+@onready var hurt_sound = $HurtSound
 @onready var body_animations = $Animation
 @onready var convo_anim = $Convo
 @onready var health_marker = $HealthMarker
@@ -109,8 +109,11 @@ func actor_setup():
 	
 
 func take_hit():
+	if state == State.HURT or state == State.DEAD:
+		return
 	print("taking health")
 	state = State.HURT
+	hurt_sound.play()
 	health -= 1
 
 func _on_interact_body_entered(body: Node2D) -> void:
