@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_wnlxl"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_jgaqf"]
 [ext_resource type="Texture2D" uid="uid://qr4bqj8gci5" path="res://Assets/Art/UI/Waves/Floor_03.png" id="18_ocbj8"]
+[ext_resource type="PackedScene" uid="uid://dt2yp7sm2y31j" path="res://Scenes/Objects/dsd_door.tscn" id="19_r8neg"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -708,16 +709,19 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(127, 94)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Npcs2" parent="." unique_id=786006039 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(162, 66)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Npcs3" parent="." unique_id=173178468 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(51, 120)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
@@ -780,6 +784,9 @@ libraries/ = SubResource("AnimationLibrary_rcyh2")
 visible = false
 position = Vector2(160, 128)
 texture = ExtResource("18_ocbj8")
+
+[node name="DsdDoor" parent="." unique_id=1074552836 instance=ExtResource("19_r8neg")]
+position = Vector2(238, 75)
 
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
