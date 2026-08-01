@@ -2,37 +2,39 @@
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_qvtqq"]
 [ext_resource type="PackedScene" uid="uid://c4gipqt3vgc26" path="res://Scenes/Waves/tutorial_wave.tscn" id="2_35mx6"]
-[ext_resource type="PackedScene" uid="uid://b2av23snq1gs7" path="res://Scenes/Cutscenes/booth_conversation_1.tscn" id="3_wdaxu"]
+[ext_resource type="PackedScene" uid="uid://650j77xtdxdt" path="res://Scenes/Levels/level_1.tscn" id="3_rhvh8"]
 [ext_resource type="AudioStream" uid="uid://ca7puep3fxliq" path="res://Assets/Audio/Music/MainThemeLevel1_wip1.mp3" id="4_mj38t"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_o863f"]
+[ext_resource type="Resource" uid="uid://cynhkjvtmyl5u" path="res://Resources/Cutscenes/Tutorial/booth_t_1.tres" id="6_rhvh8"]
 [ext_resource type="Resource" uid="uid://c235ooxjxu8uq" path="res://Resources/Cutscenes/Tutorial/tutorial_4_1.tres" id="6_wdaxu"]
+[ext_resource type="Resource" uid="uid://df0fhng7pnit3" path="res://Resources/Cutscenes/Tutorial/booth_t_2.tres" id="7_fc3w2"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="7_qfmmv"]
 [ext_resource type="Resource" uid="uid://b8pp3l4j4qrf8" path="res://Resources/Cutscenes/Tutorial/tutorial_4_2.tres" id="7_w7wr3"]
 [ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npc.tscn" id="8_ckfad"]
+[ext_resource type="Resource" uid="uid://6oaypab172jt" path="res://Resources/Cutscenes/Tutorial/booth_t_3.tres" id="8_etbkp"]
+[ext_resource type="Resource" uid="uid://bb4yhr1xqj7o8" path="res://Resources/Cutscenes/Tutorial/booth_t_4.tres" id="9_7gcql"]
 [ext_resource type="Resource" uid="uid://wrdj370ahrlu" path="res://Resources/Cutscenes/Tutorial/tutorial_3_1.tres" id="9_ku8a2"]
 [ext_resource type="Resource" uid="uid://bjmnhc5uoystu" path="res://Resources/Cutscenes/Tutorial/tutorial_4_4.tres" id="9_o863f"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="9_oowow"]
 [ext_resource type="Resource" uid="uid://7joujgbgv18w" path="res://Resources/Cutscenes/Tutorial/tutorial_3_2.tres" id="10_mj38t"]
+[ext_resource type="Resource" uid="uid://c2wvvu1yjm1u2" path="res://Resources/Cutscenes/Tutorial/booth_t_5.tres" id="10_v4ies"]
 [ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="10_w7wr3"]
 [ext_resource type="Resource" uid="uid://pnta660itadl" path="res://Resources/Cutscenes/Tutorial/tutorial_4_3.tres" id="11_8n3fx"]
-[ext_resource type="Texture2D" uid="uid://2ehgxj6chgxe" path="res://Assets/Art/Tiles/TutorialGrid.png" id="11_o863f"]
+[ext_resource type="Resource" uid="uid://j28v5emrh1v" path="res://Resources/Cutscenes/Tutorial/booth_t_6.tres" id="11_o7iop"]
+[ext_resource type="Resource" uid="uid://c8nlox7qyxv8g" path="res://Resources/Cutscenes/Tutorial/booth_t_7.tres" id="12_5w2a6"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="12_vjygu"]
+[ext_resource type="Resource" uid="uid://c4o5mjw143e8c" path="res://Resources/Cutscenes/Tutorial/booth_t_8.tres" id="13_3mage"]
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/UI/Waves/Wave_1.png" id="13_rhvh8"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/UI/Waves/Wave_2.png" id="14_fc3w2"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="15_etbkp"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="16_7gcql"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_v4ies"]
-[ext_resource type="Texture2D" uid="uid://bqga63vjna8t7" path="res://Assets/Art/UI/Bg/TutorialBG.png" id="23_o863f"]
+[ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="18_o7iop"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.6875, 123.859375, 156.24219, 197.71875, 17.960938, 121.65625, 164.84375, 52.140625)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(165, 41, 328, 124, 156, 209, -4, 121)])
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfmmv"]
-texture = ExtResource("11_o863f")
-texture_region_size = Vector2i(320, 240)
-0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hi6ks"]
 texture = ExtResource("6_o863f")
@@ -46,7 +48,6 @@ tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(320, 240)
 sources/2 = SubResource("TileSetAtlasSource_hi6ks")
-sources/0 = SubResource("TileSetAtlasSource_qfmmv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hkci"]
 size = Vector2(20, 388)
@@ -690,8 +691,9 @@ _data = {
 y_sort_enabled = true
 script = ExtResource("1_qvtqq")
 waves = Array[PackedScene]([ExtResource("2_35mx6")])
-next_level = ExtResource("3_wdaxu")
+next_level = ExtResource("3_rhvh8")
 music = ExtResource("4_mj38t")
+booth_convo = Array[ExtResource("9_oowow")]([ExtResource("6_rhvh8"), ExtResource("7_fc3w2"), ExtResource("8_etbkp"), ExtResource("9_7gcql"), ExtResource("10_v4ies"), ExtResource("11_o7iop"), ExtResource("12_5w2a6"), ExtResource("13_3mage")])
 npc_convo_0 = Array[ExtResource("9_oowow")]([ExtResource("6_wdaxu"), ExtResource("7_w7wr3"), ExtResource("11_8n3fx"), ExtResource("9_o863f")])
 cameo_npc = ExtResource("10_w7wr3")
 is_tutorial = true
@@ -702,7 +704,7 @@ navigation_polygon = SubResource("NavigationPolygon_numx4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1719386126]
 z_index = -2
-tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_bwgk3")
 
 [node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("7_qfmmv")]
@@ -728,24 +730,29 @@ position = Vector2(160, 128)
 wait_time = 5.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1684486360]
+visible = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=414705039]
-position = Vector2(68, 124)
+visible = false
+position = Vector2(44, 100.00001)
 rotation = 1.1220708
 shape = SubResource("RectangleShape2D_4hkci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=899707805]
-position = Vector2(252, 124)
+visible = false
+position = Vector2(273, 99)
 rotation = 0.45270494
 shape = SubResource("RectangleShape2D_ewxuw")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=606812397]
-position = Vector2(229, 174)
+visible = false
+position = Vector2(245, 181)
 rotation = 1.1130205
 shape = SubResource("RectangleShape2D_iu1sj")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="CharacterBody2D" unique_id=205842860]
-position = Vector2(114.999985, 185)
+visible = false
+position = Vector2(124, 204.99998)
 rotation = 2.0417528
 shape = SubResource("RectangleShape2D_iu1sj")
 
@@ -763,12 +770,11 @@ messages = Array[ExtResource("9_oowow")]([SubResource("Resource_tjl6l")])
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2118346129]
 z_index = -3
 position = Vector2(160, 120)
-texture = ExtResource("23_o863f")
+texture = ExtResource("18_o7iop")
 
 [node name="ComboTimer" type="Timer" parent="." unique_id=352762323]
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=1536764256]
-visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 1
 position = Vector2(163, 120)

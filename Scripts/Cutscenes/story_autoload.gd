@@ -25,3 +25,20 @@ var tutorial_3: Array[Message] = [tutorial_3_1, tutorial_3_2, tutorial_3_3]
 var tutorial_5_1: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_5_1.tres")
 var tutorial_5_2: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_5_2.tres")
 var tutorial_5: Array[Message] = [tutorial_5_1, tutorial_5_2]
+
+var dsd: Speaker = preload("res://Resources/Cutscenes/Speakers/dsd.tres")
+var trik: Speaker = preload("res://Resources/Cutscenes/Speakers/trik.tres")
+var mask: Speaker = preload("res://Resources/Cutscenes/Speakers/primeval_mask.tres")
+var pit: Speaker = preload("res://Resources/Cutscenes/Speakers/pitmaster.tres")
+
+func savedDSD() -> bool:
+	return saved_cameos.has(dsd)
+
+func savedTrik() -> bool:
+	return saved_cameos.has(trik)
+
+func savedMask() -> bool:
+	return saved_cameos.has(mask)
+
+func savedPit() -> bool:
+	return saved_cameos.has(pit)

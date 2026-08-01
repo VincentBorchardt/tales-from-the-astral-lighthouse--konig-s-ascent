@@ -4,28 +4,37 @@
 [ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_ia1lp"]
 [ext_resource type="PackedScene" uid="uid://dv2ws74mj06q" path="res://Scenes/Waves/wave_2.tscn" id="3_5buja"]
 [ext_resource type="PackedScene" uid="uid://cnk4r2obnewnv" path="res://Scenes/Waves/wave_3.tscn" id="4_wyygt"]
-[ext_resource type="PackedScene" uid="uid://dgtqlhk8mobys" path="res://Scenes/Cutscenes/booth_conversation_2.tscn" id="5_5buja"]
+[ext_resource type="PackedScene" uid="uid://bq0x0gomy56h5" path="res://Scenes/Levels/level_3.tscn" id="5_chm77"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="5_yxf76"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_ia1lp"]
-[ext_resource type="AudioStream" uid="uid://jiue6il30deb" path="res://Assets/Audio/Music/MainThemeLevel3_wip1.mp3" id="6_m4i1e"]
+[ext_resource type="AudioStream" uid="uid://cd8lfmu8qdn7y" path="res://Assets/Audio/Music/MainThemeLevel2_wip1.mp3" id="6_yxf76"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="7_5buja"]
 [ext_resource type="Resource" uid="uid://bgesioplsd0ys" path="res://Resources/Cutscenes/Level2/level_2_1.tres" id="8_m4i1e"]
+[ext_resource type="Resource" uid="uid://dncks3yo87xo0" path="res://Resources/Cutscenes/Level2/booth_2_1.tres" id="8_srchd"]
 [ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npc.tscn" id="8_wyygt"]
 [ext_resource type="Resource" uid="uid://dbm6kqtp63b5s" path="res://Resources/Cutscenes/Level2/level_2_2.tres" id="9_ixm8h"]
+[ext_resource type="Resource" uid="uid://duc6un2bavxug" path="res://Resources/Cutscenes/Level2/booth_2_2.tres" id="9_p6e1f"]
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/UI/Waves/Wave_1.png" id="9_u87on"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/UI/Waves/Wave_2.png" id="10_iunut"]
 [ext_resource type="Resource" uid="uid://ce3grs50id4xi" path="res://Resources/Cutscenes/Level2/level_2_3.tres" id="10_xk8vt"]
+[ext_resource type="Resource" uid="uid://cqk0vujm5qpae" path="res://Resources/Cutscenes/Level2/booth_2_3.tres" id="10_xo6ri"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="11_jd2hh"]
+[ext_resource type="Resource" uid="uid://cqx3twec0l71f" path="res://Resources/Cutscenes/Level2/booth_2_4.tres" id="11_potos"]
 [ext_resource type="Resource" uid="uid://c17mfr7w1qik0" path="res://Resources/Cutscenes/Level2/level_2_4.tres" id="11_umcau"]
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="12_0x4y1"]
+[ext_resource type="Resource" uid="uid://ca85j0l75iqr0" path="res://Resources/Cutscenes/Level2/booth_2_5.tres" id="12_6d4lf"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_jip10"]
 [ext_resource type="Resource" uid="uid://dihu0cnrilfwj" path="res://Resources/Cutscenes/Level2/level_2_5.tres" id="12_ud172"]
+[ext_resource type="Resource" uid="uid://cyv3vjbve2fxb" path="res://Resources/Cutscenes/Level2/booth_2_6.tres" id="13_c0rmi"]
 [ext_resource type="Resource" uid="uid://cioqej4kaplnq" path="res://Resources/Cutscenes/Level2/level_2_6.tres" id="13_s5367"]
 [ext_resource type="Resource" uid="uid://4lbrts1gm7tv" path="res://Resources/Cutscenes/Level2/level_2_7.tres" id="14_blyvk"]
+[ext_resource type="Resource" uid="uid://dhj65l6mbmqf1" path="res://Resources/Cutscenes/Level2/booth_2_7.tres" id="14_xcfnk"]
+[ext_resource type="Resource" uid="uid://chnq6cf44ah3w" path="res://Resources/Cutscenes/Level2/booth_2_8.tres" id="15_tjmj4"]
 [ext_resource type="Resource" uid="uid://byo4pvcwjenqv" path="res://Resources/Cutscenes/Level2/level_2_8.tres" id="15_ts3wb"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_jip10"]
 [ext_resource type="Texture2D" uid="uid://b41kcimdunjap" path="res://Assets/Art/UI/Waves/Floor_02.png" id="16_yxf76"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_1xj2d"]
+[ext_resource type="Resource" uid="uid://d361g08sp4r1d" path="res://Resources/Cutscenes/Speakers/primeval_mask.tres" id="24_srchd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -692,9 +701,11 @@ fill_to = Vector2(0.021367522, 0)
 y_sort_enabled = true
 script = ExtResource("1_0x4y1")
 waves = Array[PackedScene]([ExtResource("2_ia1lp"), ExtResource("3_5buja"), ExtResource("4_wyygt")])
-next_level = ExtResource("5_5buja")
-music = ExtResource("6_m4i1e")
+next_level = ExtResource("5_chm77")
+music = ExtResource("6_yxf76")
+booth_convo = Array[ExtResource("16_jip10")]([ExtResource("8_srchd"), ExtResource("9_p6e1f"), ExtResource("10_xo6ri"), ExtResource("11_potos"), ExtResource("12_6d4lf"), ExtResource("13_c0rmi"), ExtResource("14_xcfnk"), ExtResource("15_tjmj4")])
 npc_convo_0 = Array[ExtResource("16_jip10")]([ExtResource("8_m4i1e"), ExtResource("9_ixm8h"), ExtResource("10_xk8vt"), ExtResource("11_umcau"), ExtResource("12_ud172"), ExtResource("13_s5367"), ExtResource("14_blyvk"), ExtResource("15_ts3wb")])
+cameo_npc = ExtResource("24_srchd")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false
@@ -717,11 +728,13 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_wyygt")]
 position = Vector2(132, 124)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_jip10")]([SubResource("Resource_2d332")])
 
 [node name="Npcs2" parent="." unique_id=656374900 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_wyygt")]
 position = Vector2(196, 121)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_jip10")]([SubResource("Resource_2d332")])
 
