@@ -58,7 +58,6 @@ func _ready():
 
 func _input(event: InputEvent) -> void:
 	if player_in_range and Input.is_action_just_pressed("advance_text"):
-		state = State.MOVE
 		player_in_range = false
 		convo_anim.visible = false
 		start_npc_conversation.emit(conversation)

@@ -629,6 +629,11 @@ texture = ExtResource("13_ebtt5")
 [node name="Explode" type="AudioStreamPlayer2D" parent="." unique_id=1201808633]
 stream = ExtResource("14_arc86")
 
+[node name="KnocbackDeath" type="Timer" parent="." unique_id=483367909]
+wait_time = 4.0
+one_shot = true
+
 [connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="KnocbackDeath" to="." method="die"]
