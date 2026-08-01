@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://d2v8eksuu1xj4"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_h74rm"]
+[ext_resource type="Resource" uid="uid://kiy01wjkjaq0" path="res://Resources/Cutscenes/Speakers/pitmaster.tres" id="2_o88sm"]
+
+[resource]
+script = ExtResource("1_h74rm")
+speaker = ExtResource("2_o88sm")
+message = "You’re right. It was something like Chet. [color=8146c9]Chat[/color]? No, that can’t be right …"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

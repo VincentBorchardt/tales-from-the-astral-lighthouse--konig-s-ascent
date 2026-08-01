@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://c8jttlf2s3lhq"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_kiujs"]
+[ext_resource type="Resource" uid="uid://kiy01wjkjaq0" path="res://Resources/Cutscenes/Speakers/pitmaster.tres" id="2_p8t6x"]
+
+[resource]
+script = ExtResource("1_kiujs")
+speaker = ExtResource("2_p8t6x")
+message = "You know, I used to work at a hamburger restaurant, until I became a vegetarian and adopted [color=f29ce5]this pig[/color]."
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

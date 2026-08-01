@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dymmgdfw81t4"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_8fwqi"]
+[ext_resource type="Resource" uid="uid://kiy01wjkjaq0" path="res://Resources/Cutscenes/Speakers/pitmaster.tres" id="2_8fwqi"]
+
+[resource]
+script = ExtResource("1_8fwqi")
+speaker = ExtResource("2_8fwqi")
+message = "[color=f29ce5]OINK![/color]."
+animation_time = 0.5
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

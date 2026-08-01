@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cvu4e05qp4yf2"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_7un7e"]
+[ext_resource type="Resource" uid="uid://b12uia5oxvxld" path="res://Resources/Cutscenes/Speakers/gulltry.tres" id="2_cfnlo"]
+
+[resource]
+script = ExtResource("1_7un7e")
+speaker = ExtResource("2_cfnlo")
+message = "… and remember, stay away from [color=e5d363]translucent gold[/color]! "
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

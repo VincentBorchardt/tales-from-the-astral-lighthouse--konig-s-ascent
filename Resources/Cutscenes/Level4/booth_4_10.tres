@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://c8tm0410tdsfp"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_42kl6"]
+[ext_resource type="Resource" uid="uid://b12uia5oxvxld" path="res://Resources/Cutscenes/Speakers/gulltry.tres" id="2_7ogqg"]
+
+[resource]
+script = ExtResource("1_42kl6")
+speaker = ExtResource("2_7ogqg")
+message = "I’m sure you have your situation under control. Just don’t bite off more than you can chew, okay?"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
