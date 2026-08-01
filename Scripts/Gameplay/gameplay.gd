@@ -1,4 +1,4 @@
-extends Node2D
+class_name Gameplay extends Node2D
 
 var wave_animations = [
 	"wave_1",
@@ -11,6 +11,7 @@ var wave_animations = [
 @export var music : AudioStream
 
 @export_group("NPC Conversations")
+@export var booth_convo: Array[Message]
 @export var npc_convo_0 : Array[Message]
 @export var npc_convo_1 : Array[Message]
 @export var npc_convo_2 : Array[Message]
@@ -37,6 +38,7 @@ var current_wave_scene: Node2D
 var enemies_remaining := 0
 var current_wave_animation = 0
 var in_calm_state = false
+var changing_level = false
 var npc_conversations: Array
 var num_npcs: int
 var current_npc = 0
@@ -58,6 +60,7 @@ func _ready():
 	num_npcs = get_tree().get_node_count_in_group("npcs")
 	print("starting level now")
 	in_calm_state = false
+	changing_level = false
 	print("Music resource:", music)
 	MusicManager.play_music( music )
 	wave_anim_player.play("floor_transition_in")
@@ -181,16 +184,21 @@ func start_cutscene(messages):
 func _on_cutscene_overlay_cutscene_ended() -> void:
 	print("ending cutscene")
 	get_tree().paused = false
-	if scripted_progression_count > 0:
+	if changing_level:
+		changing_level = false
+		start_level_transition()
+	elif scripted_progression_count > 0:
 		continue_scripted_sequence()
 
+func start_level_transition():
+	get_tree().call_group("npcs", "start_move")
+	await wait_for_npcs()
+	konig.warp_out()
 
 func _on_booth_player_entered() -> void:
 	if in_calm_state:
-		get_tree().call_group("npcs", "start_move")
-		await wait_for_npcs()
-		konig.warp_out()
-	
+		changing_level = true
+		start_cutscene(booth_convo)
 
 func wait_for_npcs() -> void:
 	while get_tree().get_nodes_in_group("npcs").size() > 0:
@@ -236,7 +244,6 @@ func _on_konig_arrived() -> void:
 
 func _on_konig_left() -> void:
 	booth.warp_out()
-
 
 func _on_npc_died(npc: Variant) -> void:
 	num_npcs -= 1

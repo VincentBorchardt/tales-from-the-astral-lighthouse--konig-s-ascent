@@ -2,20 +2,28 @@
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_qvtqq"]
 [ext_resource type="PackedScene" uid="uid://c4gipqt3vgc26" path="res://Scenes/Waves/tutorial_wave.tscn" id="2_35mx6"]
-[ext_resource type="PackedScene" uid="uid://dti4v4l1kdr3w" path="res://Scenes/Cutscenes/booth_tutorial.tscn" id="3_wdaxu"]
+[ext_resource type="PackedScene" uid="uid://650j77xtdxdt" path="res://Scenes/Levels/level_1.tscn" id="3_rhvh8"]
 [ext_resource type="AudioStream" uid="uid://ca7puep3fxliq" path="res://Assets/Audio/Music/MainThemeLevel1_wip1.mp3" id="4_mj38t"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_o863f"]
+[ext_resource type="Resource" uid="uid://cynhkjvtmyl5u" path="res://Resources/Cutscenes/Tutorial/booth_t_1.tres" id="6_rhvh8"]
 [ext_resource type="Resource" uid="uid://c235ooxjxu8uq" path="res://Resources/Cutscenes/Tutorial/tutorial_4_1.tres" id="6_wdaxu"]
+[ext_resource type="Resource" uid="uid://df0fhng7pnit3" path="res://Resources/Cutscenes/Tutorial/booth_t_2.tres" id="7_fc3w2"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="7_qfmmv"]
 [ext_resource type="Resource" uid="uid://b8pp3l4j4qrf8" path="res://Resources/Cutscenes/Tutorial/tutorial_4_2.tres" id="7_w7wr3"]
 [ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npc.tscn" id="8_ckfad"]
+[ext_resource type="Resource" uid="uid://6oaypab172jt" path="res://Resources/Cutscenes/Tutorial/booth_t_3.tres" id="8_etbkp"]
+[ext_resource type="Resource" uid="uid://bb4yhr1xqj7o8" path="res://Resources/Cutscenes/Tutorial/booth_t_4.tres" id="9_7gcql"]
 [ext_resource type="Resource" uid="uid://wrdj370ahrlu" path="res://Resources/Cutscenes/Tutorial/tutorial_3_1.tres" id="9_ku8a2"]
 [ext_resource type="Resource" uid="uid://bjmnhc5uoystu" path="res://Resources/Cutscenes/Tutorial/tutorial_4_4.tres" id="9_o863f"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="9_oowow"]
 [ext_resource type="Resource" uid="uid://7joujgbgv18w" path="res://Resources/Cutscenes/Tutorial/tutorial_3_2.tres" id="10_mj38t"]
+[ext_resource type="Resource" uid="uid://c2wvvu1yjm1u2" path="res://Resources/Cutscenes/Tutorial/booth_t_5.tres" id="10_v4ies"]
 [ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="10_w7wr3"]
 [ext_resource type="Resource" uid="uid://pnta660itadl" path="res://Resources/Cutscenes/Tutorial/tutorial_4_3.tres" id="11_8n3fx"]
+[ext_resource type="Resource" uid="uid://j28v5emrh1v" path="res://Resources/Cutscenes/Tutorial/booth_t_6.tres" id="11_o7iop"]
+[ext_resource type="Resource" uid="uid://c8nlox7qyxv8g" path="res://Resources/Cutscenes/Tutorial/booth_t_7.tres" id="12_5w2a6"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="12_vjygu"]
+[ext_resource type="Resource" uid="uid://c4o5mjw143e8c" path="res://Resources/Cutscenes/Tutorial/booth_t_8.tres" id="13_3mage"]
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/UI/Waves/Wave_1.png" id="13_rhvh8"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/UI/Waves/Wave_2.png" id="14_fc3w2"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="15_etbkp"]
@@ -683,8 +691,9 @@ _data = {
 y_sort_enabled = true
 script = ExtResource("1_qvtqq")
 waves = Array[PackedScene]([ExtResource("2_35mx6")])
-next_level = ExtResource("3_wdaxu")
+next_level = ExtResource("3_rhvh8")
 music = ExtResource("4_mj38t")
+booth_convo = Array[ExtResource("9_oowow")]([ExtResource("6_rhvh8"), ExtResource("7_fc3w2"), ExtResource("8_etbkp"), ExtResource("9_7gcql"), ExtResource("10_v4ies"), ExtResource("11_o7iop"), ExtResource("12_5w2a6"), ExtResource("13_3mage")])
 npc_convo_0 = Array[ExtResource("9_oowow")]([ExtResource("6_wdaxu"), ExtResource("7_w7wr3"), ExtResource("11_8n3fx"), ExtResource("9_o863f")])
 cameo_npc = ExtResource("10_w7wr3")
 is_tutorial = true

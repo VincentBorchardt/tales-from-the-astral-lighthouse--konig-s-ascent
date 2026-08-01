@@ -2,30 +2,42 @@
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_xpmn3"]
 [ext_resource type="PackedScene" uid="uid://cefd7if647b4f" path="res://Scenes/Waves/wave_4.tscn" id="2_eb4ip"]
+[ext_resource type="PackedScene" uid="uid://bc8f5ly4o5t08" path="res://Scenes/Levels/final_level.tscn" id="2_slbhm"]
 [ext_resource type="PackedScene" uid="uid://cq7qwaink0bj" path="res://Scenes/Waves/wave_5.tscn" id="3_ecora"]
 [ext_resource type="PackedScene" uid="uid://y0qsdr7yuscb" path="res://Scenes/Waves/wave_6.tscn" id="4_xpmn3"]
-[ext_resource type="PackedScene" uid="uid://ck4emqm5geuse" path="res://Scenes/Cutscenes/booth_conversation_4.tscn" id="5_legg8"]
 [ext_resource type="AudioStream" uid="uid://smfksifrkc4u" path="res://Assets/Audio/Music/MainThemeLevel4_wip1.mp3" id="6_ecora"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="8_eb5oh"]
+[ext_resource type="Resource" uid="uid://bogot6kl7ppl4" path="res://Resources/Cutscenes/Level4/booth_4_1.tres" id="8_ipr37"]
 [ext_resource type="Resource" uid="uid://c8jttlf2s3lhq" path="res://Resources/Cutscenes/Level4/level_4_1.tres" id="8_roffe"]
 [ext_resource type="Resource" uid="uid://bl1l2hodmitdo" path="res://Resources/Cutscenes/Level4/level_4_2.tres" id="9_d51q7"]
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/UI/Waves/Wave_1.png" id="9_e7hmo"]
+[ext_resource type="Resource" uid="uid://dn1u5e3m1fvl6" path="res://Resources/Cutscenes/Level4/booth_4_2.tres" id="9_hckno"]
+[ext_resource type="Resource" uid="uid://k8qyv11um1xe" path="res://Resources/Cutscenes/Level4/booth_4_3.tres" id="10_d12sp"]
 [ext_resource type="Resource" uid="uid://g4cms6i4bv52" path="res://Resources/Cutscenes/Level4/level_4_3.tres" id="10_lapqw"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/UI/Waves/Wave_2.png" id="10_legg8"]
+[ext_resource type="Resource" uid="uid://1dw0sssh47v6" path="res://Resources/Cutscenes/Level4/booth_4_4.tres" id="11_mypyk"]
 [ext_resource type="Resource" uid="uid://dymmgdfw81t4" path="res://Resources/Cutscenes/Level4/level_4_4.tres" id="11_oteb1"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="11_roffe"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="12_d51q7"]
 [ext_resource type="Resource" uid="uid://d2v8eksuu1xj4" path="res://Resources/Cutscenes/Level4/level_4_5.tres" id="12_k8nfc"]
+[ext_resource type="Resource" uid="uid://vsfnd2t72rlb" path="res://Resources/Cutscenes/Level4/booth_4_5.tres" id="12_oada6"]
 [ext_resource type="Resource" uid="uid://dt7xts1h0kc2o" path="res://Resources/Cutscenes/Level4/level_4_6.tres" id="13_ep717"]
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="13_i5g5g"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="13_lapqw"]
+[ext_resource type="Resource" uid="uid://5n8kck3ub67k" path="res://Resources/Cutscenes/Level4/booth_4_6.tres" id="13_u2c58"]
 [ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npc.tscn" id="14_oteb1"]
+[ext_resource type="Resource" uid="uid://ikdhe7hfnppi" path="res://Resources/Cutscenes/Level4/booth_4_7.tres" id="14_t0r2h"]
 [ext_resource type="Resource" uid="uid://dd2fmxik0f18d" path="res://Resources/Cutscenes/Level4/level_4_7.tres" id="14_x7vre"]
+[ext_resource type="Resource" uid="uid://n2mgtj1kyn8o" path="res://Resources/Cutscenes/Level4/booth_4_8.tres" id="15_k2l7v"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="15_k8nfc"]
 [ext_resource type="Resource" uid="uid://blxfx3ehseunw" path="res://Resources/Cutscenes/Level4/level_4_8.tres" id="15_lhrhx"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_ep717"]
+[ext_resource type="Resource" uid="uid://bpr4boxpib2ck" path="res://Resources/Cutscenes/Level4/booth_4_9.tres" id="16_kpq86"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_x7vre"]
+[ext_resource type="Resource" uid="uid://c8tm0410tdsfp" path="res://Resources/Cutscenes/Level4/booth_4_10.tres" id="17_xsbhv"]
 [ext_resource type="Texture2D" uid="uid://dvk2cghua1a48" path="res://Assets/Art/UI/Waves/Floor_04.png" id="18_33y7k"]
+[ext_resource type="Resource" uid="uid://cvu4e05qp4yf2" path="res://Resources/Cutscenes/Level4/booth_4_11.tres" id="18_kdvij"]
+[ext_resource type="Resource" uid="uid://kiy01wjkjaq0" path="res://Resources/Cutscenes/Speakers/pitmaster.tres" id="27_hckno"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -692,9 +704,11 @@ _data = {
 y_sort_enabled = true
 script = ExtResource("1_xpmn3")
 waves = Array[PackedScene]([ExtResource("2_eb4ip"), ExtResource("3_ecora"), ExtResource("4_xpmn3")])
-next_level = ExtResource("5_legg8")
+next_level = ExtResource("2_slbhm")
 music = ExtResource("6_ecora")
+booth_convo = Array[ExtResource("16_ep717")]([ExtResource("8_ipr37"), ExtResource("9_hckno"), ExtResource("10_d12sp"), ExtResource("11_mypyk"), ExtResource("12_oada6"), ExtResource("13_u2c58"), ExtResource("14_t0r2h"), ExtResource("15_k2l7v"), ExtResource("16_kpq86"), ExtResource("17_xsbhv"), ExtResource("18_kdvij")])
 npc_convo_0 = Array[ExtResource("16_ep717")]([ExtResource("8_roffe"), ExtResource("9_d51q7"), ExtResource("10_lapqw"), ExtResource("11_oteb1"), ExtResource("12_k8nfc"), ExtResource("13_ep717"), ExtResource("14_x7vre"), ExtResource("15_lhrhx")])
+cameo_npc = ExtResource("27_hckno")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false

@@ -6,24 +6,31 @@
 [ext_resource type="AudioStream" uid="uid://cd8lfmu8qdn7y" path="res://Assets/Audio/Music/MainThemeLevel2_wip1.mp3" id="3_3628d"]
 [ext_resource type="PackedScene" uid="uid://cnk4r2obnewnv" path="res://Scenes/Waves/wave_3.tscn" id="4_7hll7"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="5_3628d"]
-[ext_resource type="PackedScene" uid="uid://b2av23snq1gs7" path="res://Scenes/Cutscenes/booth_conversation_1.tscn" id="5_pmbdk"]
+[ext_resource type="PackedScene" uid="uid://bl7t366jaibvd" path="res://Scenes/Levels/level_2.tscn" id="5_hd8f4"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_irw6p"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="7_31phq"]
 [ext_resource type="PackedScene" uid="uid://b5okbh648i3eq" path="res://Scenes/Characters/npc.tscn" id="8_7hll7"]
+[ext_resource type="Resource" uid="uid://bpc4jl72yalgi" path="res://Resources/Cutscenes/Level1/booth_1_1.tres" id="8_hnn05"]
 [ext_resource type="Resource" uid="uid://dyedvv04euo28" path="res://Resources/Cutscenes/Level1/level_1_1.tres" id="8_pmbdk"]
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/UI/Waves/Wave_1.png" id="9_fayjm"]
 [ext_resource type="Resource" uid="uid://b3qg5oyskcubh" path="res://Resources/Cutscenes/Level1/level_1_2.tres" id="9_ksf1i"]
+[ext_resource type="Resource" uid="uid://dc6jn2amnjq6e" path="res://Resources/Cutscenes/Level1/booth_1_2.tres" id="9_wxmgb"]
+[ext_resource type="Resource" uid="uid://cditr2nno22xo" path="res://Resources/Cutscenes/Level1/booth_1_3.tres" id="10_k1rx4"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="10_k2mw1"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/UI/Waves/Wave_2.png" id="10_nojx8"]
 [ext_resource type="Resource" uid="uid://bf2tgc2i1ifuv" path="res://Resources/Cutscenes/Level1/level_1_3.tres" id="10_vif5h"]
 [ext_resource type="Resource" uid="uid://drbb100i5kjoq" path="res://Resources/Cutscenes/Level1/level_1_4.tres" id="11_i7ma5"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="11_vvknj"]
+[ext_resource type="Resource" uid="uid://bwey4x5afdham" path="res://Resources/Cutscenes/Level1/booth_1_4.tres" id="11_yltcr"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_ad63i"]
+[ext_resource type="Resource" uid="uid://c3w00lracyrdc" path="res://Resources/Cutscenes/Level1/booth_1_5.tres" id="12_iht5x"]
 [ext_resource type="Resource" uid="uid://d0we3tl7usywu" path="res://Resources/Cutscenes/Level1/level_1_5.tres" id="12_t8afp"]
 [ext_resource type="Resource" uid="uid://cifkslqv228lr" path="res://Resources/Cutscenes/Level1/level_1_6.tres" id="13_1fgkh"]
+[ext_resource type="Resource" uid="uid://dtib5g5qcu6p7" path="res://Resources/Cutscenes/Level1/booth_1_6.tres" id="13_nuy1v"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="15_tjl6l"]
 [ext_resource type="Texture2D" uid="uid://bgp7u7j3di816" path="res://Assets/Art/UI/Waves/Floor_01.png" id="16_31phq"]
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="18_31phq"]
+[ext_resource type="Resource" uid="uid://bwljsncmvcbnv" path="res://Resources/Cutscenes/Speakers/trik.tres" id="20_hnn05"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -690,9 +697,11 @@ fill_to = Vector2(0.021367522, 0)
 y_sort_enabled = true
 script = ExtResource("1_afv7b")
 waves = Array[PackedScene]([ExtResource("2_3628d"), ExtResource("3_31phq"), ExtResource("4_7hll7")])
-next_level = ExtResource("5_pmbdk")
+next_level = ExtResource("5_hd8f4")
 music = ExtResource("3_3628d")
+booth_convo = Array[ExtResource("10_k2mw1")]([ExtResource("8_hnn05"), ExtResource("9_wxmgb"), ExtResource("10_k1rx4"), ExtResource("11_yltcr"), ExtResource("12_iht5x"), ExtResource("13_nuy1v")])
 npc_convo_0 = Array[ExtResource("10_k2mw1")]([ExtResource("8_pmbdk"), ExtResource("9_ksf1i"), ExtResource("10_vif5h"), ExtResource("11_i7ma5"), ExtResource("12_t8afp"), ExtResource("13_1fgkh")])
+cameo_npc = ExtResource("20_hnn05")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false
