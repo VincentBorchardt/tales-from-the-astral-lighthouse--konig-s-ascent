@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bq0x0gomy56h5"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_md4x4"]
+[ext_resource type="PackedScene" uid="uid://cefd7if647b4f" path="res://Scenes/Waves/wave_4.tscn" id="2_anjjd"]
 [ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_sy7oa"]
+[ext_resource type="PackedScene" uid="uid://cq7qwaink0bj" path="res://Scenes/Waves/wave_5.tscn" id="3_ocbj8"]
 [ext_resource type="PackedScene" uid="uid://d1a2op8s4io37" path="res://Scenes/Levels/level_4.tscn" id="5_13yca"]
 [ext_resource type="AudioStream" uid="uid://jiue6il30deb" path="res://Assets/Audio/Music/MainThemeLevel3_wip1.mp3" id="6_8dmpc"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="6_ocbj8"]
@@ -682,7 +684,7 @@ _data = {
 [node name="Level4" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_md4x4")
-waves = Array[PackedScene]([ExtResource("2_sy7oa")])
+waves = Array[PackedScene]([ExtResource("2_sy7oa"), ExtResource("2_anjjd"), ExtResource("3_ocbj8")])
 next_level = ExtResource("5_13yca")
 music = ExtResource("6_8dmpc")
 
@@ -707,16 +709,19 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(127, 94)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Npcs2" parent="." unique_id=786006039 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(162, 66)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Npcs3" parent="." unique_id=173178468 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(51, 120)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
@@ -766,7 +771,6 @@ messages = Array[ExtResource("16_wnlxl")]([SubResource("Resource_tjl6l")])
 [node name="ComboTimer" type="Timer" parent="." unique_id=1167771421]
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=1255374130]
-visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 1
 position = Vector2(163, 120)

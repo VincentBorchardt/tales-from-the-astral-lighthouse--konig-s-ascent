@@ -708,11 +708,13 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_wyygt")]
 position = Vector2(132, 124)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_jip10")]([SubResource("Resource_2d332")])
 
 [node name="Npcs2" parent="." unique_id=656374900 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_wyygt")]
 position = Vector2(196, 121)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_jip10")]([SubResource("Resource_2d332")])
 

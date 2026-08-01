@@ -708,11 +708,7 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
 position = Vector2(132, 124)
-movement_target = NodePath("../BoothSpawn")
-conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
-
-[node name="Npcs2" parent="." unique_id=656374900 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
-position = Vector2(196, 121)
+movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
 
@@ -781,7 +777,6 @@ texture = ExtResource("16_31phq")
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
 [connection signal="npc_died" from="Npcs" to="." method="_on_npc_died"]
 [connection signal="start_npc_conversation" from="Npcs" to="." method="_on_npcs_start_npc_conversation"]
-[connection signal="start_npc_conversation" from="Npcs2" to="." method="_on_npcs_start_npc_conversation"]
 [connection signal="player_entered" from="Booth" to="." method="_on_booth_player_entered"]
 [connection signal="warp_in_finished" from="Booth" to="." method="_on_booth_warp_in_finished"]
 [connection signal="warp_out_finished" from="Booth" to="." method="_on_booth_warp_out_finished"]

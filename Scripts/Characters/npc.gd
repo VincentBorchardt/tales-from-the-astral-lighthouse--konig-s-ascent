@@ -11,7 +11,7 @@ enum State {
 signal start_npc_conversation(messages)
 signal npc_died(npc)
 
-@export var movement_speed = 100.0
+@export var movement_speed: float = 100.0
 @export var movement_target : Node2D
 @export var navigation_agent : NavigationAgent2D
 
@@ -58,6 +58,7 @@ func _ready():
 
 func _input(event: InputEvent) -> void:
 	if player_in_range and Input.is_action_just_pressed("advance_text"):
+		state = State.MOVE
 		player_in_range = false
 		convo_anim.visible = false
 		start_npc_conversation.emit(conversation)

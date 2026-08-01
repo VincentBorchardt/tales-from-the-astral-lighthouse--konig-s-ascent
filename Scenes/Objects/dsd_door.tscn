@@ -152,7 +152,6 @@ animations = [{
 }]
 
 [node name="DsdDoor" type="Node2D" unique_id=1074552836]
-visible = false
 script = ExtResource("1_xkqeu")
 packedShippieDue = ExtResource("2_mgeu3")
 
@@ -165,14 +164,16 @@ position = Vector2(2, 4)
 shape = SubResource("CircleShape2D_mgeu3")
 
 [node name="Door" type="AnimatedSprite2D" parent="." unique_id=1868075330]
+visible = false
 sprite_frames = SubResource("SpriteFrames_pp5cw")
-animation = &"opened"
-frame_progress = 0.8110934
+animation = &"glimmer"
 
 [node name="DsdSpawn" type="Marker2D" parent="." unique_id=1153593292]
 position = Vector2(0, 4)
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="." unique_id=229479464]
 stream = ExtResource("5_26cea")
+
+[node name="DoorEffect" type="AnimatedSprite2D" parent="." unique_id=1961672066]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
