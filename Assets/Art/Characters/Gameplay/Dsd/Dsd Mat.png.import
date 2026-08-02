@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy2qh6r3fyqsd"
-path="res://.godot/imported/Dsd.webp-755b7e324155788cd8cbf3cb31d2cdcc.ctex"
+uid="uid://dfa13fwu77yor"
+path="res://.godot/imported/Dsd Mat.png-f92eadd88eb2e07eed1ea56c31390ab4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Gameplay/Dsd/Dsd.webp"
-dest_files=["res://.godot/imported/Dsd.webp-755b7e324155788cd8cbf3cb31d2cdcc.ctex"]
+source_file="res://Assets/Art/Characters/Gameplay/Dsd/Dsd Mat.png"
+dest_files=["res://.godot/imported/Dsd Mat.png-f92eadd88eb2e07eed1ea56c31390ab4.ctex"]
 
 [params]
 
