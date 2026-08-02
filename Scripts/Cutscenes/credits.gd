@@ -1,6 +1,9 @@
 extends ScrollContainer
 
-@export var scroll_speed = 50.0
+@export var scroll_speed: float
+
+var start_scrolling = false
 
 func _process(delta: float) -> void:
-	scroll_vertical += delta * scroll_speed
+	if start_scrolling:
+		scroll_vertical += delta * scroll_speed

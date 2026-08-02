@@ -1,8 +1,18 @@
 [gd_scene format=3 uid="uid://bsj5pg7rv8mf5"]
 
 [ext_resource type="Script" uid="uid://cd4ao6liie5eq" path="res://Scripts/Characters/dsd.gd" id="1_861q2"]
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_ly4eq"]
 [ext_resource type="Texture2D" uid="uid://dy2qh6r3fyqsd" path="res://Assets/Art/Characters/Gameplay/Dsd/Dsd.webp" id="2_rx287"]
+[ext_resource type="Resource" uid="uid://bgi5xc65i4xmh" path="res://Resources/Cutscenes/Level3/level_3_dsd_1.tres" id="3_s2jso"]
+[ext_resource type="Resource" uid="uid://dgfno4h78pgd4" path="res://Resources/Cutscenes/Level3/level_3_dsd_2.tres" id="4_h1jet"]
+[ext_resource type="Resource" uid="uid://nn7jg1dhb6va" path="res://Resources/Cutscenes/Level3/level_3_dsd_3.tres" id="5_b4den"]
+[ext_resource type="Resource" uid="uid://cwqy0e1ks3g38" path="res://Resources/Cutscenes/Level3/level_3_dsd_4.tres" id="6_n2f72"]
 [ext_resource type="Texture2D" uid="uid://dxq6qvjppayal" path="res://Assets/Art/Characters/Gameplay/Konig/Shadow.png" id="7_828av"]
+[ext_resource type="Resource" uid="uid://4k426ue4lxd6" path="res://Resources/Cutscenes/Level3/level_3_dsd_5.tres" id="7_pp233"]
+[ext_resource type="Resource" uid="uid://c0372f10ic6te" path="res://Resources/Cutscenes/Level3/level_3_dsd_6.tres" id="8_fumev"]
+[ext_resource type="Resource" uid="uid://dkmbhhjlagu3a" path="res://Resources/Cutscenes/Level3/level_3_dsd_7.tres" id="9_t5qa4"]
+[ext_resource type="Resource" uid="uid://ubbamn41yu2x" path="res://Resources/Cutscenes/Level3/level_3_dsd_8.tres" id="10_nq88w"]
+[ext_resource type="Resource" uid="uid://cqos4cpfkx438" path="res://Resources/Cutscenes/Level3/level_3_dsd_9.tres" id="11_3fmmi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_id0sx"]
 atlas = ExtResource("2_rx287")
@@ -21,6 +31,7 @@ animations = [{
 
 [node name="Dsd" type="CharacterBody2D" unique_id=786290646]
 script = ExtResource("1_861q2")
+conversation = Array[ExtResource("2_ly4eq")]([ExtResource("3_s2jso"), ExtResource("4_h1jet"), ExtResource("5_b4den"), ExtResource("6_n2f72"), ExtResource("7_pp233"), ExtResource("8_fumev"), ExtResource("9_t5qa4"), ExtResource("10_nq88w"), ExtResource("11_3fmmi")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1283062960]
 scale = Vector2(0.022085639, 0.018276328)

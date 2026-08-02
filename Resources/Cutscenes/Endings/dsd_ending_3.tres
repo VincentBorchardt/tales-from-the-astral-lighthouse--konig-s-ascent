@@ -7,4 +7,5 @@
 script = ExtResource("1_u82qn")
 speaker = ExtResource("2_1cbqc")
 message = "[color=8146c9]König, Herald of the Trickster King[/color]"
+has_box = false
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://c46rplo1cltr8"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_884ej"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_pxhx5"]
+
+[resource]
+script = ExtResource("1_884ej")
+speaker = ExtResource("2_pxhx5")
+message = "but their rebellions are quickly quashed by the powerful trickster’s undefeatable, cursed guard dog … "
+has_box = false
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

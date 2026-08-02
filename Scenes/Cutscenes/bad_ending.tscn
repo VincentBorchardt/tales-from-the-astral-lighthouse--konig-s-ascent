@@ -1,28 +1,34 @@
 [gd_scene format=3 uid="uid://dgtqlhk8mobys"]
 
-[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/booth_conversation.gd" id="1_nvyvj"]
+[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/ending.gd" id="1_nvyvj"]
+[ext_resource type="PackedScene" uid="uid://c2y42pymii2gj" path="res://Scenes/Cutscenes/credits.tscn" id="2_1d7n6"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_k3sye"]
-[ext_resource type="Resource" uid="uid://dncks3yo87xo0" path="res://Resources/Cutscenes/Level2/booth_2_1.tres" id="3_a1lnl"]
-[ext_resource type="Resource" uid="uid://duc6un2bavxug" path="res://Resources/Cutscenes/Level2/booth_2_2.tres" id="4_ixj8h"]
-[ext_resource type="Resource" uid="uid://cqk0vujm5qpae" path="res://Resources/Cutscenes/Level2/booth_2_3.tres" id="5_aqhf1"]
-[ext_resource type="Resource" uid="uid://cqx3twec0l71f" path="res://Resources/Cutscenes/Level2/booth_2_4.tres" id="6_by57t"]
-[ext_resource type="Resource" uid="uid://ca85j0l75iqr0" path="res://Resources/Cutscenes/Level2/booth_2_5.tres" id="7_qvov2"]
-[ext_resource type="Resource" uid="uid://cyv3vjbve2fxb" path="res://Resources/Cutscenes/Level2/booth_2_6.tres" id="8_t2k3i"]
-[ext_resource type="Resource" uid="uid://dhj65l6mbmqf1" path="res://Resources/Cutscenes/Level2/booth_2_7.tres" id="9_gnx00"]
-[ext_resource type="Resource" uid="uid://chnq6cf44ah3w" path="res://Resources/Cutscenes/Level2/booth_2_8.tres" id="10_qvov2"]
-[ext_resource type="PackedScene" uid="uid://bq0x0gomy56h5" path="res://Scenes/Levels/level_3.tscn" id="11_qvov2"]
+[ext_resource type="Resource" uid="uid://bxq5dixxcdk6n" path="res://Resources/Cutscenes/Endings/blank_message.tres" id="3_s3nd6"]
+[ext_resource type="Resource" uid="uid://dleqdraf4nv0w" path="res://Resources/Cutscenes/Endings/bad_ending_1.tres" id="3_uvmtn"]
+[ext_resource type="Resource" uid="uid://bup1o0wnx1w38" path="res://Resources/Cutscenes/Endings/bad_ending_1b.tres" id="4_s3nd6"]
+[ext_resource type="Resource" uid="uid://bspycw8ijaff2" path="res://Resources/Cutscenes/Endings/bad_ending_2.tres" id="4_wrwk0"]
+[ext_resource type="Resource" uid="uid://bb3meuncmvuq8" path="res://Resources/Cutscenes/Endings/bad_ending_3.tres" id="5_s3nd6"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_2t8mc"]
+[ext_resource type="Texture2D" uid="uid://ns7kbvlc4uyd" path="res://Assets/Art/Endings/TFTAL_BadEnding_Pixel.png" id="12_heck4"]
 
-[node name="BoothConversation1" type="Control" unique_id=1827662693]
+[node name="BadEnding" type="Control" unique_id=1827662693]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nvyvj")
-conversation = Array[ExtResource("2_k3sye")]([ExtResource("3_a1lnl"), ExtResource("4_ixj8h"), ExtResource("5_aqhf1"), ExtResource("6_by57t"), ExtResource("7_qvov2"), ExtResource("8_t2k3i"), ExtResource("9_gnx00"), ExtResource("10_qvov2")])
-next_level = ExtResource("11_qvov2")
+conversation = Array[ExtResource("2_k3sye")]([ExtResource("3_s3nd6"), ExtResource("3_uvmtn"), ExtResource("4_s3nd6"), ExtResource("4_wrwk0"), ExtResource("5_s3nd6")])
+next_level = ExtResource("2_1d7n6")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1844786785]
+position = Vector2(160, 120)
+texture = ExtResource("12_heck4")
 
 [node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("12_2t8mc")]
+visible = false
 layout_mode = 1
 
+[node name="Credits" parent="." unique_id=1784082459 instance=ExtResource("2_1d7n6")]
+visible = false
+layout_mode = 0
+
+[connection signal="advanced_text" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_advanced_text"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

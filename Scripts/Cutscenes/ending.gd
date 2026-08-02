@@ -1,0 +1,37 @@
+extends Control
+
+@export var conversation: Array[Message]
+@export var next_level: PackedScene
+
+@onready var background = $Background
+@onready var cutscene_overlay = $CutsceneOverlay
+@onready var credits = $Credits
+
+var blank_message: Array[Message] = [preload("res://Resources/Cutscenes/Endings/blank_message.tres")]
+
+var DIM = Color(0.385, 0.385, 0.385, 1.0)
+var dim_completed = false
+
+func _ready() -> void:
+	call_deferred("start_conversation")
+	#call_deferred("start_blank")
+
+func start_blank():
+	cutscene_overlay.start_cutscene(blank_message, false)
+
+func start_conversation():
+	cutscene_overlay.start_cutscene(conversation, false)
+
+
+func _on_cutscene_overlay_cutscene_ended() -> void:
+	credits.visible = true
+	credits.start_scrolling = true
+
+
+func level_change():
+	get_tree().change_scene_to_packed(next_level)
+
+
+func _on_cutscene_overlay_advanced_text() -> void:
+	if not dim_completed:
+		background.modulate = DIM

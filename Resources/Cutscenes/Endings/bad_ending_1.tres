@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dleqdraf4nv0w"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_jw762"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_lt55o"]
+
+[resource]
+script = ExtResource("1_jw762")
+speaker = ExtResource("2_lt55o")
+message = "Konig fell to the will of [color=8146c9]The Astral Lighthouse[/color],"
+has_box = false
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

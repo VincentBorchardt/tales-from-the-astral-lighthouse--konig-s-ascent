@@ -56,7 +56,7 @@ func set_up_cutscenes():
 			second_total_convo.append_array(good_part_1)
 		else:
 			chosen_ending = EndingChoice.BAD
-			second_total_convo.append(bad)
+			second_total_convo.append_array(bad)
 
 func continue_scripted_sequence():
 	match scripted_progression_count:
@@ -101,7 +101,7 @@ func continue_scripted_sequence():
 func _on_cutscene_overlay_cutscene_ended() -> void:
 	print("ending cutscene")
 	get_tree().paused = false
-	continue_scripted_sequence()
+	call_deferred("continue_scripted_sequence")
 
 func _on_booth_warp_out_finished() -> void:
 	set_up_cutscenes()

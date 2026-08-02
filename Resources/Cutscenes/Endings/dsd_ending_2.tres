@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_xixp7")
 speaker = ExtResource("2_4biod")
-message = "The [color=e24d63]Lost Souls[/color] do try to rebel from time to time, but their rebellions are quickly quashed by the powerful trickster’s undefeatable, cursed guard dog … "
+message = "The [color=e24d63]Lost Souls[/color] do try to rebel from time to time,"
+has_box = false
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
