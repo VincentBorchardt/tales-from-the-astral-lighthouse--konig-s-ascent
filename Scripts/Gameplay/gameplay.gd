@@ -52,7 +52,7 @@ var absorbed_bullet_count: int = 0:
 		if new_bullet_count == absorbed_bullet_threshold:
 			print("move to next part of sequence")
 			scripted_progression_count += 1
-			continue_scripted_sequence.call_deferred()
+			call_deferred("continue_scripted_sequence")
 
 func _ready():
 	GameplayManager.end_of_level = false

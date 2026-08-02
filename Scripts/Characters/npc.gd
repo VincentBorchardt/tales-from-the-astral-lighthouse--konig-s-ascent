@@ -16,9 +16,10 @@ signal npc_died(npc)
 @export var navigation_agent : NavigationAgent2D
 
 @export var conversation : Array[Message]
-
+@onready var hurt_sound = $HurtSound
 @onready var body_animations = $Animation
 @onready var convo_anim = $Convo
+@onready var collision_shape = $CollisionShape2D
 @onready var health_marker = $HealthMarker
 @onready var hurtbox = $Hurtbox
 
@@ -85,7 +86,6 @@ func move_state():
 
 	velocity = direction * movement_speed
 	move_and_slide()
-	body_animations.play("walk")
 
 func tutorial_wave():
 	hurtbox.monitoring = false
@@ -99,7 +99,7 @@ func move_to_booth():
 	state = State.MOVE
 	navigation_agent.path_desired_distance = 4.0
 	navigation_agent.target_desired_distance = 4.0
-	
+	collision_shape.disabled = true
 	call_deferred("actor_setup")
 
 	
@@ -109,8 +109,11 @@ func actor_setup():
 	
 
 func take_hit():
+	if state == State.HURT or state == State.DEAD:
+		return
 	print("taking health")
 	state = State.HURT
+	hurt_sound.play()
 	health -= 1
 
 func _on_interact_body_entered(body: Node2D) -> void:

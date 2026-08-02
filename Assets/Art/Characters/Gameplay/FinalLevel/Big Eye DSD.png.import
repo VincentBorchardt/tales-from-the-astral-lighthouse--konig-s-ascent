@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy2qh6r3fyqsd"
-path="res://.godot/imported/Dsd.webp-755b7e324155788cd8cbf3cb31d2cdcc.ctex"
+uid="uid://dfhshcxqijmwc"
+path="res://.godot/imported/Big Eye DSD.png-5f8d09df61a2dbbe9ca40c41f0730c49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Characters/Gameplay/Dsd/Dsd.webp"
-dest_files=["res://.godot/imported/Dsd.webp-755b7e324155788cd8cbf3cb31d2cdcc.ctex"]
+source_file="res://Assets/Art/Characters/Gameplay/FinalLevel/Big Eye DSD.png"
+dest_files=["res://.godot/imported/Big Eye DSD.png-5f8d09df61a2dbbe9ca40c41f0730c49.ctex"]
 
 [params]
 

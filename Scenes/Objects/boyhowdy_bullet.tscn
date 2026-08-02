@@ -56,12 +56,6 @@ region = Rect2(10, 10, 10, 10)
 [sub_resource type="SpriteFrames" id="SpriteFrames_lo7xo"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
 "duration": 1.5,
 "texture": SubResource("AtlasTexture_hbw2t")
 }, {
@@ -79,9 +73,6 @@ animations = [{
 "speed": 8.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": null
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f0v07")
 }, {
@@ -123,7 +114,7 @@ animations = [{
 collision_layer = 16
 collision_mask = 2
 script = ExtResource("1_q7b5d")
-SPEED = 250
+SPEED = 150
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=763936677]
 scale = Vector2(0.5080554, 0.5110863)
@@ -133,8 +124,8 @@ debug_color = Color(2.6321505e-08, 0.056600854, 0.0011945902, 0.41960785)
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1252878290]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=149996886]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_lo7xo")
-animation = &"pop"
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="." unique_id=173570178]
 stream = ExtResource("5_7kvql")

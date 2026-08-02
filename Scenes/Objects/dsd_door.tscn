@@ -5,17 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://bsj5pg7rv8mf5" path="res://Scenes/Characters/dsd.tscn" id="2_mgeu3"]
 [ext_resource type="Texture2D" uid="uid://cuykwdnhfhb2q" path="res://Assets/Art/Tiles/Dsd Door/SecretDoor.png" id="2_xkqeu"]
 [ext_resource type="AudioStream" uid="uid://crf050kh6v4l8" path="res://Assets/Audio/SFX/EnemyHittingWall_wip1.mp3" id="5_26cea"]
+[ext_resource type="Texture2D" uid="uid://v5xgd0t7ab5v" path="res://Assets/Art/Tiles/Dsd Door/SecretDoor_Obfuscate.png" id="6_x1se7"]
+[ext_resource type="Texture2D" uid="uid://6mi07uumrayd" path="res://Assets/Art/Tiles/Dsd Door/DoorPunchHighlight.png" id="7_y7vfk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mgeu3"]
 radius = 14.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mgeu3"]
-atlas = ExtResource("1_vrgnf")
-region = Rect2(36, 41, 18, 41)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_26cea"]
-atlas = ExtResource("1_vrgnf")
-region = Rect2(54, 41, 18, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3j5d"]
 atlas = ExtResource("1_vrgnf")
@@ -61,6 +55,14 @@ region = Rect2(0, 41, 18, 41)
 atlas = ExtResource("1_vrgnf")
 region = Rect2(18, 41, 18, 41)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgeu3"]
+atlas = ExtResource("1_vrgnf")
+region = Rect2(36, 41, 18, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26cea"]
+atlas = ExtResource("1_vrgnf")
+region = Rect2(54, 41, 18, 41)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_37ymi"]
 atlas = ExtResource("1_vrgnf")
 region = Rect2(18, 82, 18, 41)
@@ -81,15 +83,13 @@ region = Rect2(72, 82, 18, 41)
 atlas = ExtResource("1_vrgnf")
 region = Rect2(90, 82, 18, 41)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_obdya"]
+atlas = ExtResource("7_y7vfk")
+region = Rect2(0, 0, 37, 58)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_pp5cw"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mgeu3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_26cea")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t3j5d")
 }, {
@@ -124,6 +124,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_m6ti6")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_mgeu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26cea")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_37ymi")
 }, {
 "duration": 1.0,
@@ -141,6 +147,14 @@ animations = [{
 "loop": 1,
 "name": &"glimmer",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_obdya")
+}],
+"loop": 0,
+"name": &"hit",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -164,16 +178,27 @@ position = Vector2(2, 4)
 shape = SubResource("CircleShape2D_mgeu3")
 
 [node name="Door" type="AnimatedSprite2D" parent="." unique_id=1868075330]
-visible = false
 sprite_frames = SubResource("SpriteFrames_pp5cw")
 animation = &"glimmer"
 
 [node name="DsdSpawn" type="Marker2D" parent="." unique_id=1153593292]
-position = Vector2(0, 4)
+position = Vector2(5, 4)
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="." unique_id=229479464]
 stream = ExtResource("5_26cea")
 
-[node name="DoorEffect" type="AnimatedSprite2D" parent="." unique_id=1961672066]
+[node name="DoorCover" type="Sprite2D" parent="." unique_id=1317350168]
+visible = false
+z_index = 2
+texture = ExtResource("6_x1se7")
+
+[node name="DoorHit" type="Sprite2D" parent="." unique_id=2125114900]
+visible = false
+texture = ExtResource("7_y7vfk")
+
+[node name="HitTimer" type="Timer" parent="." unique_id=2103982690]
+wait_time = 0.15
+one_shot = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="HitTimer" to="." method="_on_hit_timer_timeout"]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cpoen3uh66hcs"]
+
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Gameplay/wave.gd" id="1_4flg5"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="2_7hxfw"]
+
+[node name="Wave1 2" type="Node2D" unique_id=1787138307]
+script = ExtResource("1_4flg5")
+enemy_count = 6
+
+[node name="Portal" parent="." unique_id=110448379 instance=ExtResource("2_7hxfw")]
+position = Vector2(163, 168)
+appear_delay = 1.0
+
+[node name="Portal2" parent="." unique_id=1557086761 instance=ExtResource("2_7hxfw")]
+position = Vector2(38, 130)
+appear_delay = 1.0
+
+[node name="Portal5" parent="." unique_id=1251974661 instance=ExtResource("2_7hxfw")]
+position = Vector2(163, 81)
+appear_delay = 6.0
+
+[node name="Portal4" parent="." unique_id=845258840 instance=ExtResource("2_7hxfw")]
+position = Vector2(198, 113)
+appear_delay = 6.0
+
+[node name="Portal6" parent="." unique_id=1115040779 instance=ExtResource("2_7hxfw")]
+position = Vector2(92, 129)
+appear_delay = 6.0
+
+[node name="Portal3" parent="." unique_id=1385469172 instance=ExtResource("2_7hxfw")]
+position = Vector2(270, 126)
+appear_delay = 3.0
