@@ -1,6 +1,7 @@
 extends Control
 
 @export var conversation: Array[Message]
+@export var faded_background: Texture2D
 @export var next_level: PackedScene
 
 @onready var background = $Background
@@ -9,7 +10,8 @@ extends Control
 
 var blank_message: Array[Message] = [preload("res://Resources/Cutscenes/Endings/blank_message.tres")]
 
-var DIM = Color(0.385, 0.385, 0.385, 1.0)
+#var DIM = Color(0.125, 0.075, 0.161, 1.0)
+#var DIM_SHADER = preload("res://Resources/Cutscenes/purple_dim.gdshader")
 var dim_completed = false
 
 func _ready() -> void:
@@ -34,4 +36,5 @@ func level_change():
 
 func _on_cutscene_overlay_advanced_text() -> void:
 	if not dim_completed:
-		background.modulate = DIM
+		dim_completed = true
+		background.texture = faded_background
