@@ -137,6 +137,7 @@ offset_left = 51.0
 offset_top = 3.0
 offset_right = 271.0
 offset_bottom = 53.0
+theme_override_constants/line_separation = -1
 bbcode_enabled = true
 text = "This is a lot of text and I want to fill the box so here is the bunch of text I need and I need a lot more text because this text is really small and I don't know what the actual answer is going to be and I'm still struggling to come up with filler"
 scroll_active = false

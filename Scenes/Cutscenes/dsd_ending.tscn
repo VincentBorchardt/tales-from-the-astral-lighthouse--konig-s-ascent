@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://cmhjtsr45i3gs" path="res://Resources/Cutscenes/Endings/dsd_ending_1b.tres" id="4_msers"]
 [ext_resource type="Resource" uid="uid://dlwvkgu1nuopd" path="res://Resources/Cutscenes/Endings/dsd_ending_3.tres" id="5_msers"]
 [ext_resource type="Resource" uid="uid://c46rplo1cltr8" path="res://Resources/Cutscenes/Endings/dsd_ending_2b.tres" id="6_88tht"]
+[ext_resource type="Texture2D" uid="uid://b3u1fjksm5ff0" path="res://Assets/Art/Endings/TFTAL_DSDEnd_Pixel_Faded.png" id="9_ikjkf"]
 [ext_resource type="PackedScene" uid="uid://c2y42pymii2gj" path="res://Scenes/Cutscenes/credits.tscn" id="10_ikjkf"]
 [ext_resource type="Texture2D" uid="uid://p62smktkcxq4" path="res://Assets/Art/Endings/TFTAL_DSDEnding_pixel.png" id="11_ikjkf"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_2t8mc"]
@@ -17,6 +18,7 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nvyvj")
 conversation = Array[ExtResource("2_k3sye")]([ExtResource("3_88tht"), ExtResource("3_ppym2"), ExtResource("4_msers"), ExtResource("4_c7niw"), ExtResource("6_88tht"), ExtResource("5_msers")])
+faded_background = ExtResource("9_ikjkf")
 next_level = ExtResource("10_ikjkf")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1844786785]
