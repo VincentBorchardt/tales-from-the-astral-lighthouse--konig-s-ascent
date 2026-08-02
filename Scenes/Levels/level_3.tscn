@@ -1,9 +1,6 @@
 [gd_scene format=3 uid="uid://bq0x0gomy56h5"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_md4x4"]
-[ext_resource type="PackedScene" uid="uid://cefd7if647b4f" path="res://Scenes/Waves/wave_4.tscn" id="2_anjjd"]
-[ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_sy7oa"]
-[ext_resource type="PackedScene" uid="uid://cq7qwaink0bj" path="res://Scenes/Waves/wave_5.tscn" id="3_ocbj8"]
 [ext_resource type="PackedScene" uid="uid://d1a2op8s4io37" path="res://Scenes/Levels/level_4.tscn" id="5_13yca"]
 [ext_resource type="AudioStream" uid="uid://jiue6il30deb" path="res://Assets/Audio/Music/MainThemeLevel3_wip1.mp3" id="6_8dmpc"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="6_ocbj8"]
@@ -26,8 +23,6 @@
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_jgaqf"]
 [ext_resource type="Texture2D" uid="uid://qr4bqj8gci5" path="res://Assets/Art/UI/Waves/Floor_03.png" id="18_ocbj8"]
 [ext_resource type="PackedScene" uid="uid://dt2yp7sm2y31j" path="res://Scenes/Objects/dsd_door.tscn" id="19_r8neg"]
-[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Gameplay/wave.gd" id="27_wvd0d"]
-[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="28_gupo0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -693,7 +688,6 @@ _data = {
 [node name="Level3" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_md4x4")
-waves = Array[PackedScene]([ExtResource("2_sy7oa"), ExtResource("2_anjjd"), ExtResource("3_ocbj8")])
 next_level = ExtResource("5_13yca")
 music = ExtResource("6_8dmpc")
 booth_convo = Array[ExtResource("16_wnlxl")]([ExtResource("8_3m4x7"), ExtResource("9_q2kiq"), ExtResource("10_wvd0d"), ExtResource("11_gupo0"), ExtResource("12_3l8qv"), ExtResource("13_teul3"), ExtResource("14_6qnit")])
@@ -795,34 +789,6 @@ texture = ExtResource("18_ocbj8")
 
 [node name="DsdDoor" parent="." unique_id=1074552836 instance=ExtResource("19_r8neg")]
 position = Vector2(238, 75)
-
-[node name="Wave3 1" type="Node2D" parent="." unique_id=636666011]
-script = ExtResource("27_wvd0d")
-
-[node name="Portal" parent="Wave3 1" unique_id=110448379 instance=ExtResource("28_gupo0")]
-position = Vector2(160, 129)
-appear_delay = 1.0
-
-[node name="Portal2" parent="Wave3 1" unique_id=2043214790 instance=ExtResource("28_gupo0")]
-position = Vector2(155, 170)
-appear_delay = 2.0
-
-[node name="Portal3" parent="Wave3 1" unique_id=758317789 instance=ExtResource("28_gupo0")]
-position = Vector2(224, 125)
-appear_delay = 3.0
-
-[node name="Portal4" parent="Wave3 1" unique_id=1486414377 instance=ExtResource("28_gupo0")]
-position = Vector2(195, 101)
-
-[node name="Portal6" parent="Wave3 1" unique_id=154394612 instance=ExtResource("28_gupo0")]
-position = Vector2(266, 134)
-
-[node name="Portal7" parent="Wave3 1" unique_id=1282863708 instance=ExtResource("28_gupo0")]
-position = Vector2(161, 195)
-
-[node name="Portal5" parent="Wave3 1" unique_id=1317434390 instance=ExtResource("28_gupo0")]
-position = Vector2(94, 151)
-appear_delay = 4.0
 
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]

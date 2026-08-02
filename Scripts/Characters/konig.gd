@@ -33,6 +33,7 @@ var attack_buffered = false
 var attack_buffer_timer = 0.0
 var attack_buffer_time = 0.2
 var in_cutscene = false
+
 func _ready():
 	hitbox.disabled = true
 

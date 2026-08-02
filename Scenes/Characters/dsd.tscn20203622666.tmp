@@ -492,11 +492,12 @@ animations = [{
 
 [node name="Dsd" type="CharacterBody2D" unique_id=786290646 node_paths=PackedStringArray("navigation_agent")]
 script = ExtResource("1_861q2")
+movement_speed = null
 navigation_agent = NodePath("NavigationAgent2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1283062960]
 sprite_frames = SubResource("SpriteFrames_xkqeu")
-animation = &"materialize"
+animation = &"laugh"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=186641006]
 

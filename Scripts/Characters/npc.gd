@@ -19,6 +19,7 @@ signal npc_died(npc)
 @onready var hurt_sound = $HurtSound
 @onready var body_animations = $Animation
 @onready var convo_anim = $Convo
+@onready var collision_shape = $CollisionShape2D
 @onready var health_marker = $HealthMarker
 @onready var hurtbox = $Hurtbox
 
@@ -98,7 +99,7 @@ func move_to_booth():
 	state = State.MOVE
 	navigation_agent.path_desired_distance = 4.0
 	navigation_agent.target_desired_distance = 4.0
-	
+	collision_shape.disabled = true
 	call_deferred("actor_setup")
 
 	
