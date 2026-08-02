@@ -1,16 +1,31 @@
 [gd_scene format=3 uid="uid://bc8f5ly4o5t08"]
 
 [ext_resource type="Script" uid="uid://wolqfnheae6e" path="res://Scripts/Gameplay/final_level.gd" id="1_ttffg"]
+[ext_resource type="Resource" uid="uid://ctklnyxhpgubi" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_1_1.tres" id="3_p2vrd"]
+[ext_resource type="Resource" uid="uid://db4ct2tfefomu" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_1_2.tres" id="4_mp41y"]
+[ext_resource type="Resource" uid="uid://dwlmastnpxloj" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_1_3.tres" id="5_5fwce"]
+[ext_resource type="Resource" uid="uid://wifqp7yx85yt" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_1_4.tres" id="6_0av1l"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="7_5fwce"]
 [ext_resource type="Texture2D" uid="uid://qknydthhly8l" path="res://Assets/Art/Tiles/KonigAscent_TopFloor.png" id="7_bmonp"]
+[ext_resource type="Resource" uid="uid://da7bugo4uqq76" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_1_5.tres" id="7_ghv47"]
 [ext_resource type="PackedScene" uid="uid://2seu0v0io3l2" path="res://Scenes/Characters/Konig.tscn" id="8_0av1l"]
 [ext_resource type="Texture2D" uid="uid://bv05nladlcqru" path="res://Assets/Art/Characters/Gameplay/FinalLevel/FINAL-EYE.png" id="8_bmonp"]
+[ext_resource type="Resource" uid="uid://daln2j3unbeny" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_1_6.tres" id="8_nfkfb"]
+[ext_resource type="Resource" uid="uid://b3uyj1gtbhnbn" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_1_7.tres" id="9_ygdto"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="10_nfkfb"]
+[ext_resource type="Resource" uid="uid://cuypnqp7u21yk" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_1_8.tres" id="10_qf4ln"]
+[ext_resource type="Resource" uid="uid://bk2nn0rhcnkr2" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_2_1.tres" id="11_qf4ln"]
+[ext_resource type="Resource" uid="uid://bxm3u12swwrg4" path="res://Resources/Cutscenes/FinalLevel/Initial/initial_3_1.tres" id="12_4bdv0"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="13_4bdv0"]
+[ext_resource type="Resource" uid="uid://bmkn7osbih1qx" path="res://Resources/Cutscenes/FinalLevel/Initial/trik_1.tres" id="13_ul8x7"]
+[ext_resource type="Resource" uid="uid://bdvekar07r1un" path="res://Resources/Cutscenes/FinalLevel/Initial/mask_1.tres" id="14_72yjl"]
 [ext_resource type="Texture2D" uid="uid://dno5ih6i5w4sf" path="res://Assets/Art/UI/Waves/Wave_1.png" id="14_ul8x7"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/UI/Waves/Wave_2.png" id="15_72yjl"]
 [ext_resource type="PackedScene" uid="uid://d3a4oan8npa3h" path="res://Scenes/Characters/boyhowdy.tscn" id="15_ttffg"]
+[ext_resource type="Resource" uid="uid://d1xr0bso0s4q7" path="res://Resources/Cutscenes/FinalLevel/Initial/pit_1.tres" id="15_ydojj"]
+[ext_resource type="Resource" uid="uid://d1b5jvms1wqnw" path="res://Resources/Cutscenes/FinalLevel/Initial/pit_2.tres" id="16_rf5lf"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="16_ydojj"]
+[ext_resource type="Resource" uid="uid://2y5vqfg1b1g4" path="res://Resources/Cutscenes/FinalLevel/Initial/pit_1_alt.tres" id="17_jhokw"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="17_rf5lf"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="18_jhokw"]
 [ext_resource type="Texture2D" uid="uid://c6ncfb5ynibob" path="res://Assets/Art/Characters/Gameplay/FinalLevel/FINAL-PLINTH.png" id="18_v6pfu"]
@@ -889,6 +904,13 @@ animations = [{
 [node name="FinalLevel" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_ttffg")
+initial_part_1 = Array[ExtResource("10_nfkfb")]([ExtResource("3_p2vrd"), ExtResource("4_mp41y"), ExtResource("5_5fwce"), ExtResource("6_0av1l"), ExtResource("7_ghv47"), ExtResource("8_nfkfb"), ExtResource("9_ygdto"), ExtResource("10_qf4ln")])
+initial_part_2 = Array[ExtResource("10_nfkfb")]([ExtResource("11_qf4ln")])
+initial_part_3 = Array[ExtResource("10_nfkfb")]([ExtResource("12_4bdv0")])
+trik = Array[ExtResource("10_nfkfb")]([ExtResource("13_ul8x7")])
+primeval_mask = Array[ExtResource("10_nfkfb")]([ExtResource("14_72yjl")])
+pitmaster = Array[ExtResource("10_nfkfb")]([ExtResource("15_ydojj"), ExtResource("16_rf5lf")])
+pitmaster_alt = Array[ExtResource("10_nfkfb")]([ExtResource("17_jhokw"), ExtResource("16_rf5lf")])
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false

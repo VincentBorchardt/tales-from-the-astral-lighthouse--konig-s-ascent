@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bdvekar07r1un"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_p0hat"]
+[ext_resource type="Resource" uid="uid://d361g08sp4r1d" path="res://Resources/Cutscenes/Speakers/primeval_mask.tres" id="2_35u5r"]
+
+[resource]
+script = ExtResource("1_p0hat")
+speaker = ExtResource("2_35u5r")
+message = "You’ll have to get through me first!"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

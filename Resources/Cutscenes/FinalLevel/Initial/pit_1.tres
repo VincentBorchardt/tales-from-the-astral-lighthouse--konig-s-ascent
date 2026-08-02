@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://d1xr0bso0s4q7"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_dqu1r"]
+[ext_resource type="Resource" uid="uid://kiy01wjkjaq0" path="res://Resources/Cutscenes/Speakers/pitmaster.tres" id="2_bi6qu"]
+
+[resource]
+script = ExtResource("1_dqu1r")
+speaker = ExtResource("2_bi6qu")
+message = "… and me! "
+animation_time = 1.5
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

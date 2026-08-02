@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bxm3u12swwrg4"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_ksr3p"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_bfa3m"]
+
+[resource]
+script = ExtResource("1_ksr3p")
+speaker = ExtResource("2_bfa3m")
+message = "All of us .... [color=e24d63]Lost Souls[/color]! Stand with the tiny king who saved you! "
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

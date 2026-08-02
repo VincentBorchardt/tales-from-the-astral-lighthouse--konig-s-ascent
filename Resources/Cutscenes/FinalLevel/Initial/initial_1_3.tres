@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dwlmastnpxloj"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_at8eb"]
+[ext_resource type="Resource" uid="uid://bt5y562vtqk7h" path="res://Resources/Cutscenes/Speakers/boyhowdy.tres" id="2_qoy2k"]
+
+[resource]
+script = ExtResource("1_at8eb")
+speaker = ExtResource("2_qoy2k")
+message = "You should be one with [color=8146c9]The Astral Lighthouse[/color], König. Can’t you feel its magnificence calling out to you?"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

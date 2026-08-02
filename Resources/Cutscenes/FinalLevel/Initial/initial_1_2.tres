@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://db4ct2tfefomu"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_oc2ss"]
+[ext_resource type="Resource" uid="uid://bkxc23eap6i3v" path="res://Resources/Cutscenes/Speakers/alexandria.tres" id="2_3asv0"]
+
+[resource]
+script = ExtResource("1_oc2ss")
+speaker = ExtResource("2_3asv0")
+message = "What the …? Konig? Replace you? I’m sorry, but we’re all leaving. "
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
