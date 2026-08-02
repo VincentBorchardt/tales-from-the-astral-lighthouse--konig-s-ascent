@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://ctklnyxhpgubi"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_qg4nx"]
+[ext_resource type="Resource" uid="uid://bt5y562vtqk7h" path="res://Resources/Cutscenes/Speakers/boyhowdy.tres" id="2_ytkkg"]
+
+[resource]
+script = ExtResource("1_qg4nx")
+speaker = ExtResource("2_ytkkg")
+message = "Did you know? DID YOU KNOW? You were always headed here to replace me!"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

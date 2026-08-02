@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dti4v4l1kdr3w"]
+[gd_scene format=3 uid="uid://diawyapli8ixn"]
 
-[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/booth_conversation.gd" id="1_a8pt6"]
+[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/ending.gd" id="1_a8pt6"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="1_jbhrr"]
 [ext_resource type="PackedScene" uid="uid://650j77xtdxdt" path="res://Scenes/Levels/level_1.tscn" id="2_rqpbp"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_v01av"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://btlvqse2f1bav"]
+
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_5g2ot"]
+[ext_resource type="Texture2D" uid="uid://kf6owjy282vy" path="res://Assets/Art/Characters/Portraits/Zugtug_pixel_portrait_full_left.png" id="1_7rcqn"]
+[ext_resource type="Texture2D" uid="uid://ddmcsdi0gkis1" path="res://Assets/Art/Characters/Portraits/Zugtug_pixel_portrait_FULL.png" id="2_448dp"]
+
+[resource]
+script = ExtResource("1_5g2ot")
+name = "Zugtug"
+full_picture_left = ExtResource("1_7rcqn")
+full_picture_right = ExtResource("2_448dp")
+metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

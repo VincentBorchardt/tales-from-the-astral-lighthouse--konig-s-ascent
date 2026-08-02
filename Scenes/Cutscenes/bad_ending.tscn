@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dgtqlhk8mobys"]
+
+[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/ending.gd" id="1_nvyvj"]
+[ext_resource type="PackedScene" uid="uid://c2y42pymii2gj" path="res://Scenes/Cutscenes/credits.tscn" id="2_1d7n6"]
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_k3sye"]
+[ext_resource type="Resource" uid="uid://bxq5dixxcdk6n" path="res://Resources/Cutscenes/Endings/blank_message.tres" id="3_s3nd6"]
+[ext_resource type="Resource" uid="uid://dleqdraf4nv0w" path="res://Resources/Cutscenes/Endings/bad_ending_1.tres" id="3_uvmtn"]
+[ext_resource type="Resource" uid="uid://bup1o0wnx1w38" path="res://Resources/Cutscenes/Endings/bad_ending_1b.tres" id="4_s3nd6"]
+[ext_resource type="Resource" uid="uid://bspycw8ijaff2" path="res://Resources/Cutscenes/Endings/bad_ending_2.tres" id="4_wrwk0"]
+[ext_resource type="Resource" uid="uid://bb3meuncmvuq8" path="res://Resources/Cutscenes/Endings/bad_ending_3.tres" id="5_s3nd6"]
+[ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_2t8mc"]
+[ext_resource type="Texture2D" uid="uid://ns7kbvlc4uyd" path="res://Assets/Art/Endings/TFTAL_BadEnding_Pixel.png" id="12_heck4"]
+
+[node name="BadEnding" type="Control" unique_id=1827662693]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nvyvj")
+conversation = Array[ExtResource("2_k3sye")]([ExtResource("3_s3nd6"), ExtResource("3_uvmtn"), ExtResource("4_s3nd6"), ExtResource("4_wrwk0"), ExtResource("5_s3nd6")])
+next_level = ExtResource("2_1d7n6")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1844786785]
+position = Vector2(160, 120)
+texture = ExtResource("12_heck4")
+
+[node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("12_2t8mc")]
+visible = false
+layout_mode = 1
+
+[node name="Credits" parent="." unique_id=1784082459 instance=ExtResource("2_1d7n6")]
+visible = false
+layout_mode = 0
+
+[connection signal="advanced_text" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_advanced_text"]
+[connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

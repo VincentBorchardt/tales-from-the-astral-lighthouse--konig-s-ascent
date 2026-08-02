@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dn7gk8ibucpsw"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_tymn1"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_jjdsc"]
+
+[resource]
+script = ExtResource("1_tymn1")
+speaker = ExtResource("2_jjdsc")
+message = "[color=8146c9]Dark Schippie Dues[/color] has reclaimed his throne as the [color=e5d363]True Keeper of the Lighthouse[/color], "
+has_box = false
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

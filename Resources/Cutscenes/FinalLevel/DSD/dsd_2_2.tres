@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dbn7c808dg2lb"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_uubs3"]
+[ext_resource type="Resource" uid="uid://onpw3vsij0i" path="res://Resources/Cutscenes/Speakers/dsd.tres" id="2_fg1cc"]
+
+[resource]
+script = ExtResource("1_uubs3")
+speaker = ExtResource("2_fg1cc")
+message = "I’m just [color=e5d363]where I’m supposed to be[/color]. All thanks to König."
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

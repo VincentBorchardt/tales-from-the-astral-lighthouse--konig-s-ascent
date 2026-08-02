@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bmkn7osbih1qx"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_yb72i"]
+[ext_resource type="Resource" uid="uid://bwljsncmvcbnv" path="res://Resources/Cutscenes/Speakers/trik.tres" id="2_kp2ap"]
+
+[resource]
+script = ExtResource("1_yb72i")
+speaker = ExtResource("2_kp2ap")
+message = "[Trik looks annoyed with this jabroni, and just wants to leave.]"
+image_location = 1
+animation_time = 1.5
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

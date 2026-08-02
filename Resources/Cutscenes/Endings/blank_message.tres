@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bxq5dixxcdk6n"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_ftq8e"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_76cc4"]
+
+[resource]
+script = ExtResource("1_ftq8e")
+speaker = ExtResource("2_76cc4")
+message = "     "
+has_box = false
+animation_time = 0.0
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

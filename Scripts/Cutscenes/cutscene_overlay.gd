@@ -1,6 +1,7 @@
 extends Control
 
 signal cutscene_ended
+signal advanced_text
 
 var cutscene_active = false
 var can_advance_text = false
@@ -92,6 +93,7 @@ func allow_advance():
 	# TODO blink the marker
 
 func advance_cutscene():
+	advanced_text.emit()
 	current_message_index += 1
 	if current_message_index >= len(messages):
 		# TODO animate out the message box, check if it's visible

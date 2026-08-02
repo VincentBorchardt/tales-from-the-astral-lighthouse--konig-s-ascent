@@ -1,26 +1,22 @@
 [gd_scene format=3 uid="uid://ck4emqm5geuse"]
 
-[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/booth_conversation.gd" id="1_8xytb"]
+[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/ending.gd" id="1_8xytb"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_aajga"]
-[ext_resource type="Resource" uid="uid://bogot6kl7ppl4" path="res://Resources/Cutscenes/Level4/booth_4_1.tres" id="3_k1v7c"]
-[ext_resource type="Resource" uid="uid://dn1u5e3m1fvl6" path="res://Resources/Cutscenes/Level4/booth_4_2.tres" id="4_q1j4s"]
-[ext_resource type="Resource" uid="uid://k8qyv11um1xe" path="res://Resources/Cutscenes/Level4/booth_4_3.tres" id="5_re0k3"]
-[ext_resource type="Resource" uid="uid://1dw0sssh47v6" path="res://Resources/Cutscenes/Level4/booth_4_4.tres" id="6_8xytb"]
-[ext_resource type="Resource" uid="uid://vsfnd2t72rlb" path="res://Resources/Cutscenes/Level4/booth_4_5.tres" id="7_aajga"]
+[ext_resource type="Resource" uid="uid://bslg7u4lxv3h3" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_1.tres" id="3_re0k3"]
+[ext_resource type="Resource" uid="uid://cltlockm2fmoa" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_2.tres" id="4_8xytb"]
+[ext_resource type="Resource" uid="uid://dptf5jn7nkols" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_3.tres" id="5_aajga"]
+[ext_resource type="Resource" uid="uid://bgikmxfdfmy8d" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_4.tres" id="6_6svl8"]
+[ext_resource type="Resource" uid="uid://dsq84hex1172e" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_5.tres" id="7_o61u0"]
 [ext_resource type="PackedScene" uid="uid://bc8f5ly4o5t08" path="res://Scenes/Levels/final_level.tscn" id="8_6svl8"]
-[ext_resource type="Resource" uid="uid://5n8kck3ub67k" path="res://Resources/Cutscenes/Level4/booth_4_6.tres" id="8_o61u0"]
-[ext_resource type="Resource" uid="uid://ikdhe7hfnppi" path="res://Resources/Cutscenes/Level4/booth_4_7.tres" id="9_jg4mq"]
-[ext_resource type="Resource" uid="uid://n2mgtj1kyn8o" path="res://Resources/Cutscenes/Level4/booth_4_8.tres" id="10_ckslo"]
-[ext_resource type="Resource" uid="uid://bpr4boxpib2ck" path="res://Resources/Cutscenes/Level4/booth_4_9.tres" id="11_tirqv"]
-[ext_resource type="Resource" uid="uid://c8tm0410tdsfp" path="res://Resources/Cutscenes/Level4/booth_4_10.tres" id="12_1uold"]
+[ext_resource type="Resource" uid="uid://dyoq0mbwtooc2" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_6.tres" id="8_jg4mq"]
+[ext_resource type="Resource" uid="uid://b1o48n1gmlek1" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_7.tres" id="9_ckslo"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_kovq7"]
-[ext_resource type="Resource" uid="uid://cvu4e05qp4yf2" path="res://Resources/Cutscenes/Level4/booth_4_11.tres" id="13_pq82h"]
 
 [node name="BoothConversation4" type="Control" unique_id=1827662693]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_8xytb")
-conversation = Array[ExtResource("2_aajga")]([ExtResource("3_k1v7c"), ExtResource("4_q1j4s"), ExtResource("5_re0k3"), ExtResource("6_8xytb"), ExtResource("7_aajga"), ExtResource("8_o61u0"), ExtResource("9_jg4mq"), ExtResource("10_ckslo"), ExtResource("11_tirqv"), ExtResource("12_1uold"), ExtResource("13_pq82h")])
+conversation = Array[ExtResource("2_aajga")]([ExtResource("3_re0k3"), ExtResource("4_8xytb"), ExtResource("5_aajga"), ExtResource("6_6svl8"), ExtResource("7_o61u0"), ExtResource("8_jg4mq"), ExtResource("9_ckslo")])
 next_level = ExtResource("8_6svl8")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1844786785]

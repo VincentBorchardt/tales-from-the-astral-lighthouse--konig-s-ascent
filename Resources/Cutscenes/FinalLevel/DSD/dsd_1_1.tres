@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bubaaxelvkda"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_l4d5e"]
+[ext_resource type="Resource" uid="uid://bt5y562vtqk7h" path="res://Resources/Cutscenes/Speakers/boyhowdy.tres" id="2_4isn7"]
+
+[resource]
+script = ExtResource("1_l4d5e")
+speaker = ExtResource("2_4isn7")
+message = "Did you know? DID YOU KNOW? ToDaY'S ThE DaY KöNiG iS gOiNg tO rEpLaCe mE! ThEn I’ll be FREE and– "
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

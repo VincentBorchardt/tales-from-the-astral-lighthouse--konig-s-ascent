@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://bt5y562vtqk7h"]
+
+[ext_resource type="Texture2D" uid="uid://bbr312bxa7pbv" path="res://Assets/Art/Characters/Portraits/BoyHowdy_Pixel_Portrait_Left.png" id="1_3vkvf"]
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_f5sd3"]
+[ext_resource type="Texture2D" uid="uid://do6sq8pvxv4qs" path="res://Assets/Art/Characters/Portraits/BoyHowdy_Pixel_Portrait.png" id="2_xf47f"]
+
+[resource]
+script = ExtResource("1_f5sd3")
+name = "Boyhowdy"
+full_picture_left = ExtResource("1_3vkvf")
+full_picture_right = ExtResource("2_xf47f")
+metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

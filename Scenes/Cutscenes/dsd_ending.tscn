@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://be8b4n5dp7v00"]
+
+[ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/ending.gd" id="1_nvyvj"]
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_k3sye"]
+[ext_resource type="Resource" uid="uid://bxq5dixxcdk6n" path="res://Resources/Cutscenes/Endings/blank_message.tres" id="3_88tht"]
+[ext_resource type="Resource" uid="uid://dn7gk8ibucpsw" path="res://Resources/Cutscenes/Endings/dsd_ending_1.tres" id="3_ppym2"]
+[ext_resource type="Resource" uid="uid://bbvw47y8almv" path="res://Resources/Cutscenes/Endings/dsd_ending_2.tres" id="4_c7niw"]
+[ext_resource type="Resource" uid="uid://cmhjtsr45i3gs" path="res://Resources/Cutscenes/Endings/dsd_ending_1b.tres" id="4_msers"]
+[ext_resource type="Resource" uid="uid://dlwvkgu1nuopd" path="res://Resources/Cutscenes/Endings/dsd_ending_3.tres" id="5_msers"]
+[ext_resource type="Resource" uid="uid://c46rplo1cltr8" path="res://Resources/Cutscenes/Endings/dsd_ending_2b.tres" id="6_88tht"]
+[ext_resource type="PackedScene" uid="uid://c2y42pymii2gj" path="res://Scenes/Cutscenes/credits.tscn" id="10_ikjkf"]
+[ext_resource type="Texture2D" uid="uid://p62smktkcxq4" path="res://Assets/Art/Endings/TFTAL_DSDEnding_pixel.png" id="11_ikjkf"]
+[ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_2t8mc"]
+
+[node name="DSDEnding" type="Control" unique_id=1827662693]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nvyvj")
+conversation = Array[ExtResource("2_k3sye")]([ExtResource("3_88tht"), ExtResource("3_ppym2"), ExtResource("4_msers"), ExtResource("4_c7niw"), ExtResource("6_88tht"), ExtResource("5_msers")])
+next_level = ExtResource("10_ikjkf")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1844786785]
+position = Vector2(160, 120)
+texture = ExtResource("11_ikjkf")
+
+[node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("12_2t8mc")]
+visible = false
+layout_mode = 1
+
+[node name="Credits" parent="." unique_id=1784082459 instance=ExtResource("10_ikjkf")]
+visible = false
+layout_mode = 0
+
+[connection signal="advanced_text" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_advanced_text"]
+[connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

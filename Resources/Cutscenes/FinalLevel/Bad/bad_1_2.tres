@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cltlockm2fmoa"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_v8ykw"]
+[ext_resource type="Resource" uid="uid://o5l4o68rjt82" path="res://Resources/Cutscenes/Speakers/lost_soul.tres" id="2_w7yt0"]
+
+[resource]
+script = ExtResource("1_v8ykw")
+speaker = ExtResource("2_w7yt0")
+message = "Can he really do this?"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bpla8mg3gi6hf"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_ujc8s"]
+[ext_resource type="Resource" uid="uid://bt5y562vtqk7h" path="res://Resources/Cutscenes/Speakers/boyhowdy.tres" id="2_ma403"]
+
+[resource]
+script = ExtResource("1_ujc8s")
+speaker = ExtResource("2_ma403")
+message = "But … [color=beab87]Big George[/color]. He trapped you on a lower floor! He defeated you and pRoMiSeD He’d cOmE RiGhT BaCk fOr mE!"
+image_location = 1
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
