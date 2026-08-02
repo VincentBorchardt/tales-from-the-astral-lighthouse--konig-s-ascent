@@ -32,5 +32,5 @@ position = Vector2(137, 173)
 appear_delay = 1.0
 
 [node name="Portal3" parent="." unique_id=1211613360 instance=ExtResource("2_3qbfp")]
-position = Vector2(76, 114)
+position = Vector2(67, 120)
 appear_delay = 1.0

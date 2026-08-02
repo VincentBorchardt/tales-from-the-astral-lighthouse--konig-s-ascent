@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://bl7t366jaibvd"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_0x4y1"]
-[ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_ia1lp"]
-[ext_resource type="PackedScene" uid="uid://dv2ws74mj06q" path="res://Scenes/Waves/wave_2.tscn" id="3_5buja"]
-[ext_resource type="PackedScene" uid="uid://cnk4r2obnewnv" path="res://Scenes/Waves/wave_3.tscn" id="4_wyygt"]
+[ext_resource type="PackedScene" uid="uid://cb4osfuckl6n8" path="res://Scenes/Waves/wave_2_2.tscn" id="2_ts3wb"]
+[ext_resource type="PackedScene" uid="uid://dw2gfos8xsjj1" path="res://Scenes/Waves/wave_2_3.tscn" id="3_chm77"]
 [ext_resource type="PackedScene" uid="uid://bq0x0gomy56h5" path="res://Scenes/Levels/level_3.tscn" id="5_chm77"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="5_yxf76"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_ia1lp"]
@@ -35,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://b41kcimdunjap" path="res://Assets/Art/UI/Waves/Floor_02.png" id="16_yxf76"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_1xj2d"]
 [ext_resource type="Resource" uid="uid://d361g08sp4r1d" path="res://Resources/Cutscenes/Speakers/primeval_mask.tres" id="24_srchd"]
+[ext_resource type="PackedScene" uid="uid://h3dwpgrtfak" path="res://Scenes/Waves/wave_2_1.tscn" id="36_p6e1f"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -700,7 +700,7 @@ fill_to = Vector2(0.021367522, 0)
 [node name="Level2" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_0x4y1")
-waves = Array[PackedScene]([ExtResource("2_ia1lp"), ExtResource("3_5buja"), ExtResource("4_wyygt")])
+waves = Array[PackedScene]([ExtResource("36_p6e1f"), ExtResource("2_ts3wb"), ExtResource("3_chm77")])
 next_level = ExtResource("5_chm77")
 music = ExtResource("6_yxf76")
 booth_convo = Array[ExtResource("16_jip10")]([ExtResource("8_srchd"), ExtResource("9_p6e1f"), ExtResource("10_xo6ri"), ExtResource("11_potos"), ExtResource("12_6d4lf"), ExtResource("13_c0rmi"), ExtResource("14_xcfnk"), ExtResource("15_tjmj4")])
@@ -728,13 +728,11 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_wyygt")]
 position = Vector2(132, 124)
-movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_jip10")]([SubResource("Resource_2d332")])
 
 [node name="Npcs2" parent="." unique_id=656374900 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_wyygt")]
 position = Vector2(196, 121)
-movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_jip10")]([SubResource("Resource_2d332")])
 

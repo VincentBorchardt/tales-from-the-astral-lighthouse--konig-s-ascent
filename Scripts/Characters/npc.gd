@@ -85,7 +85,6 @@ func move_state():
 
 	velocity = direction * movement_speed
 	move_and_slide()
-	body_animations.play("walk")
 
 func tutorial_wave():
 	hurtbox.monitoring = false

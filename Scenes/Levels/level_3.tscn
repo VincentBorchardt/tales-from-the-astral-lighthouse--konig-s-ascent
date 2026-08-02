@@ -26,6 +26,8 @@
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_jgaqf"]
 [ext_resource type="Texture2D" uid="uid://qr4bqj8gci5" path="res://Assets/Art/UI/Waves/Floor_03.png" id="18_ocbj8"]
 [ext_resource type="PackedScene" uid="uid://dt2yp7sm2y31j" path="res://Scenes/Objects/dsd_door.tscn" id="19_r8neg"]
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Gameplay/wave.gd" id="27_wvd0d"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="28_gupo0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -776,6 +778,7 @@ messages = Array[ExtResource("16_wnlxl")]([SubResource("Resource_tjl6l")])
 [node name="ComboTimer" type="Timer" parent="." unique_id=1167771421]
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=1255374130]
+visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 1
 position = Vector2(163, 120)
@@ -792,6 +795,34 @@ texture = ExtResource("18_ocbj8")
 
 [node name="DsdDoor" parent="." unique_id=1074552836 instance=ExtResource("19_r8neg")]
 position = Vector2(238, 75)
+
+[node name="Wave3 1" type="Node2D" parent="." unique_id=636666011]
+script = ExtResource("27_wvd0d")
+
+[node name="Portal" parent="Wave3 1" unique_id=110448379 instance=ExtResource("28_gupo0")]
+position = Vector2(160, 129)
+appear_delay = 1.0
+
+[node name="Portal2" parent="Wave3 1" unique_id=2043214790 instance=ExtResource("28_gupo0")]
+position = Vector2(155, 170)
+appear_delay = 2.0
+
+[node name="Portal3" parent="Wave3 1" unique_id=758317789 instance=ExtResource("28_gupo0")]
+position = Vector2(224, 125)
+appear_delay = 3.0
+
+[node name="Portal4" parent="Wave3 1" unique_id=1486414377 instance=ExtResource("28_gupo0")]
+position = Vector2(195, 101)
+
+[node name="Portal6" parent="Wave3 1" unique_id=154394612 instance=ExtResource("28_gupo0")]
+position = Vector2(266, 134)
+
+[node name="Portal7" parent="Wave3 1" unique_id=1282863708 instance=ExtResource("28_gupo0")]
+position = Vector2(161, 195)
+
+[node name="Portal5" parent="Wave3 1" unique_id=1317434390 instance=ExtResource("28_gupo0")]
+position = Vector2(94, 151)
+appear_delay = 4.0
 
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]

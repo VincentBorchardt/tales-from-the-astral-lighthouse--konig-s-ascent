@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://650j77xtdxdt"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_afv7b"]
-[ext_resource type="PackedScene" uid="uid://634kv23nuryn" path="res://Scenes/Waves/wave_1.tscn" id="2_3628d"]
-[ext_resource type="PackedScene" uid="uid://dv2ws74mj06q" path="res://Scenes/Waves/wave_2.tscn" id="3_31phq"]
+[ext_resource type="PackedScene" uid="uid://b42krjlf6mcrk" path="res://Scenes/Waves/wave_1_1.tscn" id="2_hnn05"]
 [ext_resource type="AudioStream" uid="uid://cd8lfmu8qdn7y" path="res://Assets/Audio/Music/MainThemeLevel2_wip1.mp3" id="3_3628d"]
-[ext_resource type="PackedScene" uid="uid://cnk4r2obnewnv" path="res://Scenes/Waves/wave_3.tscn" id="4_7hll7"]
+[ext_resource type="PackedScene" uid="uid://cpoen3uh66hcs" path="res://Scenes/Waves/wave_1_2.tscn" id="3_wxmgb"]
+[ext_resource type="PackedScene" uid="uid://b00xoe2f78osm" path="res://Scenes/Waves/wave_1_3.tscn" id="4_k1rx4"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="5_3628d"]
 [ext_resource type="PackedScene" uid="uid://bl7t366jaibvd" path="res://Scenes/Levels/level_2.tscn" id="5_hd8f4"]
 [ext_resource type="Texture2D" uid="uid://dnnohdx14ue15" path="res://Assets/Art/Tiles/TempTiles.png" id="6_irw6p"]
@@ -696,7 +696,7 @@ fill_to = Vector2(0.021367522, 0)
 [node name="Level1" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_afv7b")
-waves = Array[PackedScene]([ExtResource("2_3628d"), ExtResource("3_31phq"), ExtResource("4_7hll7")])
+waves = Array[PackedScene]([ExtResource("2_hnn05"), ExtResource("3_wxmgb"), ExtResource("4_k1rx4")])
 next_level = ExtResource("5_hd8f4")
 music = ExtResource("3_3628d")
 booth_convo = Array[ExtResource("10_k2mw1")]([ExtResource("8_hnn05"), ExtResource("9_wxmgb"), ExtResource("10_k1rx4"), ExtResource("11_yltcr"), ExtResource("12_iht5x"), ExtResource("13_nuy1v")])
@@ -724,7 +724,6 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("8_7hll7")]
 position = Vector2(132, 124)
-movement_speed = 100.0
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
 

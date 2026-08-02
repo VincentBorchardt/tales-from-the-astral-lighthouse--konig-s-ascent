@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dw2gfos8xsjj1"]
+
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Gameplay/wave.gd" id="1_p4lvb"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="2_nb4ot"]
+
+[node name="Wave2 3" type="Node2D" unique_id=673946649]
+script = ExtResource("1_p4lvb")
+enemy_count = 12
+
+[node name="Portal" parent="." unique_id=110448379 instance=ExtResource("2_nb4ot")]
+position = Vector2(48, 126)
+appear_delay = 1.0
+
+[node name="Portal2" parent="." unique_id=1968292665 instance=ExtResource("2_nb4ot")]
+position = Vector2(87, 108)
+appear_delay = 1.0
+
+[node name="Portal3" parent="." unique_id=2083422486 instance=ExtResource("2_nb4ot")]
+position = Vector2(118, 92)
+appear_delay = 1.0
+
+[node name="Portal4" parent="." unique_id=1600878245 instance=ExtResource("2_nb4ot")]
+position = Vector2(152, 76)
+appear_delay = 1.0
+
+[node name="Portal5" parent="." unique_id=1917983893 instance=ExtResource("2_nb4ot")]
+position = Vector2(266, 130)
+appear_delay = 2.0
+
+[node name="Portal6" parent="." unique_id=41082005 instance=ExtResource("2_nb4ot")]
+position = Vector2(236, 141)
+appear_delay = 2.0
+
+[node name="Portal7" parent="." unique_id=787570933 instance=ExtResource("2_nb4ot")]
+position = Vector2(195, 159)
+appear_delay = 2.0
+
+[node name="Portal8" parent="." unique_id=1807472427 instance=ExtResource("2_nb4ot")]
+position = Vector2(151, 174)
+appear_delay = 2.0
+
+[node name="Portal9" parent="." unique_id=429131236 instance=ExtResource("2_nb4ot")]
+position = Vector2(123, 163)
+appear_delay = 8.0
+
+[node name="Portal12" parent="." unique_id=1929350182 instance=ExtResource("2_nb4ot")]
+position = Vector2(226, 105)
+appear_delay = 8.0
+
+[node name="Portal13" parent="." unique_id=400441643 instance=ExtResource("2_nb4ot")]
+position = Vector2(180, 138)
+appear_delay = 10.0
+
+[node name="Portal14" parent="." unique_id=473321442 instance=ExtResource("2_nb4ot")]
+position = Vector2(132, 108)
+appear_delay = 10.0
