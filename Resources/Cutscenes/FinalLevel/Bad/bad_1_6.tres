@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dyoq0mbwtooc2"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_d6g14"]
+[ext_resource type="Resource" uid="uid://cpu44y12xdfnd" path="res://Resources/Cutscenes/Speakers/konig.tres" id="2_0trun"]
+
+[resource]
+script = ExtResource("1_d6g14")
+speaker = ExtResource("2_0trun")
+message = "◉ _ ◉"
+animation_time = 0.0
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

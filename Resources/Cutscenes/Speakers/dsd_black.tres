@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Speaker" format=3 uid="uid://c73bkmuga3g2o"]
+
+[ext_resource type="Texture2D" uid="uid://cwvqkvlvwbama" path="res://Assets/Art/Characters/Portraits/DSD_pixel_portrait_silhouette_left.png" id="1_itvoc"]
+[ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="1_srhe0"]
+[ext_resource type="Texture2D" uid="uid://b1kwhps78f4xt" path="res://Assets/Art/Characters/Portraits/DSD_pixel_portrait_silhouette.png" id="2_g8txx"]
+
+[resource]
+script = ExtResource("1_srhe0")
+name = "???"
+full_picture_left = ExtResource("1_itvoc")
+full_picture_right = ExtResource("2_g8txx")
+metadata/_custom_type_script = "uid://d2gsgeusfrsnk"

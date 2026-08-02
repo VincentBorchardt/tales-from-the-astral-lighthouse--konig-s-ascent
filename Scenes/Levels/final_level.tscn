@@ -27,9 +27,25 @@
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="16_ydojj"]
 [ext_resource type="Resource" uid="uid://2y5vqfg1b1g4" path="res://Resources/Cutscenes/FinalLevel/Initial/pit_1_alt.tres" id="17_jhokw"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="17_rf5lf"]
+[ext_resource type="Resource" uid="uid://bslg7u4lxv3h3" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_1.tres" id="18_588bs"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="18_jhokw"]
+[ext_resource type="Resource" uid="uid://bubaaxelvkda" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_1_1.tres" id="18_uxye4"]
 [ext_resource type="Texture2D" uid="uid://c6ncfb5ynibob" path="res://Assets/Art/Characters/Gameplay/FinalLevel/FINAL-PLINTH.png" id="18_v6pfu"]
+[ext_resource type="Resource" uid="uid://cltlockm2fmoa" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_2.tres" id="19_4nfgy"]
+[ext_resource type="Resource" uid="uid://d27ow50sjbaik" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_1_2.tres" id="19_sv3bi"]
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="19_ukj0i"]
+[ext_resource type="Resource" uid="uid://ca8ya6fs255" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_1.tres" id="20_m5350"]
+[ext_resource type="Resource" uid="uid://dptf5jn7nkols" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_3.tres" id="20_pdb50"]
+[ext_resource type="Resource" uid="uid://dbn7c808dg2lb" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_2.tres" id="21_4yvak"]
+[ext_resource type="Resource" uid="uid://bgikmxfdfmy8d" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_4.tres" id="21_6jpp8"]
+[ext_resource type="Resource" uid="uid://dsq84hex1172e" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_5.tres" id="22_k6ra2"]
+[ext_resource type="Resource" uid="uid://bhghyii2ok507" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_3.tres" id="22_ngafy"]
+[ext_resource type="Resource" uid="uid://bpla8mg3gi6hf" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_4.tres" id="23_erblo"]
+[ext_resource type="Resource" uid="uid://dyoq0mbwtooc2" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_6.tres" id="23_o136g"]
+[ext_resource type="Resource" uid="uid://b1o48n1gmlek1" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_7.tres" id="24_frrs4"]
+[ext_resource type="Resource" uid="uid://5l68v8dha4c4" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_5.tres" id="24_ftups"]
+[ext_resource type="Resource" uid="uid://b60auukun02s4" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_6.tres" id="25_588bs"]
+[ext_resource type="Resource" uid="uid://cplodi3jqhmi2" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_3_1.tres" id="26_4nfgy"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.6875, 123.859375, 156.24219, 197.71875, 17.960938, 121.65625, 164.84375, 52.140625)
@@ -911,6 +927,10 @@ trik = Array[ExtResource("10_nfkfb")]([ExtResource("13_ul8x7")])
 primeval_mask = Array[ExtResource("10_nfkfb")]([ExtResource("14_72yjl")])
 pitmaster = Array[ExtResource("10_nfkfb")]([ExtResource("15_ydojj"), ExtResource("16_rf5lf")])
 pitmaster_alt = Array[ExtResource("10_nfkfb")]([ExtResource("17_jhokw"), ExtResource("16_rf5lf")])
+bad = Array[ExtResource("10_nfkfb")]([ExtResource("18_588bs"), ExtResource("19_4nfgy"), ExtResource("20_pdb50"), ExtResource("21_6jpp8"), ExtResource("22_k6ra2"), ExtResource("23_o136g"), ExtResource("24_frrs4")])
+dsd_part_1 = Array[ExtResource("10_nfkfb")]([ExtResource("18_uxye4"), ExtResource("19_sv3bi")])
+dsd_part_2 = Array[ExtResource("10_nfkfb")]([ExtResource("20_m5350"), ExtResource("21_4yvak"), ExtResource("22_ngafy"), ExtResource("23_erblo"), ExtResource("24_ftups"), ExtResource("25_588bs")])
+dsd_part_3 = Array[ExtResource("10_nfkfb")]([ExtResource("26_4nfgy")])
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false

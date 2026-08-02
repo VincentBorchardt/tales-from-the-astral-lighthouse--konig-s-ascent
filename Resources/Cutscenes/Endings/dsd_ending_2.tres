@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bbvw47y8almv"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_xixp7"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_4biod"]
+
+[resource]
+script = ExtResource("1_xixp7")
+speaker = ExtResource("2_4biod")
+message = "The [color=e24d63]Lost Souls[/color] do try to rebel from time to time, but their rebellions are quickly quashed by the powerful trickster’s undefeatable, cursed guard dog … "
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

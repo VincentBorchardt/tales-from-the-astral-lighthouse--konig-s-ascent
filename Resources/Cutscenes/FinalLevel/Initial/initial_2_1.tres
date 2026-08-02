@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_lmok2")
 speaker = ExtResource("2_b25tc")
-message = "Did you know? DID YOU KNOW? ToDaY'S ThE DaY KoNiG iS gOiNg tO rEpLaCe mE! ThEn I’ll be FREE and can FINALLY LEAVE!"
+message = "Did you know? DID YOU KNOW? ToDaY'S ThE DaY KöNiG iS gOiNg tO rEpLaCe mE! ThEn I’ll be FREE and can FINALLY LEAVE!"
 image_location = 1
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

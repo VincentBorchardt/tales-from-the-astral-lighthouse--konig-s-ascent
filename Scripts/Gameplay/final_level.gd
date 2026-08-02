@@ -68,7 +68,35 @@ func continue_scripted_sequence():
 				_:
 					# animate in cameos
 					pass
+			scripted_progression_count += 1
 			start_cutscene(second_total_convo)
+		2:
+			scripted_progression_count += 1
+			match chosen_ending:
+				EndingChoice.DSD:
+					# animate in DSD controlling the eye
+					start_cutscene(dsd_part_3)
+				EndingChoice.BAD:
+					get_tree().change_scene_to_file("res://Scenes/Cutscenes/bad_ending.tscn")
+				EndingChoice.GOOD:
+					# start bullets
+					pass
+		3:
+			scripted_progression_count += 1
+			match chosen_ending:
+				EndingChoice.DSD:
+					get_tree().change_scene_to_file("res://Scenes/Cutscenes/dsd_ending.tscn")
+				EndingChoice.GOOD:
+					# activate area around Boyhowdy
+					pass
+				_:
+					print("followed a finished ending path")
+		4:
+			scripted_progression_count += 1
+			# activate punch on both buttons
+			pass
+		5:
+			get_tree().change_scene_to_file("res://Scenes/Cutscenes/good_ending.tscn")
 
 func _on_cutscene_overlay_cutscene_ended() -> void:
 	print("ending cutscene")

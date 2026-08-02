@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://b1o48n1gmlek1"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_jvdcr"]
+[ext_resource type="Resource" uid="uid://bt5y562vtqk7h" path="res://Resources/Cutscenes/Speakers/boyhowdy.tres" id="2_jvdcr"]
+
+[resource]
+script = ExtResource("1_jvdcr")
+speaker = ExtResource("2_jvdcr")
+message = "KÖNIG … YES !! I’M FrEeEeEeEeEe… "
+image_location = 1
+animation_time = 2.0
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

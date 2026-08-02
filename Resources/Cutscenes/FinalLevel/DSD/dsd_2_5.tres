@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://5l68v8dha4c4"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_drosq"]
+[ext_resource type="Resource" uid="uid://onpw3vsij0i" path="res://Resources/Cutscenes/Speakers/dsd.tres" id="2_rv8b5"]
+
+[resource]
+script = ExtResource("1_drosq")
+speaker = ExtResource("2_rv8b5")
+message = "We did battle. I was trapped, but I turned him into a sweater for his insolence and cast him out into the void."
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

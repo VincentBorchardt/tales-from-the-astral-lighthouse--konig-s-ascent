@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cplodi3jqhmi2"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_qw85y"]
+[ext_resource type="Resource" uid="uid://onpw3vsij0i" path="res://Resources/Cutscenes/Speakers/dsd.tres" id="2_aigoa"]
+
+[resource]
+script = ExtResource("1_qw85y")
+speaker = ExtResource("2_aigoa")
+message = "Now, I believe we were talking about finding a replacement for you? I have the perfect person in mind. Kishishishishi …"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
