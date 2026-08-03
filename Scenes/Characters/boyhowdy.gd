@@ -7,7 +7,9 @@ enum State {
 }
 
 signal boyhowdy_died
+signal entered_range
 
+var entered_range_once = false
 var state = State.CONVO
 var dead = false
 @export var knockback_speed = 1.5
@@ -81,6 +83,8 @@ func take_hit(direction):
 	interaction_animation.visible = false
 	state = State.KNOCKBACK
 
+func set_entered_range():
+	entered_range_once = true
 
 func get_knockback_animation(direction):
 	return "boyhowdy_knockback"
@@ -105,6 +109,8 @@ func _on_interaction_range_body_entered(body: Node2D) -> void:
 		player_in_range = true
 		interaction_animation.visible = true
 		interaction_animation.play("interaction")
+		if entered_range_once == false:
+			emit_signal("entered_range")
 
 
 func _on_interaction_range_body_exited(body: Node2D) -> void:

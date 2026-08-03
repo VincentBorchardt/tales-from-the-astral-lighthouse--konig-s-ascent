@@ -1268,6 +1268,9 @@ movement_targets = [NodePath("../EyeBallMarker")]
 [node name="EyeBallMarker" type="Marker2D" parent="." unique_id=694477931]
 position = Vector2(160, 43)
 
+[node name="ScriptedSequenceTimer" type="Timer" parent="." unique_id=2113936528]
+one_shot = true
+
 [connection signal="bullet_absorbed" from="Konig" to="." method="_on_bullet_absorbed"]
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
@@ -1276,6 +1279,8 @@ position = Vector2(160, 43)
 [connection signal="warp_out_finished" from="Booth" to="." method="_on_booth_warp_out_finished"]
 [connection signal="animation_finished" from="WaveAnimation" to="." method="start_next_wave"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
+[connection signal="boyhowdy_died" from="Boyhowdy" to="." method="_on_boyhowdy_boyhowdy_died"]
+[connection signal="entered_range" from="Boyhowdy" to="." method="_on_boyhowdy_entered_range"]
 [connection signal="laughing_finished" from="Dsd" to="." method="_on_dsd_laughing_finished"]
 [connection signal="materialized" from="Dsd" to="." method="_on_dsd_materialized"]
 [connection signal="movement_finished" from="Dsd" to="." method="_on_dsd_movement_finished"]
