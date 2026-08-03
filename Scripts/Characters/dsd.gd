@@ -22,8 +22,7 @@ var moving := false
 var last_direction := Vector2.DOWN
 
 func _ready() -> void:
-	pass
-	#ready.connect(get_tree().current_scene.on_dsd_ready)
+	ready.connect(get_tree().current_scene.on_dsd_ready)
 
 
 func materialize():
