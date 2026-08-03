@@ -721,6 +721,7 @@ position = Vector2(160, 120)
 texture = ExtResource("13_i5g5g")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1719386126]
+z_index = -1
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_bwgk3")
 
@@ -750,7 +751,8 @@ movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_ep717")]([SubResource("Resource_2d332")])
 
 [node name="Booth" parent="." unique_id=1170855833 instance=ExtResource("8_eb5oh")]
-position = Vector2(160, 90)
+visible = false
+position = Vector2(159, 105)
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
 position = Vector2(160, 128)

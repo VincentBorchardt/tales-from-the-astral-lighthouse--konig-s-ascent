@@ -87,6 +87,7 @@ func continue_scripted_sequence():
 				# Start the basic wave
 				start_next_wave()
 				konig.toggle_cutscene()
+				get_tree().call_group("npcs", "tutorial_wave")
 			2:
 				scripted_progression_count += 1
 				start_cutscene(StoryAutoload.tutorial_2)

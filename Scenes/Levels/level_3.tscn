@@ -717,35 +717,33 @@ position = Vector2(160, 120)
 texture = ExtResource("14_1hf40")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1719386126]
+z_index = -1
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_bwgk3")
 
 [node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("8_rcyh2")]
-position = Vector2(160, 143)
+position = Vector2(160, 142)
 ACCELERATION = 682
 FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(127, 94)
-movement_speed = null
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Npcs2" parent="." unique_id=786006039 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(162, 66)
-movement_speed = null
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Npcs3" parent="." unique_id=173178468 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(51, 120)
-movement_speed = null
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Booth" parent="." unique_id=1170855833 instance=ExtResource("6_ocbj8")]
 visible = false
-position = Vector2(160, 91)
+position = Vector2(159, 105)
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
 position = Vector2(160, 128)

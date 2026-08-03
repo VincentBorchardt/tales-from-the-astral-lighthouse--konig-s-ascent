@@ -7,5 +7,5 @@
 script = ExtResource("1_t33fj")
 
 [node name="Portal" parent="." unique_id=110448379 instance=ExtResource("2_mblmy")]
-position = Vector2(204, 115)
+position = Vector2(195, 122)
 appear_delay = 1.0

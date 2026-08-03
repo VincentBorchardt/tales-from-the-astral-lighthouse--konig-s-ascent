@@ -188,6 +188,7 @@ func _on_animated_sprite_2d_animation_finished():
 			konig_left.emit()
 		_: # TODO should probably put all the attacks here explicitly
 			hitbox.disabled = true
+			shadow.visible = false
 			if state == State.ATTACK:
 				state = State.MOVE
 
