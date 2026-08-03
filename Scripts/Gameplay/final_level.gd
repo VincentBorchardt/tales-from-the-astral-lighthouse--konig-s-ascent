@@ -72,7 +72,6 @@ func continue_scripted_sequence():
 		1:
 			match chosen_ending:
 				EndingChoice.DSD:
-					
 					start_cutscene(dsd_part_2)
 					pass
 				_:

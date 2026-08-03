@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://ftfdxokr5upd"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_688jp"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_e5kn6"]
+
+[resource]
+script = ExtResource("1_688jp")
+speaker = ExtResource("2_e5kn6")
+message = "Zugtug and König went on many more adventures across the universe as they took the [color=e24d63]Lost Souls[/color] home, taking every opportunity to pick up ‘choice garbo’ on the way. "
+has_box = false
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

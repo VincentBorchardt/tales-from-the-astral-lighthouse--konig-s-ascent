@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://pcgv1aceypnd"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_uutas"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_mg0q1"]
+
+[resource]
+script = ExtResource("1_uutas")
+speaker = ExtResource("2_mg0q1")
+message = "Zugtug and Yazmody still talk on mIRC."
+has_box = false
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

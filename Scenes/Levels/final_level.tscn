@@ -28,28 +28,41 @@
 [ext_resource type="Resource" uid="uid://2y5vqfg1b1g4" path="res://Resources/Cutscenes/FinalLevel/Initial/pit_1_alt.tres" id="17_jhokw"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="17_rf5lf"]
 [ext_resource type="Resource" uid="uid://bslg7u4lxv3h3" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_1.tres" id="18_588bs"]
+[ext_resource type="Resource" uid="uid://bav3sgv2tu5wd" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_1.tres" id="18_cpwnc"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="18_jhokw"]
 [ext_resource type="Resource" uid="uid://bubaaxelvkda" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_1_1.tres" id="18_uxye4"]
 [ext_resource type="Texture2D" uid="uid://c6ncfb5ynibob" path="res://Assets/Art/Characters/Gameplay/FinalLevel/FINAL-PLINTH.png" id="18_v6pfu"]
 [ext_resource type="Resource" uid="uid://cltlockm2fmoa" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_2.tres" id="19_4nfgy"]
+[ext_resource type="Resource" uid="uid://donbp4cw5tv1d" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_2.tres" id="19_j5ore"]
 [ext_resource type="Resource" uid="uid://d27ow50sjbaik" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_1_2.tres" id="19_sv3bi"]
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="19_ukj0i"]
 [ext_resource type="Resource" uid="uid://ca8ya6fs255" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_1.tres" id="20_m5350"]
 [ext_resource type="Resource" uid="uid://dptf5jn7nkols" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_3.tres" id="20_pdb50"]
+[ext_resource type="Resource" uid="uid://cb8i3ahbwwumn" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_3.tres" id="20_sdqu4"]
 [ext_resource type="Resource" uid="uid://dbn7c808dg2lb" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_2.tres" id="21_4yvak"]
 [ext_resource type="Resource" uid="uid://bgikmxfdfmy8d" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_4.tres" id="21_6jpp8"]
+[ext_resource type="Resource" uid="uid://bquti8ajf0f7r" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_4.tres" id="21_g1byd"]
+[ext_resource type="Resource" uid="uid://b6w0sse62e0uv" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_5.tres" id="22_cu3dn"]
 [ext_resource type="Resource" uid="uid://dsq84hex1172e" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_5.tres" id="22_k6ra2"]
 [ext_resource type="Resource" uid="uid://bhghyii2ok507" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_3.tres" id="22_ngafy"]
 [ext_resource type="Resource" uid="uid://bpla8mg3gi6hf" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_4.tres" id="23_erblo"]
 [ext_resource type="Resource" uid="uid://dyoq0mbwtooc2" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_6.tres" id="23_o136g"]
+[ext_resource type="Resource" uid="uid://m433im4xjmh2" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_6.tres" id="23_ugqcc"]
 [ext_resource type="Resource" uid="uid://b1o48n1gmlek1" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_7.tres" id="24_frrs4"]
 [ext_resource type="Resource" uid="uid://5l68v8dha4c4" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_5.tres" id="24_ftups"]
+[ext_resource type="Resource" uid="uid://boin8k33bongy" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_7.tres" id="24_pnbaj"]
 [ext_resource type="Resource" uid="uid://b60auukun02s4" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_2_6.tres" id="25_588bs"]
+[ext_resource type="Resource" uid="uid://dl2fa17qxi0kc" path="res://Resources/Cutscenes/FinalLevel/Good/good_2_1.tres" id="25_jh2cb"]
 [ext_resource type="Resource" uid="uid://cplodi3jqhmi2" path="res://Resources/Cutscenes/FinalLevel/DSD/dsd_3_1.tres" id="26_4nfgy"]
+[ext_resource type="Resource" uid="uid://nrfx2p8buif1" path="res://Resources/Cutscenes/FinalLevel/Good/good_2_2.tres" id="26_xbvml"]
+[ext_resource type="Resource" uid="uid://cpa3a5og87q7g" path="res://Resources/Cutscenes/FinalLevel/Good/good_3_1.tres" id="27_ugqcc"]
+[ext_resource type="Resource" uid="uid://vsdsonxocdaf" path="res://Resources/Cutscenes/FinalLevel/Good/good_4_1.tres" id="28_pnbaj"]
+[ext_resource type="Resource" uid="uid://df70nt682fb6l" path="res://Resources/Cutscenes/FinalLevel/Good/good_4_2.tres" id="29_jh2cb"]
+[ext_resource type="Resource" uid="uid://b8hvdfu32qwti" path="res://Resources/Cutscenes/FinalLevel/Good/good_5_1.tres" id="30_xbvml"]
+[ext_resource type="Resource" uid="uid://bjm5kf020yoyl" path="res://Resources/Cutscenes/FinalLevel/Good/good_5_2.tres" id="31_qa7ma"]
 [ext_resource type="AudioStream" uid="uid://65cbghcdt380" path="res://Assets/Audio/Music/Confrontation_wip1.mp3" id="34_k6ra2"]
 [ext_resource type="Texture2D" uid="uid://dfhshcxqijmwc" path="res://Assets/Art/Characters/Gameplay/FinalLevel/Big Eye DSD.png" id="36_pdb50"]
 [ext_resource type="PackedScene" uid="uid://bsj5pg7rv8mf5" path="res://Scenes/Characters/dsd.tscn" id="47_4nfgy"]
-[ext_resource type="PackedScene" uid="uid://c7mo38bc4kqu5" path="res://Scenes/Objects/boyhowdy_bullet.tscn" id="48_6jpp8"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(311, 77.89844, 12.890625, 75.09375, 12.1015625, -0.03125, 311, -0.9609375)
@@ -1141,6 +1154,11 @@ trik = Array[ExtResource("10_nfkfb")]([ExtResource("13_ul8x7")])
 primeval_mask = Array[ExtResource("10_nfkfb")]([ExtResource("14_72yjl")])
 pitmaster = Array[ExtResource("10_nfkfb")]([ExtResource("15_ydojj"), ExtResource("16_rf5lf")])
 pitmaster_alt = Array[ExtResource("10_nfkfb")]([ExtResource("17_jhokw"), ExtResource("16_rf5lf")])
+good_part_1 = Array[ExtResource("10_nfkfb")]([ExtResource("18_cpwnc"), ExtResource("19_j5ore"), ExtResource("20_sdqu4"), ExtResource("21_g1byd"), ExtResource("22_cu3dn"), ExtResource("23_ugqcc"), ExtResource("24_pnbaj")])
+good_part_2 = Array[ExtResource("10_nfkfb")]([ExtResource("25_jh2cb"), ExtResource("26_xbvml")])
+good_part_3 = Array[ExtResource("10_nfkfb")]([ExtResource("27_ugqcc")])
+good_part_4 = Array[ExtResource("10_nfkfb")]([ExtResource("28_pnbaj"), ExtResource("29_jh2cb")])
+good_part_5 = Array[ExtResource("10_nfkfb")]([ExtResource("30_xbvml"), ExtResource("31_qa7ma")])
 bad = Array[ExtResource("10_nfkfb")]([ExtResource("18_588bs"), ExtResource("19_4nfgy"), ExtResource("20_pdb50"), ExtResource("21_6jpp8"), ExtResource("22_k6ra2"), ExtResource("23_o136g"), ExtResource("24_frrs4")])
 dsd_part_1 = Array[ExtResource("10_nfkfb")]([ExtResource("18_uxye4"), ExtResource("19_sv3bi")])
 dsd_part_2 = Array[ExtResource("10_nfkfb")]([ExtResource("20_m5350"), ExtResource("21_4yvak"), ExtResource("22_ngafy"), ExtResource("23_erblo"), ExtResource("24_ftups"), ExtResource("25_588bs")])
@@ -1232,7 +1250,6 @@ frame_progress = 0.5081527
 
 [node name="Boyhowdy" parent="." unique_id=1252577124 instance=ExtResource("15_ttffg")]
 position = Vector2(160, 120)
-bullet_scene = ExtResource("48_6jpp8")
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=356204903]
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
@@ -1259,7 +1276,6 @@ position = Vector2(160, 43)
 [connection signal="warp_out_finished" from="Booth" to="." method="_on_booth_warp_out_finished"]
 [connection signal="animation_finished" from="WaveAnimation" to="." method="start_next_wave"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
-[connection signal="boyhowdy_died" from="Boyhowdy" to="." method="_on_boyhowdy_boyhowdy_died"]
 [connection signal="laughing_finished" from="Dsd" to="." method="_on_dsd_laughing_finished"]
 [connection signal="materialized" from="Dsd" to="." method="_on_dsd_materialized"]
 [connection signal="movement_finished" from="Dsd" to="." method="_on_dsd_movement_finished"]

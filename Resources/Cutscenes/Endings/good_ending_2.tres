@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dvlocpy7lsghs"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_04sa6"]
+[ext_resource type="Resource" uid="uid://c8mujdwuesw1g" path="res://Resources/Cutscenes/Speakers/narrator.tres" id="2_iipku"]
+
+[resource]
+script = ExtResource("1_04sa6")
+speaker = ExtResource("2_iipku")
+message = "König wasn’t really into that part. But he did enjoy that people started calling him [color=e24d63]König, The Galactic Adventurer[/color]. Which meant it wasn’t all that bad."
+has_box = false
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

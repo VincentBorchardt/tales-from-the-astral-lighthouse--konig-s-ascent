@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/ending.gd" id="1_qvov2"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_t2k3i"]
-[ext_resource type="Resource" uid="uid://bpc4jl72yalgi" path="res://Resources/Cutscenes/Level1/booth_1_1.tres" id="3_xljve"]
-[ext_resource type="Resource" uid="uid://dc6jn2amnjq6e" path="res://Resources/Cutscenes/Level1/booth_1_2.tres" id="4_bwk2w"]
-[ext_resource type="Resource" uid="uid://cditr2nno22xo" path="res://Resources/Cutscenes/Level1/booth_1_3.tres" id="5_7gler"]
-[ext_resource type="Resource" uid="uid://bwey4x5afdham" path="res://Resources/Cutscenes/Level1/booth_1_4.tres" id="6_gysc7"]
-[ext_resource type="Resource" uid="uid://c3w00lracyrdc" path="res://Resources/Cutscenes/Level1/booth_1_5.tres" id="7_ereoc"]
-[ext_resource type="Resource" uid="uid://dtib5g5qcu6p7" path="res://Resources/Cutscenes/Level1/booth_1_6.tres" id="8_1vecv"]
+[ext_resource type="Resource" uid="uid://bxq5dixxcdk6n" path="res://Resources/Cutscenes/Endings/blank_message.tres" id="3_xcvoc"]
+[ext_resource type="Resource" uid="uid://ftfdxokr5upd" path="res://Resources/Cutscenes/Endings/good_ending_1.tres" id="4_krfh5"]
+[ext_resource type="Resource" uid="uid://dvlocpy7lsghs" path="res://Resources/Cutscenes/Endings/good_ending_2.tres" id="5_wqpio"]
+[ext_resource type="Resource" uid="uid://pcgv1aceypnd" path="res://Resources/Cutscenes/Endings/good_ending_3.tres" id="6_bl3pv"]
 [ext_resource type="PackedScene" uid="uid://c2y42pymii2gj" path="res://Scenes/Cutscenes/credits.tscn" id="9_krfh5"]
 [ext_resource type="Texture2D" uid="uid://kiydqrbw6pyb" path="res://Assets/Art/Endings/TFTAL_GoodEnd_Pixel_Faded.png" id="9_wqpio"]
 [ext_resource type="Texture2D" uid="uid://d1wi02yvxvtpk" path="res://Assets/Art/Endings/TFTAL_GoodEnding_Pixel.png" id="10_krfh5"]
@@ -17,7 +15,7 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_qvov2")
-conversation = Array[ExtResource("2_t2k3i")]([ExtResource("3_xljve"), ExtResource("4_bwk2w"), ExtResource("5_7gler"), ExtResource("6_gysc7"), ExtResource("7_ereoc"), ExtResource("8_1vecv")])
+conversation = Array[ExtResource("2_t2k3i")]([ExtResource("3_xcvoc"), ExtResource("4_krfh5"), ExtResource("5_wqpio"), ExtResource("6_bl3pv")])
 faded_background = ExtResource("9_wqpio")
 next_level = ExtResource("9_krfh5")
 
@@ -33,4 +31,5 @@ layout_mode = 1
 visible = false
 layout_mode = 0
 
+[connection signal="advanced_text" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_advanced_text"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
