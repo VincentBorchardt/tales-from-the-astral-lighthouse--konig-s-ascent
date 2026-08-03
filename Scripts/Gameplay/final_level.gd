@@ -32,6 +32,8 @@ enum EndingChoice {GOOD, BAD, DSD}
 @onready var boyhowdy = $Boyhowdy
 @onready var dsd = $Dsd
 @onready var eyeball_anim = $Eyeball
+@onready var eye_sound = $EyeOpen
+@onready var eye_change_sound = $EyeChange
 @onready var initial_total_convo: Array[Message] = initial_part_1
 var second_total_convo: Array[Message] = []
 var cameos_total_convo: Array[Message] = []
@@ -106,6 +108,8 @@ func continue_scripted_sequence():
 			match chosen_ending:
 				EndingChoice.DSD:
 					scripted_progression_count += 1
+					sequence_timer.start()
+					await  sequence_timer.timeout
 					dsd.start_laugh()
 				EndingChoice.GOOD:
 					open_eyeball()
@@ -154,12 +158,18 @@ func _on_boyhowdy_boyhowdy_died() -> void:
 	start_cutscene(good_part_5)
 
 func open_eyeball():
+	eye_sound.play()
 	eyeball_anim.play("eye_open")
 	await eyeball_anim.animation_finished
 	scripted_progression_count += 1
 	start_cutscene(good_part_3)
 	
 func _on_dsd_movement_finished() -> void:
+	eye_change_sound.play()
+	plinth.play("dsd_plinth_change")
+	await plinth.animation_finished
+	plinth.play("dsd_plinth_move")
+	eye_sound.play()
 	eyeball_anim.play("dsd_eye")
 	await eyeball_anim.animation_finished
 	continue_scripted_sequence()
