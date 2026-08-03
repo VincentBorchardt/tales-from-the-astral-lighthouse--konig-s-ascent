@@ -3,10 +3,12 @@ extends CharacterBody2D
 signal movement_finished
 signal materialized
 
+
 enum State {
 	FLOAT,
 	LAUGH
 }
+
 
 @export var movement_speed: float = 100.0
 @export var movement_targets: Array[Node2D]
@@ -18,6 +20,10 @@ var state = State.FLOAT
 var current_target_index := 0
 var moving := false
 var last_direction := Vector2.DOWN
+
+func _ready() -> void:
+	pass
+	#ready.connect(get_tree().current_scene.on_dsd_ready)
 
 
 func materialize():

@@ -142,3 +142,7 @@ func _on_dsd_movement_finished() -> void:
 
 func _on_dsd_materialized() -> void:
 	start_cutscene(dsd_part_3)
+
+func on_dsd_ready():
+	# dummies out a signal being connected elsewhere, might not be needed
+	pass
