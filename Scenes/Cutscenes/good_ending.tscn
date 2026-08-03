@@ -33,3 +33,4 @@ layout_mode = 0
 
 [connection signal="advanced_text" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_advanced_text"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
+[connection signal="end_credits" from="Credits" to="." method="_on_credits_end_credits"]

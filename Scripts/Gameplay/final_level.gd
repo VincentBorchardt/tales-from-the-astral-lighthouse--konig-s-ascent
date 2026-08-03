@@ -81,7 +81,6 @@ func continue_scripted_sequence():
 			scripted_progression_count += 1
 			start_cutscene(second_total_convo)
 		2:
-
 			match chosen_ending:
 				EndingChoice.DSD:
 					scripted_progression_count += 1
@@ -125,8 +124,7 @@ func continue_scripted_sequence():
 					start_cutscene(good_part_5)
 					get_tree().change_scene_to_file("res://Scenes/Cutscenes/good_ending.tscn")
 			pass
-					
-			pass
+
 
 func _on_cutscene_overlay_cutscene_ended() -> void:
 	print("ending cutscene")

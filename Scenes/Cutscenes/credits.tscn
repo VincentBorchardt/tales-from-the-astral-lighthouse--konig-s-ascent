@@ -8,9 +8,10 @@ offset_bottom = 240.0
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 script = ExtResource("1_ub10f")
-scroll_speed = 80.0
+scroll_speed = 25.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2025567231]
+custom_maximum_size = Vector2(320, -1)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -31,63 +32,114 @@ text = "
 
 
 
-[color=#e24d63]Tales from the Astral Lighthouse
-Königs Ascent[/color]
+[img]res://Assets/Art/Credits/AstralLighthouse-Logo.png[/img]
+[img]res://Assets/Art/Credits/Konig_logo.png[/img]
 
 [img]res://Assets/Art/Credits/AlphaCrush_Alphad.png[/img]
+
 
 [color=#90dcc0]Scenario & Game Design[/color]
 Balbod & Shabello
 
-[color=#90dcc0]Writing & Dialogue[/color]
-LimeyOtoko
+
+[color=#90dcc0]Visual Direction[/color]
+Shabello
+
 
 [color=#90dcc0]Pixel Art & Animation[/color]
 Shabello
 
+
 [color=#90dcc0]Character Art & Ending Illustrations[/color]
 estherdevil
+
+
+[color=#90dcc0]Narrative Design[/color]
+LimeyOtoko
+
+
+[color=#90dcc0]Writing & Dialogue[/color]
+LimeyOtoko
+
 
 [color=#90dcc0]Music[/color]
 Chibenobi, Lam & MattB
 
-[color=#90dcc0]SFX[/color]
+
+[color=#90dcc0]Sound Design[/color]
 Chibenobi
+
+
+[color=#90dcc0]Programming[/color]
+calledthespacecowboy & Vincent
+
 
 [color=#90dcc0]Gameplay Design[/color]
 calledthespacecowboy
 
+
 [color=#90dcc0]Systems Design[/color]
 Vincent
 
+
 [color=#90dcc0]Character Designs[/color]
-Alexandria - Kyle Bosman
-Boyhowdy - Kyle Bosman
-Dark Schippie Dues - Kyle Bosman
-Ermitz - Olf_HImself & Kyle Bosman
-Gulltry - Arktykk & Kyle Bosman
+Alexandria - Kyle Bosman 
+Boyhowdy - Kyle Bosman 
+Dark Schippie Dues - Kyle Bosman 
+Ermitz - Olf_HImself & Kyle Bosman 
+Gulltry - Arktykk & Kyle Bosman 
 König - Michael2399 & Kyle Bosman
-Marygold - Kenmi & Kyle Bosman
-Pitmaster - Kyle Bosman
-PrimevalMask - Kyle Bosman
-Seraph Quartz - jinx480 & Kyle Bosman
-Trik - Kyle Bosman
-Yazmody  - calledthespacecowboy & Kyle Bosman
+Marygold - Kenmi & Kyle Bosman 
+The Pitmaster - Kyle Bosman 
+Primeval Mask - Kyle Bosman 
+Seraph Quartz - jinx480 & Kyle Bosman 
+Trik - Kyle Bosman 
+Yazmody - calledthespacecowboy & Kyle Bosman 
+Zugtug - Kyle Bosman 
+
 
 [color=#90dcc0]Fonts[/color]
 Cloak by Chevy Ray
 Emoji font by meowni.ca
 
+
 [color=#90dcc0]Playtesters[/color]
-—
+LimeyOtoko
+MayorMcFrumples
+Ota
+
+
+Astral Lighthouse concept suggested by PunkRockGlock
+
+
+Tales From The Astral Lighthouse: Konig's Ascent
+© 2026 Alpha Crush 
+
+
+Skremplets, Boyhowdy © Earth Hands Council 
+The Pitmaster © The Smoke Box 
+Primeval Mask, Big George © Melanie Birthday 
+Steel Love © Buck Authorman 
+
+
+Warriors of Encouragevar created by Sean Nick 
+
+
+All characters, copyrights & trademarks authorised for use
+under special arrangement with Robot Party.
+All rights reserved.
+
 
 [color=#90dcc0]Built on Godot Engine 4.7[/color]
 godotengine.org/license
 
-A Big Thank You to Kyle Bosman
-& the Robot Party Community
 
-And a thank you to you for playing!
+A big thank you to Kyle Bosman, Mucho
+& the Robot Party Community! 
+
+
+Thank you for playing!
+
 
 
 

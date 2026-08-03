@@ -38,3 +38,7 @@ func _on_cutscene_overlay_advanced_text() -> void:
 	if not dim_completed:
 		dim_completed = true
 		background.texture = faded_background
+
+
+func _on_credits_end_credits() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Intro/intro_scene.tscn")
