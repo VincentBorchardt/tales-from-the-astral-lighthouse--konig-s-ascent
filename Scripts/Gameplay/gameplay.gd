@@ -45,15 +45,20 @@ var current_npc = 0
 
 var scripted_progression_count = 0
 var absorbed_bullet_count: int = 0:
-	set(new_bullet_count):
-		absorbed_bullet_count = new_bullet_count
-		print("absorbed bullet count = " + str(new_bullet_count))
-		print("absorbed bullet threshold = " + str(absorbed_bullet_threshold))
-		if new_bullet_count == absorbed_bullet_threshold:
-			print("move to next part of sequence")
-			scripted_progression_count += 1
-			call_deferred("continue_scripted_sequence")
+	set(value):
+		absorbed_bullet_count = value
 
+		print("absorbed bullet count = " + str(value))
+		print("absorbed bullet threshold = " + str(absorbed_bullet_threshold))
+
+		if value == absorbed_bullet_threshold:
+			absorbed_bullet_threshold_reached()
+
+
+func absorbed_bullet_threshold_reached():
+	scripted_progression_count += 1
+	call_deferred("continue_scripted_sequence")
+	
 func _ready():
 	GameplayManager.end_of_level = false
 	npc_conversations = [npc_convo_0, npc_convo_1, npc_convo_2, npc_convo_3, npc_convo_4]
@@ -87,6 +92,7 @@ func continue_scripted_sequence():
 				# Start the basic wave
 				start_next_wave()
 				konig.toggle_cutscene()
+				get_tree().call_group("npcs", "tutorial_wave")
 			2:
 				scripted_progression_count += 1
 				start_cutscene(StoryAutoload.tutorial_2)

@@ -23,10 +23,14 @@ var moving := false
 var last_direction := Vector2.DOWN
 
 func _ready() -> void:
+	animations.play("float_sw")
 	ready.connect(get_tree().current_scene.on_dsd_ready)
 
+func make_invisible():
+	visible = false
 
 func materialize():
+	visible = true
 	animations.play("materialize")
 	await animations.animation_finished
 	materialized.emit()

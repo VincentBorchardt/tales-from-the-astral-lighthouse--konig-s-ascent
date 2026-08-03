@@ -15,7 +15,7 @@ warnings/check_invalid_track_paths=false
 [application]
 
 config/name="Tales from the Astral Lighthouse: Konig's Ascent"
-run/main_scene="uid://b768gnvq0nl7q"
+run/main_scene="uid://bc8f5ly4o5t08"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

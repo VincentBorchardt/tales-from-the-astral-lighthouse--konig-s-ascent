@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cv06otydw035o" path="res://Scenes/Characters/boyhowdy.gd" id="1_xpyvf"]
 [ext_resource type="Script" uid="uid://cpf38p4j1amrn" path="res://Scenes/Characters/boyhowdy_hurtbox.gd" id="2_0gpqa"]
+[ext_resource type="PackedScene" uid="uid://c7mo38bc4kqu5" path="res://Scenes/Objects/boyhowdy_bullet.tscn" id="2_vx7il"]
 [ext_resource type="Texture2D" uid="uid://b3ilup5d01j5q" path="res://Assets/Art/Characters/Gameplay/Boyhowdy/BoyHowdy_Temp_static.png" id="5_0gpqa"]
 [ext_resource type="Texture2D" uid="uid://c1xqtpvkye87e" path="res://Assets/Art/Characters/Gameplay/Npc/idle npc.png" id="6_bxyuv"]
 [ext_resource type="Texture2D" uid="uid://egrgdsp34gn1" path="res://Assets/Art/Characters/Gameplay/Enemy/enemy_death.png" id="7_xjp7x"]
@@ -194,6 +195,7 @@ animations = [{
 
 [node name="Boyhowdy" type="CharacterBody2D" unique_id=640059796]
 script = ExtResource("1_xpyvf")
+bullet_scene = ExtResource("2_vx7il")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=2005842994]
 collision_mask = 12

@@ -63,6 +63,8 @@ func _input(event: InputEvent) -> void:
 		player_in_range = false
 		convo_anim.visible = false
 		start_npc_conversation.emit(conversation)
+		collision_shape.disabled = true
+
 
 func _physics_process(delta):
 	if state == State.MOVE:
@@ -99,7 +101,6 @@ func move_to_booth():
 	state = State.MOVE
 	navigation_agent.path_desired_distance = 4.0
 	navigation_agent.target_desired_distance = 4.0
-	collision_shape.disabled = true
 	call_deferred("actor_setup")
 
 	

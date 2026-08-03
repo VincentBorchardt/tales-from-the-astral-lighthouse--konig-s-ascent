@@ -704,6 +704,7 @@ booth_convo = Array[ExtResource("9_oowow")]([ExtResource("6_rhvh8"), ExtResource
 npc_convo_0 = Array[ExtResource("9_oowow")]([ExtResource("6_wdaxu"), ExtResource("7_w7wr3"), ExtResource("11_8n3fx"), ExtResource("9_o863f")])
 cameo_npc = ExtResource("10_w7wr3")
 is_tutorial = true
+absorbed_bullet_threshold = 3
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 position = Vector2(-2, 12)
@@ -715,8 +716,7 @@ tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_bwgk3")
 
 [node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("7_qfmmv")]
-visible = false
-position = Vector2(160, 158)
+position = Vector2(160, 166)
 ACCELERATION = 682
 FRICTION = 565
 
@@ -727,7 +727,7 @@ conversation = Array[ExtResource("9_oowow")]([ExtResource("9_ku8a2"), ExtResourc
 
 [node name="Booth" parent="." unique_id=1170855833 instance=ExtResource("12_vjygu")]
 visible = false
-position = Vector2(157, 119)
+position = Vector2(160, 129)
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
 visible = false
@@ -777,7 +777,6 @@ texture = ExtResource("18_o7iop")
 [node name="ComboTimer" type="Timer" parent="." unique_id=352762323]
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=1536764256]
-visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 1
 position = Vector2(163, 120)
