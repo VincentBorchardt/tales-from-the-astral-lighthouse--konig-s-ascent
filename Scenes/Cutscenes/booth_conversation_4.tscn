@@ -2,21 +2,28 @@
 
 [ext_resource type="Script" uid="uid://df8px22t4kowe" path="res://Scripts/Cutscenes/ending.gd" id="1_8xytb"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="2_aajga"]
-[ext_resource type="Resource" uid="uid://bslg7u4lxv3h3" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_1.tres" id="3_re0k3"]
-[ext_resource type="Resource" uid="uid://cltlockm2fmoa" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_2.tres" id="4_8xytb"]
-[ext_resource type="Resource" uid="uid://dptf5jn7nkols" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_3.tres" id="5_aajga"]
-[ext_resource type="Resource" uid="uid://bgikmxfdfmy8d" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_4.tres" id="6_6svl8"]
-[ext_resource type="Resource" uid="uid://dsq84hex1172e" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_5.tres" id="7_o61u0"]
+[ext_resource type="Resource" uid="uid://bav3sgv2tu5wd" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_1.tres" id="3_tirqv"]
+[ext_resource type="Resource" uid="uid://donbp4cw5tv1d" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_2.tres" id="4_1uold"]
+[ext_resource type="Resource" uid="uid://cb8i3ahbwwumn" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_3.tres" id="5_pq82h"]
+[ext_resource type="Resource" uid="uid://bquti8ajf0f7r" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_4.tres" id="6_uhfec"]
+[ext_resource type="Resource" uid="uid://b6w0sse62e0uv" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_5.tres" id="7_fmacy"]
 [ext_resource type="PackedScene" uid="uid://bc8f5ly4o5t08" path="res://Scenes/Levels/final_level.tscn" id="8_6svl8"]
-[ext_resource type="Resource" uid="uid://dyoq0mbwtooc2" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_6.tres" id="8_jg4mq"]
-[ext_resource type="Resource" uid="uid://b1o48n1gmlek1" path="res://Resources/Cutscenes/FinalLevel/Bad/bad_1_7.tres" id="9_ckslo"]
+[ext_resource type="Resource" uid="uid://m433im4xjmh2" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_6.tres" id="8_kovq7"]
+[ext_resource type="Resource" uid="uid://boin8k33bongy" path="res://Resources/Cutscenes/FinalLevel/Good/good_1_7.tres" id="9_d4v83"]
+[ext_resource type="Resource" uid="uid://dl2fa17qxi0kc" path="res://Resources/Cutscenes/FinalLevel/Good/good_2_1.tres" id="10_y7qvp"]
+[ext_resource type="Resource" uid="uid://nrfx2p8buif1" path="res://Resources/Cutscenes/FinalLevel/Good/good_2_2.tres" id="11_xj3sv"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_kovq7"]
+[ext_resource type="Resource" uid="uid://cpa3a5og87q7g" path="res://Resources/Cutscenes/FinalLevel/Good/good_3_1.tres" id="12_nc1hw"]
+[ext_resource type="Resource" uid="uid://vsdsonxocdaf" path="res://Resources/Cutscenes/FinalLevel/Good/good_4_1.tres" id="13_nd3ir"]
+[ext_resource type="Resource" uid="uid://df70nt682fb6l" path="res://Resources/Cutscenes/FinalLevel/Good/good_4_2.tres" id="14_hmots"]
+[ext_resource type="Resource" uid="uid://b8hvdfu32qwti" path="res://Resources/Cutscenes/FinalLevel/Good/good_5_1.tres" id="15_7uyrr"]
+[ext_resource type="Resource" uid="uid://bjm5kf020yoyl" path="res://Resources/Cutscenes/FinalLevel/Good/good_5_2.tres" id="16_kdx54"]
 
 [node name="BoothConversation4" type="Control" unique_id=1827662693]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_8xytb")
-conversation = Array[ExtResource("2_aajga")]([ExtResource("3_re0k3"), ExtResource("4_8xytb"), ExtResource("5_aajga"), ExtResource("6_6svl8"), ExtResource("7_o61u0"), ExtResource("8_jg4mq"), ExtResource("9_ckslo")])
+conversation = Array[ExtResource("2_aajga")]([ExtResource("3_tirqv"), ExtResource("4_1uold"), ExtResource("5_pq82h"), ExtResource("6_uhfec"), ExtResource("7_fmacy"), ExtResource("8_kovq7"), ExtResource("9_d4v83"), ExtResource("10_y7qvp"), ExtResource("11_xj3sv"), ExtResource("12_nc1hw"), ExtResource("13_nd3ir"), ExtResource("14_hmots"), ExtResource("15_7uyrr"), ExtResource("16_kdx54")])
 next_level = ExtResource("8_6svl8")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1844786785]

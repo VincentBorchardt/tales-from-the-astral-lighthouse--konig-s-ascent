@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dl2fa17qxi0kc"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_quh3n"]
+[ext_resource type="Resource" uid="uid://bt5y562vtqk7h" path="res://Resources/Cutscenes/Speakers/boyhowdy.tres" id="2_yub75"]
+
+[resource]
+script = ExtResource("1_quh3n")
+speaker = ExtResource("2_yub75")
+message = "N-now what d’you say?"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
