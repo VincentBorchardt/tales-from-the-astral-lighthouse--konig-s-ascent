@@ -238,6 +238,9 @@ func _on_booth_warp_out_finished() -> void:
 			wave_timer.timeout.connect(play_wave_animation)
 			wave_timer.start(2)
 
+func on_dsd_ready():
+	start_cutscene(npc_convo_4)
+
 # TODO these both might want short timers (like a second)
 func _on_konig_arrived() -> void:
 	booth.warp_out()

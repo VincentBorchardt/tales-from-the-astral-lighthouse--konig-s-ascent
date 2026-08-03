@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://bjm5kf020yoyl"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_2spa8"]
+[ext_resource type="Resource" uid="uid://btlvqse2f1bav" path="res://Resources/Cutscenes/Speakers/zugtug.tres" id="2_2spa8"]
+
+[resource]
+script = ExtResource("1_2spa8")
+speaker = ExtResource("2_2spa8")
+message = "My boy Yazmody sent me a message on mIRC that youse might be in trouble, so I fired up the ol’ rocket engines and headed right here! You mooks wanna get out of here, or what?"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

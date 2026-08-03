@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://b8hvdfu32qwti"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_2we64"]
+[ext_resource type="Resource" uid="uid://ctnvmfv4xjgwd" path="res://Resources/Cutscenes/Speakers/zugtug_black.tres" id="2_2we64"]
+
+[resource]
+script = ExtResource("1_2we64")
+speaker = ExtResource("2_2we64")
+message = "Did you know? DID YOU KNOW? Yeeting puffins NEVER gets old!"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

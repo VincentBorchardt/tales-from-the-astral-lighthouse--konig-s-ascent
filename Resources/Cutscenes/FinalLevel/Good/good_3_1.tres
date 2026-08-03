@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cpa3a5og87q7g"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_nrcwr"]
+[ext_resource type="Resource" uid="uid://bt5y562vtqk7h" path="res://Resources/Cutscenes/Speakers/boyhowdy.tres" id="2_56cog"]
+
+[resource]
+script = ExtResource("1_nrcwr")
+speaker = ExtResource("2_56cog")
+message = "Oh … No. ThIs cAn't bE HaPpEnInG! Please, forgive me! Let me go! He’s right here. JUST TAKE HIM!"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

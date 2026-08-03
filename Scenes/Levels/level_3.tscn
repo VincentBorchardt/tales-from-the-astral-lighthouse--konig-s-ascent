@@ -16,15 +16,24 @@
 [ext_resource type="Resource" uid="uid://cqwuf25x24ic3" path="res://Resources/Cutscenes/Level3/booth_3_4.tres" id="11_gupo0"]
 [ext_resource type="Texture2D" uid="uid://148uswtju177" path="res://Assets/Art/UI/Waves/Wave_2.png" id="11_jgaqf"]
 [ext_resource type="Resource" uid="uid://24s08kp7l4se" path="res://Resources/Cutscenes/Level3/booth_3_5.tres" id="12_3l8qv"]
+[ext_resource type="Resource" uid="uid://bgi5xc65i4xmh" path="res://Resources/Cutscenes/Level3/level_3_dsd_1.tres" id="12_6qnit"]
 [ext_resource type="Texture2D" uid="uid://b3jq7bcld6i45" path="res://Assets/Art/UI/Waves/Wave_3.png" id="12_x66yp"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="13_8ve8p"]
+[ext_resource type="Resource" uid="uid://dgfno4h78pgd4" path="res://Resources/Cutscenes/Level3/level_3_dsd_2.tres" id="13_e4pux"]
 [ext_resource type="Resource" uid="uid://ckffvrjrfsw77" path="res://Resources/Cutscenes/Level3/booth_3_6.tres" id="13_teul3"]
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="14_1hf40"]
 [ext_resource type="Resource" uid="uid://bl85ut22ibw0" path="res://Resources/Cutscenes/Level3/booth_3_7.tres" id="14_6qnit"]
+[ext_resource type="Resource" uid="uid://nn7jg1dhb6va" path="res://Resources/Cutscenes/Level3/level_3_dsd_3.tres" id="14_isixn"]
+[ext_resource type="Resource" uid="uid://cwqy0e1ks3g38" path="res://Resources/Cutscenes/Level3/level_3_dsd_4.tres" id="15_d0d85"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_wnlxl"]
+[ext_resource type="Resource" uid="uid://4k426ue4lxd6" path="res://Resources/Cutscenes/Level3/level_3_dsd_5.tres" id="16_ykav4"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_jgaqf"]
+[ext_resource type="Resource" uid="uid://c0372f10ic6te" path="res://Resources/Cutscenes/Level3/level_3_dsd_6.tres" id="17_s0hn8"]
 [ext_resource type="Texture2D" uid="uid://qr4bqj8gci5" path="res://Assets/Art/UI/Waves/Floor_03.png" id="18_ocbj8"]
+[ext_resource type="Resource" uid="uid://dkmbhhjlagu3a" path="res://Resources/Cutscenes/Level3/level_3_dsd_7.tres" id="18_ulgip"]
+[ext_resource type="Resource" uid="uid://ubbamn41yu2x" path="res://Resources/Cutscenes/Level3/level_3_dsd_8.tres" id="19_phqt5"]
 [ext_resource type="PackedScene" uid="uid://dt2yp7sm2y31j" path="res://Scenes/Objects/dsd_door.tscn" id="19_r8neg"]
+[ext_resource type="Resource" uid="uid://cqos4cpfkx438" path="res://Resources/Cutscenes/Level3/level_3_dsd_9.tres" id="20_lxa11"]
 [ext_resource type="PackedScene" uid="uid://d0nxbk6lnpra6" path="res://Scenes/Waves/wave_3_3.tscn" id="25_8ve8p"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
@@ -695,6 +704,7 @@ waves = Array[PackedScene]([ExtResource("2_x66yp"), ExtResource("3_3m4x7"), ExtR
 next_level = ExtResource("5_13yca")
 music = ExtResource("6_8dmpc")
 booth_convo = Array[ExtResource("16_wnlxl")]([ExtResource("8_3m4x7"), ExtResource("9_q2kiq"), ExtResource("10_wvd0d"), ExtResource("11_gupo0"), ExtResource("12_3l8qv"), ExtResource("13_teul3"), ExtResource("14_6qnit")])
+npc_convo_4 = Array[ExtResource("16_wnlxl")]([ExtResource("12_6qnit"), ExtResource("13_e4pux"), ExtResource("14_isixn"), ExtResource("15_d0d85"), ExtResource("16_ykav4"), ExtResource("17_s0hn8"), ExtResource("18_ulgip"), ExtResource("19_phqt5"), ExtResource("20_lxa11")])
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]
 visible = false
@@ -717,16 +727,19 @@ FRICTION = 565
 
 [node name="Npcs" parent="." unique_id=1718176889 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(127, 94)
+movement_speed = null
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Npcs2" parent="." unique_id=786006039 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(162, 66)
+movement_speed = null
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
 [node name="Npcs3" parent="." unique_id=173178468 node_paths=PackedStringArray("movement_target") instance=ExtResource("9_341pv")]
 position = Vector2(51, 120)
+movement_speed = null
 movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("16_wnlxl")]([SubResource("Resource_2d332")])
 
