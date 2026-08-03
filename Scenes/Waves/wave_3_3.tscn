@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d0nxbk6lnpra6"]
+
+[ext_resource type="Script" uid="uid://cbmq83ybm4bc0" path="res://Scripts/Gameplay/wave.gd" id="1_j41pe"]
+[ext_resource type="PackedScene" uid="uid://b0llauehtytuj" path="res://Scenes/Objects/portal.tscn" id="2_mfpfd"]
+
+[node name="Wave3 3" type="Node2D" unique_id=31360262]
+script = ExtResource("1_j41pe")
+enemy_count = 14
+
+[node name="Portal" parent="." unique_id=110448379 instance=ExtResource("2_mfpfd")]
+position = Vector2(117, 140)
+
+[node name="Portal2" parent="." unique_id=321050632 instance=ExtResource("2_mfpfd")]
+position = Vector2(147, 123)
+
+[node name="Portal3" parent="." unique_id=1541044151 instance=ExtResource("2_mfpfd")]
+position = Vector2(176, 109)
+
+[node name="Portal4" parent="." unique_id=387109010 instance=ExtResource("2_mfpfd")]
+position = Vector2(208, 107)
+
+[node name="Portal5" parent="." unique_id=1803648288 instance=ExtResource("2_mfpfd")]
+position = Vector2(214, 128)
+
+[node name="Portal6" parent="." unique_id=1736455293 instance=ExtResource("2_mfpfd")]
+position = Vector2(192, 144)
+
+[node name="Portal7" parent="." unique_id=1883991169 instance=ExtResource("2_mfpfd")]
+position = Vector2(168, 161)
+
+[node name="Portal8" parent="." unique_id=101499044 instance=ExtResource("2_mfpfd")]
+position = Vector2(158, 186)
+
+[node name="Portal9" parent="." unique_id=1072726311 instance=ExtResource("2_mfpfd")]
+position = Vector2(181, 183)
+
+[node name="Portal10" parent="." unique_id=42564506 instance=ExtResource("2_mfpfd")]
+position = Vector2(262, 139)
+
+[node name="Portal11" parent="." unique_id=287239435 instance=ExtResource("2_mfpfd")]
+position = Vector2(171, 133)
+appear_delay = 10.0
+
+[node name="Portal12" parent="." unique_id=787968417 instance=ExtResource("2_mfpfd")]
+position = Vector2(205, 175)
+appear_delay = 10.0
+
+[node name="Portal13" parent="." unique_id=1536192110 instance=ExtResource("2_mfpfd")]
+position = Vector2(223, 164)
+appear_delay = 10.0
+
+[node name="Portal14" parent="." unique_id=875522489 instance=ExtResource("2_mfpfd")]
+position = Vector2(244, 152)
+appear_delay = 10.0
