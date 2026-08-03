@@ -104,15 +104,20 @@ func continue_scripted_sequence():
 				_:
 					print("followed a finished ending path")
 		4:
+			scripted_progression_count += 1
 			match chosen_ending:
 				EndingChoice.DSD:
-					get_tree().change_scene_to_file("res://Scenes/Cutscenes/dsd_ending.tscn")
-			scripted_progression_count += 1
-
+					dsd.start_laugh()
 			pass
 		5:
-			start_cutscene(good_part_4)
-			get_tree().change_scene_to_file("res://Scenes/Cutscenes/good_ending.tscn")
+			match chosen_ending:
+				EndingChoice.DSD:
+					wave_anim_player.play("fade_to_white")
+					await  wave_anim_player.animation_finished
+					get_tree().change_scene_to_file("res://Scenes/Cutscenes/dsd_ending.tscn")
+				EndingChoice.GOOD:
+					start_cutscene(good_part_4)
+					get_tree().change_scene_to_file("res://Scenes/Cutscenes/good_ending.tscn")
 
 func _on_cutscene_overlay_cutscene_ended() -> void:
 	print("ending cutscene")
@@ -141,8 +146,12 @@ func _on_dsd_movement_finished() -> void:
 
 
 func _on_dsd_materialized() -> void:
-	start_cutscene(dsd_part_3)
+	start_cutscene(dsd_part_2)
 
 func on_dsd_ready():
 	# dummies out a signal being connected elsewhere, might not be needed
 	pass
+
+
+func _on_dsd_laughing_finished() -> void:
+		start_cutscene(dsd_part_3)

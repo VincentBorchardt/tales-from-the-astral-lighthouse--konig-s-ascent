@@ -5,6 +5,7 @@
 
 [node name="Wave3 1" type="Node2D" unique_id=1497052010]
 script = ExtResource("1_sef2b")
+enemy_count = 9
 
 [node name="Portal" parent="." unique_id=110448379 instance=ExtResource("2_w6o2k")]
 position = Vector2(160, 129)
@@ -20,6 +21,14 @@ appear_delay = 3.0
 
 [node name="Portal4" parent="." unique_id=444103529 instance=ExtResource("2_w6o2k")]
 position = Vector2(195, 101)
+
+[node name="Portal9" parent="." unique_id=698683806 instance=ExtResource("2_w6o2k")]
+position = Vector2(183, 161)
+appear_delay = 7.0
+
+[node name="Portal10" parent="." unique_id=1206292257 instance=ExtResource("2_w6o2k")]
+position = Vector2(225, 162)
+appear_delay = 7.0
 
 [node name="Portal6" parent="." unique_id=1172633344 instance=ExtResource("2_w6o2k")]
 position = Vector2(266, 134)

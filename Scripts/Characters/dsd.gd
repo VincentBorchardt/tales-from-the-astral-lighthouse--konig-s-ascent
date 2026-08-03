@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal movement_finished
+signal laughing_finished
 signal materialized
 
 
@@ -108,7 +109,7 @@ func start_laugh():
 
 	if moving:
 		animations.play(get_float_animation())
-
+	laughing_finished.emit()
 
 func get_float_animation() -> String:
 	if last_direction.x > 0:
