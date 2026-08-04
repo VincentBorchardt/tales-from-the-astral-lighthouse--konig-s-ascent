@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://dvjs4i14x7tqf" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN16.png" id="40_l5qq1"]
 [ext_resource type="AudioStream" uid="uid://qh5vbdb4d6xf" path="res://Assets/Audio/Music/IntroTheme_wip2.mp3" id="41_1db4j"]
 [ext_resource type="PackedScene" uid="uid://bq2rtmcb8el5w" path="res://Scenes/Intro/title_screen.tscn" id="42_8df33"]
+[ext_resource type="Texture2D" uid="uid://d00ymtcq36111" path="res://Assets/Art/Intro/Controller_Screen.png" id="43_16jwr"]
 
 [sub_resource type="Animation" id="Animation_y1jjb"]
 length = 0.001
@@ -171,7 +172,6 @@ texture = ExtResource("1_h6nyr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Logo" unique_id=1584249857]
 libraries/ = SubResource("AnimationLibrary_qfkpq")
-autoplay = &"logo_image"
 
 [node name="CutsceneOverlay" parent="." unique_id=1536554858 instance=ExtResource("11_gn0j7")]
 visible = false
@@ -189,5 +189,9 @@ stream = ExtResource("41_1db4j")
 
 [node name="TitleScreen" parent="." unique_id=613649742 instance=ExtResource("42_8df33")]
 visible = false
+
+[node name="ControllerMessage" type="Sprite2D" parent="." unique_id=1903228]
+position = Vector2(160, 120)
+texture = ExtResource("43_16jwr")
 
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
