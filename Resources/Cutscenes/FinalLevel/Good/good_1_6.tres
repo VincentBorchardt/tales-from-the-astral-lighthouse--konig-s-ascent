@@ -7,4 +7,5 @@
 script = ExtResource("1_ihowo")
 speaker = ExtResource("2_ihowo")
 message = "yOu STILL nEeD SoMe cOnViNcInG, eY? Well how about my …"
+image_location = 1
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

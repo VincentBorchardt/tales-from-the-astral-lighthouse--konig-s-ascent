@@ -7,5 +7,4 @@
 script = ExtResource("1_at8eb")
 speaker = ExtResource("2_qoy2k")
 message = "You should be one with [color=8146c9]The Astral Lighthouse[/color], König. Can’t you feel its magnificence calling out to you?"
-image_location = 1
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

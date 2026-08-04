@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://crjl7kfn8tcb0"]
+
+[ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="1_hnoj2"]
+[ext_resource type="Script" uid="uid://dbsacjk8ge53f" path="res://Scripts/Cutscenes/options_screen.gd" id="1_r08wq"]
+[ext_resource type="Texture2D" uid="uid://c2wexfvukpebf" path="res://Assets/Art/UI/MenuPointer.png" id="2_r08wq"]
+
+[node name="OptionsScreen" type="Control" unique_id=1415004417]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r08wq")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=793677025]
+position = Vector2(160, 120)
+texture = ExtResource("1_hnoj2")
+
+[node name="TextPointer" type="Sprite2D" parent="." unique_id=1220580921]
+position = Vector2(40, 40)
+texture = ExtResource("2_r08wq")
+
+[node name="TextOption" type="Button" parent="." unique_id=1857102666]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 26.0
+offset_right = 113.0
+offset_bottom = 51.0
+focus_neighbor_bottom = NodePath("../DebugOption")
+text = "Text Speed"
+flat = true
+
+[node name="DebugPointer" type="Sprite2D" parent="." unique_id=1930309463]
+position = Vector2(40, 60)
+texture = ExtResource("2_r08wq")
+
+[node name="DebugOption" type="CheckButton" parent="." unique_id=1675382168]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 223.0
+offset_bottom = 71.0
+text = "Debug Options (Spoilers!)"
+
+[node name="DebugGroup" type="Control" parent="." unique_id=793277407]
+visible = false
+anchors_preset = 0
+offset_left = 35.0
+offset_top = 70.0
+offset_right = 289.0
+offset_bottom = 219.0
+
+[node name="TutorialPointer" type="Sprite2D" parent="DebugGroup" unique_id=1735551595]
+position = Vector2(5, 10)
+texture = ExtResource("2_r08wq")
+
+[node name="TutorialOption" type="Button" parent="DebugGroup" unique_id=1463782784]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -4.0
+offset_right = 60.0
+offset_bottom = 21.0
+text = "Tutorial"
+
+[node name="Level1Pointer" type="Sprite2D" parent="DebugGroup" unique_id=1813791863]
+position = Vector2(5, 30)
+texture = ExtResource("2_r08wq")
+
+[node name="Level1Option" type="Button" parent="DebugGroup" unique_id=666186713]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 41.0
+text = "Level 1"
+
+[node name="Level2Pointer" type="Sprite2D" parent="DebugGroup" unique_id=2044471646]
+position = Vector2(5, 50)
+texture = ExtResource("2_r08wq")
+
+[node name="Level2Option" type="Button" parent="DebugGroup" unique_id=1164541536]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 36.0
+offset_right = 57.0
+offset_bottom = 61.0
+text = "Level 2"
+
+[node name="Level3Pointer" type="Sprite2D" parent="DebugGroup" unique_id=1377610132]
+position = Vector2(5, 70)
+texture = ExtResource("2_r08wq")
+
+[node name="Level3Option" type="Button" parent="DebugGroup" unique_id=233817573]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 56.0
+offset_right = 57.0
+offset_bottom = 81.0
+text = "Level 3"
+
+[node name="Level4Pointer" type="Sprite2D" parent="DebugGroup" unique_id=1095214348]
+position = Vector2(5, 90)
+texture = ExtResource("2_r08wq")
+
+[node name="Level4Option" type="Button" parent="DebugGroup" unique_id=1755944657]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 76.0
+offset_right = 57.0
+offset_bottom = 101.0
+text = "Level 4"
+
+[node name="Level5Pointer" type="Sprite2D" parent="DebugGroup" unique_id=1791112891]
+position = Vector2(5, 110)
+texture = ExtResource("2_r08wq")
+
+[node name="Level5Option" type="Button" parent="DebugGroup" unique_id=1481637410]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 96.0
+offset_right = 57.0
+offset_bottom = 121.0
+text = "Level 5"
+
+[node name="SavedNPCsLabel" type="Label" parent="DebugGroup" unique_id=2047509820]
+layout_mode = 0
+offset_left = 140.0
+offset_right = 205.0
+offset_bottom = 17.0
+text = "Saved NPCs:"
+
+[node name="TrikCheck" type="CheckBox" parent="DebugGroup" unique_id=1029600469]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 16.0
+offset_right = 162.0
+offset_bottom = 41.0
+text = "Trik"
+
+[node name="MaskCheck" type="CheckBox" parent="DebugGroup" unique_id=28049829]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 36.0
+offset_right = 212.0
+offset_bottom = 61.0
+text = "Primeval Mask"
+
+[node name="PitCheck" type="CheckBox" parent="DebugGroup" unique_id=311968202]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 56.0
+offset_right = 215.0
+offset_bottom = 81.0
+text = "The Pitmaster"
+
+[node name="DSDCheck" type="CheckBox" parent="DebugGroup" unique_id=157645901]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 76.0
+offset_right = 215.0
+offset_bottom = 101.0
+text = "DSD"
+
+[node name="NPCCount" type="LineEdit" parent="DebugGroup" unique_id=742440401]
+custom_maximum_size = Vector2(24, -1)
+layout_mode = 0
+offset_left = 111.0
+offset_top = 96.0
+offset_right = 135.0
+offset_bottom = 123.0
+text = "10"
+placeholder_text = "0"
+max_length = 2
+
+[node name="NPCCountLabel" type="Label" parent="DebugGroup" unique_id=1084166251]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 100.0
+offset_right = 177.0
+offset_bottom = 117.0
+text = "Total"
+
+[node name="CloseButton" type="Button" parent="." unique_id=496258165]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 206.0
+offset_right = 167.0
+offset_bottom = 231.0
+text = "Close"
+
+[connection signal="pressed" from="DebugOption" to="." method="_on_debug_option_pressed"]
+[connection signal="pressed" from="DebugGroup/TutorialOption" to="." method="_on_tutorial_option_pressed"]
+[connection signal="pressed" from="DebugGroup/Level1Option" to="." method="_on_level_1_option_pressed"]
+[connection signal="pressed" from="DebugGroup/Level2Option" to="." method="_on_level_2_option_pressed"]
+[connection signal="pressed" from="DebugGroup/Level3Option" to="." method="_on_level_3_option_pressed"]
+[connection signal="pressed" from="DebugGroup/Level4Option" to="." method="_on_level_4_option_pressed"]
+[connection signal="pressed" from="DebugGroup/Level5Option" to="." method="_on_level_5_option_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

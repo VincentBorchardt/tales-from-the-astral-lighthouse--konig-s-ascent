@@ -7,5 +7,6 @@
 script = ExtResource("1_4yj4r")
 speaker = ExtResource("2_fgk5c")
 message = "D-did you know? DID YOU KNOW? if you'd spare me I would forever be in your favor ..."
+image_location = 1
 animation_time = 1.5
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

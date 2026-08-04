@@ -7,4 +7,5 @@
 script = ExtResource("1_p0hat")
 speaker = ExtResource("2_35u5r")
 message = "You’ll have to get through me first!"
+image_location = 1
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

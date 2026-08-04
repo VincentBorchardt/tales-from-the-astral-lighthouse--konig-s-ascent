@@ -7,5 +7,6 @@
 script = ExtResource("1_q5fmu")
 speaker = ExtResource("2_pwctk")
 message = "[color=e24d63]BOYHOWDY H-E-DOUBLE-HOCKEY-STICKS ATTACK !![/color]"
+image_location = 1
 animation_time = 1.0
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

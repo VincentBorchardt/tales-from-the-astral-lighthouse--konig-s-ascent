@@ -7,4 +7,5 @@
 script = ExtResource("1_nrcwr")
 speaker = ExtResource("2_56cog")
 message = "Oh … No. ThIs cAn't bE HaPpEnInG! Please, forgive me! Let me go! He’s right here. JUST TAKE HIM!"
+image_location = 1
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
