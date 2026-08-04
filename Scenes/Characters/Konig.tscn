@@ -55,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://ykn8g131p03b" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW08.png" id="55_fekeg"]
 [ext_resource type="Texture2D" uid="uid://qe3nqwgd58td" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW09.png" id="56_m3ryu"]
 [ext_resource type="Texture2D" uid="uid://bic1n2prbaeol" path="res://Assets/Art/Characters/Gameplay/Konig/Leave/Konig_Demat_SW/Konig_DeMat_SW10.png" id="57_l1nqm"]
+[ext_resource type="AudioStream" uid="uid://im077315bhw3" path="res://Assets/Audio/SFX/DSD_Laugh_wip1.mp3" id="58_16tm7"]
 [ext_resource type="Texture2D" uid="uid://dxq6qvjppayal" path="res://Assets/Art/Characters/Gameplay/Konig/Shadow.png" id="63_cugtb"]
 [ext_resource type="AudioStream" uid="uid://de1sa64aaferj" path="res://Assets/Audio/SFX/PunchCollide_wip1.mp3" id="64_bwrv0"]
 
@@ -879,6 +880,9 @@ flip_h = true
 [node name="Punch" type="AudioStreamPlayer2D" parent="." unique_id=1529802421]
 stream = ExtResource("64_bwrv0")
 volume_db = -9.301
+
+[node name="Laugh" type="AudioStreamPlayer2D" parent="." unique_id=1615633064]
+stream = ExtResource("58_16tm7")
 
 [connection signal="animation_finished" from="Animations" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="take_hit"]

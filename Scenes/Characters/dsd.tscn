@@ -536,8 +536,9 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="Dsd" type="CharacterBody2D" unique_id=786290646 node_paths=PackedStringArray("navigation_agent")]
+[node name="Dsd" type="CharacterBody2D" unique_id=786290646 node_paths=PackedStringArray("navigation_agent") groups=["npcs"]]
 script = ExtResource("1_861q2")
+movement_speed = 60.0
 navigation_agent = NodePath("NavigationAgent2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1283062960]

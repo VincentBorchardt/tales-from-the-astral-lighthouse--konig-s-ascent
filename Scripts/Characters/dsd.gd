@@ -90,6 +90,10 @@ func move_state():
 
 		animations.play(get_float_animation())
 		movement_finished.emit()
+		if GameplayManager.is_final_level == false:
+			animations.play("demat_nw")
+			await animations.animation_finished
+			queue_free()
 		return
 
 	var next_path = navigation_agent.get_next_path_position()
@@ -112,8 +116,9 @@ func start_laugh():
 
 	state = State.FLOAT
 
-	if moving:
+	if moving or !GameplayManager.is_final_level:
 		animations.play(get_float_animation())
+		 
 	laughing_finished.emit()
 
 func get_float_animation() -> String:

@@ -1697,7 +1697,6 @@ libraries/ = SubResource("AnimationLibrary_4nfgy")
 
 [node name="Dsd" parent="." unique_id=786290646 node_paths=PackedStringArray("movement_targets") instance=ExtResource("47_4nfgy")]
 position = Vector2(259, 48)
-movement_speed = 60.0
 movement_targets = [NodePath("../EyeBallMarker")]
 
 [node name="EyeBallMarker" type="Marker2D" parent="." unique_id=694477931]

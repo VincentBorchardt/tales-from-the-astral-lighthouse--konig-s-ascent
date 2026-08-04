@@ -43,6 +43,7 @@ var chosen_ending: EndingChoice
 
 func _ready():
 	super._ready()
+	GameplayManager.set_final_level()
 	plinth.play("plinth_move")
 	dsd.make_invisible()
 

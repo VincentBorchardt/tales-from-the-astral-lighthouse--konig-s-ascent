@@ -3,6 +3,7 @@ extends Control
 @export var conversation: Array[Message]
 @export var faded_background: Texture2D
 @export var next_level: PackedScene
+@export var music : AudioStream
 
 @onready var background = $Background
 @onready var cutscene_overlay = $CutsceneOverlay
@@ -15,6 +16,7 @@ var blank_message: Array[Message] = [preload("res://Resources/Cutscenes/Endings/
 var dim_completed = false
 
 func _ready() -> void:
+	MusicManager.play_music_from_start( music )
 	call_deferred("start_conversation")
 	#call_deferred("start_blank")
 
