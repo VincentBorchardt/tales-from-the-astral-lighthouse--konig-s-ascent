@@ -10,12 +10,15 @@ extends Node2D
 @onready var title_screen = $TitleScreen
 
 func start_intro():
+	StoryAutoload.total_saved_npcs = 0
+	StoryAutoload.saved_cameos = []
 	$CutsceneOverlay.start_cutscene(messages, false)
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_pressed("advance_text"):
-		controller_message.visible = false
-		logo_animation.play("logo_image")
+	if controller_message.visible:
+		if Input.is_action_pressed("advance_text"):
+			controller_message.visible = false
+			logo_animation.play("logo_image")
 
 func _on_cutscene_overlay_cutscene_ended() -> void:
 	titles.show()

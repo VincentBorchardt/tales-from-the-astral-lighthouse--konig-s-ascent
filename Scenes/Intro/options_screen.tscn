@@ -40,7 +40,6 @@ offset_bottom = 71.0
 text = "Debug Options (Spoilers!)"
 
 [node name="DebugGroup" type="Control" parent="." unique_id=793277407]
-visible = false
 anchors_preset = 0
 offset_left = 35.0
 offset_top = 70.0
@@ -158,16 +157,17 @@ offset_right = 215.0
 offset_bottom = 101.0
 text = "DSD"
 
-[node name="NPCCount" type="LineEdit" parent="DebugGroup" unique_id=742440401]
-custom_maximum_size = Vector2(24, -1)
+[node name="NPCCount" type="SpinBox" parent="DebugGroup" unique_id=509052322]
+custom_maximum_size = Vector2(35, -1)
 layout_mode = 0
-offset_left = 111.0
+offset_left = 98.0
 offset_top = 96.0
-offset_right = 135.0
+offset_right = 138.0
 offset_bottom = 123.0
-text = "10"
-placeholder_text = "0"
-max_length = 2
+max_value = 80.0
+rounded = true
+custom_arrow_step = 1.0
+custom_arrow_round = true
 
 [node name="NPCCountLabel" type="Label" parent="DebugGroup" unique_id=1084166251]
 layout_mode = 0

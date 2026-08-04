@@ -7,4 +7,5 @@
 script = ExtResource("1_q81ok")
 speaker = ExtResource("2_e1ckm")
 message = "The decadent allure … the raw power … of [color=e5d363]translucent gold[/color] … "
+image_location = 1
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

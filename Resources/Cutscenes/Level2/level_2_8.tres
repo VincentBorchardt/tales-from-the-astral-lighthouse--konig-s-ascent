@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_iadry")
 speaker = ExtResource("2_hecnm")
-message = "[color=e5d363]Big George[/color] blew my robot up. Honestly, I’m still sore about it. "
+message = "[color=beab87]Big George[/color] blew my robot up. Honestly, I’m still sore about it. "
 image_location = 1
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

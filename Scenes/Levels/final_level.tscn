@@ -60,6 +60,7 @@
 [ext_resource type="Resource" uid="uid://df70nt682fb6l" path="res://Resources/Cutscenes/FinalLevel/Good/good_4_2.tres" id="29_jh2cb"]
 [ext_resource type="Resource" uid="uid://b8hvdfu32qwti" path="res://Resources/Cutscenes/FinalLevel/Good/good_5_1.tres" id="30_xbvml"]
 [ext_resource type="Resource" uid="uid://bjm5kf020yoyl" path="res://Resources/Cutscenes/FinalLevel/Good/good_5_2.tres" id="31_qa7ma"]
+[ext_resource type="Resource" uid="uid://deirgd2cmctd6" path="res://Resources/Cutscenes/FinalLevel/Good/good_5_3.tres" id="32_7k5ks"]
 [ext_resource type="AudioStream" uid="uid://65cbghcdt380" path="res://Assets/Audio/Music/Confrontation_wip1.mp3" id="34_k6ra2"]
 [ext_resource type="Texture2D" uid="uid://dfhshcxqijmwc" path="res://Assets/Art/Characters/Gameplay/FinalLevel/Big Eye DSD.png" id="36_pdb50"]
 [ext_resource type="PackedScene" uid="uid://bsj5pg7rv8mf5" path="res://Scenes/Characters/dsd.tscn" id="47_4nfgy"]
@@ -1592,7 +1593,7 @@ good_part_1 = Array[ExtResource("10_nfkfb")]([ExtResource("18_cpwnc"), ExtResour
 good_part_2 = Array[ExtResource("10_nfkfb")]([ExtResource("25_jh2cb"), ExtResource("26_xbvml")])
 good_part_3 = Array[ExtResource("10_nfkfb")]([ExtResource("27_ugqcc")])
 good_part_4 = Array[ExtResource("10_nfkfb")]([ExtResource("28_pnbaj"), ExtResource("29_jh2cb")])
-good_part_5 = Array[ExtResource("10_nfkfb")]([ExtResource("30_xbvml"), ExtResource("31_qa7ma")])
+good_part_5 = Array[ExtResource("10_nfkfb")]([ExtResource("30_xbvml"), ExtResource("31_qa7ma"), ExtResource("32_7k5ks")])
 bad = Array[ExtResource("10_nfkfb")]([ExtResource("18_588bs"), ExtResource("19_4nfgy"), ExtResource("20_pdb50"), ExtResource("21_6jpp8"), ExtResource("22_k6ra2"), ExtResource("23_o136g"), ExtResource("24_frrs4")])
 dsd_part_1 = Array[ExtResource("10_nfkfb")]([ExtResource("18_uxye4"), ExtResource("19_sv3bi")])
 dsd_part_2 = Array[ExtResource("10_nfkfb")]([ExtResource("20_m5350"), ExtResource("21_4yvak"), ExtResource("22_ngafy"), ExtResource("23_erblo"), ExtResource("24_ftups"), ExtResource("25_588bs")])

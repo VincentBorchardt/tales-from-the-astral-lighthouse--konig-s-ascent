@@ -7,4 +7,5 @@
 script = ExtResource("1_qg4nx")
 speaker = ExtResource("2_ytkkg")
 message = "Did you know? DID YOU KNOW? You were always headed here to replace me!"
+image_location = 1
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

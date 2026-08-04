@@ -7,6 +7,5 @@
 script = ExtResource("1_v0b3s")
 speaker = ExtResource("2_s7wg6")
 message = "._.;;"
-image_location = 1
 animation_time = 0.0
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
