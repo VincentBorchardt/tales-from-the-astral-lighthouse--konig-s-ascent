@@ -734,7 +734,7 @@ tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_bwgk3")
 
 [node name="Konig" parent="." unique_id=2108258614 instance=ExtResource("7_31phq")]
-position = Vector2(160, 133)
+position = Vector2(160, 128)
 ACCELERATION = 682
 FRICTION = 565
 
@@ -744,7 +744,6 @@ movement_target = NodePath("../BoothSpawn")
 conversation = Array[ExtResource("10_k2mw1")]([SubResource("Resource_2d332")])
 
 [node name="Booth" parent="." unique_id=1170855833 instance=ExtResource("5_3628d")]
-visible = false
 position = Vector2(159, 91)
 
 [node name="BoothSpawn" type="Marker2D" parent="." unique_id=1017123306]
@@ -793,6 +792,7 @@ messages = Array[ExtResource("10_k2mw1")]([SubResource("Resource_tjl6l")])
 [node name="ComboTimer" type="Timer" parent="." unique_id=1559184445]
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=30594026]
+visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 1
 position = Vector2(163, 120)

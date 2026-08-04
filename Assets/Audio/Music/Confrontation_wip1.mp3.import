@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Confrontation_wip1.mp3-572e0d39a3d25907459308
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

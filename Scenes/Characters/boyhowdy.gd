@@ -72,17 +72,18 @@ func start_shooting():
 	timer.start()
 	
 func beg():
-	enemy_anim.play("boyhowdy_idle")
+	enemy_anim.play("boyhowdy_wings")
 	state = State.CONVO
 	interaction_range.monitoring = true
 	timer.stop()
 
-func take_hit(direction):
-	velocity = direction * knockback_speed
-	enemy_anim.play(get_knockback_animation())
-	interaction_range.monitoring = false
+func take_hit():
 	interaction_animation.visible = false
-	state = State.KNOCKBACK
+	explode.play()
+	enemy_anim.play("boyhowdy_knockback")
+	await enemy_anim.animation_finished
+	boyhowdy_died.emit()
+	queue_free()
 
 func set_entered_range():
 	entered_range_once = true

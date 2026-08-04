@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bq0x0gomy56h5"]
 
 [ext_resource type="Script" uid="uid://dc8f20l0pkuc6" path="res://Scripts/Gameplay/gameplay.gd" id="1_md4x4"]
+[ext_resource type="PackedScene" uid="uid://dd7iylkr6ytrg" path="res://Scenes/Waves/wave_3_1.tscn" id="2_d0d85"]
+[ext_resource type="PackedScene" uid="uid://b4gd4bn380w8y" path="res://Scenes/Waves/wave_3_2.tscn" id="3_ykav4"]
+[ext_resource type="PackedScene" uid="uid://d0nxbk6lnpra6" path="res://Scenes/Waves/wave_3_3.tscn" id="4_s0hn8"]
 [ext_resource type="PackedScene" uid="uid://d1a2op8s4io37" path="res://Scenes/Levels/level_4.tscn" id="5_13yca"]
 [ext_resource type="AudioStream" uid="uid://jiue6il30deb" path="res://Assets/Audio/Music/MainThemeLevel3_wip1.mp3" id="6_8dmpc"]
 [ext_resource type="PackedScene" uid="uid://ckv4ykifoeidp" path="res://Scenes/Objects/booth.tscn" id="6_ocbj8"]
@@ -697,6 +700,7 @@ _data = {
 [node name="Level3" type="Node2D" unique_id=1763996064]
 y_sort_enabled = true
 script = ExtResource("1_md4x4")
+waves = Array[PackedScene]([ExtResource("2_d0d85"), ExtResource("3_ykav4"), ExtResource("4_s0hn8")])
 next_level = ExtResource("5_13yca")
 music = ExtResource("6_8dmpc")
 booth_convo = Array[ExtResource("16_wnlxl")]([ExtResource("8_3m4x7"), ExtResource("9_q2kiq"), ExtResource("10_wvd0d"), ExtResource("11_gupo0"), ExtResource("12_3l8qv"), ExtResource("13_teul3"), ExtResource("14_6qnit")])
