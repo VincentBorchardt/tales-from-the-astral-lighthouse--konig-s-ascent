@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dhmhomq34h05o" path="res://Assets/Art/Characters/Gameplay/Dsd/Dsd Laugh.png" id="6_rj45a"]
 [ext_resource type="Texture2D" uid="uid://dxq6qvjppayal" path="res://Assets/Art/Characters/Gameplay/Konig/Shadow.png" id="7_828av"]
 [ext_resource type="Texture2D" uid="uid://dfa13fwu77yor" path="res://Assets/Art/Characters/Gameplay/Dsd/Dsd Mat.png" id="7_cddhq"]
+[ext_resource type="AudioStream" uid="uid://im077315bhw3" path="res://Assets/Audio/SFX/DSD_Laugh_wip1.mp3" id="11_828av"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dkcoq"]
 atlas = ExtResource("2_rj45a")
@@ -553,3 +554,6 @@ modulate = Color(0.45490196, 0.45490196, 0.45490196, 0.4862745)
 z_index = -1
 position = Vector2(0, 15)
 texture = ExtResource("7_828av")
+
+[node name="Laugh" type="AudioStreamPlayer2D" parent="." unique_id=974513210]
+stream = ExtResource("11_828av")

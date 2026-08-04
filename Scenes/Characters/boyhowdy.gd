@@ -19,7 +19,6 @@ var dead = false
 @onready var muzzle = $Marker2D
 @onready var hurtbox = $Hurtbox/CollisionShape2D
 @onready var enemy_anim = $AnimatedSprite2D
-@onready var shadow = $Shadow
 @onready var explode = $Explode
 @onready var interaction_animation = $InteractAnimation
 @onready var interaction_range = $InteractionRange
@@ -27,6 +26,7 @@ var dead = false
 var player
 var player_in_range = false
 func _ready():
+	enemy_anim.play("boyhowdy_idle")
 	player = get_tree().get_first_node_in_group("player")
 
 func _input(event: InputEvent) -> void:
@@ -38,7 +38,7 @@ func _physics_process(delta):
 	match state:
 		State.SHOOT:
 			var direction = (player.global_position - global_position).normalized()
-			enemy_anim.play(get_idle_animation(direction))
+			enemy_anim.play(get_wing_animation())
 		State.KNOCKBACK:
 			hurtbox.disabled = true
 			var collision = move_and_collide(velocity)
@@ -53,7 +53,6 @@ func die():
 		return
 	dead = true
 	velocity = Vector2.ZERO
-	shadow.visible = false
 	play_explode_sound()
 	enemy_anim.play("boyhowdy_death")
 	await enemy_anim.animation_finished
@@ -68,29 +67,32 @@ func play_explode_sound():
 	explode.play()
 
 func start_shooting():
+	
 	state = State.SHOOT
 	timer.start()
 	
 func beg():
+	enemy_anim.play("boyhowdy_wings")
 	state = State.CONVO
 	interaction_range.monitoring = true
 	timer.stop()
 
-func take_hit(direction):
-	velocity = direction * knockback_speed
-	enemy_anim.play(get_knockback_animation(direction))
-	interaction_range.monitoring = false
+func take_hit():
 	interaction_animation.visible = false
-	state = State.KNOCKBACK
+	explode.play()
+	enemy_anim.play("boyhowdy_knockback")
+	await enemy_anim.animation_finished
+	boyhowdy_died.emit()
+	queue_free()
 
 func set_entered_range():
 	entered_range_once = true
 
-func get_knockback_animation(direction):
+func get_knockback_animation():
 	return "boyhowdy_knockback"
 
-func get_idle_animation(direction):
-	return "boyhowdy_idle"
+func get_wing_animation():
+	return "boyhowdy_wings"
 
 func shoot():
 	var bullet = bullet_scene.instantiate()

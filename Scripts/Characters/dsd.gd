@@ -15,6 +15,7 @@ enum State {
 @export var movement_targets: Array[Node2D]
 @export var navigation_agent: NavigationAgent2D
 
+@onready var laugh_sound = $Laugh
 @onready var animations = $AnimatedSprite2D
 
 var state = State.FLOAT
@@ -105,7 +106,7 @@ func move_state():
 func start_laugh():
 	state = State.LAUGH
 	velocity = Vector2.ZERO
-
+	laugh_sound.play()
 	animations.play("laugh")
 	await animations.animation_finished
 
