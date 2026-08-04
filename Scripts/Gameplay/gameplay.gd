@@ -110,6 +110,7 @@ func continue_scripted_sequence():
 				scripted_progression_count += 1
 				booth.visible = true
 				booth.warp_in()
+				is_tutorial = false
 			7:
 				end_level()
 	elif is_final:
@@ -202,7 +203,7 @@ func start_level_transition():
 	konig.warp_out()
 
 func _on_booth_player_entered() -> void:
-	if in_calm_state:
+	if in_calm_state and !is_tutorial:
 		changing_level = true
 		start_cutscene(booth_convo)
 

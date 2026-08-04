@@ -11,7 +11,6 @@ signal warp_out_finished
 @onready var exit_sfx = $Exit
 @onready var enter_sfx = $Enter
 
-var end_of_level = false
 
 func _ready() -> void:
 	visible = true

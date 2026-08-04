@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c2y42pymii2gj" path="res://Scenes/Cutscenes/credits.tscn" id="10_ikjkf"]
 [ext_resource type="Texture2D" uid="uid://p62smktkcxq4" path="res://Assets/Art/Endings/TFTAL_DSDEnding_pixel.png" id="11_ikjkf"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_2t8mc"]
+[ext_resource type="AudioStream" uid="uid://drjvrjfurto14" path="res://Assets/Audio/Music/DSDEnding_FINAL.mp3" id="13_j244p"]
 
 [node name="DSDEnding" type="Control" unique_id=1827662693]
 layout_mode = 3
@@ -20,6 +21,7 @@ script = ExtResource("1_nvyvj")
 conversation = Array[ExtResource("2_k3sye")]([ExtResource("3_88tht"), ExtResource("3_ppym2"), ExtResource("4_msers"), ExtResource("4_c7niw"), ExtResource("6_88tht"), ExtResource("5_msers")])
 faded_background = ExtResource("9_ikjkf")
 next_level = ExtResource("10_ikjkf")
+music = ExtResource("13_j244p")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1844786785]
 position = Vector2(160, 120)

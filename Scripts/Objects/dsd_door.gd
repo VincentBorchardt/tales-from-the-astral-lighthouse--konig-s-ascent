@@ -7,6 +7,7 @@ extends Node2D
 @onready var door_hit = $DoorHit
 @onready var hit_timer = $HitTimer
 @export var packedShippieDue : PackedScene
+@export var movement_targets: Array[Node2D]
 
 var health := 3:
 	set(value):
@@ -29,6 +30,9 @@ func open_door():
 	var shippie = packedShippieDue.instantiate()
 	get_tree().current_scene.add_child(shippie)
 	shippie.global_position = dsd_spawn.global_position
+	shippie.movement_targets = movement_targets
+	
+	await shippie.start_laugh()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	hit_sound.play()
