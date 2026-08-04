@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://deirgd2cmctd6"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_cwdv5"]
+[ext_resource type="Resource" uid="uid://btlvqse2f1bav" path="res://Resources/Cutscenes/Speakers/zugtug.tres" id="2_4v0yr"]
+
+[resource]
+script = ExtResource("1_cwdv5")
+speaker = ExtResource("2_4v0yr")
+message = "You mooks wanna get out of here, or what?"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_688jp")
 speaker = ExtResource("2_e5kn6")
-message = "Zugtug and König went on many more adventures across the universe as they took the [color=e24d63]Lost Souls[/color] home, taking every opportunity to pick up ‘choice garbo’ on the way. "
+message = "Zugtug and König went on many more adventures across the universe as they took the [color=e24d63]Lost Souls[/color] home,"
 has_box = false
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

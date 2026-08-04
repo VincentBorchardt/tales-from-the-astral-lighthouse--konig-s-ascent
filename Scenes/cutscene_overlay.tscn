@@ -4,10 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://cgm4aj5ed61gt" path="res://Assets/Art/Characters/Portraits/Alexandria_pixel_portrait_left.png" id="2_0o6c1"]
 [ext_resource type="Texture2D" uid="uid://crsqdgq7o2n1i" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0001.png" id="2_lit3v"]
 [ext_resource type="Texture2D" uid="uid://c1lao7k408vm7" path="res://Assets/Art/Characters/Portraits/Marygold_pixel_portrait.png" id="3_0o6c1"]
-[ext_resource type="Texture2D" uid="uid://ctkq5mwwd0y1a" path="res://Assets/Art/UI/Cutscenes/Textbox2/Text_advance_button.png" id="3_flhaj"]
-[ext_resource type="Texture2D" uid="uid://duakcfptglds8" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0002.png" id="3_i5ixn"]
-[ext_resource type="Texture2D" uid="uid://44mq820c5yq7" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0003.png" id="4_0o6c1"]
-[ext_resource type="Texture2D" uid="uid://ccm2n48gv4auc" path="res://Assets/Art/UI/Cutscenes/Textbox2/TFTAL_Textbox0004.png" id="5_sgna5"]
+[ext_resource type="Texture2D" uid="uid://ds6aupl7rvtnb" path="res://Assets/Art/UI/Cutscenes/TextBox_New/TFTAL_Textbox0001.png" id="5_lsy2e"]
+[ext_resource type="Texture2D" uid="uid://5fdv827wgh22" path="res://Assets/Art/UI/Cutscenes/TextBox_New/TFTAL_Textbox0002.png" id="6_m6ogy"]
+[ext_resource type="Texture2D" uid="uid://bcygd7c0a4pu8" path="res://Assets/Art/UI/Cutscenes/TextBox_New/TFTAL_Textbox0003.png" id="7_af33g"]
+[ext_resource type="Texture2D" uid="uid://6bunbviduhkl" path="res://Assets/Art/UI/Cutscenes/TextBox_New/TFTAL_Textbox0004.png" id="8_k6wl1"]
+[ext_resource type="Texture2D" uid="uid://dktqe1selh4x1" path="res://Assets/Art/UI/UI_Interact_Buttons.png" id="12_lsy2e"]
 
 [sub_resource type="Animation" id="Animation_qjxta"]
 length = 0.001
@@ -37,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("2_lit3v"), ExtResource("3_i5ixn"), ExtResource("4_0o6c1"), ExtResource("5_sgna5")]
+"values": [ExtResource("5_lsy2e"), ExtResource("6_m6ogy"), ExtResource("7_af33g"), ExtResource("8_k6wl1")]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -67,7 +68,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("5_sgna5"), ExtResource("4_0o6c1"), ExtResource("3_i5ixn"), ExtResource("2_lit3v")]
+"values": [ExtResource("8_k6wl1"), ExtResource("7_af33g"), ExtResource("6_m6ogy"), ExtResource("5_lsy2e")]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -120,9 +121,9 @@ texture = ExtResource("2_lit3v")
 libraries/ = SubResource("AnimationLibrary_lsy2e")
 
 [node name="AdvanceTextMarker" type="Sprite2D" parent="." unique_id=1577689292]
-position = Vector2(271, 224)
-texture = ExtResource("3_flhaj")
-hframes = 2
+visible = false
+position = Vector2(280, 216)
+texture = ExtResource("12_lsy2e")
 
 [node name="MessageArea" type="Control" parent="." unique_id=1054554033]
 anchors_preset = 0
@@ -131,12 +132,12 @@ offset_right = 320.0
 offset_bottom = 245.0
 
 [node name="MessageText" type="RichTextLabel" parent="MessageArea" unique_id=40516724]
-custom_maximum_size = Vector2(220, 50)
+custom_maximum_size = Vector2(240, 50)
 layout_mode = 0
-offset_left = 51.0
-offset_top = 3.0
-offset_right = 271.0
-offset_bottom = 53.0
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 278.0
+offset_bottom = 55.0
 theme_override_constants/line_separation = -1
 bbcode_enabled = true
 text = "This is a lot of text and I want to fill the box so here is the bunch of text I need and I need a lot more text because this text is really small and I don't know what the actual answer is going to be and I'm still struggling to come up with filler"

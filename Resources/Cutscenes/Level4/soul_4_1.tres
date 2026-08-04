@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_q2lxw")
 speaker = ExtResource("2_2cd00")
-message = "Do you think time moves at the same rate in here as out in the real world? Has it been 1000 years, or only 10 seconds? I'm scared to find out."
+message = "Do you think time moves at the same rate in here as out in the real world?"
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

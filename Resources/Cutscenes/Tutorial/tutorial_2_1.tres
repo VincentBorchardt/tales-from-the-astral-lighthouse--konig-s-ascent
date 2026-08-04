@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_vv7hd")
 speaker = ExtResource("2_pwkng")
-message = "Just as I thought! Now destroy the sentries with strikes from your powerful fists! (Press A/Space)"
+message = "Just as I thought! Now destroy the sentries with strikes from your powerful fists! (Press A/X)"
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://dwc8djnc7080q"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_y50nq"]
+[ext_resource type="Resource" uid="uid://o5l4o68rjt82" path="res://Resources/Cutscenes/Speakers/lost_soul.tres" id="2_f2f4l"]
+
+[resource]
+script = ExtResource("1_y50nq")
+speaker = ExtResource("2_f2f4l")
+message = "Has it been 1000 years, or only 10 seconds? I'm scared to find out."
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

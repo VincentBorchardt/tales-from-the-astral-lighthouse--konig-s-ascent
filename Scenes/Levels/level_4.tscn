@@ -39,6 +39,7 @@
 [ext_resource type="Resource" uid="uid://cvu4e05qp4yf2" path="res://Resources/Cutscenes/Level4/booth_4_11.tres" id="18_kdvij"]
 [ext_resource type="Resource" uid="uid://kiy01wjkjaq0" path="res://Resources/Cutscenes/Speakers/pitmaster.tres" id="27_hckno"]
 [ext_resource type="Resource" uid="uid://cxeewttmyrboc" path="res://Resources/Cutscenes/Level4/soul_4_1.tres" id="27_oada6"]
+[ext_resource type="Resource" uid="uid://dwc8djnc7080q" path="res://Resources/Cutscenes/Level4/soul_4_1b.tres" id="28_t0r2h"]
 [ext_resource type="Resource" uid="uid://dy7g2tukx6vt8" path="res://Resources/Cutscenes/Level4/soul_4_2.tres" id="28_u2c58"]
 [ext_resource type="Resource" uid="uid://cbb2fginrwole" path="res://Resources/Cutscenes/Level4/soul_4_3.tres" id="29_t0r2h"]
 
@@ -711,7 +712,7 @@ next_level = ExtResource("2_slbhm")
 music = ExtResource("6_ecora")
 booth_convo = Array[ExtResource("16_ep717")]([ExtResource("8_ipr37"), ExtResource("9_hckno"), ExtResource("10_d12sp"), ExtResource("11_mypyk"), ExtResource("12_oada6"), ExtResource("13_u2c58"), ExtResource("14_t0r2h"), ExtResource("15_k2l7v"), ExtResource("16_kpq86"), ExtResource("17_xsbhv"), ExtResource("18_kdvij")])
 npc_convo_0 = Array[ExtResource("16_ep717")]([ExtResource("8_roffe"), ExtResource("9_d51q7"), ExtResource("10_lapqw"), ExtResource("11_oteb1"), ExtResource("12_k8nfc"), ExtResource("13_ep717"), ExtResource("14_x7vre"), ExtResource("15_lhrhx")])
-npc_convo_1 = Array[ExtResource("16_ep717")]([ExtResource("27_oada6")])
+npc_convo_1 = Array[ExtResource("16_ep717")]([ExtResource("27_oada6"), ExtResource("28_t0r2h")])
 npc_convo_2 = Array[ExtResource("16_ep717")]([ExtResource("28_u2c58")])
 npc_convo_3 = Array[ExtResource("16_ep717")]([ExtResource("29_t0r2h")])
 cameo_npc = ExtResource("27_hckno")

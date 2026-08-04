@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_04sa6")
 speaker = ExtResource("2_iipku")
-message = "König wasn’t really into that part. But he did enjoy that people started calling him [color=e24d63]König, The Galactic Adventurer[/color]. Which meant it wasn’t all that bad."
+message = "König wasn’t really into that part. But he did enjoy that people started calling him [color=e24d63]König, The Galactic Adventurer[/color]."
 has_box = false
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
