@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://kiydqrbw6pyb" path="res://Assets/Art/Endings/TFTAL_GoodEnd_Pixel_Faded.png" id="9_wqpio"]
 [ext_resource type="Texture2D" uid="uid://d1wi02yvxvtpk" path="res://Assets/Art/Endings/TFTAL_GoodEnding_Pixel.png" id="10_krfh5"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_smk8f"]
+[ext_resource type="AudioStream" uid="uid://dybcylv20aovs" path="res://Assets/Audio/Music/GoodEnding_FINAL.mp3" id="13_bl3pv"]
 
 [node name="GoodEnding" type="Control" unique_id=1827662693]
 layout_mode = 3
@@ -20,6 +21,7 @@ script = ExtResource("1_qvov2")
 conversation = Array[ExtResource("2_t2k3i")]([ExtResource("3_xcvoc"), ExtResource("4_krfh5"), ExtResource("5_krfh5"), ExtResource("5_wqpio"), ExtResource("7_wqpio"), ExtResource("6_bl3pv")])
 faded_background = ExtResource("9_wqpio")
 next_level = ExtResource("9_krfh5")
+music = ExtResource("13_bl3pv")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1844786785]
 position = Vector2(160, 120)

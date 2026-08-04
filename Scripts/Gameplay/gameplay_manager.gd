@@ -2,6 +2,7 @@ extends Node
 
 signal shippie_door
 
+var is_final_level : bool = false
 var enemy_combo : float = 0
 var end_of_level: bool = false:
 	set(value):
@@ -9,6 +10,9 @@ var end_of_level: bool = false:
 
 		if end_of_level:
 			shippie_door_open()
+
+func set_final_level():
+	is_final_level = true
 
 func increase_combo():
 	enemy_combo += .1

@@ -55,7 +55,38 @@ func play_music(_audio: AudioStream) -> void:
 	await fade_out.finished
 	old_player.stop()
 
+func play_music_from_start(audio: AudioStream) -> void:
+	if audio == null:
+		return
 
+	var old_player := music_players[current_music_player]
+
+	current_music_player = (current_music_player + 1) % music_audio_player_count
+
+	var new_player := music_players[current_music_player]
+
+	new_player.stream = audio
+	new_player.volume_db = SILENT_VOLUME_DB
+	new_player.play(0.0)
+
+	var fade_in := create_tween()
+	fade_in.tween_property(
+		new_player,
+		"volume_db",
+		DEFAULT_VOLUME_DB,
+		music_fade_duration
+	)
+
+	var fade_out := create_tween()
+	fade_out.tween_property(
+		old_player,
+		"volume_db",
+		SILENT_VOLUME_DB,
+		music_fade_duration
+	)
+
+	await fade_out.finished
+	old_player.stop()
 
 func play_and_fade_in( player : AudioStreamPlayer ) -> void:
 	player.play( 0 )
