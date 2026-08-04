@@ -26,9 +26,12 @@
 [ext_resource type="Resource" uid="uid://bl85ut22ibw0" path="res://Resources/Cutscenes/Level3/booth_3_7.tres" id="14_6qnit"]
 [ext_resource type="Resource" uid="uid://nn7jg1dhb6va" path="res://Resources/Cutscenes/Level3/level_3_dsd_3.tres" id="14_isixn"]
 [ext_resource type="Resource" uid="uid://cwqy0e1ks3g38" path="res://Resources/Cutscenes/Level3/level_3_dsd_4.tres" id="15_d0d85"]
+[ext_resource type="Resource" uid="uid://c8ieg2vbl344m" path="res://Resources/Cutscenes/Level3/soul_3_1.tres" id="15_ulgip"]
+[ext_resource type="Resource" uid="uid://be5un3x33yjgo" path="res://Resources/Cutscenes/Level3/soul_3_2.tres" id="16_phqt5"]
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_wnlxl"]
 [ext_resource type="Resource" uid="uid://4k426ue4lxd6" path="res://Resources/Cutscenes/Level3/level_3_dsd_5.tres" id="16_ykav4"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_jgaqf"]
+[ext_resource type="Resource" uid="uid://cmxispkhqf2vo" path="res://Resources/Cutscenes/Level3/soul_3_3.tres" id="17_lxa11"]
 [ext_resource type="Resource" uid="uid://c0372f10ic6te" path="res://Resources/Cutscenes/Level3/level_3_dsd_6.tres" id="17_s0hn8"]
 [ext_resource type="Texture2D" uid="uid://qr4bqj8gci5" path="res://Assets/Art/UI/Waves/Floor_03.png" id="18_ocbj8"]
 [ext_resource type="Resource" uid="uid://dkmbhhjlagu3a" path="res://Resources/Cutscenes/Level3/level_3_dsd_7.tres" id="18_ulgip"]
@@ -704,6 +707,9 @@ waves = Array[PackedScene]([ExtResource("2_d0d85"), ExtResource("3_ykav4"), ExtR
 next_level = ExtResource("5_13yca")
 music = ExtResource("6_8dmpc")
 booth_convo = Array[ExtResource("16_wnlxl")]([ExtResource("8_3m4x7"), ExtResource("9_q2kiq"), ExtResource("10_wvd0d"), ExtResource("11_gupo0"), ExtResource("12_3l8qv"), ExtResource("13_teul3"), ExtResource("14_6qnit")])
+npc_convo_0 = Array[ExtResource("16_wnlxl")]([ExtResource("15_ulgip")])
+npc_convo_1 = Array[ExtResource("16_wnlxl")]([ExtResource("16_phqt5")])
+npc_convo_2 = Array[ExtResource("16_wnlxl")]([ExtResource("17_lxa11")])
 npc_convo_4 = Array[ExtResource("16_wnlxl")]([ExtResource("12_6qnit"), ExtResource("13_e4pux"), ExtResource("14_isixn"), ExtResource("15_d0d85"), ExtResource("16_ykav4"), ExtResource("17_s0hn8"), ExtResource("18_ulgip"), ExtResource("19_phqt5"), ExtResource("20_lxa11")])
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]

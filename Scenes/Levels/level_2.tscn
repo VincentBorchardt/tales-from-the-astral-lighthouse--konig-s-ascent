@@ -33,6 +33,7 @@
 [ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="16_jip10"]
 [ext_resource type="Texture2D" uid="uid://b41kcimdunjap" path="res://Assets/Art/UI/Waves/Floor_02.png" id="16_yxf76"]
 [ext_resource type="Script" uid="uid://d2gsgeusfrsnk" path="res://Scripts/Cutscenes/speaker.gd" id="17_1xj2d"]
+[ext_resource type="Resource" uid="uid://o0vctfkvbjtp" path="res://Resources/Cutscenes/Level2/soul_2_1.tres" id="24_p6e1f"]
 [ext_resource type="Resource" uid="uid://d361g08sp4r1d" path="res://Resources/Cutscenes/Speakers/primeval_mask.tres" id="24_srchd"]
 [ext_resource type="PackedScene" uid="uid://h3dwpgrtfak" path="res://Scenes/Waves/wave_2_1.tscn" id="36_p6e1f"]
 
@@ -705,6 +706,7 @@ next_level = ExtResource("5_chm77")
 music = ExtResource("6_yxf76")
 booth_convo = Array[ExtResource("16_jip10")]([ExtResource("8_srchd"), ExtResource("9_p6e1f"), ExtResource("10_xo6ri"), ExtResource("11_potos"), ExtResource("12_6d4lf"), ExtResource("13_c0rmi"), ExtResource("14_xcfnk"), ExtResource("15_tjmj4")])
 npc_convo_0 = Array[ExtResource("16_jip10")]([ExtResource("8_m4i1e"), ExtResource("9_ixm8h"), ExtResource("10_xk8vt"), ExtResource("11_umcau"), ExtResource("12_ud172"), ExtResource("13_s5367"), ExtResource("14_blyvk"), ExtResource("15_ts3wb")])
+npc_convo_1 = Array[ExtResource("16_jip10")]([ExtResource("24_p6e1f")])
 cameo_npc = ExtResource("24_srchd")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1204904193]

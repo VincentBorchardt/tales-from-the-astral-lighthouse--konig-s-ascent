@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://be5un3x33yjgo"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_l0c6x"]
+[ext_resource type="Resource" uid="uid://o5l4o68rjt82" path="res://Resources/Cutscenes/Speakers/lost_soul.tres" id="2_euavw"]
+
+[resource]
+script = ExtResource("1_l0c6x")
+speaker = ExtResource("2_euavw")
+message = "I was watching over someone ... or something ... I think?"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

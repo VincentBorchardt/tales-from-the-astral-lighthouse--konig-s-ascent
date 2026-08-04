@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Message" format=3 uid="uid://cbb2fginrwole"]
+
+[ext_resource type="Script" uid="uid://dwvq7fdlgftn0" path="res://Scripts/Cutscenes/message.gd" id="1_ncwvc"]
+[ext_resource type="Resource" uid="uid://o5l4o68rjt82" path="res://Resources/Cutscenes/Speakers/lost_soul.tres" id="2_ffe7y"]
+
+[resource]
+script = ExtResource("1_ncwvc")
+speaker = ExtResource("2_ffe7y")
+message = "Do you think she remembers me?"
+metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
