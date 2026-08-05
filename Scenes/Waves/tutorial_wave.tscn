@@ -5,7 +5,12 @@
 
 [node name="TutorialWave" type="Node2D" unique_id=1424351692]
 script = ExtResource("1_t33fj")
+enemy_count = 2
 
 [node name="Portal" parent="." unique_id=110448379 instance=ExtResource("2_mblmy")]
 position = Vector2(195, 122)
+appear_delay = 1.0
+
+[node name="Portal2" parent="." unique_id=2112337218 instance=ExtResource("2_mblmy")]
+position = Vector2(211, 143)
 appear_delay = 1.0

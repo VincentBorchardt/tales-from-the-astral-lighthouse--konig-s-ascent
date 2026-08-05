@@ -1,5 +1,6 @@
 extends Node2D
 
+
 signal player_entered
 signal warp_in_finished
 signal warp_out_finished
@@ -11,7 +12,7 @@ signal warp_out_finished
 @onready var exit_sfx = $Exit
 @onready var enter_sfx = $Enter
 
-
+var player_triggered = false
 func _ready() -> void:
 	visible = true
 	booth_area.monitoring = false
@@ -33,7 +34,9 @@ func stay_open():
 	interaction_range.monitoring = true
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	emit_signal("player_entered")
+	if !player_triggered:
+		player_triggered = true
+		emit_signal("player_entered")
 	#transition to next gameplay area
 
 
@@ -45,11 +48,6 @@ func _on_animations_animation_finished() -> void:
 			warp_out_finished.emit()
 		_:
 			pass
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	emit_signal("player_entered")
-
 
 func _on_interaction_range_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and GameplayManager.end_of_level == true:

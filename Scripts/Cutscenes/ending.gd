@@ -33,6 +33,7 @@ func _on_cutscene_overlay_cutscene_ended() -> void:
 
 
 func level_change():
+	MusicManager.stop_music()
 	get_tree().change_scene_to_packed(next_level)
 
 
