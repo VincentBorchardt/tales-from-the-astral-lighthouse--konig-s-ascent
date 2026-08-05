@@ -89,6 +89,7 @@ func set_up_message_box(current_message):
 		message_text.remove_theme_color_override("font_color")
 
 func allow_advance():
+	await get_tree().create_timer(0.5).timeout
 	advance_text_marker.visible = true
 	can_advance_text = true
 	# TODO blink the marker
