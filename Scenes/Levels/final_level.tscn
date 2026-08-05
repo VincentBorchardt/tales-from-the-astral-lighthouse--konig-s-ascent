@@ -279,7 +279,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hkci"]
-size = Vector2(20, 388)
+size = Vector2(20, 395.8695)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewxuw"]
 size = Vector2(348, 19)
@@ -1636,12 +1636,21 @@ position = Vector2(159, 140)
 wait_time = 5.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1684486360]
-visible = false
 collision_mask = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=414705039]
 position = Vector2(-13, 127.000015)
 rotation = 1.1220708
+shape = SubResource("RectangleShape2D_4hkci")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CharacterBody2D" unique_id=452098436]
+position = Vector2(-8.749241, 9.144775)
+rotation = 2.0943952
+shape = SubResource("RectangleShape2D_4hkci")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="CharacterBody2D" unique_id=294224065]
+position = Vector2(344, 55)
+rotation = 1.3089969
 shape = SubResource("RectangleShape2D_4hkci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=899707805]
@@ -1688,6 +1697,7 @@ animation = &"dsd_plinth_change"
 position = Vector2(160, 63)
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=356204903]
+visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 2
 position = Vector2(163, 120)

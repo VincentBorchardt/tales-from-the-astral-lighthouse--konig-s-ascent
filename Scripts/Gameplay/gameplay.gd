@@ -46,6 +46,7 @@ var num_npcs: int
 var current_npc = 0
 
 var scripted_progression_count = 0
+var booth_cutscene_activated: bool = false
 var absorbed_bullet_count: int = 0:
 	set(value):
 		absorbed_bullet_count = value
@@ -207,7 +208,8 @@ func start_level_transition():
 	konig.warp_out()
 
 func _on_booth_player_entered() -> void:
-	if in_calm_state and !is_tutorial:
+	if in_calm_state and !is_tutorial and !booth_cutscene_activated:
+		booth_cutscene_activated = true
 		changing_level = true
 		start_cutscene(booth_convo)
 
