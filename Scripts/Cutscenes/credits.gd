@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 		print("end of credits")
 		end_credits.emit.call_deferred()
 	if start_scrolling:
-		print(scroll_bar.value)
-		print(scroll_bar.max_value)
+		#print(scroll_bar.value)
+		#print(scroll_bar.max_value)
 		current_scroll_interval += delta * scroll_speed
 		if current_scroll_interval >= 1.0:
 			scroll_vertical += current_scroll_interval

@@ -1,6 +1,7 @@
 extends Control
 
 signal options_closed
+signal play_menu_sound
 
 @onready var debug_option = $DebugOption
 @onready var debug_group = $DebugGroup
@@ -11,9 +12,11 @@ signal options_closed
 @onready var npc_count = $DebugGroup/NPCCount
 
 func _on_debug_option_pressed() -> void:
+	play_menu_sound.emit()
 	debug_group.visible = debug_option.button_pressed
 
 func warp_to_level(level):
+	play_menu_sound.emit()
 	set_up_npcs()
 	get_tree().change_scene_to_file(level)
 	
@@ -49,4 +52,10 @@ func _on_level_5_option_pressed() -> void:
 
 
 func _on_close_button_pressed() -> void:
+	play_menu_sound.emit()
 	options_closed.emit()
+
+
+func _on_visibility_changed() -> void:
+	if visible:
+		debug_option.grab_focus()

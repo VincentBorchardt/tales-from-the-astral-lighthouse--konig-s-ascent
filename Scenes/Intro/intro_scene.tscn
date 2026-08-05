@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://dvjs4i14x7tqf" path="res://Assets/Art/Intro/Titles 2/KonigAscent_title_MAIN16.png" id="40_l5qq1"]
 [ext_resource type="AudioStream" uid="uid://qh5vbdb4d6xf" path="res://Assets/Audio/Music/IntroTheme_wip2.mp3" id="41_1db4j"]
 [ext_resource type="PackedScene" uid="uid://bq2rtmcb8el5w" path="res://Scenes/Intro/title_screen.tscn" id="42_8df33"]
+[ext_resource type="AudioStream" uid="uid://b13xrglqrh8b" path="res://Assets/Audio/SFX/MenuSelect_wip1.mp3" id="42_nwxsa"]
 [ext_resource type="Texture2D" uid="uid://cx7sui0eqqg2g" path="res://Assets/Art/Intro/Controller_Screen_w_interactions.png" id="43_16jwr"]
 [ext_resource type="PackedScene" uid="uid://crjl7kfn8tcb0" path="res://Scenes/Intro/options_screen.tscn" id="44_u16qi"]
 
@@ -188,6 +189,9 @@ libraries/ = SubResource("AnimationLibrary_b0ob4")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=455029277]
 stream = ExtResource("41_1db4j")
 
+[node name="MenuSound" type="AudioStreamPlayer" parent="." unique_id=713129481]
+stream = ExtResource("42_nwxsa")
+
 [node name="TitleScreen" parent="." unique_id=613649742 instance=ExtResource("42_8df33")]
 visible = false
 
@@ -200,4 +204,6 @@ visible = false
 
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
 [connection signal="open_options" from="TitleScreen" to="." method="_on_title_screen_open_options"]
+[connection signal="play_menu_sound" from="TitleScreen" to="." method="play_menu_sound"]
 [connection signal="options_closed" from="OptionsScreen" to="." method="_on_options_screen_options_closed"]
+[connection signal="play_menu_sound" from="OptionsScreen" to="." method="play_menu_sound"]

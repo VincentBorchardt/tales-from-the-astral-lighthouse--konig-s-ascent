@@ -40,6 +40,10 @@ offset_left = 45.0
 offset_top = 46.0
 offset_right = 223.0
 offset_bottom = 71.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../CloseButton")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../DebugGroup/TutorialOption")
 text = "Debug Options (Spoilers!)"
 
 [node name="DebugGroup" type="Control" parent="." unique_id=793277407]
@@ -61,6 +65,10 @@ offset_left = 11.0
 offset_top = -4.0
 offset_right = 60.0
 offset_bottom = 21.0
+focus_neighbor_left = NodePath("../TrikCheck")
+focus_neighbor_top = NodePath("../../DebugOption")
+focus_neighbor_right = NodePath("../TrikCheck")
+focus_neighbor_bottom = NodePath("../Level1Option")
 text = "Tutorial"
 
 [node name="Level1Pointer" type="Sprite2D" parent="DebugGroup" unique_id=1813791863]
@@ -74,6 +82,10 @@ offset_left = 11.0
 offset_top = 16.0
 offset_right = 56.0
 offset_bottom = 41.0
+focus_neighbor_left = NodePath("../TrikCheck")
+focus_neighbor_top = NodePath("../TutorialOption")
+focus_neighbor_right = NodePath("../TrikCheck")
+focus_neighbor_bottom = NodePath("../Level2Option")
 text = "Level 1"
 
 [node name="Level2Pointer" type="Sprite2D" parent="DebugGroup" unique_id=2044471646]
@@ -87,6 +99,10 @@ offset_left = 11.0
 offset_top = 36.0
 offset_right = 57.0
 offset_bottom = 61.0
+focus_neighbor_left = NodePath("../MaskCheck")
+focus_neighbor_top = NodePath("../Level1Option")
+focus_neighbor_right = NodePath("../MaskCheck")
+focus_neighbor_bottom = NodePath("../Level3Option")
 text = "Level 2"
 
 [node name="Level3Pointer" type="Sprite2D" parent="DebugGroup" unique_id=1377610132]
@@ -100,6 +116,10 @@ offset_left = 11.0
 offset_top = 56.0
 offset_right = 57.0
 offset_bottom = 81.0
+focus_neighbor_left = NodePath("../PitCheck")
+focus_neighbor_top = NodePath("../Level2Option")
+focus_neighbor_right = NodePath("../PitCheck")
+focus_neighbor_bottom = NodePath("../Level4Option")
 text = "Level 3"
 
 [node name="Level4Pointer" type="Sprite2D" parent="DebugGroup" unique_id=1095214348]
@@ -113,6 +133,10 @@ offset_left = 11.0
 offset_top = 76.0
 offset_right = 57.0
 offset_bottom = 101.0
+focus_neighbor_left = NodePath("../DSDCheck")
+focus_neighbor_top = NodePath("../Level3Option")
+focus_neighbor_right = NodePath("../DSDCheck")
+focus_neighbor_bottom = NodePath("../Level5Option")
 text = "Level 4"
 
 [node name="Level5Pointer" type="Sprite2D" parent="DebugGroup" unique_id=1791112891]
@@ -126,6 +150,10 @@ offset_left = 11.0
 offset_top = 96.0
 offset_right = 57.0
 offset_bottom = 121.0
+focus_neighbor_left = NodePath("../NPCCount")
+focus_neighbor_top = NodePath("../Level4Option")
+focus_neighbor_right = NodePath("../NPCCount")
+focus_neighbor_bottom = NodePath("../../CloseButton")
 text = "Level 5"
 
 [node name="SavedNPCsLabel" type="Label" parent="DebugGroup" unique_id=2047509820]
@@ -141,6 +169,10 @@ offset_left = 114.0
 offset_top = 16.0
 offset_right = 162.0
 offset_bottom = 41.0
+focus_neighbor_left = NodePath("../Level1Option")
+focus_neighbor_top = NodePath("../../DebugOption")
+focus_neighbor_right = NodePath("../Level1Option")
+focus_neighbor_bottom = NodePath("../MaskCheck")
 text = "Trik"
 
 [node name="MaskCheck" type="CheckBox" parent="DebugGroup" unique_id=28049829]
@@ -149,6 +181,10 @@ offset_left = 114.0
 offset_top = 36.0
 offset_right = 212.0
 offset_bottom = 61.0
+focus_neighbor_left = NodePath("../Level2Option")
+focus_neighbor_top = NodePath("../TrikCheck")
+focus_neighbor_right = NodePath("../Level2Option")
+focus_neighbor_bottom = NodePath("../PitCheck")
 text = "Primeval Mask"
 
 [node name="PitCheck" type="CheckBox" parent="DebugGroup" unique_id=311968202]
@@ -157,6 +193,10 @@ offset_left = 114.0
 offset_top = 56.0
 offset_right = 215.0
 offset_bottom = 81.0
+focus_neighbor_left = NodePath("../Level3Option")
+focus_neighbor_top = NodePath("../MaskCheck")
+focus_neighbor_right = NodePath("../Level3Option")
+focus_neighbor_bottom = NodePath("../DSDCheck")
 text = "The Pitmaster"
 
 [node name="DSDCheck" type="CheckBox" parent="DebugGroup" unique_id=157645901]
@@ -165,6 +205,10 @@ offset_left = 114.0
 offset_top = 76.0
 offset_right = 215.0
 offset_bottom = 101.0
+focus_neighbor_left = NodePath("../Level4Option")
+focus_neighbor_top = NodePath("../PitCheck")
+focus_neighbor_right = NodePath("../Level4Option")
+focus_neighbor_bottom = NodePath("../NPCCount")
 text = "DSD"
 
 [node name="NPCCount" type="SpinBox" parent="DebugGroup" unique_id=509052322]
@@ -174,6 +218,10 @@ offset_left = 98.0
 offset_top = 96.0
 offset_right = 138.0
 offset_bottom = 123.0
+focus_neighbor_left = NodePath("../Level5Option")
+focus_neighbor_top = NodePath("../DSDCheck")
+focus_neighbor_right = NodePath("../Level5Option")
+focus_neighbor_bottom = NodePath("../../CloseButton")
 max_value = 80.0
 rounded = true
 custom_arrow_step = 1.0
@@ -193,8 +241,13 @@ offset_left = 130.0
 offset_top = 206.0
 offset_right = 167.0
 offset_bottom = 231.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../DebugGroup/Level5Option")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../DebugOption")
 text = "Close"
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="DebugOption" to="." method="_on_debug_option_pressed"]
 [connection signal="pressed" from="DebugGroup/TutorialOption" to="." method="_on_tutorial_option_pressed"]
 [connection signal="pressed" from="DebugGroup/Level1Option" to="." method="_on_level_1_option_pressed"]

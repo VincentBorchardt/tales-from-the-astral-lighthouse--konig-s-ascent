@@ -31,9 +31,13 @@ func show_title_screen():
 	title_screen.visible = true
 	title_screen.start_title_screen()
 
+func play_menu_sound():
+	$MenuSound.play()
+
 
 func _on_title_screen_open_options() -> void:
 	options_screen.visible = true
 
 func _on_options_screen_options_closed() -> void:
 	options_screen.visible = false
+	title_screen.start_title_screen()

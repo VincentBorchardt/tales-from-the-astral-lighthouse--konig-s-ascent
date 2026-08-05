@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://p62smktkcxq4" path="res://Assets/Art/Endings/TFTAL_DSDEnding_pixel.png" id="11_ikjkf"]
 [ext_resource type="PackedScene" uid="uid://ch0mq2ugu3sf7" path="res://Scenes/cutscene_overlay.tscn" id="12_2t8mc"]
 [ext_resource type="AudioStream" uid="uid://drjvrjfurto14" path="res://Assets/Audio/Music/DSDEnding_FINAL.mp3" id="13_j244p"]
+[ext_resource type="Texture2D" uid="uid://d10xb4b2ihggu" path="res://Assets/Art/UI/Credits_Interaction.png" id="14_mxn72"]
 
 [node name="DSDEnding" type="Control" unique_id=1827662693]
 layout_mode = 3
@@ -34,6 +35,11 @@ layout_mode = 1
 [node name="Credits" parent="." unique_id=1784082459 instance=ExtResource("10_ikjkf")]
 visible = false
 layout_mode = 0
+
+[node name="Interaction" type="Sprite2D" parent="." unique_id=529037663]
+visible = false
+position = Vector2(160, 220)
+texture = ExtResource("14_mxn72")
 
 [connection signal="advanced_text" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_advanced_text"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]

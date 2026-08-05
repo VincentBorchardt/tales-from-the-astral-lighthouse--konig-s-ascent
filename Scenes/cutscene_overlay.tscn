@@ -132,12 +132,13 @@ offset_right = 320.0
 offset_bottom = 245.0
 
 [node name="MessageText" type="RichTextLabel" parent="MessageArea" unique_id=40516724]
-custom_maximum_size = Vector2(240, 50)
+texture_filter = 1
+custom_maximum_size = Vector2(240, 52)
 layout_mode = 0
 offset_left = 38.0
 offset_top = 5.0
 offset_right = 278.0
-offset_bottom = 55.0
+offset_bottom = 58.0
 theme_override_constants/line_separation = -1
 bbcode_enabled = true
 text = "This is a lot of text and I want to fill the box so here is the bunch of text I need and I need a lot more text because this text is really small and I don't know what the actual answer is going to be and I'm still struggling to come up with filler"

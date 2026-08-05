@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_7c1a4")
 speaker = ExtResource("2_tnrr8")
-message = "When you’ve made a floor safe, you can talk to the [color=e24d63]Lost Souls[/color] you’ve saved and see what they remember. (Press X/G)"
+message = "When you’ve made a floor safe, you can talk to the [color=e24d63]Lost Souls[/color] you’ve saved and see what they remember. (Press [img]res://Assets/Art/UI/UI_Interact_Controller_b.png[/img]/[img]res://Assets/Art/UI/UI_Interact_Keyb.png[/img])"
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

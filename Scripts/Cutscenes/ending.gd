@@ -8,20 +8,14 @@ extends Control
 @onready var background = $Background
 @onready var cutscene_overlay = $CutsceneOverlay
 @onready var credits = $Credits
+@onready var interaction = $Interaction
 
-var blank_message: Array[Message] = [preload("res://Resources/Cutscenes/Endings/blank_message.tres")]
-
-#var DIM = Color(0.125, 0.075, 0.161, 1.0)
-#var DIM_SHADER = preload("res://Resources/Cutscenes/purple_dim.gdshader")
 var dim_completed = false
 
 func _ready() -> void:
 	MusicManager.play_music_from_start( music )
 	call_deferred("start_conversation")
-	#call_deferred("start_blank")
 
-func start_blank():
-	cutscene_overlay.start_cutscene(blank_message, false)
 
 func start_conversation():
 	cutscene_overlay.start_cutscene(conversation, false)
@@ -44,4 +38,9 @@ func _on_cutscene_overlay_advanced_text() -> void:
 
 
 func _on_credits_end_credits() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Intro/intro_scene.tscn")
+	interaction.visible = true
+
+func _input(event: InputEvent) -> void:
+	if interaction.visible:
+		if Input.is_action_pressed("advance_text"):
+			get_tree().change_scene_to_file("res://Scenes/Intro/intro_scene.tscn")
