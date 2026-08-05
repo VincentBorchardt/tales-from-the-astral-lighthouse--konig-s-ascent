@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_dgx34")
 speaker = ExtResource("2_l5le6")
-message = "[color=f29ce5]OINK![/color]."
+message = "[color=f29ce5]OINK![/color]"
 animation_time = 0.5
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_ej8ml")
 speaker = ExtResource("2_kvifo")
-message = "… and remember, save as many [color=e24d63]Lost Souls[/color]. as you can! Do it for your new friend, Alexandria! "
+message = "… and remember, save as many [color=e24d63]Lost Souls[/color] as you can! Do it for your new friend, Alexandria! "
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

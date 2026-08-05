@@ -91,6 +91,8 @@ func move_state():
 		animations.play(get_float_animation())
 		movement_finished.emit()
 		if GameplayManager.is_final_level == false:
+			StoryAutoload.saved_cameos.append(StoryAutoload.dsd)
+			StoryAutoload.total_saved_npcs += 1
 			animations.play("demat_nw")
 			await animations.animation_finished
 			queue_free()
