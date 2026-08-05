@@ -34,9 +34,7 @@ func stay_open():
 	interaction_range.monitoring = true
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if !player_triggered:
-		player_triggered = true
-		emit_signal("player_entered")
+	emit_signal("player_entered")
 	#transition to next gameplay area
 
 
