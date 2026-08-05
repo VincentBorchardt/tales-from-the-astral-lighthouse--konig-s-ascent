@@ -1,7 +1,15 @@
 extends Node
 
+signal saved_npcs_updated
+
+var is_ready = false
+
 var saved_cameos = []
-var total_saved_npcs = 0
+var total_saved_npcs = 0:
+	set(new_count):
+		total_saved_npcs = new_count
+		if is_ready and new_count > 0:
+			saved_npcs_updated.emit(new_count)
 
 var tutorial_1_1: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_1_1.tres")
 var tutorial_1_2: Message = preload("res://Resources/Cutscenes/Tutorial/tutorial_1_2.tres")
@@ -30,6 +38,9 @@ var dsd: Speaker = preload("res://Resources/Cutscenes/Speakers/dsd.tres")
 var trik: Speaker = preload("res://Resources/Cutscenes/Speakers/trik.tres")
 var mask: Speaker = preload("res://Resources/Cutscenes/Speakers/primeval_mask.tres")
 var pit: Speaker = preload("res://Resources/Cutscenes/Speakers/pitmaster.tres")
+
+func _ready() -> void:
+	is_ready = true
 
 func savedDSD() -> bool:
 	return saved_cameos.has(dsd)

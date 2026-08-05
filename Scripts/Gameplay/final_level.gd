@@ -53,7 +53,7 @@ func set_up_cutscenes():
 		initial_total_convo.append_array(dsd_part_1)
 		second_total_convo = good_part_1
 	else:
-		initial_total_convo.append(initial_part_2)
+		initial_total_convo.append_array(initial_part_2)
 		if StoryAutoload.savedMask():
 			cameos_total_convo.append_array(primeval_mask)
 			if StoryAutoload.savedPit():
@@ -92,16 +92,14 @@ func continue_scripted_sequence():
 					scripted_progression_count += 1
 					get_tree().change_scene_to_file("res://Scenes/Cutscenes/bad_ending.tscn")
 				EndingChoice.GOOD:
-					scripted_progression_count += 1
-					start_cutscene(good_part_1)
-					pass
+					boyhowdy.start_shooting()
 		3:
 			match chosen_ending:
 				EndingChoice.DSD:
 					scripted_progression_count += 1
 					dsd.move_to_next_target()
 				EndingChoice.GOOD:
-					boyhowdy.start_shooting()
+					open_eyeball()
 				_:
 					print("followed a finished ending path")
 		4:
@@ -111,24 +109,19 @@ func continue_scripted_sequence():
 					sequence_timer.start()
 					await  sequence_timer.timeout
 					dsd.start_laugh()
-				EndingChoice.GOOD:
-					open_eyeball()
-			pass
+				_:
+					pass
 		5:
 			match chosen_ending:
 				EndingChoice.DSD:
 					wave_anim_player.play("fade_to_white")
 					await  wave_anim_player.animation_finished
 					get_tree().change_scene_to_file("res://Scenes/Cutscenes/dsd_ending.tscn")
-				pass
-					
-		7:
+		6:
 			match chosen_ending:
 				EndingChoice.GOOD:
 					scripted_progression_count += 1
-					start_cutscene(good_part_5)
 					get_tree().change_scene_to_file("res://Scenes/Cutscenes/good_ending.tscn")
-			pass
 
 
 func _on_cutscene_overlay_cutscene_ended() -> void:
@@ -140,7 +133,6 @@ func _on_booth_warp_out_finished() -> void:
 	set_up_cutscenes()
 	scripted_progression_count += 1
 	call_deferred("start_cutscene", initial_total_convo)
-	
 
 func absorbed_bullet_threshold_reached():
 	scripted_progression_count += 1
@@ -162,7 +154,7 @@ func open_eyeball():
 	await eyeball_anim.animation_finished
 	scripted_progression_count += 1
 	start_cutscene(good_part_3)
-	
+
 func _on_dsd_movement_finished() -> void:
 	eye_change_sound.play()
 	plinth.play("dsd_plinth_change")
@@ -173,19 +165,15 @@ func _on_dsd_movement_finished() -> void:
 	await eyeball_anim.animation_finished
 	continue_scripted_sequence()
 
-
 func _on_dsd_materialized() -> void:
 	start_cutscene(dsd_part_2)
 
 func on_dsd_ready():
 	pass
 
-
 func _on_dsd_laughing_finished() -> void:
 		start_cutscene(dsd_part_3)
-
 
 func _on_boyhowdy_entered_range() -> void:
 	start_cutscene(good_part_4)
 	boyhowdy.set_entered_range()
-	

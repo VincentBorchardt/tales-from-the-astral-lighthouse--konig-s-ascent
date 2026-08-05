@@ -32,7 +32,6 @@ visible = false
 layout_mode = 1
 
 [node name="Credits" parent="." unique_id=1784082459 instance=ExtResource("9_krfh5")]
-visible = false
 layout_mode = 0
 
 [connection signal="advanced_text" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_advanced_text"]

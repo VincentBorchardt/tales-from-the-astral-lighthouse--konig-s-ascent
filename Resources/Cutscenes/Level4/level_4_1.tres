@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_kiujs")
 speaker = ExtResource("2_p8t6x")
-message = "You know, I used to work at a hamburger restaurant, until I became a vegetarian and adopted [color=f29ce5]this pig[/color]."
+message = "I used to work at a hamburger restaurant, until I became a vegetarian and adopted [color=f29ce5]this pig[/color]."
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"

@@ -8,6 +8,7 @@ extends Node2D
 @onready var titles = $Titles
 @onready var titles_animation = $Titles/AnimationPlayer
 @onready var title_screen = $TitleScreen
+@onready var options_screen = $OptionsScreen
 
 func start_intro():
 	StoryAutoload.total_saved_npcs = 0
@@ -28,3 +29,10 @@ func _on_cutscene_overlay_cutscene_ended() -> void:
 func show_title_screen():
 	title_screen.visible = true
 	title_screen.start_title_screen()
+
+
+func _on_title_screen_open_options() -> void:
+	options_screen.visible = true
+
+func _on_options_screen_options_closed() -> void:
+	options_screen.visible = false

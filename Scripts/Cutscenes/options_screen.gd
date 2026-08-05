@@ -1,5 +1,7 @@
 extends Control
 
+signal options_closed
+
 @onready var debug_option = $DebugOption
 @onready var debug_group = $DebugGroup
 @onready var trik_check = $DebugGroup/TrikCheck
@@ -47,4 +49,4 @@ func _on_level_5_option_pressed() -> void:
 
 
 func _on_close_button_pressed() -> void:
-	pass # Replace with function body.
+	options_closed.emit()

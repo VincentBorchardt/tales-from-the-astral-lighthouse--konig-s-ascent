@@ -1,5 +1,7 @@
 extends Control
 
+signal open_options
+
 @onready var begin_marker = $BeginMarker
 @onready var begin_button = $BeginButton
 @onready var option_marker = $OptionMarker
@@ -21,3 +23,7 @@ func start_title_screen():
 
 func _on_begin_button_pressed() -> void:
 	get_tree().change_scene_to_packed(preload("res://Scenes/Levels/tutorial.tscn"))
+
+
+func _on_option_button_pressed() -> void:
+	open_options.emit()

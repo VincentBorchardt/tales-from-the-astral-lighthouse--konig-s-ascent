@@ -32,6 +32,8 @@ var wave_animations = [
 @onready var wave_animation = $WaveAnimation
 @onready var wave_anim_player = $AnimationPlayer
 @onready var cutscene_overlay = $CutsceneOverlay
+@onready var npc_counter = $NPCCounter
+@onready var npc_label = $NPCCounter/NPCLabel
 
 var current_wave := -1
 var current_wave_scene: Node2D
@@ -61,6 +63,10 @@ func absorbed_bullet_threshold_reached():
 	
 func _ready():
 	GameplayManager.end_of_level = false
+	if StoryAutoload.total_saved_npcs > 0:
+		_on_saved_npcs_updated(StoryAutoload.total_saved_npcs)
+		npc_counter.visible = true
+	StoryAutoload.saved_npcs_updated.connect(_on_saved_npcs_updated)
 	npc_conversations = [npc_convo_0, npc_convo_1, npc_convo_2, npc_convo_3, npc_convo_4]
 	num_npcs = get_tree().get_node_count_in_group("npcs")
 	print("starting level now")
@@ -86,7 +92,7 @@ func play_wave_animation():
 		current_wave_animation += 1
 
 func continue_scripted_sequence():
-	if is_tutorial:
+	#if is_tutorial:
 		match scripted_progression_count:
 			1:
 				# Start the basic wave
@@ -113,8 +119,6 @@ func continue_scripted_sequence():
 				is_tutorial = false
 			7:
 				end_level()
-	elif is_final:
-		pass
 
 #TODO: set everything here that needs to be at the start of a round or when all waves or finished
 func start_next_wave():
@@ -230,7 +234,7 @@ func _on_booth_warp_in_finished() -> void:
 
 func _on_booth_warp_out_finished() -> void:
 	if in_calm_state:
-		if is_tutorial:
+		if scripted_progression_count > 0:
 			start_cutscene(StoryAutoload.tutorial_5)
 		else:
 			end_level()
@@ -244,6 +248,13 @@ func _on_booth_warp_out_finished() -> void:
 			wave_timer.one_shot = true
 			wave_timer.timeout.connect(play_wave_animation)
 			wave_timer.start(2)
+
+func _on_saved_npcs_updated(num):
+	if num < 10:
+		npc_label.text = "0" + str(num)
+	else:
+		npc_label.text = str(num)
+	npc_counter.visible = true
 
 func on_dsd_ready():
 	start_cutscene(npc_convo_4)

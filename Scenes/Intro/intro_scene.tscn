@@ -43,6 +43,7 @@
 [ext_resource type="AudioStream" uid="uid://qh5vbdb4d6xf" path="res://Assets/Audio/Music/IntroTheme_wip2.mp3" id="41_1db4j"]
 [ext_resource type="PackedScene" uid="uid://bq2rtmcb8el5w" path="res://Scenes/Intro/title_screen.tscn" id="42_8df33"]
 [ext_resource type="Texture2D" uid="uid://cx7sui0eqqg2g" path="res://Assets/Art/Intro/Controller_Screen_w_interactions.png" id="43_16jwr"]
+[ext_resource type="PackedScene" uid="uid://crjl7kfn8tcb0" path="res://Scenes/Intro/options_screen.tscn" id="44_u16qi"]
 
 [sub_resource type="Animation" id="Animation_y1jjb"]
 length = 0.001
@@ -194,4 +195,9 @@ visible = false
 position = Vector2(160, 120)
 texture = ExtResource("43_16jwr")
 
+[node name="OptionsScreen" parent="." unique_id=1415004417 instance=ExtResource("44_u16qi")]
+visible = false
+
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
+[connection signal="open_options" from="TitleScreen" to="." method="_on_title_screen_open_options"]
+[connection signal="options_closed" from="OptionsScreen" to="." method="_on_options_screen_options_closed"]

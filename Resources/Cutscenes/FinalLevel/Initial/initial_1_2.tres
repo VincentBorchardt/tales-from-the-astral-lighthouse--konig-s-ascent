@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_oc2ss")
 speaker = ExtResource("2_3asv0")
-message = "What the …? Konig? Replace you? I’m sorry, but we’re all leaving. "
+message = "What the …? König? Replace you? I’m sorry, but we’re all leaving. "
 metadata/_custom_type_script = "uid://dwvq7fdlgftn0"
