@@ -68,6 +68,7 @@
 [ext_resource type="Texture2D" uid="uid://d3y677kgrn6lx" path="res://Assets/Art/Characters/Gameplay/FinalLevel/dsd_plinth.png" id="62_xbvml"]
 [ext_resource type="AudioStream" uid="uid://ceio4xlp4bilc" path="res://Assets/Audio/SFX/OminousEyeOpen_wip2.mp3" id="66_xbvml"]
 [ext_resource type="AudioStream" uid="uid://de1sa64aaferj" path="res://Assets/Audio/SFX/PunchCollide_wip1.mp3" id="67_qa7ma"]
+[ext_resource type="Texture2D" uid="uid://dkyeywoisskpc" path="res://Assets/Art/UI/NPC_Booth_Counter_icon.png" id="69_bimvy"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(311, 77.89844, 12.890625, 75.09375, 12.1015625, -0.03125, 311, -0.9609375)
@@ -1712,6 +1713,26 @@ volume_db = 10.0
 
 [node name="EyeChange" type="AudioStreamPlayer2D" parent="." unique_id=423637760]
 stream = ExtResource("67_qa7ma")
+
+[node name="NPCCounter" type="Control" parent="." unique_id=881716413]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 10.0
+offset_right = 312.0
+offset_bottom = 28.0
+
+[node name="NPCIcon" type="Sprite2D" parent="NPCCounter" unique_id=1152340173]
+position = Vector2(7, 9)
+texture = ExtResource("69_bimvy")
+
+[node name="NPCLabel" type="Label" parent="NPCCounter" unique_id=1134820483]
+layout_mode = 0
+offset_left = 14.0
+offset_right = 28.0
+offset_bottom = 17.0
+text = "99"
 
 [connection signal="bullet_absorbed" from="Konig" to="." method="_on_bullet_absorbed"]
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]

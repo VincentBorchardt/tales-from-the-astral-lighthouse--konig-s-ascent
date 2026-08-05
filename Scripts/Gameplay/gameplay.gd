@@ -160,7 +160,7 @@ func enemy_died():
 func end_level():
 	if num_npcs > 0:
 		StoryAutoload.saved_cameos.append(cameo_npc)
-		StoryAutoload.total_saved_npcs += num_npcs
+		#StoryAutoload.total_saved_npcs += num_npcs
 	call_deferred("level_change")
 
 

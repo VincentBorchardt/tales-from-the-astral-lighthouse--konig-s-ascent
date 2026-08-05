@@ -80,6 +80,7 @@ func move_state():
 	if distance < 20:
 		velocity = Vector2.ZERO
 		state = State.IDLE
+		StoryAutoload.total_saved_npcs += 1
 		body_animations.play("warp")
 		return
 	

@@ -42,6 +42,7 @@
 [ext_resource type="Resource" uid="uid://dwc8djnc7080q" path="res://Resources/Cutscenes/Level4/soul_4_1b.tres" id="28_t0r2h"]
 [ext_resource type="Resource" uid="uid://dy7g2tukx6vt8" path="res://Resources/Cutscenes/Level4/soul_4_2.tres" id="28_u2c58"]
 [ext_resource type="Resource" uid="uid://cbb2fginrwole" path="res://Resources/Cutscenes/Level4/soul_4_3.tres" id="29_t0r2h"]
+[ext_resource type="Texture2D" uid="uid://dkyeywoisskpc" path="res://Assets/Art/UI/NPC_Booth_Counter_icon.png" id="43_t0r2h"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.35938, 127.96875, 173.04688, 196.70313, 34.976563, 123.35156, 169.85938, 57.203125)
@@ -816,6 +817,26 @@ libraries/ = SubResource("AnimationLibrary_khr6i")
 visible = false
 position = Vector2(160, 128)
 texture = ExtResource("18_33y7k")
+
+[node name="NPCCounter" type="Control" parent="." unique_id=1114043226]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 10.0
+offset_right = 312.0
+offset_bottom = 28.0
+
+[node name="NPCIcon" type="Sprite2D" parent="NPCCounter" unique_id=915347902]
+position = Vector2(7, 9)
+texture = ExtResource("43_t0r2h")
+
+[node name="NPCLabel" type="Label" parent="NPCCounter" unique_id=918674292]
+layout_mode = 0
+offset_left = 14.0
+offset_right = 28.0
+offset_bottom = 17.0
+text = "99"
 
 [connection signal="konig_arrived" from="Konig" to="." method="_on_konig_arrived"]
 [connection signal="konig_left" from="Konig" to="." method="_on_konig_left"]
