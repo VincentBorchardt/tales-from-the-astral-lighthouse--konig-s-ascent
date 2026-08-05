@@ -402,7 +402,8 @@ stream = ExtResource("55_eg8f1")
 
 [node name="InteractAnimation" type="AnimatedSprite2D" parent="." unique_id=1881624363]
 visible = false
-position = Vector2(0, -18)
+z_index = 1
+position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_cwrr4")
 animation = &"interaction"
 frame = 5

@@ -2,6 +2,7 @@ extends Node2D
 
 @export var messages: Array[Message]
 
+
 @onready var controller_message = $ControllerMessage
 @onready var logo = $Logo
 @onready var logo_animation = $Logo/AnimationPlayer

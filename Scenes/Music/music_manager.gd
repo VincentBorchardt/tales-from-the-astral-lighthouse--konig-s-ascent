@@ -105,3 +105,21 @@ func fade_out_and_stop( player : AudioStreamPlayer ) -> void:
 
 func get_current_track() -> AudioStream:
 	return music_players[ current_music_player ].stream
+	
+func stop_music() -> void:
+	var old_player := music_players[current_music_player]
+
+	if not old_player.playing:
+		return
+
+	var tween := create_tween()
+	tween.tween_property(
+		old_player,
+		"volume_db",
+		SILENT_VOLUME_DB,
+		music_fade_duration
+	)
+
+	await tween.finished
+	old_player.stop()
+	old_player.volume_db = DEFAULT_VOLUME_DB
