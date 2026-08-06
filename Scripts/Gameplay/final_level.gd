@@ -72,7 +72,6 @@ func set_up_cutscenes():
 			second_total_convo.append_array(bad)
 
 func continue_scripted_sequence():
-	chosen_ending = EndingChoice.GOOD
 	match scripted_progression_count:
 		1:
 			match chosen_ending:
