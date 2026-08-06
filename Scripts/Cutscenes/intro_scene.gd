@@ -11,6 +11,9 @@ extends Node2D
 @onready var title_screen = $TitleScreen
 @onready var options_screen = $OptionsScreen
 
+func _ready() -> void:
+	MusicManager.stop_music()
+
 func start_intro():
 	StoryAutoload.total_saved_npcs = 0
 	StoryAutoload.saved_cameos = []

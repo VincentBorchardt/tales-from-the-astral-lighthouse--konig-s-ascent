@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="18_o7iop"]
 [ext_resource type="Texture2D" uid="uid://dkyeywoisskpc" path="res://Assets/Art/UI/NPC_Booth_Counter_icon.png" id="32_etbkp"]
 [ext_resource type="PackedScene" uid="uid://l3jjrynaqeyc" path="res://Scenes/pause_screen.tscn" id="33_7gcql"]
+[ext_resource type="AudioStream" uid="uid://qh5vbdb4d6xf" path="res://Assets/Audio/Music/IntroTheme_wip2.mp3" id="33_v4ies"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
 vertices = PackedVector2Array(305.6875, 123.859375, 156.24219, 197.71875, 17.960938, 121.65625, 164.84375, 52.140625)
@@ -792,6 +793,8 @@ libraries/ = SubResource("AnimationLibrary_wdaxu")
 process_mode = 3
 visible = false
 z_index = 3
+level_music = ExtResource("4_mj38t")
+intro_music = ExtResource("33_v4ies")
 
 [node name="NPCCounter" type="Control" parent="." unique_id=671876757]
 visible = false

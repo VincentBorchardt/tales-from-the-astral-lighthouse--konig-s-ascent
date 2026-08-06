@@ -13,7 +13,7 @@ var health := 3:
 	set(value):
 		health = value
 
-		if health <= 0:
+		if health == 0:
 			open_door()
 
 func _ready():
