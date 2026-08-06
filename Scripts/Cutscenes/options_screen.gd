@@ -11,6 +11,11 @@ signal play_menu_sound
 @onready var dsd_check = $DebugGroup/DSDCheck
 @onready var npc_count = $DebugGroup/NPCCount
 
+var is_ready = false
+
+func _ready() -> void:
+	is_ready = true
+
 func _on_debug_option_pressed() -> void:
 	play_menu_sound.emit()
 	debug_group.visible = debug_option.button_pressed
@@ -57,5 +62,5 @@ func _on_close_button_pressed() -> void:
 
 
 func _on_visibility_changed() -> void:
-	if visible:
+	if visible and is_ready:
 		debug_option.grab_focus()

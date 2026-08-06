@@ -76,22 +76,22 @@ func continue_scripted_sequence():
 		1:
 			match chosen_ending:
 				EndingChoice.DSD:
-					start_cutscene(dsd_part_2)
-					pass
+					scripted_progression_count += 1
+					dsd.materialize()
 				_:
 					# animate in cameos
-					pass
-			scripted_progression_count += 1
-			start_cutscene(second_total_convo)
+					scripted_progression_count += 1
+					start_cutscene(second_total_convo)
 		2:
 			match chosen_ending:
 				EndingChoice.DSD:
 					scripted_progression_count += 1
-					dsd.materialize()
+					open_eyeball()
 				EndingChoice.BAD:
 					scripted_progression_count += 1
 					get_tree().change_scene_to_file("res://Scenes/Cutscenes/bad_ending.tscn")
 				EndingChoice.GOOD:
+					scripted_progression_count += 1
 					boyhowdy.start_shooting()
 		3:
 			match chosen_ending:
@@ -99,6 +99,7 @@ func continue_scripted_sequence():
 					scripted_progression_count += 1
 					dsd.move_to_next_target()
 				EndingChoice.GOOD:
+					scripted_progression_count += 1
 					open_eyeball()
 				_:
 					print("followed a finished ending path")
@@ -109,11 +110,13 @@ func continue_scripted_sequence():
 					sequence_timer.start()
 					await  sequence_timer.timeout
 					dsd.start_laugh()
-				_:
-					pass
+				EndingChoice.GOOD:
+					scripted_progression_count += 1
+					start_cutscene(good_part_3)
 		5:
 			match chosen_ending:
 				EndingChoice.DSD:
+					scripted_progression_count += 1
 					wave_anim_player.play("fade_to_white")
 					await  wave_anim_player.animation_finished
 					get_tree().change_scene_to_file("res://Scenes/Cutscenes/dsd_ending.tscn")
@@ -135,12 +138,11 @@ func _on_booth_warp_out_finished() -> void:
 	call_deferred("start_cutscene", initial_total_convo)
 
 func absorbed_bullet_threshold_reached():
-	scripted_progression_count += 1
 	boyhowdy.beg()
 	sequence_timer.start()
 	await  sequence_timer.timeout
 	start_cutscene(good_part_2)
-	continue_scripted_sequence()
+	#continue_scripted_sequence()
 
 func _on_boyhowdy_boyhowdy_died() -> void:
 	sequence_timer.start()
@@ -152,8 +154,8 @@ func open_eyeball():
 	eye_sound.play()
 	eyeball_anim.play("eye_open")
 	await eyeball_anim.animation_finished
-	scripted_progression_count += 1
-	start_cutscene(good_part_3)
+	continue_scripted_sequence()
+
 
 func _on_dsd_movement_finished() -> void:
 	eye_change_sound.play()
