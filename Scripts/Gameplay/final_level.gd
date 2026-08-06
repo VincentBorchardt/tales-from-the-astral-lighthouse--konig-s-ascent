@@ -72,6 +72,7 @@ func set_up_cutscenes():
 			second_total_convo.append_array(bad)
 
 func continue_scripted_sequence():
+	chosen_ending = EndingChoice.GOOD
 	match scripted_progression_count:
 		1:
 			match chosen_ending:
@@ -145,10 +146,11 @@ func absorbed_bullet_threshold_reached():
 	#continue_scripted_sequence()
 
 func _on_boyhowdy_boyhowdy_died() -> void:
-	sequence_timer.start()
-	await  sequence_timer.timeout
-	scripted_progression_count += 1
-	start_cutscene(good_part_5)
+	if chosen_ending == EndingChoice.GOOD:
+		sequence_timer.start()
+		await  sequence_timer.timeout
+		scripted_progression_count += 1
+		start_cutscene(good_part_5)
 
 func open_eyeball():
 	eye_sound.play()
@@ -177,5 +179,6 @@ func _on_dsd_laughing_finished() -> void:
 	start_cutscene(dsd_part_3)
 
 func _on_boyhowdy_entered_range() -> void:
-	start_cutscene(good_part_4)
-	boyhowdy.set_entered_range()
+	if scripted_progression_count == 5:
+		start_cutscene(good_part_4)
+		boyhowdy.set_entered_range()
