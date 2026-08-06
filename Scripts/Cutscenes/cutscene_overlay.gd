@@ -28,6 +28,7 @@ func _input(event: InputEvent) -> void:
 
 func start_cutscene(message_array, has_box=true):
 	message_text.visible = false
+	can_advance_text = false
 	messages = message_array
 	current_message_index = 0
 	cutscene_active = true
