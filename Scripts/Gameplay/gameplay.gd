@@ -86,7 +86,7 @@ func _ready():
 
 func _input(event: InputEvent) -> void:
 	if not get_tree().paused:
-		if Input.is_action_pressed("pause"):
+		if Input.is_action_just_pressed("pause"):
 			get_tree().paused = true
 			pause_screen.visible = true
 			pause_screen.start_pause_menu()
