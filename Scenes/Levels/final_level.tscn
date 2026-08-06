@@ -1698,7 +1698,6 @@ animation = &"dsd_plinth_change"
 position = Vector2(160, 63)
 
 [node name="Transition" type="Sprite2D" parent="." unique_id=356204903]
-visible = false
 modulate = Color(0.1254902, 0.07450981, 0.16078432, 1)
 z_index = 2
 position = Vector2(163, 120)
