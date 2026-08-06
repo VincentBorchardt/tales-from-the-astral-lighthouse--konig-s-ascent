@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://l3jjrynaqeyc"]
+
+[ext_resource type="Script" uid="uid://c20vwjbyl6uim" path="res://Scripts/pause_screen.gd" id="1_16tsp"]
+[ext_resource type="Texture2D" uid="uid://d1716dhuy735d" path="res://Assets/Art/UI/Bg/TempBG.png" id="1_xub4q"]
+[ext_resource type="AudioStream" uid="uid://b13xrglqrh8b" path="res://Assets/Audio/SFX/MenuSelect_wip1.mp3" id="2_hl5t3"]
+[ext_resource type="Texture2D" uid="uid://c2wexfvukpebf" path="res://Assets/Art/UI/MenuPointer.png" id="3_16tsp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_orahx"]
+
+[node name="PauseScreen" type="Control" unique_id=1950325700]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_16tsp")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1654990502]
+position = Vector2(160, 120)
+texture = ExtResource("1_xub4q")
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="." unique_id=2069821519]
+stream = ExtResource("2_hl5t3")
+
+[node name="PausedLabel" type="Label" parent="." unique_id=1656468478]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 116.0
+offset_right = 182.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0.8862745, 0.3019608, 0.3882353, 1)
+text = "PAUSED"
+
+[node name="ContinueMarker" type="Sprite2D" parent="." unique_id=815037712]
+position = Vector2(85, 155)
+texture = ExtResource("3_16tsp")
+
+[node name="RestartMarker" type="Sprite2D" parent="." unique_id=142509986]
+position = Vector2(85, 174)
+texture = ExtResource("3_16tsp")
+
+[node name="ExitMarker" type="Sprite2D" parent="." unique_id=1282938961]
+position = Vector2(85, 193)
+texture = ExtResource("3_16tsp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1511181935]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 143.0
+offset_right = 224.0
+offset_bottom = 202.0
+theme_override_constants/separation = -7
+alignment = 1
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=1738397752]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+focus_neighbor_bottom = NodePath("../RestartButton")
+accessibility_name = "Begin Climb"
+theme_override_colors/font_color = Color(0.8862745, 0.3019608, 0.3882353, 1)
+theme_override_colors/font_focus_color = Color(0.5882353, 0.8392157, 0.6627451, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_orahx")
+text = "Continue"
+flat = true
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=1937170682]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ContinueButton")
+focus_neighbor_bottom = NodePath("../ExitButton")
+accessibility_name = "Begin Climb"
+theme_override_colors/font_color = Color(0.8862745, 0.3019608, 0.3882353, 1)
+theme_override_colors/font_focus_color = Color(0.5882353, 0.8392157, 0.6627451, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_orahx")
+text = "Restart Floor"
+flat = true
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1748977555]
+layout_mode = 2
+focus_neighbor_top = NodePath("../RestartButton")
+focus_neighbor_bottom = NodePath(".")
+accessibility_name = "Begin Climb"
+theme_override_colors/font_color = Color(0.8862745, 0.3019608, 0.3882353, 1)
+theme_override_colors/font_focus_color = Color(0.5882353, 0.8392157, 0.6627451, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_orahx")
+text = "Return to Title Screen"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

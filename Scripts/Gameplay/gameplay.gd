@@ -34,6 +34,7 @@ var wave_animations = [
 @onready var cutscene_overlay = $CutsceneOverlay
 @onready var npc_counter = $NPCCounter
 @onready var npc_label = $NPCCounter/NPCLabel
+@onready var pause_screen = $PauseScreen
 
 var current_wave := -1
 var current_wave_scene: Node2D
@@ -61,7 +62,7 @@ var absorbed_bullet_count: int = 0:
 func absorbed_bullet_threshold_reached():
 	scripted_progression_count += 1
 	call_deferred("continue_scripted_sequence")
-	
+
 func _ready():
 	GameplayManager.end_of_level = false
 	if StoryAutoload.total_saved_npcs > 0:
@@ -82,7 +83,13 @@ func _ready():
 	if wave_anim_player.has_animation("floor_number"):
 		wave_anim_player.play("floor_number")
 	booth.warp_in()
-	
+
+func _input(event: InputEvent) -> void:
+	if not get_tree().paused:
+		if Input.is_action_pressed("pause"):
+			get_tree().paused = true
+			pause_screen.visible = true
+			pause_screen.start_pause_menu()
 
 func play_wave_animation():
 	if current_wave_animation >= waves.size():
@@ -270,3 +277,11 @@ func _on_konig_left() -> void:
 
 func _on_npc_died(npc: Variant) -> void:
 	num_npcs -= 1
+
+func _on_pause_screen_unpause() -> void:
+	get_tree().paused = false
+	pause_screen.visible = false
+
+func _on_pause_screen_restart_level() -> void:
+	get_tree().paused = false
+	get_tree().reload_current_scene()

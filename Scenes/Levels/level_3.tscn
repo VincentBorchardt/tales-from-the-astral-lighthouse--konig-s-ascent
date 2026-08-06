@@ -38,6 +38,7 @@
 [ext_resource type="Resource" uid="uid://ubbamn41yu2x" path="res://Resources/Cutscenes/Level3/level_3_dsd_8.tres" id="19_phqt5"]
 [ext_resource type="PackedScene" uid="uid://dt2yp7sm2y31j" path="res://Scenes/Objects/dsd_door.tscn" id="19_r8neg"]
 [ext_resource type="Resource" uid="uid://cqos4cpfkx438" path="res://Resources/Cutscenes/Level3/level_3_dsd_9.tres" id="20_lxa11"]
+[ext_resource type="PackedScene" uid="uid://l3jjrynaqeyc" path="res://Scenes/pause_screen.tscn" id="39_lxa11"]
 [ext_resource type="Texture2D" uid="uid://dkyeywoisskpc" path="res://Assets/Art/UI/NPC_Booth_Counter_icon.png" id="39_phqt5"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_numx4"]
@@ -813,6 +814,11 @@ texture = ExtResource("18_ocbj8")
 position = Vector2(238, 75)
 movement_targets = [NodePath("../BoothSpawn")]
 
+[node name="PauseScreen" parent="." unique_id=1950325700 instance=ExtResource("39_lxa11")]
+process_mode = 3
+visible = false
+z_index = 3
+
 [node name="NPCCounter" type="Control" parent="." unique_id=22486513]
 visible = false
 layout_mode = 3
@@ -843,3 +849,5 @@ text = "99"
 [connection signal="warp_out_finished" from="Booth" to="." method="_on_booth_warp_out_finished"]
 [connection signal="animation_finished" from="WaveAnimation" to="." method="start_next_wave"]
 [connection signal="cutscene_ended" from="CutsceneOverlay" to="." method="_on_cutscene_overlay_cutscene_ended"]
+[connection signal="restart_level" from="PauseScreen" to="." method="_on_pause_screen_restart_level"]
+[connection signal="unpause" from="PauseScreen" to="." method="_on_pause_screen_unpause"]

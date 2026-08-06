@@ -10,7 +10,6 @@ var can_advance_text = false
 var current_message_index = 0
 
 var DIM = Color(0.125, 0.075, 0.161, 1.0)
-var DIM_SHADER = preload("res://Resources/Cutscenes/purple_dim.gdshader")
 
 @onready var left_image = $LeftSpeaker
 @onready var right_image = $RightSpeaker

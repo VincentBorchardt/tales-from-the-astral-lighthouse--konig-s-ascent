@@ -174,7 +174,7 @@ func on_dsd_ready():
 	pass
 
 func _on_dsd_laughing_finished() -> void:
-		start_cutscene(dsd_part_3)
+	start_cutscene(dsd_part_3)
 
 func _on_boyhowdy_entered_range() -> void:
 	start_cutscene(good_part_4)
