@@ -9,10 +9,11 @@ extends Node2D
 @export var packedShippieDue : PackedScene
 @export var movement_targets: Array[Node2D]
 
+var door_opened = false
+
 var health := 3:
 	set(value):
 		health = value
-
 		if health == 0:
 			open_door()
 
@@ -25,14 +26,16 @@ func show_glimmer():
 	door_animation.play("glimmer")
 
 func open_door():
-	door_animation.play("opened")
-	door_cover.visible = true
-	var shippie = packedShippieDue.instantiate()
-	get_tree().current_scene.add_child(shippie)
-	shippie.global_position = dsd_spawn.global_position
-	shippie.movement_targets = movement_targets
-	
-	await shippie.start_laugh()
+	if not door_opened:
+		door_opened = true
+		door_animation.play("opened")
+		door_cover.visible = true
+		var shippie = packedShippieDue.instantiate()
+		get_tree().current_scene.add_child(shippie)
+		shippie.global_position = dsd_spawn.global_position
+		shippie.movement_targets = movement_targets
+		
+		await shippie.start_laugh()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	hit_sound.play()
