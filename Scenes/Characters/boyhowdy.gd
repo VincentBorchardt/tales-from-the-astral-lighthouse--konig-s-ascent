@@ -12,6 +12,7 @@ signal entered_range
 var entered_range_once = false
 var state = State.CONVO
 var dead = false
+var hit_taken = false
 @export var knockback_speed = 1.5
 @export var bullet_lag : float = 0.3
 @export var bullet_scene: PackedScene
@@ -41,23 +42,11 @@ func _physics_process(delta):
 			enemy_anim.play(get_wing_animation())
 		State.KNOCKBACK:
 			hurtbox.disabled = true
-			var collision = move_and_collide(velocity)
 
-			if collision:
-				die()
 		State.CONVO:
 			return
 
-func die():
-	if dead:
-		return
-	dead = true
-	velocity = Vector2.ZERO
-	play_explode_sound()
-	enemy_anim.play("boyhowdy_death")
-	await enemy_anim.animation_finished
-	boyhowdy_died.emit()
-	queue_free()
+
 
 func play_explode_sound():
 	var pitch_max = 1
@@ -78,12 +67,14 @@ func beg():
 	timer.stop()
 
 func take_hit():
-	interaction_animation.visible = false
-	explode.play()
-	enemy_anim.play("boyhowdy_knockback")
-	await enemy_anim.animation_finished
-	boyhowdy_died.emit()
-	queue_free()
+	if hit_taken == false:
+		hit_taken = true
+		interaction_animation.visible = false
+		explode.play()
+		enemy_anim.play("boyhowdy_knockback")
+		await enemy_anim.animation_finished
+		boyhowdy_died.emit()
+		queue_free()
 
 func set_entered_range():
 	entered_range_once = true
